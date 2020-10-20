@@ -1,5 +1,7 @@
 package jp.gr.java_conf.mt777.zukei2d.heikinzahyou;
 
+import jp.gr.java_conf.mt777.zukei2d.ten.Ten;
+
 public class HeikinZahyou {
     double x, y;
     int kosuu;

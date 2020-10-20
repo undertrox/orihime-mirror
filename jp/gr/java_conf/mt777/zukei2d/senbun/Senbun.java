@@ -1,5 +1,7 @@
 package jp.gr.java_conf.mt777.zukei2d.senbun;
 
+import jp.gr.java_conf.mt777.zukei2d.ten.Ten;
+
 import java.awt.*;
 import java.math.BigDecimal;
 
@@ -10,9 +12,9 @@ public class Senbun {
     int iactive;//0‚ÍŠˆ?«‚È‚µ?B1‚Ía‚ªŠˆ?«?B2‚Íb‚ªŠˆ?«?B3‚Ía‚àb‚àŠˆ?«?B
     int icol;//?F‚ÌŽw’è?@0=black,1=blue,2=red.
 
-    int tpp = 0;//“Á’?ƒvƒ?ƒpƒeƒBƒpƒ‰ƒ??[ƒ^?[
-    //Color tpp_color =new Color(100, 200, 200);//“Á’?‚ ‚é?ê?‡‚Ì?F
-    Color tpp_color = new Color(100, 200, 200);//“Á’?‚ ‚é?ê?‡‚Ì?F
+    int tpp = 0;//“Á??ƒv??ƒpƒeƒBƒpƒ‰???[ƒ^?[
+    //Color tpp_color =new Color(100, 200, 200);//“Á??‚ ‚é???‡‚Ì?F
+    Color tpp_color = new Color(100, 200, 200);//“Á??‚ ‚é???‡‚Ì?F
 
 
     int i_select;//0‚Í‘I‘ð‚³‚ê‚Ä‚¢‚È‚¢?B1ˆÈ?ã‚Í?ê–Ê‚É‰ž‚¶‚Ä“K‹X?Ý’è
@@ -88,7 +90,7 @@ public class Senbun {
     public String d2s(double d0) {
         BigDecimal bd = new BigDecimal(d0);
 
-        //?¬?”‘æ2ˆÊ‚ÅŽlŽÌŒÜ“ü
+        //?¬?”‘?2ˆÊ‚ÅŽlŽÌŒÜ“ü
         BigDecimal bd1 = bd.setScale(1, BigDecimal.ROUND_HALF_UP);
 
         String sr = "";
@@ -229,7 +231,7 @@ public class Senbun {
         return i_select;
     }
 
-    //‚±‚Ì?ü•ª‚ª?A‚ ‚é“_‚Æ‹ß‚¢‚©‚Ç‚¤‚©‚ÅŠˆ?«‰»‚·‚é?B
+    //‚±‚Ì??•ª‚ª?A‚ ‚é“_‚Æ‹ß‚¢‚©‚Ç‚¤‚©‚ÅŠˆ?«‰»‚·‚é?B
     public void kasseika(Ten p, double r) {
         iactive = 0;
         if (p.kyori2jyou(a) <= r * r) {
@@ -242,7 +244,7 @@ public class Senbun {
         //if(oc.kyori(p,b)<=r){iactive=2;}
     }
 
-    //‚±‚Ì?ü•ª‚ð”ñŠˆ?«‰»
+    //‚±‚Ì??•ª‚ð”ñŠˆ?«‰»
     public void hikasseika() {
         iactive = 0;
     }

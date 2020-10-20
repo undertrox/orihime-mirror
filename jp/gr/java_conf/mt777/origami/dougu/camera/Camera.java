@@ -3,6 +3,7 @@ package jp.gr.java_conf.mt777.origami.dougu.camera;
 //import java.util.*;
 
 import jp.gr.java_conf.mt777.zukei2d.senbun.Senbun;
+import jp.gr.java_conf.mt777.zukei2d.ten.Ten;
 
 public class Camera {//ŽÀ?Û‚Ì?À•W‚Æ?A•\Ž¦?À•W‚Ì’‡—§‚¿
 
@@ -10,7 +11,7 @@ public class Camera {//ŽÀ?Û‚Ì?À•W‚Æ?A•\Ž¦?À•W‚Ì’‡—§‚¿
 
     double camera_ichi_x, camera_ichi_y;
     double camera_kakudo;
-    double camera_kagami; //-1.0‚©1.0‚Ì‚Ç‚¿‚ç‚©?@xŽ²‚¾‚¯•„?†‚ð•Ï‚¦‚é       //‹¾
+    double camera_kagami; //-1.0‚©1.0‚Ì‚Ç‚¿‚ç‚©?@xŽ²‚¾‚¯•„??‚ð•Ï‚¦‚é       //‹¾
     double camera_bairitsu_x;
     double camera_bairitsu_y;
     double hyouji_ichi_x, hyouji_ichi_y;
@@ -139,7 +140,7 @@ public class Camera {//ŽÀ?Û‚Ì?À•W‚Æ?A•\Ž¦?À•W‚Ì’‡—§‚¿
     }
 
 
-    public void hyouji() {//ŠeŽíƒpƒ‰ƒ??[ƒ^‚ð•\Ž¦‚·‚é
+    public void hyouji() {//ŠeŽíƒpƒ‰???[ƒ^‚ð•\Ž¦‚·‚é
 
         System.out.println("camera.hyouji() VVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVV ");
         System.out.println("camera_ichi_x = " + camera_ichi_x);

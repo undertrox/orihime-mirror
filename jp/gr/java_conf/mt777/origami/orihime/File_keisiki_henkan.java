@@ -1,6 +1,8 @@
 package jp.gr.java_conf.mt777.origami.orihime;
 
 import jp.gr.java_conf.mt777.kiroku.memo.Memo;
+import jp.gr.java_conf.mt777.origami.dougu.bou.Bou;
+import jp.gr.java_conf.mt777.zukei2d.ten.Ten;
 
 import java.util.ArrayList;
 import java.util.StringTokenizer;
@@ -11,7 +13,7 @@ public class File_keisiki_henkan {
 
     //---------------
     Memo obj2orihime(Memo mem) {
-        System.out.println("objƒtƒ@ƒCƒ‹‚ðƒIƒŠƒqƒ?—p‚É‚·‚é");
+        System.out.println("objƒtƒ@ƒCƒ‹‚ðƒIƒŠƒq??—p‚É‚·‚é");
         Memo MemR = new Memo();
         int ibangou = 0;
         int jtok;
@@ -128,10 +130,10 @@ public class File_keisiki_henkan {
         //  writeMemo2File(MemR) ;
 
         MemR.reset();
-        MemR.addGyou("<?ü•ª?W?‡>");
+        MemR.addGyou("<??•ª?W??>");
         for (int i = 1; i <= Boumax; i++) {
-            MemR.addGyou("”Ô?†," + i);
-            //System.out.println("”Ô?†,"+str.valueOf(i));
+            MemR.addGyou("”Ô??," + i);
+            //System.out.println("”Ô??,"+str.valueOf(i));
             bu = (Bou) bL.get(i);
 
             int icol;
@@ -177,8 +179,8 @@ public class File_keisiki_henkan {
 
     //---------------
     Memo cp2orihime(Memo mem) {
-        System.out.println("cpƒtƒ@ƒCƒ‹‚ðƒIƒŠƒqƒ?—p‚É‚·‚é");
-        System.out.println("cpƒtƒ@ƒCƒ‹‚ðƒIƒŠƒqƒ?—p‚É‚·‚é");
+        System.out.println("cpƒtƒ@ƒCƒ‹‚ðƒIƒŠƒq??—p‚É‚·‚é");
+        System.out.println("cpƒtƒ@ƒCƒ‹‚ðƒIƒŠƒq??—p‚É‚·‚é");
         Memo MemR = new Memo();
 
         int ibangou = 0;
@@ -187,10 +189,10 @@ public class File_keisiki_henkan {
         String str = "";
         int icol;
 
-        //ƒIƒŠƒqƒ??@0.Contour, 1.Mountain, 2.Valley?@?AORIPA 1.Contour, 2.Mountain, 3.Valley
+        //ƒIƒŠƒq???@0.Contour, 1.Mountain, 2.Valley?@?AORIPA 1.Contour, 2.Mountain, 3.Valley
 
         MemR.reset();
-        MemR.addGyou("<?ü•ª?W?‡>");
+        MemR.addGyou("<??•ª?W??>");
 
         //  int isen=0;
         for (int ig = 1; ig <= mem.getGyousuu(); ig++) {
@@ -210,12 +212,12 @@ public class File_keisiki_henkan {
                     // if(d1<xmin){xmin=d1;}
                     // if(d2>ymax){ymax=d2;}
                     // if(d2<ymin){ymin=d2;}
-                    MemR.addGyou("”Ô?†," + ibangou);
-                    System.out.println("”Ô?†," + ibangou);
+                    MemR.addGyou("”Ô??," + ibangou);
+                    System.out.println("”Ô??," + ibangou);
                     MemR.addGyou("?F," + icol);
                     //System.out.println("?F,"  +str.valueOf(icol) );
 
-                    //d1=d1+350.0;d2=d2+350.0;d3=d3+350.0;d4=d4+350.0;//ORIPA‚©‚çƒIƒŠƒqƒ?‚ÖˆÚ‚·‚Æ‚«‚Ì?À•W’²?®
+                    //d1=d1+350.0;d2=d2+350.0;d3=d3+350.0;d4=d4+350.0;//ORIPA‚©‚çƒIƒŠƒq??‚ÖˆÚ‚·‚Æ‚«‚Ì?À•W’²?®
 
                     MemR.addGyou("?À•W," + d1 + "," + d2 + "," + d3 + "," + d4);
                     //System.out.println("?À•W,"+str.valueOf(d1)+","+str.valueOf(d2)+","+str.valueOf(d3)+","+str.valueOf(d4)     );
@@ -227,10 +229,10 @@ public class File_keisiki_henkan {
                     d2 = Double.parseDouble(tk.nextToken());
                     d3 = Double.parseDouble(tk.nextToken());
                     d4 = Double.parseDouble(tk.nextToken());
-                    MemR.addGyou("”Ô?†," + ibangou);
+                    MemR.addGyou("”Ô??," + ibangou);
                     MemR.addGyou("?F," + icol);
 
-                    //d1=d1+350.0;d2=d2+350.0;d3=d3+350.0;d4=d4+350.0;//ORIPA‚©‚çƒIƒŠƒqƒ?‚ÖˆÚ‚·‚Æ‚«‚Ì?À•W’²?®
+                    //d1=d1+350.0;d2=d2+350.0;d3=d3+350.0;d4=d4+350.0;//ORIPA‚©‚çƒIƒŠƒq??‚ÖˆÚ‚·‚Æ‚«‚Ì?À•W’²?®
 
                     MemR.addGyou("?À•W," + d1 + "," + d2 + "," + d3 + "," + d4);
                 }
@@ -241,10 +243,10 @@ public class File_keisiki_henkan {
                     d2 = Double.parseDouble(tk.nextToken());
                     d3 = Double.parseDouble(tk.nextToken());
                     d4 = Double.parseDouble(tk.nextToken());
-                    MemR.addGyou("”Ô?†," + ibangou);
+                    MemR.addGyou("”Ô??," + ibangou);
                     MemR.addGyou("?F," + icol);
 
-                    //d1=d1+350.0;d2=d2+350.0;d3=d3+350.0;d4=d4+350.0;//ORIPA‚©‚çƒIƒŠƒqƒ?‚ÖˆÚ‚·‚Æ‚«‚Ì?À•W’²?®
+                    //d1=d1+350.0;d2=d2+350.0;d3=d3+350.0;d4=d4+350.0;//ORIPA‚©‚çƒIƒŠƒq??‚ÖˆÚ‚·‚Æ‚«‚Ì?À•W’²?®
 
                     MemR.addGyou("?À•W," + d1 + "," + d2 + "," + d3 + "," + d4);
                 }
@@ -256,7 +258,7 @@ public class File_keisiki_henkan {
     //-----------------------------------------------------------------------------------------------------
 
     Memo orihime2cp(Memo mem) {
-        System.out.println("ƒIƒŠƒqƒ?—pƒtƒ@ƒCƒ‹‚ðcp—p‚É‚·‚é");
+        System.out.println("ƒIƒŠƒq??—pƒtƒ@ƒCƒ‹‚ðcp—p‚É‚·‚é");
         Memo MemR = new Memo();
         int ibangou = 0;
         Integer Ii = new Integer(0);
@@ -265,10 +267,10 @@ public class File_keisiki_henkan {
         String str = "";
         int icol = 0;
 
-        //ƒIƒŠƒqƒ??@0.Contour, 1.Mountain, 2.Valley?@?AORIPA 1.Contour, 2.Mountain, 3.Valley
+        //ƒIƒŠƒq???@0.Contour, 1.Mountain, 2.Valley?@?AORIPA 1.Contour, 2.Mountain, 3.Valley
 
         MemR.reset();
-        //MemR.addGyou("<?ü•ª?W?‡>");
+        //MemR.addGyou("<??•ª?W??>");
 
         //  int isen=0;
         for (int ig = 1; ig <= mem.getGyousuu(); ig++) {
@@ -277,7 +279,7 @@ public class File_keisiki_henkan {
                 StringTokenizer tk = new StringTokenizer(mem.getGyou(ig), ",");
                 str = tk.nextToken();
                 //    System.out.print("..."+str+"..."); System.out.println(ig);
-                if (str.equals("”Ô?†")) {
+                if (str.equals("”Ô??")) {
                     ibangou = ibangou + 1;
                 }
                 if (str.equals("?F")) {
@@ -292,12 +294,12 @@ public class File_keisiki_henkan {
                     // if(d1<xmin){xmin=d1;}
                     // if(d2>ymax){ymax=d2;}
                     // if(d2<ymin){ymin=d2;}
-                    //MemR.addGyou("”Ô?†,"+str.valueOf(ibangou));
-                    //System.out.println("”Ô?†,"+str.valueOf(ibangou));
+                    //MemR.addGyou("”Ô??,"+str.valueOf(ibangou));
+                    //System.out.println("”Ô??,"+str.valueOf(ibangou));
 
                     //System.out.println("?F,"  +str.valueOf(icol) );
 
-                    //d1=d1-350.0;d2=d2-350.0;d3=d3-350.0;d4=d4-350.0;//ƒIƒŠƒqƒ?‚©‚çORIPA‚ÖˆÚ‚·‚Æ‚«‚Ì?À•W’²?®
+                    //d1=d1-350.0;d2=d2-350.0;d3=d3-350.0;d4=d4-350.0;//ƒIƒŠƒq??‚©‚çORIPA‚ÖˆÚ‚·‚Æ‚«‚Ì?À•W’²?®
                     MemR.addGyou(icol + " " + d1 + " " + d2 + " " + d3 + " " + d4);
                     //MemR.addGyou("?À•W,"+str.valueOf(d1)+","+str.valueOf(d2)+","+str.valueOf(d3)+","+str.valueOf(d4)     );
                     //System.out.println("?À•W,"+str.valueOf(d1)+","+str.valueOf(d2)+","+str.valueOf(d3)+","+str.valueOf(d4)     );
@@ -310,7 +312,7 @@ public class File_keisiki_henkan {
     //-----------------------------------------------------------------------------------------------------
 
     Memo orihime2svg(Memo mem) {//‚±‚ê‚Íes1.getMemo_for_kakidasi()‚ð“ü—Í‚µ‚Ä“WŠJ?}‚Ì?¶ƒf?[ƒ^‚Ìsvg‚ð?o—Í
-        System.out.println("ƒIƒŠƒqƒ?—pƒtƒ@ƒCƒ‹‚ðsvg—p‚É‚·‚é");
+        System.out.println("ƒIƒŠƒq??—pƒtƒ@ƒCƒ‹‚ðsvg—p‚É‚·‚é");
         Memo MemR = new Memo();
         int ibangou = 0;
         Integer Ii = new Integer(0);
@@ -322,13 +324,13 @@ public class File_keisiki_henkan {
         str_strokewidth = "1";
         int icol = 0;
 
-        //ƒIƒŠƒqƒ??@0.Contour, 1.Mountain, 2.Valley?@?AORIPA 1.Contour, 2.Mountain, 3.Valley
+        //ƒIƒŠƒq???@0.Contour, 1.Mountain, 2.Valley?@?AORIPA 1.Contour, 2.Mountain, 3.Valley
 
         MemR.reset();
 
         MemR.addGyou("<svg xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\">");
 
-        //MemR.addGyou("<?ü•ª?W?‡>");
+        //MemR.addGyou("<??•ª?W??>");
 
         //  int isen=0;
         for (int ig = 1; ig <= mem.getGyousuu(); ig++) {
@@ -337,7 +339,7 @@ public class File_keisiki_henkan {
                 StringTokenizer tk = new StringTokenizer(mem.getGyou(ig), ",");
                 str = tk.nextToken();
                 //    System.out.print("..."+str+"..."); System.out.println(ig);
-                if (str.equals("”Ô?†")) {
+                if (str.equals("”Ô??")) {
                     ibangou = ibangou + 1;
                 }
                 if (str.equals("?F")) {
@@ -423,7 +425,7 @@ public class File_keisiki_henkan {
 
 
 /*
-		//MemR.addGyou("<?ü•ª?W?‡>");    
+		//MemR.addGyou("<??•ª?W??>");    
 
                 //  int isen=0;
 		for(int ig=1;ig<=mem.getGyousuu();ig++){
@@ -432,7 +434,7 @@ public class File_keisiki_henkan {
 			 	StringTokenizer tk = new StringTokenizer(mem.getGyou(ig),",");
 				str=tk.nextToken();
                     //    System.out.print("..."+str+"..."); System.out.println(ig);				
-				if (str.equals("”Ô?†")){ibangou=ibangou+1;}  
+				if (str.equals("”Ô??")){ibangou=ibangou+1;}  
 				if (str.equals("?F")){icol=Ii.parseInt(tk.nextToken());} 
 			 		str_stroke="black";
 					if(icol==0){str_stroke="black";

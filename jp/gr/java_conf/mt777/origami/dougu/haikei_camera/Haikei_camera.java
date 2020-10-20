@@ -3,11 +3,12 @@ package jp.gr.java_conf.mt777.origami.dougu.haikei_camera;
 
 import jp.gr.java_conf.mt777.origami.dougu.camera.Camera;
 import jp.gr.java_conf.mt777.zukei2d.oritacalc.OritaCalc;
+import jp.gr.java_conf.mt777.zukei2d.ten.Ten;
 
 public class Haikei_camera {//ŽÀ?Û‚Ì?À•W‚Æ?A•\Ž¦?À•W‚Ì’‡—§‚¿
 
-	//”wŒi‰æ‚ð?A‰æ‘œ‚Ì?¶?ã‚Í‚µ‚ð?AƒEƒBƒ“ƒhƒE‚Ì(0,0)‚É?‡‚í‚¹‚Ä‰ñ“]‚âŠg‘å‚È‚µ‚Å•\Ž¦‚µ‚½?ê?‡‚ðŠî?€?ó‘Ô‚Æ‚·‚é?B
-//”wŒi‰æ?ã‚Ì“_h1‚ð’†?S‚Æ‚µ‚Äa”{Šg‘å‚·‚é?BŽŸ‚É?Ah1‚ð“WŠJ?}?ã‚Ì“_h3‚Æ?d‚È‚é‚æ‚¤‚É”wŒi‰æ‚ð•½?sˆÚ“®‚·‚é?B‚±‚Ì?ó‘Ô‚Ì“WŠJ?}‚ð?Ah3‚ð’†?S‚Éb“x‰ñ“]‚µ‚½‚æ‚¤Œ©‚¦‚é‚æ‚¤‚É?À•W‚ð‰ñ“]‚³‚¹‚Ä“\‚è•t‚¯‚Ä?A‚»‚ÌŒã?A?À•W‚Ì‰ñ“]‚ðŒ³‚É–ß‚·‚Æ‚¢‚¤ŠÖ?”?B
+	//”wŒi‰æ‚ð?A‰æ‘œ‚Ì?¶?ã‚Í‚µ‚ð?AƒEƒBƒ“ƒhƒE‚Ì(0,0)‚É?‡‚úž¹‚Ä‰ñ“]‚âŠg‘å‚È‚µ‚Å•\Ž¦‚µ‚½???‡‚ðŠ????ó‘Ô‚Æ‚·‚é?B
+//”wŒi‰æ?ã‚Ì“_h1‚ð’†?S‚Æ‚µ‚Äa”{Šg‘å‚·‚é?BŽŸ‚É?Ah1‚ð“WŠJ?}?ã‚Ì“_h3‚Æ?d‚È‚é‚æ‚¤‚É”wŒi‰æ‚ð•½?sˆÚ“®‚·‚é?B‚±‚Ì?ó‘Ô‚Ì“WŠJ?}‚ð?Ah3‚ð’†?S‚Éb“x‰ñ“]‚µ‚½‚æ‚¤Œ©‚¦‚é‚æ‚¤‚É?À•W‚ð‰ñ“]‚³‚¹‚Ä“\‚è•t‚¯‚Ä?A‚»‚ÌŒã?A?À•W‚Ì‰ñ“]‚ðŒ³‚É–ß‚·‚Æ‚¢‚¤ŠÖ???B
 //ˆø?”‚Í?AGraphics2D g2h,Image imgh,Ten h1,Ten h2,Ten h3,Ten h4
 //h2,‚Æh4‚à?d‚È‚é‚æ‚¤‚É‚·‚é
 	OritaCalc oc = new OritaCalc();
@@ -158,7 +159,7 @@ public class Haikei_camera {//ŽÀ?Û‚Ì?À•W‚Æ?A•\Ž¦?À•W‚Ì’‡—§‚¿
 		haikei_takasa = d0;
 	}
 
-//?@g.drawImage(BufferedImageŒ^•Ï?”–¼,‰¡ˆÊ’u,?cˆÊ’u,•\Ž¦•?,•\Ž¦?‚‚³,this);
+//?@g.drawImage(BufferedImageŒ^•Ï?”–¼,‰¡ˆÊ’u,?cˆÊ’u,•\Ž¦??,•\Ž¦?‚‚³,this);
 //  g.drawImage(image, x0,y0,x1,y1,this);
 
 

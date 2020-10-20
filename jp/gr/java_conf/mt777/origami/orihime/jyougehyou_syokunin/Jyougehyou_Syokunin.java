@@ -6,11 +6,14 @@ import jp.gr.java_conf.mt777.origami.dougu.camera.Camera;
 import jp.gr.java_conf.mt777.origami.dougu.tensyuugou.Tensyuugou;
 import jp.gr.java_conf.mt777.origami.orihime.ap;
 import jp.gr.java_conf.mt777.origami.orihime.jyougehyou_syokunin.jyougehyou.Jyougehyou;
+import jp.gr.java_conf.mt777.origami.orihime.jyougehyou_syokunin.jyougehyou.touka_jyouken.Touka_jyouken;
 import jp.gr.java_conf.mt777.origami.orihime.jyougehyou_syokunin.smen.Smen;
 import jp.gr.java_conf.mt777.origami.orihime.tenkaizu_syokunin.Tenkaizu_Syokunin;
+import jp.gr.java_conf.mt777.seiretu.narabebako.Narabebako_int_double;
 import jp.gr.java_conf.mt777.seiretu.narabebako.int_double;
 import jp.gr.java_conf.mt777.zukei2d.oritaoekaki.OritaOekaki;
 import jp.gr.java_conf.mt777.zukei2d.senbun.Senbun;
+import jp.gr.java_conf.mt777.zukei2d.ten.Ten;
 
 import java.awt.*;
 import java.math.BigDecimal;
@@ -19,13 +22,13 @@ import java.util.Random;
 
 public class Jyougehyou_Syokunin {//?ã‰º•\?@?Ü‚è‚½‚½‚Ş‘O‚Ì“WŠJ?}‚Ì–Ê‚ª?Ü‚è‚½‚½‚ñ‚¾‚ ‚Æ‚Å‚Ç‚Ì‚æ‚¤‚È?ã‰ºŠÖŒW‚É‚È‚é‚©‚ğ‹L˜^‚µŠˆ—p‚·‚é
 	//String c=new String();
-	//int Mensuu;             //?Ü‚è‚½‚½‚Ş‘O‚Ì“WŠJ?}‚Ì–Ê‚Ì?” 
+	//int Mensuu;             //?Ü‚è‚½‚½‚Ş‘O‚Ì“WŠJ?}‚Ì–Ê‚Ì?? 
 	Jyougehyou jg = new Jyougehyou();
 	//Jyougehyou jg;// =new Jyougehyou();
 	//Jyougehyou jg_syokiti =new Jyougehyou();//“WŠJ?}‚Ì‚İ‚©‚ç“¾‚ç‚ê‚é?ã‰ºŠÖŒW‚ğ‹L˜^‚µ‚Ä‚¨‚­?B
-	int Smensuu;//Smen‚Ì?”
-	int Smen_yuukou_suu;//Smen‚Í‘S‚Ä’²‚×‚È‚­‚Ä‚à?AMen‚Ì?ã‰ºŠÖŒW‚Í–Ô—…‚Å‚«‚é?BMen‚Ì?ã‰ºŠÖŒW‚ğ–Ô—…‚·‚é‚Ì‚É•K—v‚ÈSmen‚Ì?”‚ª—D?æ?‡ˆÊ‚Ì‰½”Ô–Ú‚Ü‚Å‚©‚ğ‚³‚ª‚·?B
-	int Menidsuu_max;//ŠeSmen‚Ì?‚ÂMenidsuu‚Ì?Å‘å’l?B‚·‚È‚í‚¿?A?Å‚à†‚É?d‚È‚è‚ª‘½‚¢‚Æ‚±‚ë‚Ì–‡?”?B
+	int Smensuu;//Smen‚Ì??
+	int Smen_yuukou_suu;//Smen‚Í‘S‚Ä’²‚×‚È‚­‚Ä‚à?AMen‚Ì?ã‰ºŠÖŒW‚Í–Ô—…‚Å‚«‚é?BMen‚Ì?ã‰ºŠÖŒW‚ğ–Ô—…‚·‚é‚Ì‚É•K—v‚ÈSmen‚Ì?”‚ª—D???‡ˆÊ‚Ì‰½”Ô–Ú‚Ü‚Å‚©‚ğ‚³‚ª‚·?B
+	int Menidsuu_max;//ŠeSmen‚Ì??‚ÂMenidsuu‚Ì?Å‘å’l?B‚·‚È‚í‚¿?A?Å‚à†‚É?d‚È‚è‚ª‘½‚¢‚Æ‚±‚ë‚Ì–‡???B
 	//paint —p‚ÌintŠi”[—pVVVVVVVVVVVVVVVVVVVVVV
 	int ip1 = 0; //0‚Í?Ü‚è?ô‚İ?}‚Ì•\‘¤‚ğ•\¦‚·‚éƒ‚?[ƒh?B1‚Í?Ü‚è?ô‚İ?}‚Ì— ‘¤‚ğ•\¦‚·‚éƒ‚?[ƒh?B
 	// int ip1,ip2,ip3,ip4,ip5;
@@ -102,8 +105,8 @@ public class Jyougehyou_Syokunin {//?ã‰º•\?@?Ü‚è‚½‚½‚Ş‘O‚Ì“WŠJ?}‚Ì–Ê‚ª?Ü‚è‚½‚½‚ñ
 	}
 
 	//?@‚±‚±‚Í  class Jyougehyou_Syokunin  ‚Ì’†‚Å‚·?B
-	//?ã‰º•\‚Ì?‰Šú?İ’è?B“WŠJ?}‚É1’¸“_‚©‚çŠï?”‚Ì?Ü?ü‚ª‚Å‚éŒë‚è‚ª‚ ‚é?ê?‡0‚ğ•Ô‚·?B‚»‚ê‚ª–³‚¯‚ê‚Î1000‚ğ•Ô‚·?B
-	//“WŠJ?}‚ÉR’J?Ü?ü‚ÌŠg’£‚É‚æ‚éŒë‚è‚ª‚ ‚é?ê?‡2‚ğ•Ô‚·?B
+	//?ã‰º•\‚Ì?‰Š??İ’è?B“WŠJ?}‚É1’¸“_‚©‚çŠï?”‚Ì?Ü??‚ª‚Å‚éŒë‚è‚ª‚ ‚é????0‚ğ•Ô‚·?B‚»‚ê‚ª–³‚¯‚ê‚Î1000‚ğ•Ô‚·?B
+	//“WŠJ?}‚ÉR’J?Ü??‚ÌŠg’£‚É‚æ‚éŒë‚è‚ª‚ ‚é????2‚ğ•Ô‚·?B
 
 	//----------------------------------------------------------------------
 /*
@@ -113,13 +116,13 @@ public class Jyougehyou_Syokunin {//?ã‰º•\?@?Ü‚è‚½‚½‚Ş‘O‚Ì“WŠJ?}‚Ì–Ê‚ª?Ü‚è‚½‚½‚ñ
        }
 */
 	public void Smen_settei(Tenkaizu_Syokunin orite, Tensyuugou otta_Men_zu, Tensyuugou Smen_zu) {//js.Jyougehyou_settei(ts1,ts2.get(),ts3.get());
-		//–Ê(?Ü‚è‚½‚½‚Ş‘O‚Ì“WŠJ?}‚Ì–Ê‚Ì‚±‚Æ)‚Ì?ã‰º•\‚ğ?ì‚é?B
-		//‚±‚ê‚É‚Íts2‚Ì?‚Â“_?W?‡?i?Ü‚è‚½‚½‚ñ‚¾‚ ‚Æ‚Ì–Ê‚ÌˆÊ’uŠÖŒW‚Ì?î•ñ‚ğ?‚Â?j‚Æ  <-------------otta_Men_zu
-		//ts3‚Ì?‚Â“_?W?‡?i?j‹à?}‚Å–Ê‚ğ?×•ªŠ„‚µ‚½Smen‚Ì?î•ñ‚ğ?‚Â?j‚ğg‚¤?B <-------------Smen_zu
-		//‚Ü‚½?Ats1‚Ì?‚Â?A?Ü‚Á‚½‚Æ‚«‚Ì–Ê‚ÌˆÊ’uŠÖŒW‚Ì?î•ñ‚àg‚¤?B
+		//–Ê(?Ü‚è‚½‚½‚Ş‘O‚Ì“WŠJ?}‚Ì–Ê‚Ì‚±‚Æ)‚Ì?ã‰º•\‚ğ??‚é?B
+		//‚±‚ê‚É‚Íts2‚Ì??‚Â“_?W???i?Ü‚è‚½‚½‚ñ‚¾‚ ‚Æ‚Ì–Ê‚ÌˆÊ’uŠÖŒW‚Ì?û±ñ‚ğ?‚Â?j‚Æ  <-------------otta_Men_zu
+		//ts3‚Ì??‚Â“_?W???i?j‹à?}‚Å–Ê‚ğ?×•ªŠ„‚µ‚½Smen‚Ì?û±ñ‚ğ?‚Â?j‚ğg‚¤?B <-------------Smen_zu
+		//‚Ü‚½?Ats1‚Ì??‚Â?A?Ü‚Á‚½‚Æ‚«‚Ì–Ê‚ÌˆÊ’uŠÖŒW‚Ì?û±ñ‚àg‚¤?B
 
 
-		System.out.println("Smen‚Ì?‰Šú?İ’è");
+		System.out.println("Smen‚Ì?‰Š??İ’è");
 		reset();
 		Smensuu = Smen_zu.getMensuu();
 		//4915                      System.out.print("Smensuu = "); System.out.println(Smensuu);System.exit(0);
@@ -170,7 +173,7 @@ public class Jyougehyou_Syokunin {//?ã‰º•\?@?Ü‚è‚½‚½‚Ş‘O‚Ì“WŠJ?}‚Ì–Ê‚ª?Ü‚è‚½‚½‚ñ
 			for(int j=1;j<=jg.getMensuu();j++){
 				//if(otta_Men_zu.naibu(Smen_zu.naibuTen_motome(i),j)==2){
 				if(otta_Men_zu.kantan_naibu(Smen_naibuTen[i],j)==2){
-					s0[i].addMenid(j)	;//‚±‚±‚Å–Ê”Ô?†j‚Í?¬‚³‚¢•û‚ª?æ‚É’Ç‰Á‚³‚ê‚é?B
+					s0[i].addMenid(j)	;//‚±‚±‚Å–Ê”Ô??j‚Í?¬‚³‚¢•û‚ª?æ‚É’Ç‰Á‚³‚ê‚é?B
 				}
 			}
                         s0[i].setKetasuu();
@@ -179,12 +182,12 @@ public class Jyougehyou_Syokunin {//?ã‰º•\?@?Ü‚è‚½‚½‚Ş‘O‚Ì“WŠJ?}‚Ì–Ê‚ª?Ü‚è‚½‚½‚ñ
 
 		for (int i = 1; i <= Smensuu; i++) {
 			int s0addMenidsuu = 0;
-			//System.out.println("Œ»?İ?ˆ—?’†‚ÌSmen‚Í?A"+i+" / "+Smensuu );
+			//System.out.println("Œ»?İ????’†‚ÌSmen‚Í?A"+i+" / "+Smensuu );
 			//for(int j=1;j<=jg.getMensuu();j++){
 
 			for (int j = 1; j <= otta_Men_zu.getMensuu(); j++) {
 
-				//System.out.print("Œ»?İ?ˆ—?’†‚ÌSmen‚Í?A"+i+" / "+Smensuu +"     :::     "   +j+"/"+jg.getMensuu()+"-");
+				//System.out.print("Œ»?İ????’†‚ÌSmen‚Í?A"+i+" / "+Smensuu +"     :::     "   +j+"/"+jg.getMensuu()+"-");
 				if (otta_Men_zu.kantan_naibu(Smen_naibuTen[i], j) == 2) {
 					//System.out.println(j);
 					s0addMenidsuu = s0addMenidsuu + 1;
@@ -193,22 +196,22 @@ public class Jyougehyou_Syokunin {//?ã‰º•\?@?Ü‚è‚½‚½‚Ş‘O‚Ì“WŠJ?}‚Ì–Ê‚ª?Ü‚è‚½‚½‚ñ
 
 			}
 			//if (s0addMenidsuu==0){
-			//System.out.println("**1** Œ»?İ?ˆ—?’†‚ÌSmen‚Í?A"+i+" / "+Smensuu+"  :::  s0addMenidsuu= "+s0addMenidsuu+" ::: –Ê?Ï= "+Smen_zu.menseki_motome(i));
+			//System.out.println("**1** Œ»?İ????’†‚ÌSmen‚Í?A"+i+" / "+Smensuu+"  :::  s0addMenidsuu= "+s0addMenidsuu+" ::: –Ê?Ï= "+Smen_zu.menseki_motome(i));
 			//}/////////20150308
 
 			s0[i].setKetasuu(s0addMenidsuu);
 
 			//System.out.println("**2**");
 			for (int j = 1; j <= s0addMenidsuu; j++) {
-				s0[i].setMenid(j, s0addMenid[j]);//‚±‚±‚Å–Ê”Ô?†j‚Í?¬‚³‚¢•û‚ª?æ‚É’Ç‰Á‚³‚ê‚é?B
+				s0[i].setMenid(j, s0addMenid[j]);//‚±‚±‚Å–Ê”Ô??j‚Í?¬‚³‚¢•û‚ª?æ‚É’Ç‰Á‚³‚ê‚é?B
 			}
 			//System.out.println("**3**");
 		}
 
 		//4956                     System.out.print("Smensuu = "); System.out.println(Smensuu);System.exit(0);
 		//‚±‚±‚Ü‚Å‚Å?ASmensuu??	Smen_zu.getMensuu()‚Ì‚Ü‚Ü‚©‚í‚è‚È‚µ?B
-		System.out.println("ŠeSmen‚ÉŠÜ‚Ü‚ê‚é–Ê‚Ì?”‚Ì“à‚Å?Å‘å‚Ì‚à‚Ì‚ğ‹?‚ß‚é");
-		//ŠeSmen‚ÉŠÜ‚Ü‚ê‚é–Ê‚Ì?”‚Ì“à‚Å?Å‘å‚Ì‚à‚Ì‚ğ‹?‚ß‚é?B
+		System.out.println("ŠeSmen‚ÉŠÜ‚Ü‚ê‚é–Ê‚Ì?”‚Ì“à‚Å?Å‘å‚Ì‚à‚Ì‚ğ??‚ß‚é");
+		//ŠeSmen‚ÉŠÜ‚Ü‚ê‚é–Ê‚Ì?”‚Ì“à‚Å?Å‘å‚Ì‚à‚Ì‚ğ??‚ß‚é?B
 		Menidsuu_max = 0;
 		for (int i = 1; i <= Smensuu; i++) {
 			if (s0[i].getMenidsuu() > Menidsuu_max) {
@@ -234,31 +237,31 @@ public class Jyougehyou_Syokunin {//?ã‰º•\?@?Ü‚è‚½‚½‚Ş‘O‚Ì“WŠJ?}‚Ì–Ê‚ª?Ü‚è‚½‚½‚ñ
 		int ireturn = 1000;
 		jg.setMensuu(otta_Men_zu.getMensuu());
 
-		//R?Ü‚è’J?Ü‚è‚Ì?î•ñ‚©‚çŒˆ’è‚³‚ê‚é?ã‰ºŠÖŒW‚ğ?ã‰º•\‚É“ü‚ê‚é
-		System.out.println("R?Ü‚è’J?Ü‚è‚Ì?î•ñ‚©‚çŒˆ’è‚³‚ê‚é?ã‰ºŠÖŒW‚ğ?ã‰º•\‚É“ü‚ê‚é");
+		//R?Ü‚è’J?Ü‚è‚Ì?û±ñ‚©‚çŒˆ’è‚³‚ê‚é?ã‰ºŠÖŒW‚ğ?ã‰º•\‚É“ü‚ê‚é
+		System.out.println("R?Ü‚è’J?Ü‚è‚Ì?û±ñ‚©‚çŒˆ’è‚³‚ê‚é?ã‰ºŠÖŒW‚ğ?ã‰º•\‚É“ü‚ê‚é");
 		int Mid_min, Mid_max;
 		for (int ib = 1; ib <= orite.getBousuu(); ib++) {
 			Mid_min = orite.Bou_moti_Menid_min_motome(ib);
 			Mid_max = orite.Bou_moti_Menid_max_motome(ib);
 			if (Mid_min != Mid_max) {//“WŠJ?}‚É‚¨‚¢‚Ä?A–_ib‚Ì—¼˜e‚É–Ê‚ª‚ ‚é
-				//if(orite.getcolor(ib)==1){//?Ô‚¢?ü‚ÅR?Ü‚è‚ğˆÓ–¡‚·‚é
-				if (otta_Men_zu.getcolor(ib) == 1) {//?Ô‚¢?ü‚ÅR?Ü‚è‚ğˆÓ–¡‚·‚é
-					if (orite.getiMeniti(Mid_min) % 2 == 1) {//–ÊMid_min‚ÍŠî?€–Ê‚Æ“¯‚¶Œü‚«(•\–Ê‚ª?ã‚ğŒü‚­)
+				//if(orite.getcolor(ib)==1){//?Ô‚¢??‚ÅR?Ü‚è‚ğˆÓ–¡‚·‚é
+				if (otta_Men_zu.getcolor(ib) == 1) {//?Ô‚¢??‚ÅR?Ü‚è‚ğˆÓ–¡‚·‚é
+					if (orite.getiMeniti(Mid_min) % 2 == 1) {//–ÊMid_min‚ÍŠî??–Ê‚Æ“¯‚¶Œü‚«(•\–Ê‚ª?ã‚ğŒ?‚­)
 						jg.set(Mid_min, Mid_max, 1);
 						jg.set(Mid_max, Mid_min, 0);
 					}
-					if (orite.getiMeniti(Mid_max) % 2 == 1) {//–ÊMid_max‚ÍŠî?€–Ê‚Æ“¯‚¶Œü‚«(•\–Ê‚ª?ã‚ğŒü‚­)
+					if (orite.getiMeniti(Mid_max) % 2 == 1) {//–ÊMid_max‚ÍŠî??–Ê‚Æ“¯‚¶Œü‚«(•\–Ê‚ª?ã‚ğŒ?‚­)
 						jg.set(Mid_max, Mid_min, 1);
 						jg.set(Mid_min, Mid_max, 0);
 					}
 				}
-				//if(orite.getcolor(ib)==2){//?Â‚¢?ü‚Å’J?Ü‚è‚ğˆÓ–¡‚·‚é
-				if (otta_Men_zu.getcolor(ib) == 2) {//?Â‚¢?ü‚Å’J?Ü‚è‚ğˆÓ–¡‚·‚é
-					if (orite.getiMeniti(Mid_min) % 2 == 1) {//–ÊMid_min‚ÍŠî?€–Ê‚Æ“¯‚¶Œü‚«(•\–Ê‚ª?ã‚ğŒü‚­)
+				//if(orite.getcolor(ib)==2){//?Â‚¢??‚Å’J?Ü‚è‚ğˆÓ–¡‚·‚é
+				if (otta_Men_zu.getcolor(ib) == 2) {//?Â‚¢??‚Å’J?Ü‚è‚ğˆÓ–¡‚·‚é
+					if (orite.getiMeniti(Mid_min) % 2 == 1) {//–ÊMid_min‚ÍŠî??–Ê‚Æ“¯‚¶Œü‚«(•\–Ê‚ª?ã‚ğŒ?‚­)
 						jg.set(Mid_min, Mid_max, 0);
 						jg.set(Mid_max, Mid_min, 1);
 					}
-					if (orite.getiMeniti(Mid_max) % 2 == 1) {//–ÊMid_max‚ÍŠî?€–Ê‚Æ“¯‚¶Œü‚«(•\–Ê‚ª?ã‚ğŒü‚­)
+					if (orite.getiMeniti(Mid_max) % 2 == 1) {//–ÊMid_max‚ÍŠî??–Ê‚Æ“¯‚¶Œü‚«(•\–Ê‚ª?ã‚ğŒ?‚­)
 						jg.set(Mid_max, Mid_min, 0);
 						jg.set(Mid_min, Mid_max, 1);
 					}
@@ -276,7 +279,7 @@ public class Jyougehyou_Syokunin {//?ã‰º•\?@?Ü‚è‚½‚½‚Ş‘O‚Ì“WŠJ?}‚Ì–Ê‚ª?Ü‚è‚½‚½‚ñ
 		//----------------------------------------------
 		orihime_ap.keijiban.tuiki("           Jyougehyou_settei   step2   start ");
 		System.out.println("“™‰¿?ğŒ?‚ğ?İ’è‚·‚é   ");
-		//“™‰¿?ğŒ?‚ğ?İ’è‚·‚é?B–_ib‚ğ‹«ŠE‚Æ‚µ‚Ä—×?Ú‚·‚é2‚Â‚Ì–Êim1,im2‚ª—L‚é?ê?‡?A?Ü‚è?ô‚İ?„’è‚µ‚½?ê?‡‚É
+		//“™‰¿?ğŒ?‚ğ?İ’è‚·‚é?B–_ib‚ğ‹«ŠE‚Æ‚µ‚Ä—×?Ú‚·‚é2‚Â‚Ì–Êim1,im2‚ª—L‚é?????A?Ü‚è?ô‚İ??’è‚µ‚½???‡‚É
 		//–_ib‚Ìˆê•”‚Æ?d‚È‚éˆÊ’u‚É—L‚é–Êim‚Í–Êim1‚Æ–Êim2‚É?ã‰º•ûŒü‚Å‹²‚Ü‚ê‚é‚±‚Æ‚Í‚È‚¢?B‚±‚Ì‚±‚Æ‚©‚ç
 		//gj[im1][im]=gj[im2][im]‚Æ‚¢‚¤“™‰¿?ğŒ?‚ª?¬‚è—§‚Â?B
 		for (int ib = 1; ib <= orite.getBousuu(); ib++) {
@@ -286,7 +289,7 @@ public class Jyougehyou_Syokunin {//?ã‰º•\?@?Ü‚è‚½‚½‚Ş‘O‚Ì“WŠJ?}‚Ì–Ê‚ª?Ü‚è‚½‚½‚ñ
 				for (int im = 1; im <= jg.getMensuu(); im++) {
 					if ((im != Mid_min) && (im != Mid_max)) {
 						if (otta_Men_zu.kantan_totu_naibu(ib, im) == 1) {
-							//‰º‚Ì‚Q‚Â‚Ìif‚Íb’è“I‚È?ˆ—??B‚ ‚Æ‚Å’u‚«Š·‚¦—\’è
+							//‰º‚Ì‚Q‚Â‚Ìif‚Íb’è“I‚È?????B‚ ‚Æ‚Å’u‚«Š·‚¦—\’è
 							if (otta_Men_zu.totu_naibu(0.5, ib, im) == 1) {
 								if (otta_Men_zu.totu_naibu(-0.5, ib, im) == 1) {
 									jg.addTouka_jyouken(im, Mid_min, im, Mid_max);
@@ -297,13 +300,13 @@ public class Jyougehyou_Syokunin {//?ã‰º•\?@?Ü‚è‚½‚½‚Ş‘O‚Ì“WŠJ?}‚Ì–Ê‚ª?Ü‚è‚½‚½‚ñ
 				}
 			}
 		}
-		System.out.print("‚R–Ê‚ªŠÖ—^‚·‚é“Ë‚«”²‚¯?ğŒ?‚Ì?”?@???@");
+		System.out.print("‚R–Ê‚ªŠÖ—^‚·‚é“Ë‚«”²‚¯?ğŒ?‚Ì???@???@");
 		System.out.println(jg.getTouka_jyoukensuu());
 		orihime_ap.keijiban.tuiki("           Jyougehyou_settei   step3   start ");
 		//“™‰¿?ğŒ?‚Ì’Ç‰Á?B–_ib‚Ì‹«ŠE‚Æ‚µ‚Ä—×?Ú‚·‚é2‚Â‚Ì–Êim1,im2‚ª—L‚è?A
-		//‚Ü‚½–_jb‚Ì‹«ŠE‚Æ‚µ‚Ä—×?Ú‚·‚é2‚Â‚Ì–Êim3,im4‚ª—L‚è?Aib‚Æjb‚ª•½?s‚Å?Aˆê•”?d‚È‚é?ê?‡?A?Ü‚è?ô‚İ?„’è‚µ‚½?ê?‡‚É
+		//‚Ü‚½–_jb‚Ì‹«ŠE‚Æ‚µ‚Ä—×?Ú‚·‚é2‚Â‚Ì–Êim3,im4‚ª—L‚è?Aib‚Æjb‚ª•½?s‚Å?Aˆê•”?d‚È‚é?????A?Ü‚è?ô‚İ??’è‚µ‚½???‡‚É
 		//–_ib‚Ì–Ê‚Æ–Êjb‚Ì–Ê‚ªi,j,i,j?@‚Ü‚½‚Í?@j,i,j,i?@‚Æ•À‚Ô‚±‚Æ‚Í‚È‚¢?B‚à‚µ‚±‚ê‚ª‚¨‚«‚½‚ç?A
-		//?Å?‰‚©‚ç3”Ô–Ú‚ÅŠÔˆá‚¢‚ª‹N‚«‚Ä‚¢‚é‚Ì‚Å?A‚±‚Ì3”Ô–Ú‚Ì‚Æ‚±‚ë‚ªSmen‚Å‰½Œ…–Ú‚©‚ğ‹?‚ß‚Ä?A‚±‚ÌŒ…‚ğ‚P?i‚ß‚é?B
+		//?Å?‰‚©‚ç3”Ô–Ú‚ÅŠÔˆá‚¢‚ª‹N‚«‚Ä‚¢‚é‚Ì‚Å?A‚±‚Ì3”Ô–Ú‚Ì‚Æ‚±‚ë‚ªSmen‚Å‰½Œ…–Ú‚©‚ğ??‚ß‚Ä?A‚±‚ÌŒ…‚ğ‚P?i‚ß‚é?B
 		int mi1, mi2, mj1, mj2;
 
 		for (int ib = 1; ib <= orite.getBousuu() - 1; ib++) {
@@ -325,12 +328,12 @@ public class Jyougehyou_Syokunin {//?ã‰º•\?@?Ü‚è‚½‚½‚Ş‘O‚Ì“WŠJ?}‚Ì–Ê‚ª?Ü‚è‚½‚½‚ñ
 				}
 			}
 		}
-		System.out.print("‚S–Ê‚ªŠÖ—^‚·‚é“Ë‚«”²‚¯?ğŒ?‚Ì?”?@???@");
+		System.out.print("‚S–Ê‚ªŠÖ—^‚·‚é“Ë‚«”²‚¯?ğŒ?‚Ì???@???@");
 		System.out.println(jg.get_uTouka_jyoukensuu());
 		//5154                      System.out.print("Smensuu = "); System.out.println(Smensuu);System.exit(0);
 
 		orihime_ap.keijiban.tuiki("           Jyougehyou_settei   step4   start ");
-		//’Ç‰Á?„’è
+		//’Ç‰Á??’è
 		int ituika;
 
 		ituika = tuika_suitei();
@@ -338,22 +341,22 @@ public class Jyougehyou_Syokunin {//?ã‰º•\?@?Ü‚è‚½‚½‚Ş‘O‚Ì“WŠJ?}‚Ì–Ê‚ª?Ü‚è‚½‚½‚ñ
 			return ituika;
 		}
 
-		System.out.println("’Ç‰Á?„’è ?I—¹‚µ?A?ã‰º•\‚ğ•Û‘¶------------------------?–?–?–?–?–?–?–?–?–?–?–?–?–?–?–?–?–?–?–?–?–");
+		System.out.println("’Ç‰Á??’è ?I—¹‚µ?A?ã‰º•\‚ğ•Û‘¶------------------------??????????????????????????????????????????");
 
-		//*************?Å?‰‚É?s‚¤‰‰ãˆ“I?„˜_‚ÌŒ‹‰Ê‚Ì•Û‘¶**************************
-		jg.jg_hozon();//R?Ü‚è’J?Ü‚è‚Ì?î•ñ‚©‚çŒˆ’è‚³‚ê‚é?ã‰ºŠÖŒW‚ğ•Û‘¶‚µ‚Ä‚¨‚­?B
+		//*************?Å?‰‚É?s‚¤‰‰ãˆ“I??˜_‚ÌŒ‹‰Ê‚Ì•Û‘¶**************************
+		jg.jg_hozon();//R?Ü‚è’J?Ü‚è‚Ì?û±ñ‚©‚çŒˆ’è‚³‚ê‚é?ã‰ºŠÖŒW‚ğ•Û‘¶‚µ‚Ä‚¨‚­?B
 		//************************************************************************
 		orihime_ap.keijiban.tuiki("           Jyougehyou_settei   step5   start ");
 //orihime_ap.keijiban.tuiki("00000           ");
-		//Smen–ˆ‚ÉˆÄ“à?‘‚ğ?ì‚é
-		System.out.println("Smen–ˆ‚ÉˆÄ“à?‘‚ğ?ì‚é");
+		//Smen–ˆ‚ÉˆÄ“à?‘‚???‚é
+		System.out.println("Smen–ˆ‚ÉˆÄ“à?‘‚???‚é");
 		for (int i = 1; i <= Smensuu; i++) {
 			//System.out.print("Smen");System.out.print(i);System.out.println("‚É‚Ä?B");
 			s0[i].setAnnaisyo(jg);
 		}
 
-		//s0‚É—D?æ?‡ˆÊ‚ğ‚Â‚¯‚é(‚±‚Ì‚Æ‚«jg‚Ì-100‚Ì‚Æ‚±‚ë‚ª•Ï‚é‚Æ‚±‚ë‚ª‚ ‚é)
-		System.out.println("Smen(s0)‚É—D?æ?‡ˆÊ‚ğ‚Â‚¯‚é");
+		//s0‚É—D???‡ˆÊ‚ğ‚Â‚¯‚é(‚±‚Ì‚Æ‚«jg‚Ì-100‚Ì‚Æ‚±‚ë‚ª•Ï‚é‚Æ‚±‚ë‚ª‚ ‚é)
+		System.out.println("Smen(s0)‚É—D???‡ˆÊ‚ğ‚Â‚¯‚é");
 		//‚Ü‚¸?A‘¼‚ÌSmen‚ÉŠÛ‚²‚ÆŠÜ‚Ü‚ê‚Ä‚¢‚éSmen‚ğ?œŠO‚·‚é
 
 		int[] Smen_no_dokujisei = new int[Smensuu + 1];  //<<<<<<<<<<<<<<<Smen‚Ì“Æ©?«
@@ -397,11 +400,11 @@ public class Jyougehyou_Syokunin {//?ã‰º•\?@?Ü‚è‚½‚½‚Ş‘O‚Ì“WŠJ?}‚Ì–Ê‚ª?Ü‚è‚½‚½‚ñ
 
 			for (int is0 = 1; is0 <= Smensuu; is0++) { //Smen‚ğ‚P‚©‚çSmensuu”Ô–Ú‚Ü‚ÅƒT?[ƒ`
 				int Sy;//Smenid_yusendo(is0)+Smen_no_dokujisei[is0] ‚ğŠi”[
-				if (s0_no_yusenjyun[is0] == 0) {//‚Ü‚¾—D?æ?‡ˆÊ‚ª‚Â‚¢‚Ä‚¢‚È‚¢Smen‚¾‚¯‚ğˆµ‚¤
+				if (s0_no_yusenjyun[is0] == 0) {//‚Ü‚¾—D???‡ˆÊ‚ª‚Â‚¢‚Ä‚¢‚È‚¢Smen‚¾‚¯‚ğˆµ‚¤
 					Sy = Smenid_yusendo(is0)/*+Smen_no_dokujisei[is0]*/;//<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 					if (yusendo_max < Sy) {
 						yusendo_max = Sy;
-						i_yusen = is0;// i_yusen‚ªi”Ô–Ú‚Ì—D?æ“x‚ğ’T‚µ‚Ä‚¢‚é?Û‚Ì?Å‚à—L—Í‚ÈŒó•â‚Ì”Ô?†
+						i_yusen = is0;// i_yusen‚ªi”Ô–Ú‚Ì—D?æ“x‚ğ’T‚µ‚Ä‚¢‚é?Û‚Ì?Å‚à—L—Í‚ÈŒó•â‚Ì”Ô??
 					}
 					if (yusendo_max == Sy) {
 						if (s0[i_yusen].getMenidsuu() < s0[is0].getMenidsuu()) {
@@ -437,7 +440,7 @@ public class Jyougehyou_Syokunin {//?ã‰º•\?@?Ü‚è‚½‚½‚Ş‘O‚Ì“WŠJ?}‚Ì–Ê‚ª?Ü‚è‚½‚½‚ñ
 
 		//System.out.println("------------" );
 		System.out.println("?ã‰º•\?E?l“à?@Smensuu = " + Smensuu);
-		System.out.println("?ã‰º•\?E?l“à?@s0‚É—D?æ?‡ˆÊ‚ğ‚Â‚¯‚é");
+		System.out.println("?ã‰º•\?E?l“à?@s0‚É—D???‡ˆÊ‚ğ‚Â‚¯‚é");
 		for (int i = 1; i <= Smensuu; i++) {
 			System.out.println(s0_no_yusenjyun[i]);
 		}
@@ -450,12 +453,12 @@ public class Jyougehyou_Syokunin {//?ã‰º•\?@?Ü‚è‚½‚½‚Ş‘O‚Ì“WŠJ?}‚Ì–Ê‚ª?Ü‚è‚½‚½‚ñ
 		for (int i = 1; i <= Smensuu; i++) {
 			//System.out.println(yusenjyun_kara_s0id[i]);
 			if (i_yusendo_max[yusenjyun_kara_s0id[i]] != 0) {
-				Smen_yuukou_suu = i;       //‘?‚¢‚ª•Ï‚ÈŒ‹‰Ê‚É‚È‚é‚±‚Æ‚ ‚è?B
+				Smen_yuukou_suu = i;       //??‚¢‚ª•Ï‚ÈŒ‹‰Ê‚É‚È‚é‚±‚Æ‚ ‚è?B
 //20191012 wwwww				Smen_yuukou_suu=Smensuu;//’x‚¢‚ªŠmÀ
 
 				//System.out.print("‘æ");
 				//System.out.print(i);
-				//System.out.print("ˆÊ(–¢’èƒyƒA?”??");
+				//System.out.print("ˆÊ(–¢’èƒyƒA????");
 				//System.out.print(i_yusendo_max[yusenjyun_kara_s0id[i]]);
 
 				//System.out.print("?@||?@");
@@ -473,7 +476,7 @@ public class Jyougehyou_Syokunin {//?ã‰º•\?@?Ü‚è‚½‚½‚Ş‘O‚Ì“WŠJ?}‚Ì–Ê‚ª?Ü‚è‚½‚½‚ñ
 			s[i] = s0[yusenjyun_kara_s0id[i]];
 		}
 
-		//—D?æ?‡ˆÊ‚ğ‹t“]‚³‚¹‚é?B‚±‚ê‚ª—LŒø‚©‚Ç‚¤‚©‚Í•s–¾wwwww
+		//—D???‡ˆÊ‚ğ‹t“]‚³‚¹‚é?B‚±‚ê‚ª—LŒø‚©‚Ç‚¤‚©‚Í•s–¾wwwww
 		//for(int i=1;i<=Smen_yuukou_suu;i++){s[Smen_yuukou_suu-i+1]=s0[yusenjyun_kara_s0id[i]];}
 
 /*
@@ -481,9 +484,9 @@ public class Jyougehyou_Syokunin {//?ã‰º•\?@?Ü‚è‚½‚½‚Ş‘O‚Ì“WŠJ?}‚Ì–Ê‚ª?Ü‚è‚½‚½‚ñ
                        if(i_yusendo_max[yusenjyun_kara_s0id[i]]!=0){
 				System.out.print("‘æ");
 				System.out.print(i);
-				System.out.print("ˆÊ(–¢’èƒyƒA?”??");
+				System.out.print("ˆÊ(–¢’èƒyƒA????");
 				System.out.print(i_yusendo_max[yusenjyun_kara_s0id[i]]);
-				System.out.print("?A–Ê?”??");
+				System.out.print("?A–Ê????");
 				System.out.print(s[i].getMenidsuu());
 				System.out.print("?@||?@");
 			}
@@ -492,7 +495,7 @@ public class Jyougehyou_Syokunin {//?ã‰º•\?@?Ü‚è‚½‚½‚Ş‘O‚Ì“WŠJ?}‚Ì–Ê‚ª?Ü‚è‚½‚½‚ñ
 		System.out.println();
 */
 
-		//Smen‚Í—D?æ?‡‚Ì‰½”Ô–Ú‚Ü‚Å‚â‚é‚©‚ğŒˆ‚ß‚é
+		//Smen‚Í—D???‡‚Ì‰½”Ô–Ú‚Ü‚Å‚â‚é‚©‚ğŒˆ‚ß‚é
 /*
 		for(int i=1;i<=Smensuu;i++){
 	  		if(s[i].getMenidsuu()>=1){
@@ -507,10 +510,10 @@ public class Jyougehyou_Syokunin {//?ã‰º•\?@?Ü‚è‚½‚½‚Ş‘O‚Ì“WŠJ?}‚Ì–Ê‚ª?Ü‚è‚½‚½‚ñ
 		System.out.println(Smensuu);
 
 
-		//jg.jg_hozon();//R?Ü‚è’J?Ü‚è‚Ì?î•ñ‚©‚çŒˆ’è‚³‚ê‚é?ã‰ºŠÖŒW‚ğ•Û‘¶‚µ‚Ä‚¨‚­?B
+		//jg.jg_hozon();//R?Ü‚è’J?Ü‚è‚Ì?û±ñ‚©‚çŒˆ’è‚³‚ê‚é?ã‰ºŠÖŒW‚ğ•Û‘¶‚µ‚Ä‚¨‚­?B
 
 
-		//jg[][]‚Ì?d‚È‚è‚Ì‚ ‚é–Ê‚Ì‘g‚İ?‡‚í‚¹‚ÌˆÊ’u‚Ì’l‚ğ-100‚©‚ç-50‚É•Ï‚¦‚é?B
+		//jg[][]‚Ì?d‚È‚è‚Ì‚ ‚é–Ê‚Ì‘g‚İ?‡‚ú¹‚ÌˆÊ’u‚Ì’l‚ğ-100‚©‚ç-50‚É•Ï‚¦‚é?B
 		for (int k = 1; k <= Smensuu; k++) {
 			for (int i = 1; i <= s[k].getMenidsuu() - 1; i++) {
 				for (int j = i + 1; j <= s[k].getMenidsuu(); j++) {
@@ -521,10 +524,10 @@ public class Jyougehyou_Syokunin {//?ã‰º•\?@?Ü‚è‚½‚½‚Ş‘O‚Ì“WŠJ?}‚Ì–Ê‚ª?Ü‚è‚½‚½‚ñ
 		}
 
 
-		System.out.println("?ã‰º•\?‰Šú?İ’è?I—¹");
+		System.out.println("?ã‰º•\?‰Š??İ’è?I—¹");
 
 
-//		jg.jg_hozon();//R?Ü‚è’J?Ü‚è‚Ì?î•ñ‚©‚çŒˆ’è‚³‚ê‚é?ã‰ºŠÖŒW‚ğ•Û‘¶‚µ‚Ä‚¨‚­?B
+//		jg.jg_hozon();//R?Ü‚è’J?Ü‚è‚Ì?û±ñ‚©‚çŒˆ’è‚³‚ê‚é?ã‰ºŠÖŒW‚ğ•Û‘¶‚µ‚Ä‚¨‚­?B
 
 		//System.out.print("–Ê?”‚Í1?@");  System.out.println(s[1].getMenidsuu());
 		return ireturn;
@@ -532,16 +535,16 @@ public class Jyougehyou_Syokunin {//?ã‰º•\?@?Ü‚è‚½‚½‚Ş‘O‚Ì“WŠJ?}‚Ì–Ê‚ª?Ü‚è‚½‚½‚ñ
 
 	//------------------------------------------------------------
 	public int tuika_suitei() {
-		//R?Ü‚è’J?Ü‚è‚Ì?î•ñ‚©‚ç?X‚ÉŒˆ’è‚Å‚«‚éŠÖŒW‚ğ?„‘ª‚µ‚Ä‚¢‚­?B
+		//R?Ü‚è’J?Ü‚è‚Ì?û±ñ‚©‚ç?X‚ÉŒˆ’è‚Å‚«‚éŠÖŒW‚ğ?„‘ª‚µ‚Ä‚¢‚­?B
 
 		int Mid;//3–Ê‚Ì”äŠr‚Å’†ŠÔ‚É‚­‚é–Ê
 		int flg_c = 1;
-		System.out.println("’Ç‰Á?„’èŠJn---------------------?–?–?–?–?–?–?–?–?–?–?–?–?–?–?–?–?–?–?–?–?–?–");
+		System.out.println("’Ç‰Á??’èŠJn---------------------????????????????????????????????????????????");
 
 		while (flg_c >= 1) {
 			flg_c = 0;
-			System.out.println("’Ç‰Á?„’è------------------------");
-			//System.out.println("R?Ü‚è’J?Ü‚è‚Ì?î•ñ‚©‚ç’Ç‰Á?„’è   " );
+			System.out.println("’Ç‰Á??’è------------------------");
+			//System.out.println("R?Ü‚è’J?Ü‚è‚Ì?û±ñ‚©‚ç’Ç‰Á??’è   " );
 
 			int flg_b = 1;
 			while (flg_b >= 1) {
@@ -553,8 +556,8 @@ public class Jyougehyou_Syokunin {//?ã‰º•\?@?Ü‚è‚½‚½‚Ş‘O‚Ì“WŠJ?}‚Ì–Ê‚ª?Ü‚è‚½‚½‚ñ
 					while (flg_a >= 1) {
 						flg_a = 0;
 						for (int iM = 1; iM <= s0[iS].getMenidsuu(); iM++) {//3–Ê‚Ì”äŠr‚Å’†ŠÔ‚É‚­‚é–Ê
-							int[] ueMenid = new int[s0[iS].getMenidsuu() + 1];//S–Ê‚ÉŠÜ‚Ü‚ê‚é‚ ‚éMen‚Ì?ã‚ª‚í‚É‚ ‚éid”Ô?†‚ğ‹L˜^‚·‚é?B‚±‚ê‚ª20‚Æ‚¢‚¤‚±‚Æ‚Í?A
-							int[] sitaMenid = new int[s0[iS].getMenidsuu() + 1];//S–Ê‚ÉŠÜ‚Ü‚ê‚é‚ ‚éMen‚Ì‰º‚ª‚í‚É‚ ‚éid”Ô?†‚ğ‹L˜^‚·‚é?B‚±‚ê‚ª20‚Æ‚¢‚¤‚±‚Æ‚Í?A
+							int[] ueMenid = new int[s0[iS].getMenidsuu() + 1];//S–Ê‚ÉŠÜ‚Ü‚ê‚é‚ ‚éMen‚Ì?ã‚ª‚í‚É‚ ‚éid”Ô??‚ğ‹L˜^‚·‚é?B‚±‚ê‚ª20‚Æ‚¢‚¤‚±‚Æ‚Í?A
+							int[] sitaMenid = new int[s0[iS].getMenidsuu() + 1];//S–Ê‚ÉŠÜ‚Ü‚ê‚é‚ ‚éMen‚Ì‰º‚ª‚í‚É‚ ‚éid”Ô??‚ğ‹L˜^‚·‚é?B‚±‚ê‚ª20‚Æ‚¢‚¤‚±‚Æ‚Í?A
 							int ueMenid_max = 0;
 							int sitaMenid_max = 0;
 							Mid = s0[iS].getMenid(iM);
@@ -563,10 +566,10 @@ public class Jyougehyou_Syokunin {//?ã‰º•\?@?Ü‚è‚½‚½‚Ş‘O‚Ì“WŠJ?}‚Ì–Ê‚ª?Ü‚è‚½‚½‚ñ
 							//‚±‚ÌSmenˆÈŠO‚Å–ÊA‚Í–ÊMid‚Ì?ã‘¤?A–ÊB‚Í–ÊMid‚Ì‰º‘¤‚ÆŒˆ‚Ü‚Á‚Ä‚¢‚½‚Æ‚·‚é?B
 							//ˆê”Ê‚É•Ê?X‚ÌSmen‚Å?A–ÊA‚Í–ÊMid‚Ì?ã‘¤‚Å?A–ÊB‚Í–ÊMid‚Ì‰º‘¤‚¾‚Á‚½‚©‚ç‚ÆŒ¾‚Á‚Ä?A–ÊA‚Í–ÊB‚Ì?ã‘¤‚Æ‚ÍŒˆ’è‚Å‚«‚È‚¢?B
 							//‚µ‚©‚µ?A‚±‚±‚ªƒ|ƒCƒ“ƒg‚¾‚ª?A–ÊA?A–ÊMid?A–ÊB‚ª‚¢‚Á‚µ‚å‚ÉŠÜ‚Ü‚ê‚Ä‚¢‚éSmen‚ª‚ ‚é‚È‚ç?A‚»‚ÌSmen‚Ì?ã‰ºŠÖŒW‚ª‚í‚©‚Á‚Ä‚¢‚È‚­‚Ä‚à
-							//–ÊA‚Í–ÊB‚Ì?ã‘¤‚Æ‚È‚é?B‚¾‚©‚ç?A‚±‚Ì‘€?ì‚Å‚Í‚ ‚éSmen‚©‚ç“¾‚é?î•ñ‚Í‚R‚Â‚Ì–Ê‚ª‚¢‚Á‚µ‚å‚É‚ ‚é‚©‚Æ‚¢‚¤‚±‚Æ‚Å‚ ‚é?B
+							//–ÊA‚Í–ÊB‚Ì?ã‘¤‚Æ‚È‚é?B‚¾‚©‚ç?A‚±‚Ì‘€??‚Å‚Í‚ ‚éSmen‚©‚ç“¾‚é?û±ñ‚Í‚R‚Â‚Ì–Ê‚ª‚¢‚Á‚µ‚å‚É‚ ‚é‚©‚Æ‚¢‚¤‚±‚Æ‚Å‚ ‚é?B
 							//‚ ‚éSmen“à‚Ì?ã‰ºŠÖŒW‚Í•K—v‚È‚¢?B
 							//
-							//‚±‚±‚Ì‘€?ì‚Í‚ ‚éSmen‚Ì?ã‰ºŠÖŒW‚ğ?ã‰º•\‚©‚ç?Ì?W‚µ‚Ä‚¢‚é?B
+							//‚±‚±‚Ì‘€??‚Í‚ ‚éSmen‚Ì?ã‰ºŠÖŒW‚ğ?ã‰º•\‚©‚ç?Ì?W‚µ‚Ä‚¢‚é?B
 							for (int i = 1; i <= s0[iS].getMenidsuu(); i++) {//Menid[iM]‚æ‚è?ã‚É‚ ‚é–Ê?B
 								if (iM != i) {
 									if (jg.get(Mid, s0[iS].getMenid(i)) == 0) {
@@ -586,7 +589,7 @@ public class Jyougehyou_Syokunin {//?ã‰º•\?@?Ü‚è‚½‚½‚Ş‘O‚Ì“WŠJ?}‚Ì–Ê‚ª?Ü‚è‚½‚½‚ñ
 							for (int iuM = 1; iuM <= ueMenid_max; iuM++) {//Menid[iM]‚æ‚è?ã‚É‚ ‚é–Ê?B
 								for (int isM = 1; isM <= sitaMenid_max; isM++) {//Menid[iM]‚æ‚è‰º‚É‚ ‚é–Ê?B
 
-									//  System.out.print(ueMenid[iuM]);System.out.print("<-?ã:‰º->");System.out.println(sitaMenid[isM]);
+									//  System.out.print(ueMenid[iuM]);System.out.print("<-??:‰º->");System.out.println(sitaMenid[isM]);
 
 
 									if (jg.get(ueMenid[iuM], sitaMenid[isM]) == 0) {
@@ -617,16 +620,16 @@ public class Jyougehyou_Syokunin {//?ã‰º•\?@?Ü‚è‚½‚½‚Ş‘O‚Ì“WŠJ?}‚Ì–Ê‚ª?Ü‚è‚½‚½‚ñ
 
 				}
 
-				//System.out.print("?„‘ª‚³‚ê‚½ŠÖŒW‚Ì?” ?? ");System.out.println(flg_b);
+				//System.out.print("?„‘ª‚³‚ê‚½ŠÖŒW‚Ì?? ?? ");System.out.println(flg_b);
 			}
 
 			//
-			//jg.jg_hozon();//R?Ü‚è’J?Ü‚è‚Ì?î•ñ‚©‚çŒˆ’è‚³‚ê‚é?ã‰ºŠÖŒW‚ğ•Û‘¶‚µ‚Ä‚¨‚­?B
+			//jg.jg_hozon();//R?Ü‚è’J?Ü‚è‚Ì?û±ñ‚©‚çŒˆ’è‚³‚ê‚é?ã‰ºŠÖŒW‚ğ•Û‘¶‚µ‚Ä‚¨‚­?B
 
 
 			//jg ‚Ìreset“K?Ø‚É?s‚í‚ê‚Ä‚¢‚é‚©Šm”F‚Ì‚±‚Æ
 
-			//System.out.println ("‚R–Ê‚ªŠÖ—^‚·‚é“Ë‚«”²‚¯?ğŒ?‚©‚ç’Ç‰Á?„’è   " );
+			//System.out.println ("‚R–Ê‚ªŠÖ—^‚·‚é“Ë‚«”²‚¯?ğŒ?‚©‚ç’Ç‰Á??’è   " );
 			//jg.addTouka_jyouken(im,Mid_min,im,Mid_max)qqqqqqqqqqqq
 			//(im,Mid_min,im,Mid_max);
 			Touka_jyouken tg = new Touka_jyouken();
@@ -717,7 +720,7 @@ public class Jyougehyou_Syokunin {//?ã‰º•\?@?Ü‚è‚½‚½‚Ş‘O‚Ì“WŠJ?}‚Ì–Ê‚ª?Ü‚è‚½‚½‚ñ
 
 			//----------------
 
-//	System.out.println ("‚S–Ê‚ªŠÖ—^‚·‚é“Ë‚«”²‚¯?ğŒ?‚©‚ç’Ç‰Á?„’è   " );
+//	System.out.println ("‚S–Ê‚ªŠÖ—^‚·‚é“Ë‚«”²‚¯?ğŒ?‚©‚ç’Ç‰Á??’è   " );
 			//jg.addTouka_jyouken(im,Mid_min,im,Mid_max)qqqqqqqqqqqq
 			//(im,Mid_min,im,Mid_max);
 			//Touka_jyouken tg = new Touka_jyouken();
@@ -1113,7 +1116,7 @@ public class Jyougehyou_Syokunin {//?ã‰º•\?@?Ü‚è‚½‚½‚Ş‘O‚Ì“WŠJ?}‚Ì–Ê‚ª?Ü‚è‚½‚½‚ñ
 		}
 
 
-		System.out.println("’Ç‰Á?„’è ?I—¹------------------------?–?–?–?–‚±‚±‚Ü‚Å20150310?–?–?–?–?–?–?–?–?–?–?–");
+		System.out.println("’Ç‰Á??’è ?I—¹------------------------???????–‚±‚±‚Ü‚Å20150310??????????????????????");
 
 		return 1000;
 
@@ -1122,16 +1125,16 @@ public class Jyougehyou_Syokunin {//?ã‰º•\?@?Ü‚è‚½‚½‚Ş‘O‚Ì“WŠJ?}‚Ì–Ê‚ª?Ü‚è‚½‚½‚ñ
 	//------------------------------------------
 
 	private int tuika_suitei_2() {
-		//R?Ü‚è’J?Ü‚è‚Ì?î•ñ‚©‚ç?X‚ÉŒˆ’è‚Å‚«‚éŠÖŒW‚ğ?„‘ª‚µ‚Ä‚¢‚­?B
+		//R?Ü‚è’J?Ü‚è‚Ì?û±ñ‚©‚ç?X‚ÉŒˆ’è‚Å‚«‚éŠÖŒW‚ğ?„‘ª‚µ‚Ä‚¢‚­?B
 
 		int Mid;//3–Ê‚Ì”äŠr‚Å’†ŠÔ‚É‚­‚é–Ê
 		int flg_c = 1;
-		System.out.println("’Ç‰Á?„’èŠJn---------------------?–?–?–?–?–?–?–?–?–?–?–?–?–?–?–?–?–?–?–?–?–?–");
+		System.out.println("’Ç‰Á??’èŠJn---------------------????????????????????????????????????????????");
 
 		while (flg_c >= 1) {
 			flg_c = 0;
-			System.out.println("’Ç‰Á?„’è------------------------");
-			//System.out.println("R?Ü‚è’J?Ü‚è‚Ì?î•ñ‚©‚ç’Ç‰Á?„’è   " );
+			System.out.println("’Ç‰Á??’è------------------------");
+			//System.out.println("R?Ü‚è’J?Ü‚è‚Ì?û±ñ‚©‚ç’Ç‰Á??’è   " );
 
 			int flg_b = 1;
 			while (flg_b >= 1) {
@@ -1143,8 +1146,8 @@ public class Jyougehyou_Syokunin {//?ã‰º•\?@?Ü‚è‚½‚½‚Ş‘O‚Ì“WŠJ?}‚Ì–Ê‚ª?Ü‚è‚½‚½‚ñ
 					while (flg_a >= 1) {
 						flg_a = 0;
 						for (int iM = 1; iM <= s0[iS].getMenidsuu(); iM++) {//3–Ê‚Ì”äŠr‚Å’†ŠÔ‚É‚­‚é–Ê
-							int[] ueMenid = new int[s0[iS].getMenidsuu() + 1];//S–Ê‚ÉŠÜ‚Ü‚ê‚é‚ ‚éMen‚Ì?ã‚ª‚í‚É‚ ‚éid”Ô?†‚ğ‹L˜^‚·‚é?B‚±‚ê‚ª20‚Æ‚¢‚¤‚±‚Æ‚Í?A
-							int[] sitaMenid = new int[s0[iS].getMenidsuu() + 1];//S–Ê‚ÉŠÜ‚Ü‚ê‚é‚ ‚éMen‚Ì‰º‚ª‚í‚É‚ ‚éid”Ô?†‚ğ‹L˜^‚·‚é?B‚±‚ê‚ª20‚Æ‚¢‚¤‚±‚Æ‚Í?A
+							int[] ueMenid = new int[s0[iS].getMenidsuu() + 1];//S–Ê‚ÉŠÜ‚Ü‚ê‚é‚ ‚éMen‚Ì?ã‚ª‚í‚É‚ ‚éid”Ô??‚ğ‹L˜^‚·‚é?B‚±‚ê‚ª20‚Æ‚¢‚¤‚±‚Æ‚Í?A
+							int[] sitaMenid = new int[s0[iS].getMenidsuu() + 1];//S–Ê‚ÉŠÜ‚Ü‚ê‚é‚ ‚éMen‚Ì‰º‚ª‚í‚É‚ ‚éid”Ô??‚ğ‹L˜^‚·‚é?B‚±‚ê‚ª20‚Æ‚¢‚¤‚±‚Æ‚Í?A
 							int ueMenid_max = 0;
 							int sitaMenid_max = 0;
 							Mid = s0[iS].getMenid(iM);
@@ -1153,10 +1156,10 @@ public class Jyougehyou_Syokunin {//?ã‰º•\?@?Ü‚è‚½‚½‚Ş‘O‚Ì“WŠJ?}‚Ì–Ê‚ª?Ü‚è‚½‚½‚ñ
 							//‚±‚ÌSmenˆÈŠO‚Å–ÊA‚Í–ÊMid‚Ì?ã‘¤?A–ÊB‚Í–ÊMid‚Ì‰º‘¤‚ÆŒˆ‚Ü‚Á‚Ä‚¢‚½‚Æ‚·‚é?B
 							//ˆê”Ê‚É•Ê?X‚ÌSmen‚Å?A–ÊA‚Í–ÊMid‚Ì?ã‘¤‚Å?A–ÊB‚Í–ÊMid‚Ì‰º‘¤‚¾‚Á‚½‚©‚ç‚ÆŒ¾‚Á‚Ä?A–ÊA‚Í–ÊB‚Ì?ã‘¤‚Æ‚ÍŒˆ’è‚Å‚«‚È‚¢?B
 							//‚µ‚©‚µ?A‚±‚±‚ªƒ|ƒCƒ“ƒg‚¾‚ª?A–ÊA?A–ÊMid?A–ÊB‚ª‚¢‚Á‚µ‚å‚ÉŠÜ‚Ü‚ê‚Ä‚¢‚éSmen‚ª‚ ‚é‚È‚ç?A‚»‚ÌSmen‚Ì?ã‰ºŠÖŒW‚ª‚í‚©‚Á‚Ä‚¢‚È‚­‚Ä‚à
-							//–ÊA‚Í–ÊB‚Ì?ã‘¤‚Æ‚È‚é?B‚¾‚©‚ç?A‚±‚Ì‘€?ì‚Å‚Í‚ ‚éSmen‚©‚ç“¾‚é?î•ñ‚Í‚R‚Â‚Ì–Ê‚ª‚¢‚Á‚µ‚å‚É‚ ‚é‚©‚Æ‚¢‚¤‚±‚Æ‚Å‚ ‚é?B
+							//–ÊA‚Í–ÊB‚Ì?ã‘¤‚Æ‚È‚é?B‚¾‚©‚ç?A‚±‚Ì‘€??‚Å‚Í‚ ‚éSmen‚©‚ç“¾‚é?û±ñ‚Í‚R‚Â‚Ì–Ê‚ª‚¢‚Á‚µ‚å‚É‚ ‚é‚©‚Æ‚¢‚¤‚±‚Æ‚Å‚ ‚é?B
 							//‚ ‚éSmen“à‚Ì?ã‰ºŠÖŒW‚Í•K—v‚È‚¢?B
 							//
-							//‚±‚±‚Ì‘€?ì‚Í‚ ‚éSmen‚Ì?ã‰ºŠÖŒW‚ğ?ã‰º•\‚©‚ç?Ì?W‚µ‚Ä‚¢‚é?B
+							//‚±‚±‚Ì‘€??‚Í‚ ‚éSmen‚Ì?ã‰ºŠÖŒW‚ğ?ã‰º•\‚©‚ç?Ì?W‚µ‚Ä‚¢‚é?B
 							for (int i = 1; i <= s0[iS].getMenidsuu(); i++) {//Menid[iM]‚æ‚è?ã‚É‚ ‚é–Ê?B
 								if (iM != i) {
 									if (jg.get(Mid, s0[iS].getMenid(i)) == 0) {
@@ -1176,7 +1179,7 @@ public class Jyougehyou_Syokunin {//?ã‰º•\?@?Ü‚è‚½‚½‚Ş‘O‚Ì“WŠJ?}‚Ì–Ê‚ª?Ü‚è‚½‚½‚ñ
 							for (int iuM = 1; iuM <= ueMenid_max; iuM++) {//Menid[iM]‚æ‚è?ã‚É‚ ‚é–Ê?B
 								for (int isM = 1; isM <= sitaMenid_max; isM++) {//Menid[iM]‚æ‚è‰º‚É‚ ‚é–Ê?B
 
-									/**/      //  System.out.print(ueMenid[iuM]);System.out.print("<-?ã:‰º->");System.out.println(sitaMenid[isM]);
+									/**/      //  System.out.print(ueMenid[iuM]);System.out.print("<-??:‰º->");System.out.println(sitaMenid[isM]);
 
 
 									if (jg.get(ueMenid[iuM], sitaMenid[isM]) == 0) {
@@ -1208,11 +1211,11 @@ public class Jyougehyou_Syokunin {//?ã‰º•\?@?Ü‚è‚½‚½‚Ş‘O‚Ì“WŠJ?}‚Ì–Ê‚ª?Ü‚è‚½‚½‚ñ
 
 			}
 
-			//System.out.print("?„‘ª‚³‚ê‚½ŠÖŒW‚Ì?” ?? ");System.out.println(flg_b);
+			//System.out.print("?„‘ª‚³‚ê‚½ŠÖŒW‚Ì?? ?? ");System.out.println(flg_b);
 		}
 
 
-		System.out.println("’Ç‰Á?„’è ?I—¹------------------------?–?–?–?–?–?–?–?–?–?–?–?–?–?–?–?–?–?–?–?–?–");
+		System.out.println("’Ç‰Á??’è ?I—¹------------------------??????????????????????????????????????????");
 
 		return 1000;
 
@@ -1242,7 +1245,7 @@ public class Jyougehyou_Syokunin {//?ã‰º•\?@?Ü‚è‚½‚½‚Ş‘O‚Ì“WŠJ?}‚Ì–Ê‚ª?Ü‚è‚½‚½‚ñ
 
 	}
 
-	//s0(Smen)‚Ì—D?æ“x‚ğ¦‚·’l‚ğ‹?‚ß‚é?B‚±‚Ì’l‚ª?‚‚¢‚Ù‚¤‚ª—D?æ“x‚ª?ã?i”z—ñ‚Ì?æ“ª‚É‹ß‚¢?B?j
+	//s0(Smen)‚Ì—D?æ“x‚ğ¦‚·’l‚ğ??‚ß‚é?B‚±‚Ì’l‚ª?‚‚¢‚Ù‚¤‚ª—D?æ“x‚ª???i”z—ñ‚Ì?æ“ª‚É‹ß‚¢?B?j
 	int Smenid_yusendo(int s0id) {
 		//return s0[s0id].getMenidsuu();
 
@@ -1299,8 +1302,8 @@ public class Jyougehyou_Syokunin {//?ã‰º•\?@?Ü‚è‚½‚½‚Ş‘O‚Ì“WŠJ?}‚Ì–Ê‚ª?Ü‚è‚½‚½‚ñ
 	//zzzzzzzz
 
 	public int susumu(int ss) {
-		int isusumu;//=0‚Ì?ê?‡Smen‚ª•Ï‚í‚é?iŒ…‚ª•Ï‚é‚æ‚¤‚ÈƒCƒ??[ƒW?j?B
-		int Sid;//•Ï‰»‚ª‹y‚ñ‚¾Smen‚Ìid”Ô?†
+		int isusumu;//=0‚Ì???‡Smen‚ª•Ï‚í‚é?iŒ…‚ª•Ï‚é‚æ‚¤‚ÈƒC???[ƒW?j?B
+		int Sid;//•Ï‰»‚ª‹y‚ñ‚¾Smen‚Ìid”Ô??
 		isusumu = 0;
 		//ss+1”Ô–ÚˆÈ?ã‚ÌSmen‚Í‚İ‚È?‰Šú’l‚É‚·‚é?BSmen‚ÉŠÜ‚Ü‚ê‚é–Ê?”‚ª0‚Ì‚Æ‚«‚ÍƒGƒ‰?[‚É‚È‚é?B
 //System.out.println("    js.susumu 001      ss+1”Ô–ÚˆÈ?ã‚ÌSmen‚Í‚İ‚È?‰Šú’l‚É‚·‚é?B");
@@ -1312,7 +1315,7 @@ public class Jyougehyou_Syokunin {//?ã‰º•\?@?Ü‚è‚½‚½‚Ş‘O‚Ì“WŠJ?}‚Ì–Ê‚ª?Ü‚è‚½‚½‚ñ
 			s[i].Jyunretu_1banme();
 		}
 //System.out.println("    js.susumu 002      ss+1”Ô–ÚˆÈ?ã‚ÌSmen‚Í‚İ‚È?‰Šú’l‚É‚·‚é?B");
-		//Smen‚Ìid”Ô?†‚Ì‘å‚«‚¢‚à‚Ì‚©‚ç?¬‚³‚¢‚à‚Ì‚Ì?‡‚É–Ê‚Ì?d‚È‚è?ó‘Ô‚ğ•Ï‚¦‚Ä‚¢‚­?B
+		//Smen‚Ìid”Ô??‚Ì‘å‚«‚¢‚à‚Ì‚©‚ç?¬‚³‚¢‚à‚Ì‚Ì?‡‚É–Ê‚Ì?d‚È‚è?ó‘Ô‚ğ•Ï‚¦‚Ä‚¢‚­?B
 		Sid = ss;
 		//isusumu =s[ss].susumu(s);
 		for (int i = ss; i >= 1; i--) {
@@ -1332,8 +1335,8 @@ public class Jyougehyou_Syokunin {//?ã‰º•\?@?Ü‚è‚½‚½‚Ş‘O‚Ì“WŠJ?}‚Ì–Ê‚ª?Ü‚è‚½‚½‚ñ
 
 	/*
 public int yuukouk_Smen_susumu(){//yuuko‚ÈSmen?”‚¾‚¯Œ…‚ª•Ï‚í‚é
-		int isusumu;//=0‚Ì?ê?‡Smen‚ª•Ï‚í‚é?iŒ…‚ª•Ï‚é‚æ‚¤‚ÈƒCƒ??[ƒW?j?B
-		int Sid;//•Ï‰»‚ª‹y‚ñ‚¾Smen‚Ìid”Ô?†
+		int isusumu;//=0‚Ì???‡Smen‚ª•Ï‚í‚é?iŒ…‚ª•Ï‚é‚æ‚¤‚ÈƒC???[ƒW?j?B
+		int Sid;//•Ï‰»‚ª‹y‚ñ‚¾Smen‚Ìid”Ô??
 		isusumu =0;
 int ss; ss=getSmen_yuukou_suu();
 	//ss+1”Ô–ÚˆÈ?ã‚ÌSmen‚Í‚İ‚È?‰Šú’l‚É‚·‚é?B—LŒø?”ˆÈ?ã‚Íg‚í‚È‚¢‚Ì‚Å?A‰½‚à‚µ‚È‚¢‚±‚Æ‚É‚·‚é?B
@@ -1346,7 +1349,7 @@ int ss; ss=getSmen_yuukou_suu();
 		 // s[i].Jyunretu_1banme();
 		//}
 //System.out.println("    js.susumu 002      ss+1”Ô–ÚˆÈ?ã‚ÌSmen‚Í‚İ‚È?‰Šú’l‚É‚·‚é?B");
-		  //Smen‚Ìid”Ô?†‚Ì‘å‚«‚¢‚à‚Ì‚©‚ç?¬‚³‚¢‚à‚Ì‚Ì?‡‚É–Ê‚Ì?d‚È‚è?ó‘Ô‚ğ•Ï‚¦‚Ä‚¢‚­?B
+		  //Smen‚Ìid”Ô??‚Ì‘å‚«‚¢‚à‚Ì‚©‚ç?¬‚³‚¢‚à‚Ì‚Ì?‡‚É–Ê‚Ì?d‚È‚è?ó‘Ô‚ğ•Ï‚¦‚Ä‚¢‚­?B
                 Sid=ss;
 		//isusumu =s[ss].susumu(s);
 		for(int i=ss;i>=1;i--){
@@ -1384,10 +1387,10 @@ int ss; ss=getSmen_yuukou_suu();
 	public int kanou_kasanari_sagasi_new() {
 
 //System.out.println(" Jyougehyou_syokunin          kanou_kasanari_sagasi()   ");
-//System.out.print("Smen—LŒø?”/Smensuu?@" );System.out.print(Smen_yuukou_suu );System.out.print("?^");System.out.println(Smensuu );
+//System.out.print("Smen—LŒø??/Smensuu?@" );System.out.print(Smen_yuukou_suu );System.out.print("?^");System.out.println(Smensuu );
 		if (Smen_yuukou_suu == 0) {
 			return 1000;
-		}//Smen_yuukou_suu==0‚Æ‚¢‚¤‚±‚Æ‚Í?A?ã‰º•\‚É?V‚½‚È?î•ñ‚ğ‰Á‚¦‚éSmen‚ª‚È‚¢‚Æ‚¢‚¤‚±‚Æ?B‚·‚È‚í‚¿?A?ã‰º•\‚ª‚·‚×‚Ä–„‚Ü‚Á‚Ä‚¢‚é‚Æ‚¢‚¤‚±‚Æ‚ğ¦‚·‚½‚ß?A‚±‚êˆÈ?ã‚Ì?d‚È‚è?„’è‚Í•s—v?B
+		}//Smen_yuukou_suu==0‚Æ‚¢‚¤‚±‚Æ‚Í?A?ã‰º•\‚É?V‚½‚È?û±ñ‚ğ‰Á‚¦‚éSmen‚ª‚È‚¢‚Æ‚¢‚¤‚±‚Æ?B‚·‚È‚í‚¿?A?ã‰º•\‚ª‚·‚×‚Ä–„‚Ü‚Á‚Ä‚¢‚é‚Æ‚¢‚¤‚±‚Æ‚ğ¦‚·‚½‚ß?A‚±‚êˆÈ?ã‚Ì?d‚È‚è??’è‚Í•s—v?B
 
 
 		return kanou_kasanari_sagasi_self(1);
@@ -1396,11 +1399,11 @@ int ss; ss=getSmen_yuukou_suu();
 	//---------------------------------------------------------------------------------------------------------------------------------------------
 	public int kanou_kasanari_sagasi_self(int ss) {
 		//orihime_ap.keijiban.tuiki("ss = "+ss  +"  :  Smen_yuukou_suu = "+Smen_yuukou_suu );
-		//?Å?IŒ…‚Å‚Ì?ˆ—?
+		//?Å?IŒ…‚Å‚Ì????
 		if (ss == Smen_yuukou_suu) {
 
-			if (s[ss].kanou_kasanari_sagasi(jg) == 1000) {//==0‚Æ‚¢‚¤‚±‚Æ‚Í?A‰Â”\‚È?d‚È‚è‚©‚½‚Æ‚È‚é?‡—ñ‚Í‘¶?İ‚µ‚È‚¢?B?@==1000?@‚±‚ÌSmen‚Í?A–µ?‚‚Í‚È‚¢?ó‘Ô‚É‚È‚Á‚Ä‚¢‚é?B
-				return 100;//?Ü‚è?ô‚İ‰Â”\‚È?‡—ñ‘g‚İ?‡‚í‚¹‚ªŒ©‚Â‚©‚Á‚½?B
+			if (s[ss].kanou_kasanari_sagasi(jg) == 1000) {//==0‚Æ‚¢‚¤‚±‚Æ‚Í?A‰Â”\‚È?d‚È‚è‚©‚½‚Æ‚È‚é?Úñ‚Í‘¶?İ‚µ‚È‚¢?B?@==1000?@‚±‚ÌSmen‚Í?A–µ?‚‚Í‚È‚¢?ó‘Ô‚É‚È‚Á‚Ä‚¢‚é?B
+				return 100;//?Ü‚è?ô‚İ‰Â”\‚È?Úñ‘g‚İ?‡‚ú¹‚ªŒ©‚Â‚©‚Á‚½?B
 			} else {
 				return 0;
 			}
@@ -1408,18 +1411,18 @@ int ss; ss=getSmen_yuukou_suu();
 		}
 
 
-		//?Å?IŒ…ˆÈŠO‚Å‚Ì?ˆ—?
-		if (s[ss].kanou_kasanari_sagasi(jg) == 1000) {//==0‚Æ‚¢‚¤‚±‚Æ‚Í?A‰Â”\‚È?d‚È‚è‚©‚½‚Æ‚È‚é?‡—ñ‚Í‘¶?İ‚µ‚È‚¢?B?@==1000?@‚±‚ÌSmen‚Í?A–µ?‚‚Í‚È‚¢?ó‘Ô‚É‚È‚Á‚Ä‚¢‚é?B
+		//?Å?IŒ…ˆÈŠO‚Å‚Ì????
+		if (s[ss].kanou_kasanari_sagasi(jg) == 1000) {//==0‚Æ‚¢‚¤‚±‚Æ‚Í?A‰Â”\‚È?d‚È‚è‚©‚½‚Æ‚È‚é?Úñ‚Í‘¶?İ‚µ‚È‚¢?B?@==1000?@‚±‚ÌSmen‚Í?A–µ?‚‚Í‚È‚¢?ó‘Ô‚É‚È‚Á‚Ä‚¢‚é?B
 
 
-			while (kanou_kasanari_sagasi_self(ss + 1) == 0) {//Ÿ‚ÌŒ…‚Å‰Â”\‚È?d‚È‚è‚©‚½‚Æ‚È‚é?‡—ñ‚Í‘¶?İ‚µ‚È‚¢
+			while (kanou_kasanari_sagasi_self(ss + 1) == 0) {//Ÿ‚ÌŒ…‚Å‰Â”\‚È?d‚È‚è‚©‚½‚Æ‚È‚é?Úñ‚Í‘¶?İ‚µ‚È‚¢
 				if (s[ss].susumu() == 0) {
 					return 0;
-				}//‚±‚ÌŒ…‚Å‚Í?i‚ß‚È‚¢?i?V‚½‚È?‡—ñ‚Í–³‚¢?j
+				}//‚±‚ÌŒ…‚Å‚Í?i‚ß‚È‚¢?i?V‚½‚È?Úñ‚Í–³‚¢?j
 
 			}
 
-			return 1000;//?Ü‚è?ô‚İ‰Â”\‚È?‡—ñ‘g‚İ?‡‚í‚¹‚ªŒ©‚Â‚©‚Á‚½?B
+			return 1000;//?Ü‚è?ô‚İ‰Â”\‚È?Úñ‘g‚İ?‡‚ú¹‚ªŒ©‚Â‚©‚Á‚½?B
 
 		}
 
@@ -1427,7 +1430,7 @@ int ss; ss=getSmen_yuukou_suu();
 
 
 		//for(int ss=1;ss<=Smen_yuukou_suu;ss++){      //<<<<<<<<<<<<<<?‚‘¬‰»‚Ì‚½‚ß•Ï?X?B070417
-		//        s[ss].jg_ni_Smen_wo_nyuuryoku(jg);//ss”Ô–Ú‚ÌSmen‚Ì?ã‰º?î•ñ‚ğjg‚É“ü—Í‚·‚é?B
+		//        s[ss].jg_ni_Smen_wo_nyuuryoku(jg);//ss”Ô–Ú‚ÌSmen‚Ì?ã‰º?û±ñ‚ğjg‚É“ü—Í‚·‚é?B
 		//  }
 // return 100;
 
@@ -1439,7 +1442,7 @@ int ss; ss=getSmen_yuukou_suu();
 	}
 //------------------------------------------------------------------------------------------------------
 
-	//Œ»?İ‚Ì?‡—ñ?ó‘Ô‚©‚çŠJn‚µ‚Ä?A‰Â”\‚È?d‚È‚è‚©‚½‚Æ‚È‚é?ó‘Ô‚ğ’T‚·?B‚È‚¨?A‚±‚±‚Í?‚‘¬‰»‚Ì—]’n‚ª‚ ‚é?B
+	//Œ»?İ‚Ì?Ú??ó‘Ô‚©‚çŠJn‚µ‚Ä?A‰Â”\‚È?d‚È‚è‚©‚½‚Æ‚È‚é?ó‘Ô‚ğ’T‚·?B‚È‚¨?A‚±‚±‚Í?‚‘¬‰»‚Ì—]’n‚ª‚ ‚é?B
 	public int kanou_kasanari_sagasi() {      //‚±‚ê‚Íjg‚ğ•Ï‚¦‚È‚¢‚Í‚¸?B
 		orihime_ap.keijiban.tuiki("_ _______");
 		orihime_ap.keijiban.tuiki("__ ______");
@@ -1451,7 +1454,7 @@ int ss; ss=getSmen_yuukou_suu();
 		//System.out.print("–Ê?”‚Í2?@");  System.out.println(s[1].getMenidsuu());
 
 		Sid = 1;//Sid‚Ì?‰Šú’l‚Í0ˆÈŠO‚È‚ç‚È‚ñ‚Å‚à‚¢‚¢?B
-		while (Sid != 0) { //Sid==0‚È‚ç?ASmen‚Ì?Å‚à”Ô?†‚Ì?¬‚³‚¢‚à‚Ì‚Ü‚Å’²‚×?s‚­‚µ‚½‚Æ‚¢‚¤ˆÓ–¡?B
+		while (Sid != 0) { //Sid==0‚È‚ç?ASmen‚Ì?Å‚à”Ô??‚Ì?¬‚³‚¢‚à‚Ì‚Ü‚Å’²‚×?s‚­‚µ‚½‚Æ‚¢‚¤ˆÓ–¡?B
 
 			ms = mujyun_Smen_motome();
 			if (ms == 1000) {
@@ -1464,7 +1467,7 @@ int ss; ss=getSmen_yuukou_suu();
 	}
 
 	//-----------------------------------------------------------------------------------------------------------------
-	//?Ü‚è?d‚È‚è•û‚ª–µ?‚‚·‚éSmen‚ğ”Ô?†‚Ì?¬‚³‚¢?‡‚©‚ç‚³‚ª‚·?B  ‚È‚¨?A‚±‚±‚à?‚‘¬‰»‚Ì—]’n‚ª‚ ‚é?B
+	//?Ü‚è?d‚È‚è•û‚ª–µ?‚‚·‚éSmen‚ğ”Ô??‚Ì?¬‚³‚¢?‡‚©‚ç‚³‚ª‚·?B  ‚È‚¨?A‚±‚±‚à?‚‘¬‰»‚Ì—]’n‚ª‚ ‚é?B
 	private int mujyun_Smen_motome() { //jg‚Í•Ï‰»‚·‚é?B
 
 		//orihime_ap.keijiban.kakikae(9,"mujyun_Smen_motome()");
@@ -1482,11 +1485,11 @@ int ss; ss=getSmen_yuukou_suu();
 			orihime_ap.keijiban.kakikae(10, Jyunretu_count(ss));
 
 
-			if (kks == 0) {//kks==0‚Æ‚¢‚¤‚±‚Æ‚Í?A‰Â”\‚È?d‚È‚è‚©‚½‚Æ‚È‚é?‡—ñ‚Í‘¶?İ‚µ‚È‚¢
+			if (kks == 0) {//kks==0‚Æ‚¢‚¤‚±‚Æ‚Í?A‰Â”\‚È?d‚È‚è‚©‚½‚Æ‚È‚é?Úñ‚Í‘¶?İ‚µ‚È‚¢
 
 				return ss;
 			}
-			s[ss].jg_ni_Smen_wo_nyuuryoku(jg);//ss”Ô–Ú‚ÌSmen‚Ì?ã‰º?î•ñ‚ğjg‚É“ü—Í‚·‚é?B
+			s[ss].jg_ni_Smen_wo_nyuuryoku(jg);//ss”Ô–Ú‚ÌSmen‚Ì?ã‰º?û±ñ‚ğjg‚É“ü—Í‚·‚é?B
 
 
 		}
@@ -1507,7 +1510,7 @@ int ss; ss=getSmen_yuukou_suu();
 	}
 
 
-	//?}‚ğ‚©‚­?Û‚Ì?”’l•ÏŠ·—pŠÖ?”-----------------------------------------------------------------
+	//?}‚ğ‚©‚­?Û‚Ì?”’l•ÏŠ·—pŠÖ??-----------------------------------------------------------------
 
 	private int gx(double d) {
 		//if(ip1==1){return (int)(-d+2.0*700.0);} //— ‘¤•\¦   <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
@@ -1526,7 +1529,7 @@ int ss; ss=getSmen_yuukou_suu();
 
 	Color F_color = new Color(255, 255, 50);//•\–Ê‚Ì?F
 	Color B_color = new Color(233, 233, 233);//— –Ê‚Ì?F
-	Color L_color = Color.black;//?ü‚Ì?F
+	Color L_color = Color.black;//??‚Ì?F
 
 	public void set_F_color(Color color0) {
 		F_color = color0;
@@ -1583,12 +1586,12 @@ int ss; ss=getSmen_yuukou_suu();
 	public void oekaki(Graphics g, Tenkaizu_Syokunin orite, Tensyuugou otta_Men_zu, Tensyuugou Smen_zu, int omote_ura, int hyouji_flg) {
 
 
-		//hyouji_flg‚Í?Ü‚è?ã‚ª‚è?}‚Ì•\¦—l®‚Ìw’è?B4‚È‚çÀ?Û‚É?Ü‚è†‚ğ?Ü‚Á‚½?ê?‡‚Æ“¯‚¶?B3‚È‚ç“§‰ß?}
-		String text = "";//•¶š—ñ?ˆ—?—p‚ÌƒNƒ‰ƒX‚ÌƒCƒ“ƒXƒ^ƒ“ƒX‰»
+		//hyouji_flg‚Í?Ü‚è?ã‚ª‚è?}‚Ì•\¦—l®‚Ìw’è?B4‚È‚çÀ?Û‚É?Ü‚è†‚ğ?Ü‚Á‚½???‡‚Æ“¯‚¶?B3‚È‚ç“§‰ß?}
+		String text = "";//•¶š—ñ????—p‚ÌƒNƒ‰ƒX‚ÌƒCƒ“ƒXƒ^ƒ“ƒX‰»
 		ip1 = omote_ura;
 		//  System.out.println(Smensuu);
-		for (int im = 1; im <= Smensuu; im++) { //Smen‚©‚ç?ã‚©‚ç‚Ìw’è‚µ‚½”Ô–Ú‚Ì–Ê‚Ìid‚ğ‹?‚ß‚é?B
-			s0[im].set_Menid2uekara_kazoeta_iti(jg);//Smen‚Ì.set_Menid2uekara_kazoeta_iti‚ÍŒ»?İ‚Ì?ã‰º•\‚ğ‚à‚Æ‚É?A?ã‚©‚ç?”‚¦‚Äi”Ô‚ß‚Ì–Ê‚Ìid”Ô?†‚ğ‘S‚Ä‚Ì?‡”Ô‚É‚Â‚«Ši”[‚·‚é?B
+		for (int im = 1; im <= Smensuu; im++) { //Smen‚©‚ç?ã‚©‚ç‚Ìw’è‚µ‚½”Ô–Ú‚Ì–Ê‚Ìid‚ğ??‚ß‚é?B
+			s0[im].set_Menid2uekara_kazoeta_iti(jg);//Smen‚Ì.set_Menid2uekara_kazoeta_iti‚ÍŒ»?İ‚Ì?ã‰º•\‚ğ‚à‚Æ‚É?A?ã‚©‚ç?”‚¦‚Äi”Ô‚ß‚Ì–Ê‚Ìid”Ô??‚ğ‘S‚Ä‚Ì?‡”Ô‚É‚Â‚«Ši”[‚·‚é?B
 		}
 
 		//–Ê‚ğ•`‚­
@@ -1639,8 +1642,8 @@ int ss; ss=getSmen_yuukou_suu();
 			for (int ib = 1; ib <= Smen_zu.getBousuu(); ib++) {
 				Mid_min = Smen_zu.Bou_moti_Menid_min_motome(ib);
 				Mid_max = Smen_zu.Bou_moti_Menid_max_motome(ib);
-				if (Mid_min == Mid_max) {//‚±‚Ì–_‚Í‹«ŠE?ü‚È‚Ì‚Å‚±‚Ì–_‚Í•`‚­?B
-					g.drawLine(gx(Smen_zu.getmaex(ib)), gy(Smen_zu.getmaey(ib)), gx(Smen_zu.getatox(ib)), gy(Smen_zu.getatoy(ib))); //’¼?ü
+				if (Mid_min == Mid_max) {//‚±‚Ì–_‚Í‹«ŠE??‚È‚Ì‚Å‚±‚Ì–_‚Í•`‚­?B
+					g.drawLine(gx(Smen_zu.getmaex(ib)), gy(Smen_zu.getmaey(ib)), gx(Smen_zu.getatox(ib)), gy(Smen_zu.getatoy(ib))); //’¼??
 				}
 
 				Men_jyunban_min = 1;
@@ -1658,7 +1661,7 @@ int ss; ss=getSmen_yuukou_suu();
 								(s0[Mid_min].uekara_kazoeta_Menid(Men_jyunban_min) !=
 										s0[Mid_max].uekara_kazoeta_Menid(Men_jyunban_max))
 				) {//‚±‚Ì–_‚Å—×?Ú‚·‚éSmen‚Ì1”Ô?ã‚Ì–Ê‚ÍˆÙ‚È‚é‚Ì‚Å?A‚±‚Ì–_‚Í•`‚­?B
-					g.drawLine(gx(Smen_zu.getmaex(ib)), gy(Smen_zu.getmaey(ib)), gx(Smen_zu.getatox(ib)), gy(Smen_zu.getatoy(ib))); //’¼?ü
+					g.drawLine(gx(Smen_zu.getmaex(ib)), gy(Smen_zu.getmaey(ib)), gx(Smen_zu.getatox(ib)), gy(Smen_zu.getatoy(ib))); //’¼??
 				}
 			}
 		}
@@ -1693,7 +1696,7 @@ int ss; ss=getSmen_yuukou_suu();
 			int Mid_min, Mid_max;
 			int Men_jyunban_min, Men_jyunban_max;
 			for (int ib = 1; ib <= Smen_zu.getBousuu(); ib++) {
-				g.drawLine(gx(Smen_zu.getmaex(ib)), gy(Smen_zu.getmaey(ib)), gx(Smen_zu.getatox(ib)), gy(Smen_zu.getatoy(ib))); //’¼?ü
+				g.drawLine(gx(Smen_zu.getmaex(ib)), gy(Smen_zu.getmaey(ib)), gx(Smen_zu.getatox(ib)), gy(Smen_zu.getatoy(ib))); //’¼??
 			}
 		}
 /*
@@ -1705,7 +1708,7 @@ int ss; ss=getSmen_yuukou_suu();
 
 			//–_‚ğ•`‚­
 			for(int ib=1;ib<=otta_Men_zu.getBousuu();ib++){
-                         	g.drawLine( gx(otta_Men_zu.getmaex(ib)),gy(otta_Men_zu.getmaey(ib)),gx(otta_Men_zu.getatox(ib)),gy(otta_Men_zu.getatoy(ib))); //’¼?ü
+                         	g.drawLine( gx(otta_Men_zu.getmaex(ib)),gy(otta_Men_zu.getmaey(ib)),gx(otta_Men_zu.getatox(ib)),gy(otta_Men_zu.getatoy(ib))); //’¼??
 			}
 		}
 
@@ -1736,7 +1739,7 @@ int ss; ss=getSmen_yuukou_suu();
 		if (hyouji_yousiki == 1) {
 			for (int iu = 1; iu <= Smen_yuukou_suu; iu++) {
 				int im;
-				im = yusenjyun_kara_s0id[iu]; //Smen‚Ì—D?æ?‡ˆÊ
+				im = yusenjyun_kara_s0id[iu]; //Smen‚Ì—D???‡ˆÊ
 				int col_kosa;
 				col_kosa = 255 - 20 * iu;
 				if (col_kosa < 0) {
@@ -1778,10 +1781,10 @@ int ss; ss=getSmen_yuukou_suu();
 		int omote_ura = 0;
 		if (camera.get_camera_kagami() == 1.0) {
 			omote_ura = 0;
-		}//ƒJƒ?ƒ‰‚Ì‹¾?İ’è‚ª1‚È‚ç?A?Ü‚è?ã‚ª‚è?}‚Í•\•\¦
+		}//ƒJ??ƒ‰‚Ì‹¾?İ’è‚ª1‚È‚ç?A?Ü‚è?ã‚ª‚è?}‚Í•\•\¦
 		if (camera.get_camera_kagami() == -1.0) {
 			omote_ura = 1;
-		}//ƒJƒ?ƒ‰‚Ì‹¾?İ’è‚ª-1(x²‚Ì•„?†‚ğ”½“])‚È‚ç?A?Ü‚è?ã‚ª‚è?}‚Í— •\¦
+		}//ƒJ??ƒ‰‚Ì‹¾?İ’è‚ª-1(x²‚Ì•„??‚ğ”½“])‚È‚ç?A?Ü‚è?ã‚ª‚è?}‚Í— •\¦
 
 		Ten t0 = new Ten();
 		Ten t1 = new Ten();
@@ -1809,17 +1812,17 @@ int ss; ss=getSmen_yuukou_suu();
 		double[] xd = new double[100];
 		double[] yd = new double[100];
 
-		//Smen‚Ì.set_Menid2uekara_kazoeta_iti‚ÍŒ»?İ‚Ì?ã‰º•\‚ğ‚à‚Æ‚É?A?ã‚©‚ç?”‚¦‚Äi”Ô‚ß‚Ì–Ê‚Ìid”Ô?†‚ğ‘S‚Ä‚Ì?‡”Ô‚É‚Â‚«Ši”[‚·‚é?B
-		for (int im = 1; im <= Smensuu; im++) { //Smen‚©‚ç?ã‚©‚ç‚Ìw’è‚µ‚½”Ô–Ú‚Ì–Ê‚Ìid‚ğ‹?‚ß‚é?B
+		//Smen‚Ì.set_Menid2uekara_kazoeta_iti‚ÍŒ»?İ‚Ì?ã‰º•\‚ğ‚à‚Æ‚É?A?ã‚©‚ç?”‚¦‚Äi”Ô‚ß‚Ì–Ê‚Ìid”Ô??‚ğ‘S‚Ä‚Ì?‡”Ô‚É‚Â‚«Ši”[‚·‚é?B
+		for (int im = 1; im <= Smensuu; im++) { //Smen‚©‚ç?ã‚©‚ç‚Ìw’è‚µ‚½”Ô–Ú‚Ì–Ê‚Ìid‚ğ??‚ß‚é?B
 			s0[im].set_Menid2uekara_kazoeta_iti(jg);//s0[]‚ÍSmen_zu‚©‚ç“¾‚ç‚ê‚éSmen‚»‚Ì‚à‚Ì?Ajg‚Í?ã‰º•\Jyougehyou‚Ì‚±‚Æ
 		}
-		//‚±‚±‚Ü‚Å‚Å?A?ã‰º•\‚Ì?î•ñ‚ªSmen‚ÌŠe–Ê‚É“ü‚Á‚½
+		//‚±‚±‚Ü‚Å‚Å?A?ã‰º•\‚Ì?û±ñ‚ªSmen‚ÌŠe–Ê‚É“ü‚Á‚½
 
 		//–Ê‚ğ•`‚­
 		//g2.setRenderingHint(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_OFF);//ƒAƒ“ƒ`ƒFƒCƒŠƒAƒX?@ƒIƒt
 		int Men_jyunban;
-		for (int im = 1; im <= Smensuu; im++) {//im‚ÍŠeSmen‚Ì”Ô?†
-			if (s0[im].getMenidsuu() > 0) {//Menidsuu‚ÍSmen(?Ü‚è?ô‚İ?„’è‚µ‚Ä‚¦‚ç‚ê‚½?j‹à?}‚ğ?×•ªŠ„‚µ‚½–Ê)‚Å?d‚È‚Á‚Ä‚¢‚éMen(?Ü‚è‚½‚½‚Ş‘O‚Ì“WŠJ?}‚Ì–Ê)‚Ì?”?B‚±‚ê‚ª0‚È‚ç?Aƒh?[ƒiƒc?ó‚ÌŒŠ‚Ì–Ê‚È‚Ì‚Å•`‰æ‘Î?ÛŠO
+		for (int im = 1; im <= Smensuu; im++) {//im‚ÍŠeSmen‚Ì”Ô??
+			if (s0[im].getMenidsuu() > 0) {//Menidsuu‚ÍSmen(?Ü‚è?ô‚İ??’è‚µ‚Ä‚¦‚ç‚ê‚½?j‹à?}‚ğ?×•ªŠ„‚µ‚½–Ê)‚Å?d‚È‚Á‚Ä‚¢‚éMen(?Ü‚è‚½‚½‚Ş‘O‚Ì“WŠJ?}‚Ì–Ê)‚Ì???B‚±‚ê‚ª0‚È‚ç?Aƒh?[ƒiƒc?ó‚ÌŒŠ‚Ì–Ê‚È‚Ì‚Å•`‰æ‘Î?ÛŠO
 
 				//?Ü‚è?ã‚ª‚è?}‚ğ•`‚­‚Æ‚«‚Ìim”Ô–Ú‚ÌSmen‚Ì?F‚ğŒˆ‚ß‚é
 				Men_jyunban = 1;
@@ -1851,7 +1854,7 @@ int ss; ss=getSmen_yuukou_suu();
 
 				//?Ü‚è?ã‚ª‚è?}‚ğ•`‚­‚Æ‚«‚ÌSmen‚Ì?F‚ğŒˆ‚ß‚é‚Ì‚Í‚±‚±‚Ü‚Å
 
-				//?Ü‚è?ã‚ª‚è?}‚ğ•`‚­‚Æ‚«‚Ìim”Ô–Ú‚ÌSmen‚Ì‘½ŠpŒ`‚Ì’¸“_‚Ì?À•W?iPC•\¦?ã?j‚ğ‹?‚ß‚é
+				//?Ü‚è?ã‚ª‚è?}‚ğ•`‚­‚Æ‚«‚Ìim”Ô–Ú‚ÌSmen‚Ì‘½ŠpŒ`‚Ì’¸“_‚Ì?À•W?iPC•\¦???j‚ğ??‚ß‚é
 				for (int i = 1; i <= Smen_zu.getTenidsuu(im) - 1; i++) {
 					t0.setx(Smen_zu.getTenx(Smen_zu.getTenid(im, i)));
 					t0.sety(Smen_zu.getTeny(Smen_zu.getTenid(im, i)));
@@ -1865,7 +1868,7 @@ int ss; ss=getSmen_yuukou_suu();
 				t1.set(camera.object2TV(t0));
 				x[0] = gx(t1.getx());
 				y[0] = gy(t1.gety());
-				//?Ü‚è?ã‚ª‚è?}‚ğ•`‚­‚Æ‚«‚Ìim”Ô–Ú‚ÌSmen‚Ì‘½ŠpŒ`‚Ì’¸“_‚Ì?À•W?iPC•\¦?ã?j‚ğ‹?‚ß‚é‚Ì‚Í‚±‚±‚Ü‚Å
+				//?Ü‚è?ã‚ª‚è?}‚ğ•`‚­‚Æ‚«‚Ìim”Ô–Ú‚ÌSmen‚Ì‘½ŠpŒ`‚Ì’¸“_‚Ì?À•W?iPC•\¦???j‚ğ??‚ß‚é‚Ì‚Í‚±‚±‚Ü‚Å
 
 				//g2.fill(new Polygon(x,y,Smen_zu.getTenidsuu(im)));  //svg?o—Í
 
@@ -1902,11 +1905,11 @@ int ss; ss=getSmen_yuukou_suu();
 /*
 		if(i_anti_alias==1){
 			g2.setRenderingHint(RenderingHints.KEY_ANTIALIASING,RenderingHints.VALUE_ANTIALIAS_ON);//ƒAƒ“ƒ`ƒFƒCƒŠƒAƒX?@ƒIƒ“
-			BasicStroke BStroke = new BasicStroke(1.2f, BasicStroke.CAP_BUTT, BasicStroke.JOIN_MITER);g2.setStroke(BStroke);//?ü‚Ì‘¾‚³‚â?ü‚Ì––’[‚ÌŒ`?ó
+			BasicStroke BStroke = new BasicStroke(1.2f, BasicStroke.CAP_BUTT, BasicStroke.JOIN_MITER);g2.setStroke(BStroke);//??‚Ì‘¾‚³‚â??‚Ì––’[‚ÌŒ`??
 		}
 		if(i_anti_alias==0){
 	  		g2.setRenderingHint(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_OFF);//ƒAƒ“ƒ`ƒFƒCƒŠƒAƒX?@ƒIƒt
-			BasicStroke BStroke = new BasicStroke(1.0f, BasicStroke.CAP_BUTT, BasicStroke.JOIN_MITER);g2.setStroke(BStroke);//?ü‚Ì‘¾‚³‚â?ü‚Ì––’[‚ÌŒ`?ó
+			BasicStroke BStroke = new BasicStroke(1.0f, BasicStroke.CAP_BUTT, BasicStroke.JOIN_MITER);g2.setStroke(BStroke);//??‚Ì‘¾‚³‚â??‚Ì––’[‚ÌŒ`??
 		}
 */
 		//g.setColor(L_color);//?Ü‚è?ã‚ª‚è?}‚ğ•`‚­‚Æ‚«‚Ì–_‚Ì?F‚ğŒˆ‚ß‚é
@@ -1917,12 +1920,12 @@ int ss; ss=getSmen_yuukou_suu();
 		//System.out.println("?ã‰º•\?E?l?@oekaki_with_camera+++++++++++++++?Ü†•\¦?@–_‚ğ•`‚­");
 		for (int ib = 1; ib <= Smen_zu.getBousuu(); ib++) {
 
-			int Mid_min, Mid_max; //–_‚Ì—¼‘¤‚ÌSmen‚Ì”Ô?†‚Ì?¬‚³‚¢‚Ù‚¤‚ªMid_min,?@‘å‚«‚¢‚Ù‚¤‚ªMid_max
-			int Men_jyunban_min, Men_jyunban_max;//PC‰æ–Ê‚É•\¦‚µ‚½‚Æ‚«Smen(Mid_min) ‚ÅŒ©‚¦‚é–Ê‚Ì”Ô?†‚ªMen_jyunban_min?ASmen(Mid_max) ‚ÅŒ©‚¦‚é–Ê‚Ì”Ô?†‚ªMen_jyunban_max
+			int Mid_min, Mid_max; //–_‚Ì—¼‘¤‚ÌSmen‚Ì”Ô??‚Ì?¬‚³‚¢‚Ù‚¤‚ªMid_min,?@‘å‚«‚¢‚Ù‚¤‚ªMid_max
+			int Men_jyunban_min, Men_jyunban_max;//PC‰æ–Ê‚É•\¦‚µ‚½‚Æ‚«Smen(Mid_min) ‚ÅŒ©‚¦‚é–Ê‚Ì”Ô??‚ªMen_jyunban_min?ASmen(Mid_max) ‚ÅŒ©‚¦‚é–Ê‚Ì”Ô??‚ªMen_jyunban_max
 			int oekaki_flg;
 
 			oekaki_flg = 0;
-			Mid_min = Smen_zu.Bou_moti_Menid_min_motome(ib);//–_ib‚ğ‹«ŠE‚Æ‚µ‚ÄŠÜ‚Ş–Ê(?Å‘å‚Å2–Ê‚ ‚é)‚Ì‚¤‚¿‚ÅMenid‚Ì?¬‚³‚¢‚Ù‚¤‚ÌMenid‚ğ•Ô‚·?B–_‚ğ‹«ŠE‚Æ‚µ‚ÄŠÜ‚Ş–Ê‚ª–³‚¢?ê?‡‚Í0‚ğ•Ô‚·
+			Mid_min = Smen_zu.Bou_moti_Menid_min_motome(ib);//–_ib‚ğ‹«ŠE‚Æ‚µ‚ÄŠÜ‚Ş–Ê(?Å‘å‚Å2–Ê‚ ‚é)‚Ì‚¤‚¿‚ÅMenid‚Ì?¬‚³‚¢‚Ù‚¤‚ÌMenid‚ğ•Ô‚·?B–_‚ğ‹«ŠE‚Æ‚µ‚ÄŠÜ‚Ş–Ê‚ª–³‚¢???‡‚Í0‚ğ•Ô‚·
 			Mid_max = Smen_zu.Bou_moti_Menid_max_motome(ib);
 
 			if (s0[Mid_min].getMenidsuu() == 0) {
@@ -1950,10 +1953,10 @@ int ss; ss=getSmen_yuukou_suu();
 			if (oekaki_flg == 1) {//–_‚ğ•`‚­?B
 				s_ob.set(Smen_zu.getmaex(ib), Smen_zu.getmaey(ib), Smen_zu.getatox(ib), Smen_zu.getatoy(ib));
 				s_tv.set(camera.object2TV(s_ob));
-				//g.drawLine( gx(s_tv.getax()),gy(s_tv.getay()),gx(s_tv.getbx()),gy(s_tv.getby())); //svg ‚É’¼?ü‚ğ?o—Í
+				//g.drawLine( gx(s_tv.getax()),gy(s_tv.getay()),gx(s_tv.getbx()),gy(s_tv.getby())); //svg ‚É’¼??‚ğ?o—Í
 
 				a.set(s_tv.geta());
-				b.set(s_tv.getb());//a.set(s_tv.getax()+0.000001,s_tv.getay()+0.000001); b.set(s_tv.getbx()+0.000001,s_tv.getby()+0.000001);//‚È‚º0.000001‚ğ‘«‚·‚©‚Æ‚¢‚¤‚Æ,ƒfƒBƒXƒvƒŒƒC‚É•`‰æ‚·‚é‚Æ‚«Œ³‚Ì?Ü?ü‚ª?V‚µ‚¢?Ü?ü‚É‰e‹¿‚³‚ê‚Ä“®‚¢‚Ä‚µ‚Ü‚¤‚Ì‚ğ–h‚®‚½‚ß
+				b.set(s_tv.getb());//a.set(s_tv.getax()+0.000001,s_tv.getay()+0.000001); b.set(s_tv.getbx()+0.000001,s_tv.getby()+0.000001);//‚È‚º0.000001‚ğ‘«‚·‚©‚Æ‚¢‚¤‚Æ,ƒfƒBƒXƒvƒŒƒC‚É•`‰æ‚·‚é‚Æ‚«Œ³‚Ì?Ü??‚ª?V‚µ‚¢?Ü??‚É‰e‹¿‚³‚ê‚Ä“®‚¢‚Ä‚µ‚Ü‚¤‚Ì‚ğ–h‚®‚½‚ß
 
 				BigDecimal b_ax = new BigDecimal(String.valueOf(a.getx()));
 				BigDecimal b_ay = new BigDecimal(String.valueOf(a.gety()));
@@ -1994,13 +1997,13 @@ int ss; ss=getSmen_yuukou_suu();
 	public void oekaki_with_camera(Graphics g, Tenkaizu_Syokunin orite, Tensyuugou otta_Men_zu, Tensyuugou Smen_zu, int omote_ura, int hyouji_flg) {
 
 
-		//hyouji_flg‚Í?Ü‚è?ã‚ª‚è?}‚Ì•\¦—l®‚Ìw’è?B4‚È‚çÀ?Û‚É?Ü‚è†‚ğ?Ü‚Á‚½?ê?‡‚Æ“¯‚¶?B3‚È‚ç“§‰ß?}
+		//hyouji_flg‚Í?Ü‚è?ã‚ª‚è?}‚Ì•\¦—l®‚Ìw’è?B4‚È‚çÀ?Û‚É?Ü‚è†‚ğ?Ü‚Á‚½???‡‚Æ“¯‚¶?B3‚È‚ç“§‰ß?}
 		OritaOekaki OO = new OritaOekaki();
 		Ten t0 = new Ten();
 		Ten t1 = new Ten();
 		Senbun s_ob = new Senbun();
 		Senbun s_tv = new Senbun();
-		String text = "";//•¶š—ñ?ˆ—?—p‚ÌƒNƒ‰ƒX‚ÌƒCƒ“ƒXƒ^ƒ“ƒX‰»
+		String text = "";//•¶š—ñ????—p‚ÌƒNƒ‰ƒX‚ÌƒCƒ“ƒXƒ^ƒ“ƒX‰»
 		ip1 = omote_ura;
 		//  System.out.println(Smensuu);
 
@@ -2011,7 +2014,7 @@ int ss; ss=getSmen_yuukou_suu();
 
 		if (hyouji_flg == 5) {//?Ü†•\¦---------------------------------------------------------------------------
 
-			for (int im = 1; im <= Smensuu; im++) { //Smen‚©‚ç?ã‚©‚ç‚Ìw’è‚µ‚½”Ô–Ú‚Ì–Ê‚Ìid‚ğ‹?‚ß‚é?B
+			for (int im = 1; im <= Smensuu; im++) { //Smen‚©‚ç?ã‚©‚ç‚Ìw’è‚µ‚½”Ô–Ú‚Ì–Ê‚Ìid‚ğ??‚ß‚é?B
 				s0[im].set_Menid2uekara_kazoeta_iti(jg);
 			}
 
@@ -2073,7 +2076,7 @@ int ss; ss=getSmen_yuukou_suu();
 			int oekaki_flg;
 			for (int ib = 1; ib <= Smen_zu.getBousuu(); ib++) {
 				oekaki_flg = 0;
-				Mid_min = Smen_zu.Bou_moti_Menid_min_motome(ib);//–_ib‚ğ‹«ŠE‚Æ‚µ‚ÄŠÜ‚Ş–Ê(?Å‘å‚Å2–Ê‚ ‚é)‚Ì‚¤‚¿‚ÅMenid‚Ì?¬‚³‚¢‚Ù‚¤‚ÌMenid‚ğ•Ô‚·?B–_‚ğ‹«ŠE‚Æ‚µ‚ÄŠÜ‚Ş–Ê‚ª–³‚¢?ê?‡‚Í0‚ğ•Ô‚·
+				Mid_min = Smen_zu.Bou_moti_Menid_min_motome(ib);//–_ib‚ğ‹«ŠE‚Æ‚µ‚ÄŠÜ‚Ş–Ê(?Å‘å‚Å2–Ê‚ ‚é)‚Ì‚¤‚¿‚ÅMenid‚Ì?¬‚³‚¢‚Ù‚¤‚ÌMenid‚ğ•Ô‚·?B–_‚ğ‹«ŠE‚Æ‚µ‚ÄŠÜ‚Ş–Ê‚ª–³‚¢???‡‚Í0‚ğ•Ô‚·
 				Mid_max = Smen_zu.Bou_moti_Menid_max_motome(ib);
 
 				if (s0[Mid_min].getMenidsuu() == 0) {
@@ -2101,8 +2104,8 @@ int ss; ss=getSmen_yuukou_suu();
 				if (oekaki_flg == 1) {//–_‚ğ•`‚­?B
 					s_ob.set(Smen_zu.getmaex(ib), Smen_zu.getmaey(ib), Smen_zu.getatox(ib), Smen_zu.getatoy(ib));
 					s_tv.set(camera.object2TV(s_ob));
-					g.drawLine(gx(s_tv.getax()), gy(s_tv.getay()), gx(s_tv.getbx()), gy(s_tv.getby())); //’¼?ü
-					//g.drawLine( gx(Smen_zu.getmaex(ib)),gy(Smen_zu.getmaey(ib)),gx(Smen_zu.getatox(ib)),gy(Smen_zu.getatoy(ib))); //’¼?ü
+					g.drawLine(gx(s_tv.getax()), gy(s_tv.getay()), gx(s_tv.getbx()), gy(s_tv.getby())); //’¼??
+					//g.drawLine( gx(Smen_zu.getmaex(ib)),gy(Smen_zu.getmaey(ib)),gx(Smen_zu.getatox(ib)),gy(Smen_zu.getatoy(ib))); //’¼??
 				}
 
 
@@ -2117,7 +2120,7 @@ int ss; ss=getSmen_yuukou_suu();
 		if (hyouji_yousiki == 1) {
 			for (int iu = 1; iu <= Smen_yuukou_suu; iu++) {
 				int im;
-				im = yusenjyun_kara_s0id[iu]; //Smen‚Ì—D?æ?‡ˆÊ
+				im = yusenjyun_kara_s0id[iu]; //Smen‚Ì—D???‡ˆÊ
 				int col_kosa;
 				col_kosa = 255 - 20 * iu;
 				if (col_kosa < 0) {
@@ -2167,10 +2170,10 @@ int ss; ss=getSmen_yuukou_suu();
 		int omote_ura = 0;
 		if (camera.get_camera_kagami() == 1.0) {
 			omote_ura = 0;
-		}//ƒJƒ?ƒ‰‚Ì‹¾?İ’è‚ª1‚È‚ç?A?Ü‚è?ã‚ª‚è?}‚Í•\•\¦
+		}//ƒJ??ƒ‰‚Ì‹¾?İ’è‚ª1‚È‚ç?A?Ü‚è?ã‚ª‚è?}‚Í•\•\¦
 		if (camera.get_camera_kagami() == -1.0) {
 			omote_ura = 1;
-		}//ƒJƒ?ƒ‰‚Ì‹¾?İ’è‚ª-1(x²‚Ì•„?†‚ğ”½“])‚È‚ç?A?Ü‚è?ã‚ª‚è?}‚Í— •\¦
+		}//ƒJ??ƒ‰‚Ì‹¾?İ’è‚ª-1(x²‚Ì•„??‚ğ”½“])‚È‚ç?A?Ü‚è?ã‚ª‚è?}‚Í— •\¦
 
 		Ten t_ob = new Ten();
 		Ten t_tv = new Ten();
@@ -2199,7 +2202,7 @@ int ss; ss=getSmen_yuukou_suu();
 		rating2();
 
 
-		//–Ê‚ğ•`‚­?€”õ
+		//–Ê‚ğ•`‚­??”õ
 		int[] x = new int[100];
 		int[] y = new int[100];
 
@@ -2207,13 +2210,13 @@ int ss; ss=getSmen_yuukou_suu();
 
 		for (int i_nbox = 1; i_nbox <= otta_Men_zu.getMensuu(); i_nbox++) {
 			int im = 0;
-			if (camera.get_camera_kagami() == -1.0) {//ƒJƒ?ƒ‰‚Ì‹¾?İ’è‚ª-1(x²‚Ì•„?†‚ğ”½“])‚È‚ç?A?Ü‚è?ã‚ª‚è?}‚Í— •\¦
+			if (camera.get_camera_kagami() == -1.0) {//ƒJ??ƒ‰‚Ì‹¾?İ’è‚ª-1(x²‚Ì•„??‚ğ”½“])‚È‚ç?A?Ü‚è?ã‚ª‚è?}‚Í— •\¦
 				im = nbox.usirokara_get_int(i_nbox);
 			} else {
 				im = nbox.get_int(i_nbox);
 			}
 
-			String text = "";//•¶š—ñ?ˆ—?—p‚ÌƒNƒ‰ƒX‚ÌƒCƒ“ƒXƒ^ƒ“ƒX‰»
+			String text = "";//•¶š—ñ????—p‚ÌƒNƒ‰ƒX‚ÌƒCƒ“ƒXƒ^ƒ“ƒX‰»
 
 			text = "M ";
 			t_ob.setx(otta_Men_zu.getTenx(otta_Men_zu.getTenid(im, 1)));
@@ -2334,16 +2337,16 @@ int ss; ss=getSmen_yuukou_suu();
 		Ten t1 = new Ten();
 		Senbun s_ob = new Senbun();
 		Senbun s_tv = new Senbun();
-		String text = "";//•¶š—ñ?ˆ—?—p‚ÌƒNƒ‰ƒX‚ÌƒCƒ“ƒXƒ^ƒ“ƒX‰»
+		String text = "";//•¶š—ñ????—p‚ÌƒNƒ‰ƒX‚ÌƒCƒ“ƒXƒ^ƒ“ƒX‰»
 
-		//–Ê‚ğ•`‚­?€”õ
+		//–Ê‚ğ•`‚­??”õ
 		int[] x = new int[100];
 		int[] y = new int[100];
 
-		//–Ê‚Ì“K?Ø‚È”Z‚³‚ğ‹?‚ß‚é
+		//–Ê‚Ì“K?Ø‚È”Z‚³‚ğ??‚ß‚é
 		int col_hiku = 0;
 		int colmax = 255;
-		int colmin = 30;//colmax=255(?^‚Á”’)ˆÈ‰º?Acolmin=0(?^‚Á?•)ˆÈ?ã
+		int colmin = 30;//colmax=255(?^‚Á”’)ˆÈ‰º?Acolmin=0(?^‚Á??)ˆÈ??
 		//Menidsuu_max‚Í1ˆÈ?ã‚Å‚ ‚é‚±‚Æ
 		if (Menidsuu_max > 0) {
 			col_hiku = (colmax - colmin) / Menidsuu_max;
@@ -2377,19 +2380,19 @@ int ss; ss=getSmen_yuukou_suu();
 				//g.drawPolygon(x,y,otta_Men_zu.getTenidsuu(im));
 			}
 
-			//–_‚ğ•`‚­?€”õ
+			//–_‚ğ•`‚­??”õ
 			//g.setColor(Color.black);
 
 
 			if (i_anti_alias == 1) {
 				g2.setRenderingHint(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON);//ƒAƒ“ƒ`ƒFƒCƒŠƒAƒX?@ƒIƒ“
 				BasicStroke BStroke = new BasicStroke(1.2f, BasicStroke.CAP_BUTT, BasicStroke.JOIN_MITER);
-				g2.setStroke(BStroke);//?ü‚Ì‘¾‚³‚â?ü‚Ì––’[‚ÌŒ`?ó
+				g2.setStroke(BStroke);//??‚Ì‘¾‚³‚â??‚Ì––’[‚ÌŒ`??
 			}
 			if (i_anti_alias == 0) {
 				g2.setRenderingHint(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_OFF);//ƒAƒ“ƒ`ƒFƒCƒŠƒAƒX?@ƒIƒt
 				BasicStroke BStroke = new BasicStroke(1.0f, BasicStroke.CAP_BUTT, BasicStroke.JOIN_MITER);
-				g2.setStroke(BStroke);//?ü‚Ì‘¾‚³‚â?ü‚Ì––’[‚ÌŒ`?ó
+				g2.setStroke(BStroke);//??‚Ì‘¾‚³‚â??‚Ì––’[‚ÌŒ`??
 			}
 
 			g.setColor(new Color(F_color.getRed(), F_color.getGreen(), F_color.getBlue(), 2 * toukazu_toukado));
@@ -2399,7 +2402,7 @@ int ss; ss=getSmen_yuukou_suu();
 			for (int ib = 1; ib <= Smen_zu.getBousuu(); ib++) {
 				s_ob.set(Smen_zu.getmaex(ib), Smen_zu.getmaey(ib), Smen_zu.getatox(ib), Smen_zu.getatoy(ib));
 				s_tv.set(camera.object2TV(s_ob));
-				g.drawLine(gx(s_tv.getax()), gy(s_tv.getay()), gx(s_tv.getbx()), gy(s_tv.getby())); //’¼?ü
+				g.drawLine(gx(s_tv.getax()), gy(s_tv.getay()), gx(s_tv.getbx()), gy(s_tv.getby())); //’¼??
 			}
 
 
@@ -2408,7 +2411,7 @@ int ss; ss=getSmen_yuukou_suu();
 
 
 /*
-		int col_hiku=0;int colmax=255;int colmin=30;//colmax=255(?^‚Á”’)ˆÈ‰º?Acolmin=0(?^‚Á?•)ˆÈ?ã
+		int col_hiku=0;int colmax=255;int colmin=30;//colmax=255(?^‚Á”’)ˆÈ‰º?Acolmin=0(?^‚Á??)ˆÈ??
 		//Menidsuu_max‚Í1ˆÈ?ã‚Å‚ ‚é‚±‚Æ
 		if(Menidsuu_max>0){col_hiku=(colmax-colmin)/Menidsuu_max;}
 		//if(Menidsuu_max<=0){System.out.println("?ã‰º•\?E?l?@oekaki_toukazu_with_camera!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!    Menidsuu_max<=0  !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");}
@@ -2447,19 +2450,19 @@ int ss; ss=getSmen_yuukou_suu();
 				g.fillPolygon(x, y, Smen_zu.getTenidsuu(im));
 			}
 
-			//–_‚ğ•`‚­?€”õ
+			//–_‚ğ•`‚­??”õ
 			g.setColor(Color.black);
 
 
 			if (i_anti_alias == 1) {
 				g2.setRenderingHint(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON);//ƒAƒ“ƒ`ƒFƒCƒŠƒAƒX?@ƒIƒ“
 				BasicStroke BStroke = new BasicStroke(1.2f, BasicStroke.CAP_BUTT, BasicStroke.JOIN_MITER);
-				g2.setStroke(BStroke);//?ü‚Ì‘¾‚³‚â?ü‚Ì––’[‚ÌŒ`?ó
+				g2.setStroke(BStroke);//??‚Ì‘¾‚³‚â??‚Ì––’[‚ÌŒ`??
 			}
 			if (i_anti_alias == 0) {
 				g2.setRenderingHint(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_OFF);//ƒAƒ“ƒ`ƒFƒCƒŠƒAƒX?@ƒIƒt
 				BasicStroke BStroke = new BasicStroke(1.0f, BasicStroke.CAP_BUTT, BasicStroke.JOIN_MITER);
-				g2.setStroke(BStroke);//?ü‚Ì‘¾‚³‚â?ü‚Ì––’[‚ÌŒ`?ó
+				g2.setStroke(BStroke);//??‚Ì‘¾‚³‚â??‚Ì––’[‚ÌŒ`??
 			}
 
 
@@ -2469,7 +2472,7 @@ int ss; ss=getSmen_yuukou_suu();
 			for (int ib = 1; ib <= Smen_zu.getBousuu(); ib++) {
 				s_ob.set(Smen_zu.getmaex(ib), Smen_zu.getmaey(ib), Smen_zu.getatox(ib), Smen_zu.getatoy(ib));
 				s_tv.set(camera.object2TV(s_ob));
-				g.drawLine(gx(s_tv.getax()), gy(s_tv.getay()), gx(s_tv.getbx()), gy(s_tv.getby())); //’¼?ü
+				g.drawLine(gx(s_tv.getax()), gy(s_tv.getay()), gx(s_tv.getbx()), gy(s_tv.getby())); //’¼??
 			}
 
 		}
@@ -2484,17 +2487,17 @@ int ss; ss=getSmen_yuukou_suu();
 		int omote_ura = 0;
 		if (camera.get_camera_kagami() == 1.0) {
 			omote_ura = 0;
-		}//ƒJƒ?ƒ‰‚Ì‹¾?İ’è‚ª1‚È‚ç?A?Ü‚è?ã‚ª‚è?}‚Í•\•\¦
+		}//ƒJ??ƒ‰‚Ì‹¾?İ’è‚ª1‚È‚ç?A?Ü‚è?ã‚ª‚è?}‚Í•\•\¦
 		if (camera.get_camera_kagami() == -1.0) {
 			omote_ura = 1;
-		}//ƒJƒ?ƒ‰‚Ì‹¾?İ’è‚ª-1(x²‚Ì•„?†‚ğ”½“])‚È‚ç?A?Ü‚è?ã‚ª‚è?}‚Í— •\¦
+		}//ƒJ??ƒ‰‚Ì‹¾?İ’è‚ª-1(x²‚Ì•„??‚ğ”½“])‚È‚ç?A?Ü‚è?ã‚ª‚è?}‚Í— •\¦
 		//System.out.println("?ã‰º•\?E?l?@oekaki_with_camera+++++++++++++++?Ü†•\¦?@–Ê‚ğ•`‚­");
 		OritaOekaki OO = new OritaOekaki();
 		Ten t0 = new Ten();
 		Ten t1 = new Ten();
 		Senbun s_ob = new Senbun();
 		Senbun s_tv = new Senbun();
-		String text = "";//•¶š—ñ?ˆ—?—p‚ÌƒNƒ‰ƒX‚ÌƒCƒ“ƒXƒ^ƒ“ƒX‰»
+		String text = "";//•¶š—ñ????—p‚ÌƒNƒ‰ƒX‚ÌƒCƒ“ƒXƒ^ƒ“ƒX‰»
 		ip1 = omote_ura;
 		//  System.out.println(Smensuu);
 
@@ -2508,19 +2511,19 @@ int ss; ss=getSmen_yuukou_suu();
 
 		//if(hyouji_flg==5){//?Ü†•\¦---------------------------------------------------------------------------
 
-		//Smen‚Ì.set_Menid2uekara_kazoeta_iti‚ÍŒ»?İ‚Ì?ã‰º•\‚ğ‚à‚Æ‚É?A?ã‚©‚ç?”‚¦‚Äi”Ô‚ß‚Ì–Ê‚Ìid”Ô?†‚ğ‘S‚Ä‚Ì?‡”Ô‚É‚Â‚«Ši”[‚·‚é?B
-		for (int im = 1; im <= Smensuu; im++) { //Smen‚©‚ç?ã‚©‚ç‚Ìw’è‚µ‚½”Ô–Ú‚Ì–Ê‚Ìid‚ğ‹?‚ß‚é?B
+		//Smen‚Ì.set_Menid2uekara_kazoeta_iti‚ÍŒ»?İ‚Ì?ã‰º•\‚ğ‚à‚Æ‚É?A?ã‚©‚ç?”‚¦‚Äi”Ô‚ß‚Ì–Ê‚Ìid”Ô??‚ğ‘S‚Ä‚Ì?‡”Ô‚É‚Â‚«Ši”[‚·‚é?B
+		for (int im = 1; im <= Smensuu; im++) { //Smen‚©‚ç?ã‚©‚ç‚Ìw’è‚µ‚½”Ô–Ú‚Ì–Ê‚Ìid‚ğ??‚ß‚é?B
 			s0[im].set_Menid2uekara_kazoeta_iti(jg);//s0[]‚ÍSmen_zu‚©‚ç“¾‚ç‚ê‚éSmen‚»‚Ì‚à‚Ì?Ajg‚Í?ã‰º•\Jyougehyou‚Ì‚±‚Æ
 		}
-		//‚±‚±‚Ü‚Å‚Å?A?ã‰º•\‚Ì?î•ñ‚ªSmen‚ÌŠe–Ê‚É“ü‚Á‚½
+		//‚±‚±‚Ü‚Å‚Å?A?ã‰º•\‚Ì?û±ñ‚ªSmen‚ÌŠe–Ê‚É“ü‚Á‚½
 
 
 		//–Ê‚ğ•`‚­-----------------------------------------------------------------------------------------------------
 		g2.setRenderingHint(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_OFF);//ƒAƒ“ƒ`ƒFƒCƒŠƒAƒX?@ƒIƒt
 
 		int Men_jyunban;
-		for (int im = 1; im <= Smensuu; im++) {//im‚ÍŠeSmen‚Ì”Ô?†
-			if (s0[im].getMenidsuu() > 0) {//Menidsuu‚ÍSmen(?Ü‚è?ô‚İ?„’è‚µ‚Ä‚¦‚ç‚ê‚½?j‹à?}‚ğ?×•ªŠ„‚µ‚½–Ê)‚Å?d‚È‚Á‚Ä‚¢‚éMen(?Ü‚è‚½‚½‚Ş‘O‚Ì“WŠJ?}‚Ì–Ê)‚Ì?”?B‚±‚ê‚ª0‚È‚ç?Aƒh?[ƒiƒc?ó‚ÌŒŠ‚Ì–Ê‚È‚Ì‚Å•`‰æ‘Î?ÛŠO
+		for (int im = 1; im <= Smensuu; im++) {//im‚ÍŠeSmen‚Ì”Ô??
+			if (s0[im].getMenidsuu() > 0) {//Menidsuu‚ÍSmen(?Ü‚è?ô‚İ??’è‚µ‚Ä‚¦‚ç‚ê‚½?j‹à?}‚ğ?×•ªŠ„‚µ‚½–Ê)‚Å?d‚È‚Á‚Ä‚¢‚éMen(?Ü‚è‚½‚½‚Ş‘O‚Ì“WŠJ?}‚Ì–Ê)‚Ì???B‚±‚ê‚ª0‚È‚ç?Aƒh?[ƒiƒc?ó‚ÌŒŠ‚Ì–Ê‚È‚Ì‚Å•`‰æ‘Î?ÛŠO
 
 				//?Ü‚è?ã‚ª‚è?}‚ğ•`‚­‚Æ‚«‚Ìim”Ô–Ú‚ÌSmen‚Ì?F‚ğŒˆ‚ß‚é
 				Men_jyunban = 1;
@@ -2553,7 +2556,7 @@ int ss; ss=getSmen_yuukou_suu();
 
 				//?Ü‚è?ã‚ª‚è?}‚ğ•`‚­‚Æ‚«‚ÌSmen‚Ì?F‚ğŒˆ‚ß‚é‚Ì‚Í‚±‚±‚Ü‚Å
 
-				//?Ü‚è?ã‚ª‚è?}‚ğ•`‚­‚Æ‚«‚Ìim”Ô–Ú‚ÌSmen‚Ì‘½ŠpŒ`‚Ì’¸“_‚Ì?À•W?iPC•\¦?ã?j‚ğ‹?‚ß‚é
+				//?Ü‚è?ã‚ª‚è?}‚ğ•`‚­‚Æ‚«‚Ìim”Ô–Ú‚ÌSmen‚Ì‘½ŠpŒ`‚Ì’¸“_‚Ì?À•W?iPC•\¦???j‚ğ??‚ß‚é
 
 				for (int i = 1; i <= Smen_zu.getTenidsuu(im) - 1; i++) {
 
@@ -2574,7 +2577,7 @@ int ss; ss=getSmen_yuukou_suu();
 				//x[0]=gx(Smen_zu.getTenx(Smen_zu.getTenid(im,Smen_zu.getTenidsuu(im))));
 				//y[0]=gy(Smen_zu.getTeny(Smen_zu.getTenid(im,Smen_zu.getTenidsuu(im))));
 
-				//?Ü‚è?ã‚ª‚è?}‚ğ•`‚­‚Æ‚«‚Ìim”Ô–Ú‚ÌSmen‚Ì‘½ŠpŒ`‚Ì’¸“_‚Ì?À•W?iPC•\¦?ã?j‚ğ‹?‚ß‚é‚Ì‚Í‚±‚±‚Ü‚Å
+				//?Ü‚è?ã‚ª‚è?}‚ğ•`‚­‚Æ‚«‚Ìim”Ô–Ú‚ÌSmen‚Ì‘½ŠpŒ`‚Ì’¸“_‚Ì?À•W?iPC•\¦???j‚ğ??‚ß‚é‚Ì‚Í‚±‚±‚Ü‚Å
 
 				g2.fill(new Polygon(x, y, Smen_zu.getTenidsuu(im)));
 				//g.fillPolygon(x,y,Smen_zu.getTenidsuu(im));
@@ -2582,7 +2585,7 @@ int ss; ss=getSmen_yuukou_suu();
 		}
 		//–Ê‚ğ•`‚­?@‚±‚±‚Ü‚Å
 
-		//g.setColor(new Color(0,0,0));		//?•
+		//g.setColor(new Color(0,0,0));		//??
 		//g.setColor(new Color(255,255,255));	//”’
 
 
@@ -2593,7 +2596,7 @@ int ss; ss=getSmen_yuukou_suu();
 				int im = bou_no_bangou_kara_kagenoaru_Smen_no_bangou_wo_motomeru(ib, Smen_zu, omote_ura);//‰e‚ğ‚Â‚¯‚éSmen‚Ìid
 				if (im != 0) {//‰e‚ğ•`‚­?B
 
-					//?Ü‚è?ã‚ª‚è?}‚ğ•`‚­‚Æ‚«‚Ìim”Ô–Ú‚ÌSmen‚Ì‘½ŠpŒ`‚Ì’¸“_‚Ì?À•W?iPC•\¦?ã?j‚ğ‹?‚ß‚é
+					//?Ü‚è?ã‚ª‚è?}‚ğ•`‚­‚Æ‚«‚Ìim”Ô–Ú‚ÌSmen‚Ì‘½ŠpŒ`‚Ì’¸“_‚Ì?À•W?iPC•\¦???j‚ğ??‚ß‚é
 		   /*
 				for (int i=1; i<=Smen_zu.getTenidsuu(im)-1; i++ ){
 
@@ -2610,7 +2613,7 @@ int ss; ss=getSmen_yuukou_suu();
 				x[0]=gx(t1.getx());
 				y[0]=gy(t1.gety());
 
-				//?Ü‚è?ã‚ª‚è?}‚ğ•`‚­‚Æ‚«‚Ìim”Ô–Ú‚ÌSmen‚Ì‘½ŠpŒ`‚Ì’¸“_‚Ì?À•W?iPC•\¦?ã?j‚ğ‹?‚ß‚é‚Ì‚Í‚±‚±‚Ü‚Å
+				//?Ü‚è?ã‚ª‚è?}‚ğ•`‚­‚Æ‚«‚Ìim”Ô–Ú‚ÌSmen‚Ì‘½ŠpŒ`‚Ì’¸“_‚Ì?À•W?iPC•\¦???j‚ğ??‚ß‚é‚Ì‚Í‚±‚±‚Ü‚Å
 */
 
 
@@ -2636,12 +2639,12 @@ int ss; ss=getSmen_yuukou_suu();
 					t_bmx = t1.getx();
 					t_bmy = t1.gety();
 
-					//–_‚Ì’†“_‚ğ’Ê‚é’¼Œğ?ü?ã‚Ì“_
+					//–_‚Ì’†“_‚ğ’Ê‚é’¼Œğ???ã‚Ì“_
 					double o_bmtx, o_bmty;
 					double t_bmtx, t_bmty;
 
 
-					//–_‚Ì’†“_‚ğ’Ê‚é’¼Œğ?ü?ã‚Ì“_
+					//–_‚Ì’†“_‚ğ’Ê‚é’¼Œğ???ã‚Ì“_
 					o_bmtx = o_bmx + o_btx;
 					o_bmty = o_bmy + o_bty;
 
@@ -2708,7 +2711,7 @@ int ss; ss=getSmen_yuukou_suu();
 
 
 					//-----------------------------------------------
-					//–_‚Ì’†“_‚ğ’Ê‚é’¼Œğ?ü?ã‚Ì“_
+					//–_‚Ì’†“_‚ğ’Ê‚é’¼Œğ???ã‚Ì“_
 					o_bmtx = o_bmx + o_btx;
 					o_bmty = o_bmy + o_bty;
 
@@ -2779,12 +2782,12 @@ int ss; ss=getSmen_yuukou_suu();
 		if (i_anti_alias == 1) {
 			g2.setRenderingHint(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON);//ƒAƒ“ƒ`ƒFƒCƒŠƒAƒX?@ƒIƒ“
 			BasicStroke BStroke = new BasicStroke(1.2f, BasicStroke.CAP_BUTT, BasicStroke.JOIN_MITER);
-			g2.setStroke(BStroke);//?ü‚Ì‘¾‚³‚â?ü‚Ì––’[‚ÌŒ`?ó
+			g2.setStroke(BStroke);//??‚Ì‘¾‚³‚â??‚Ì––’[‚ÌŒ`??
 		}
 		if (i_anti_alias == 0) {
 			g2.setRenderingHint(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_OFF);//ƒAƒ“ƒ`ƒFƒCƒŠƒAƒX?@ƒIƒt
 			BasicStroke BStroke = new BasicStroke(1.0f, BasicStroke.CAP_BUTT, BasicStroke.JOIN_MITER);
-			g2.setStroke(BStroke);//?ü‚Ì‘¾‚³‚â?ü‚Ì––’[‚ÌŒ`?ó
+			g2.setStroke(BStroke);//??‚Ì‘¾‚³‚â??‚Ì––’[‚ÌŒ`??
 		}
 
 		g.setColor(L_color);//g.setColor(Color.black);
@@ -2795,12 +2798,12 @@ int ss; ss=getSmen_yuukou_suu();
 
 		for (int ib = 1; ib <= Smen_zu.getBousuu(); ib++) {
 
-			int Mid_min, Mid_max; //–_‚Ì—¼‘¤‚ÌSmen‚Ì”Ô?†‚Ì?¬‚³‚¢‚Ù‚¤‚ªMid_min,?@‘å‚«‚¢‚Ù‚¤‚ªMid_max
-			int Men_jyunban_min, Men_jyunban_max;//PC‰æ–Ê‚É•\¦‚µ‚½‚Æ‚«Smen(Mid_min) ‚ÅŒ©‚¦‚é–Ê‚Ì”Ô?†‚ªMen_jyunban_min?ASmen(Mid_max) ‚ÅŒ©‚¦‚é–Ê‚Ì”Ô?†‚ªMen_jyunban_max
+			int Mid_min, Mid_max; //–_‚Ì—¼‘¤‚ÌSmen‚Ì”Ô??‚Ì?¬‚³‚¢‚Ù‚¤‚ªMid_min,?@‘å‚«‚¢‚Ù‚¤‚ªMid_max
+			int Men_jyunban_min, Men_jyunban_max;//PC‰æ–Ê‚É•\¦‚µ‚½‚Æ‚«Smen(Mid_min) ‚ÅŒ©‚¦‚é–Ê‚Ì”Ô??‚ªMen_jyunban_min?ASmen(Mid_max) ‚ÅŒ©‚¦‚é–Ê‚Ì”Ô??‚ªMen_jyunban_max
 			int oekaki_flg;
 
 			oekaki_flg = 0;
-			Mid_min = Smen_zu.Bou_moti_Menid_min_motome(ib);//–_ib‚ğ‹«ŠE‚Æ‚µ‚ÄŠÜ‚Ş–Ê(?Å‘å‚Å2–Ê‚ ‚é)‚Ì‚¤‚¿‚ÅMenid‚Ì?¬‚³‚¢‚Ù‚¤‚ÌMenid‚ğ•Ô‚·?B–_‚ğ‹«ŠE‚Æ‚µ‚ÄŠÜ‚Ş–Ê‚ª–³‚¢?ê?‡‚Í0‚ğ•Ô‚·
+			Mid_min = Smen_zu.Bou_moti_Menid_min_motome(ib);//–_ib‚ğ‹«ŠE‚Æ‚µ‚ÄŠÜ‚Ş–Ê(?Å‘å‚Å2–Ê‚ ‚é)‚Ì‚¤‚¿‚ÅMenid‚Ì?¬‚³‚¢‚Ù‚¤‚ÌMenid‚ğ•Ô‚·?B–_‚ğ‹«ŠE‚Æ‚µ‚ÄŠÜ‚Ş–Ê‚ª–³‚¢???‡‚Í0‚ğ•Ô‚·
 			Mid_max = Smen_zu.Bou_moti_Menid_max_motome(ib);
 
 			if (s0[Mid_min].getMenidsuu() == 0) {
@@ -2829,8 +2832,8 @@ int ss; ss=getSmen_yuukou_suu();
 				s_ob.set(Smen_zu.getmaex(ib), Smen_zu.getmaey(ib), Smen_zu.getatox(ib), Smen_zu.getatoy(ib));
 				s_tv.set(camera.object2TV(s_ob));
 				//g2.draw(new Line2D.Double( gx(s_tv.getax()),gy(s_tv.getay()),gx(s_tv.getbx()),gy(s_tv.getby())));
-				g.drawLine(gx(s_tv.getax()), gy(s_tv.getay()), gx(s_tv.getbx()), gy(s_tv.getby())); //’¼?ü
-				//g.drawLine( gx(Smen_zu.getmaex(ib)),gy(Smen_zu.getmaey(ib)),gx(Smen_zu.getatox(ib)),gy(Smen_zu.getatoy(ib))); //’¼?ü
+				g.drawLine(gx(s_tv.getax()), gy(s_tv.getay()), gx(s_tv.getbx()), gy(s_tv.getby())); //’¼??
+				//g.drawLine( gx(Smen_zu.getmaex(ib)),gy(Smen_zu.getmaey(ib)),gx(Smen_zu.getatox(ib)),gy(Smen_zu.getatoy(ib))); //’¼??
 			}
 
 
@@ -2873,14 +2876,14 @@ int ss; ss=getSmen_yuukou_suu();
 
 	//---------------------------------------------------------
 
-	public int bou_no_bangou_kara_kagenoaru_Smen_no_bangou_wo_motomeru(int ib, Tensyuugou Smen_zu, int omote_ura) {//–_‚Ì”Ô?†‚©‚ç?A‚»‚Ì–_‚Ì‰e‚ª”­?¶‚·‚éSmen ‚Ì”Ô?†‚ğ‹?‚ß‚é?B‰e‚ª”­?¶‚µ‚È‚¢?ê?‡‚Í0‚ğ•Ô‚·?B
+	public int bou_no_bangou_kara_kagenoaru_Smen_no_bangou_wo_motomeru(int ib, Tensyuugou Smen_zu, int omote_ura) {//–_‚Ì”Ô??‚©‚ç?A‚»‚Ì–_‚Ì‰e‚ª”­?¶‚·‚éSmen ‚Ì”Ô??‚ğ??‚ß‚é?B‰e‚ª”­?¶‚µ‚È‚¢???‡‚Í0‚ğ•Ô‚·?B
 
 		int i_return = 0;
 
-		int Mid_min, Mid_max; //–_‚Ì—¼‘¤‚ÌSmen‚Ì”Ô?†‚Ì?¬‚³‚¢‚Ù‚¤‚ªMid_min,?@‘å‚«‚¢‚Ù‚¤‚ªMid_max
+		int Mid_min, Mid_max; //–_‚Ì—¼‘¤‚ÌSmen‚Ì”Ô??‚Ì?¬‚³‚¢‚Ù‚¤‚ªMid_min,?@‘å‚«‚¢‚Ù‚¤‚ªMid_max
 		int Men_jyunban_min, Men_jyunban_max;//PC‰æ–Ê‚É•\¦‚µ‚½‚Æ‚«Smen(Mid_min) ‚ÅŒ©‚¦‚é–Ê‚Ì?A‚»‚ÌSmen‚Å‚Ì?d‚È‚è?‡‚ªMen_jyunban_min?ASmen(Mid_max) ‚ÅŒ©‚¦‚é–Ê‚Ì‚»‚ÌSmen‚Å‚Ì?d‚È‚è?‡‚ªMen_jyunban_max
 
-		Mid_min = Smen_zu.Bou_moti_Menid_min_motome(ib);//–_ib‚ğ‹«ŠE‚Æ‚µ‚ÄŠÜ‚Ş–Ê(?Å‘å‚Å2–Ê‚ ‚é)‚Ì‚¤‚¿‚ÅMenid‚Ì?¬‚³‚¢‚Ù‚¤‚ÌMenid‚ğ•Ô‚·?B–_‚ğ‹«ŠE‚Æ‚µ‚ÄŠÜ‚Ş–Ê‚ª–³‚¢?ê?‡‚Í0‚ğ•Ô‚·
+		Mid_min = Smen_zu.Bou_moti_Menid_min_motome(ib);//–_ib‚ğ‹«ŠE‚Æ‚µ‚ÄŠÜ‚Ş–Ê(?Å‘å‚Å2–Ê‚ ‚é)‚Ì‚¤‚¿‚ÅMenid‚Ì?¬‚³‚¢‚Ù‚¤‚ÌMenid‚ğ•Ô‚·?B–_‚ğ‹«ŠE‚Æ‚µ‚ÄŠÜ‚Ş–Ê‚ª–³‚¢???‡‚Í0‚ğ•Ô‚·
 		Mid_max = Smen_zu.Bou_moti_Menid_max_motome(ib);
 
 		if (s0[Mid_min].getMenidsuu() == 0) {
@@ -2954,7 +2957,7 @@ int ss; ss=getSmen_yuukou_suu();
 		//------------------------------------------------------------------------------
 		double katen=100.0;//‰Á“_
 		for (int ism=1; ism<=Smensuu; ism++ ){
-			int Mensuu=	s0[ism].getMenidsuu();//Smen‚Å‚Ì–Ê?”
+			int Mensuu=	s0[ism].getMenidsuu();//Smen‚Å‚Ì–Ê??
 			for (int jyunban=1; jyunban<=Mensuu; jyunban++ ){
 				int im=	s0[ism].uekara_kazoeta_Menid(jyunban);
 				men_rating[im]=men_rating[im]+(double)(Mensuu-2*jyunban+1)*katen;
@@ -2974,7 +2977,7 @@ int ss; ss=getSmen_yuukou_suu();
 						//ia=rand.nextInt(jgms)+1 ;
 						//ib=rand.nextInt(jgms)+1 ;
 						if (ia != ib) {
-							if (jg.get(ia, ib) == 1) {//wiki‚ÌƒCƒ?ƒŒ?[ƒeƒBƒ“ƒO‚Ì?«ŠûƒNƒ‰ƒu24Q?Æ
+							if (jg.get(ia, ib) == 1) {//wiki‚ÌƒC??ƒŒ?[ƒeƒBƒ“ƒO‚Ì?«ŠûƒNƒ‰ƒu24Q?Æ
 								dr = 12.0 + (men_rating[ib] - men_rating[ia]) * 0.04;
 								if (dr < 1.0) {
 									dr = 1.0;
@@ -3012,7 +3015,7 @@ int ss; ss=getSmen_yuukou_suu();
 					ib=rand.nextInt(jgms)+1 ;
 
 					if(ia != ib){
-						if(jg.get(ia,ib)==1){//wiki‚ÌƒCƒ?ƒŒ?[ƒeƒBƒ“ƒO‚Ì?«ŠûƒNƒ‰ƒu24Q?Æ
+						if(jg.get(ia,ib)==1){//wiki‚ÌƒC??ƒŒ?[ƒeƒBƒ“ƒO‚Ì?«ŠûƒNƒ‰ƒu24Q?Æ
 							dr=12.0+( men_rating[ib]-men_rating[ia]   )*0.04;
 							if(dr<1.0){dr=1.0;}
 							if(dr>31.0){dr=31.0;}
@@ -3052,21 +3055,21 @@ int ss; ss=getSmen_yuukou_suu();
 
 //-----------------------------------
 
-	int makesuu0no_menno_kazu = 0;//?ã‚É‘¼‚Ì–Ê‚ª‚È‚¢?ó‘Ô‚Å?‡ˆÊ•t‚¯‚Å‚«‚é–Ê‚Ì?”
-	int makesuu1ijyouno_menno_kazu = 0;//?ã‚É‘¼‚Ì–Ê‚ª1ˆÈ?ã‚ ‚é?ó‘Ô‚Å‚È‚¢‚Æ?‡ˆÊ•t‚¯‚Å‚«‚È‚¢–Ê‚Ì?”
+	int makesuu0no_menno_kazu = 0;//?ã‚É‘¼‚Ì–Ê‚ª‚È‚¢?ó‘Ô‚Å?‡ˆÊ•t‚¯‚Å‚«‚é–Ê‚Ì??
+	int makesuu1ijyouno_menno_kazu = 0;//?ã‚É‘¼‚Ì–Ê‚ª1ˆÈ?ã‚?‚é?ó‘Ô‚Å‚È‚¢‚Æ?‡ˆÊ•t‚¯‚Å‚«‚È‚¢–Ê‚Ì??
 
 	private void rating2() {
-		int jgms = jg.getMensuu();//–Ê‚Ì‘??”‚ğ‹?‚ß‚é?B
+		int jgms = jg.getMensuu();//–Ê‚Ì???”‚ğ‹?‚ß‚é?B
 //System.out.println("*********  rating2()   *************");
 		double[] men_r = new double[jgms + 1];
 		men_rating = men_r;
 
-		int[] i_m_r = new int[jgms + 1];//Še–Ê‚Ì?®?”ƒŒ?[ƒeƒBƒ“ƒO?irating2()‚Åg‚¤?j?j
+		int[] i_m_r = new int[jgms + 1];//Še–Ê‚Ì?®?”ƒ??[ƒeƒBƒ“ƒO?irating2()‚Åg‚¤?j?j
 		i_men_rating = i_m_r;
 
 
-		makesuu0no_menno_kazu = 0;//?ã‚É‘¼‚Ì–Ê‚ª‚È‚¢?ó‘Ô‚Å?‡ˆÊ•t‚¯‚Å‚«‚é–Ê‚Ì?”
-		makesuu1ijyouno_menno_kazu = 0;//?ã‚É‘¼‚Ì–Ê‚ª1ˆÈ?ã‚ ‚é?ó‘Ô‚Å‚È‚¢‚Æ?‡ˆÊ•t‚¯‚Å‚«‚È‚¢–Ê‚Ì?”
+		makesuu0no_menno_kazu = 0;//?ã‚É‘¼‚Ì–Ê‚ª‚È‚¢?ó‘Ô‚Å?‡ˆÊ•t‚¯‚Å‚«‚é–Ê‚Ì??
+		makesuu1ijyouno_menno_kazu = 0;//?ã‚É‘¼‚Ì–Ê‚ª1ˆÈ?ã‚?‚é?ó‘Ô‚Å‚È‚¢‚Æ?‡ˆÊ•t‚¯‚Å‚«‚È‚¢–Ê‚Ì??
 
 
 		for (int i = 0; i <= jgms; i++) {
@@ -3074,9 +3077,9 @@ int ss; ss=getSmen_yuukou_suu();
 		}
 
 
-//s–Ê‚Ì‚P‚©‚ç?‡‚Éˆê”Ô?ã‚É‚ ‚é–Ê‚ğ‹?‚ß‚é?iƒŒ?[ƒg‚ª‚Â‚¢‚½–Ê‚Í?œ‚­?j?B
-//s–Ê‚Ì‚P‚©‚ç?‡‚É‚»‚Ì–Ê‚Ì?ã‚É‚ ‚é–Ê?”?iƒŒ?[ƒg‚ª‚Â‚¢‚½–Ê‚Í?œ‚­?j‚ğ‹?‚ß?A‘?Œv‚ğ‹?‚ß‚é
-//‚»‚Ì–Ê‚Ì?ã‚Ì‚ ‚é–Ê?”?iƒŒ?[ƒg‚ª‚Â‚¢‚½–Ê‚Í?œ‚­?j‚ª?Å?¬‚Ì–Ê‚ğ‹?‚ßƒŒ?[ƒg‚ğ‚Â‚¯‚é
+//s–Ê‚Ì‚P‚©‚ç?‡‚Éˆê”Ô?ã‚É‚ ‚é–Ê‚ğ??‚ß‚é?iƒŒ?[ƒg‚ª‚Â‚¢‚½–Ê‚Í?œ‚­?j?B
+//s–Ê‚Ì‚P‚©‚ç?‡‚É‚»‚Ì–Ê‚Ì?ã‚É‚ ‚é–Ê???iƒŒ?[ƒg‚ª‚Â‚¢‚½–Ê‚Í?œ‚­?j‚ğ??‚ß?A??Œv‚ğ??‚ß‚é
+//‚»‚Ì–Ê‚Ì?ã‚Ì‚ ‚é–Ê???iƒŒ?[ƒg‚ª‚Â‚¢‚½–Ê‚Í?œ‚­?j‚ª?Å?¬‚Ì–Ê‚ğ??‚ßƒŒ?[ƒg‚ğ‚Â‚¯‚é
 
 
 		for (int i = 1; i <= jgms; i++) {
@@ -3094,8 +3097,8 @@ int ss; ss=getSmen_yuukou_suu();
 //System.out.println("*********  rating2()   end *************");
 
 
-		System.out.println("?ã‚É‘¼‚Ì–Ê‚ª‚È‚¢?ó‘Ô‚Å?‡ˆÊ•t‚¯‚Å‚«‚½–Ê‚Ì?” = " + makesuu0no_menno_kazu);
-		System.out.println("?ã‚É‘¼‚Ì–Ê‚ª1ˆÈ?ã‚ ‚é?ó‘Ô‚Å?‡ˆÊ•t‚¯‚µ‚½–Ê‚Ì?” = " + makesuu1ijyouno_menno_kazu);
+		System.out.println("?ã‚É‘¼‚Ì–Ê‚ª‚È‚¢?ó‘Ô‚Å?‡ˆÊ•t‚¯‚Å‚«‚½–Ê‚Ì?? = " + makesuu0no_menno_kazu);
+		System.out.println("?ã‚É‘¼‚Ì–Ê‚ª1ˆÈ?ã‚?‚é?ó‘Ô‚Å?‡ˆÊ•t‚¯‚µ‚½–Ê‚Ì?? = " + makesuu1ijyouno_menno_kazu);
 
 
 
@@ -3120,7 +3123,7 @@ int ss; ss=getSmen_yuukou_suu();
 		//------------------------------------------------------------------------------
 		double katen=100.0;//‰Á“_
 		for (int ism=1; ism<=Smensuu; ism++ ){
-			int Mensuu=	s0[ism].getMenidsuu();//Smen‚Å‚Ì–Ê?”
+			int Mensuu=	s0[ism].getMenidsuu();//Smen‚Å‚Ì–Ê??
 			for (int jyunban=1; jyunban<=Mensuu; jyunban++ ){
 				int im=	s0[ism].uekara_kazoeta_Menid(jyunban);
 				men_rating[im]=men_rating[im]+(double)(Mensuu-2*jyunban+1)*katen;
@@ -3140,7 +3143,7 @@ int ss; ss=getSmen_yuukou_suu();
 						//ia=rand.nextInt(jgms)+1 ;
 						//ib=rand.nextInt(jgms)+1 ;
 						if(ia != ib){
-							if(jg.get(ia,ib)==1){//wiki‚ÌƒCƒ?ƒŒ?[ƒeƒBƒ“ƒO‚Ì?«ŠûƒNƒ‰ƒu24Q?Æ
+							if(jg.get(ia,ib)==1){//wiki‚ÌƒC??ƒŒ?[ƒeƒBƒ“ƒO‚Ì?«ŠûƒNƒ‰ƒu24Q?Æ
 								dr=12.0+( men_rating[ib]-men_rating[ia]   )*0.04;
 								if(dr<1.0){dr=1.0;}
 								if(dr>31.0){dr=31.0;}
@@ -3170,7 +3173,7 @@ int ss; ss=getSmen_yuukou_suu();
 					ib=rand.nextInt(jgms)+1 ;
 
 					if(ia != ib){
-						if(jg.get(ia,ib)==1){//wiki‚ÌƒCƒ?ƒŒ?[ƒeƒBƒ“ƒO‚Ì?«ŠûƒNƒ‰ƒu24Q?Æ
+						if(jg.get(ia,ib)==1){//wiki‚ÌƒC??ƒŒ?[ƒeƒBƒ“ƒO‚Ì?«ŠûƒNƒ‰ƒu24Q?Æ
 							dr=12.0+( men_rating[ib]-men_rating[ia]   )*0.04;
 							if(dr<1.0){dr=1.0;}
 							if(dr>31.0){dr=31.0;}
@@ -3221,7 +3224,7 @@ int ss; ss=getSmen_yuukou_suu();
 		top_men_id_ga_maketa_kazu_goukei_without_rated_men = jg.getMensuu() + 100;
 
 
-		int jgms = jg.getMensuu();//–Ê‚Ì‘??”‚ğ‹?‚ß‚é?B
+		int jgms = jg.getMensuu();//–Ê‚Ì???”‚ğ‹?‚ß‚é?B
 
 		int[] i_kentouzumi = new int[jgms + 1];//ŒŸ“¢?Ï‚İ‚Ì–ÊID‚Í‚P‚É‚·‚é
 		for (int i = 0; i <= jgms; i++) {
@@ -3230,13 +3233,13 @@ int ss; ss=getSmen_yuukou_suu();
 
 		for (int i = 1; i <= Smensuu; i++) {
 			int s_top_id = get_s_top_id_without_rated_men(i);//Šes–Ê‚Ì?iƒŒ?[ƒg‚ª‚Â‚¢‚½–Ê‚Í?œ‚­?jˆê”Ô?ã‚Ì–Ê?Bs_top_id=0‚È‚ç‚»‚Ìs–Ê‚É‚ÍƒŒ?[ƒg‚ª–¢’è‚Ì–Ê‚Í‚È‚¢
-			//System.out.println("*********   get_top_men_id_without_rated_men()   Smen ID = "+I+"  s_top_id = "+s_top_id+  "   •‰‚¯?” = "+get_maketa_kazu_goukei_without_rated_men(s_top_id));
+			//System.out.println("*********   get_top_men_id_without_rated_men()   Smen ID = "+I+"  s_top_id = "+s_top_id+  "   •‰‚¯?? = "+get_maketa_kazu_goukei_without_rated_men(s_top_id));
 
 
 			if (s_top_id != 0) {
 				if (i_kentouzumi[s_top_id] == 0) {
 					//int makesuu=get_maketa_kazu_goukei_without_rated_men(s_top_id);
-					//System.out.println("*********     Smen ID = "+i+"  s_top_id = "+s_top_id+  "   •‰‚¯?” = "+get_maketa_kazu_goukei_without_rated_men(s_top_id));
+					//System.out.println("*********     Smen ID = "+i+"  s_top_id = "+s_top_id+  "   •‰‚¯?? = "+get_maketa_kazu_goukei_without_rated_men(s_top_id));
 
 
 					int mkg = get_maketa_kazu_goukei_without_rated_men(s_top_id);
@@ -3258,8 +3261,8 @@ int ss; ss=getSmen_yuukou_suu();
 		}
 
 //System.out.println("*********   get_top_men_id_without_rated_men()   end *************");
-		//makesuu0no_menno_kazu=0;//?ã‚É‘¼‚Ì–Ê‚ª‚È‚¢?ó‘Ô‚Å?‡ˆÊ•t‚¯‚Å‚«‚é–Ê‚Ì?”
-		//makesuu1ijyouno_menno_kazu=0;//?ã‚É‘¼‚Ì–Ê‚ª1ˆÈ?ã‚ ‚é?ó‘Ô‚Å‚È‚¢‚Æ?‡ˆÊ•t‚¯‚Å‚«‚È‚¢–Ê‚Ì?”
+		//makesuu0no_menno_kazu=0;//?ã‚É‘¼‚Ì–Ê‚ª‚È‚¢?ó‘Ô‚Å?‡ˆÊ•t‚¯‚Å‚«‚é–Ê‚Ì??
+		//makesuu1ijyouno_menno_kazu=0;//?ã‚É‘¼‚Ì–Ê‚ª1ˆÈ?ã‚?‚é?ó‘Ô‚Å‚È‚¢‚Æ?‡ˆÊ•t‚¯‚Å‚«‚È‚¢–Ê‚Ì??
 		if (top_men_id_ga_maketa_kazu_goukei_without_rated_men == 0) {
 			makesuu0no_menno_kazu = makesuu0no_menno_kazu + 1;
 		} else if (top_men_id_ga_maketa_kazu_goukei_without_rated_men > 0) {
@@ -3267,8 +3270,8 @@ int ss; ss=getSmen_yuukou_suu();
 		}
 
 
-//System.out.println("*?ã‚É‘¼‚Ì–Ê‚ª‚È‚¢?ó‘Ô‚Å?‡ˆÊ•t‚¯‚Å‚«‚½–Ê‚Ì?” = "+makesuu0no_menno_kazu);
-//System.out.println("*?ã‚É‘¼‚Ì–Ê‚ª1ˆÈ?ã‚ ‚é?ó‘Ô‚Å?‡ˆÊ•t‚¯‚µ‚½–Ê‚Ì?” = "+makesuu1ijyouno_menno_kazu);
+//System.out.println("*?ã‚É‘¼‚Ì–Ê‚ª‚È‚¢?ó‘Ô‚Å?‡ˆÊ•t‚¯‚Å‚«‚½–Ê‚Ì?? = "+makesuu0no_menno_kazu);
+//System.out.println("*?ã‚É‘¼‚Ì–Ê‚ª1ˆÈ?ã‚?‚é?ó‘Ô‚Å?‡ˆÊ•t‚¯‚µ‚½–Ê‚Ì?? = "+makesuu1ijyouno_menno_kazu);
 
 
 		return top_men_id;
@@ -3278,7 +3281,7 @@ int ss; ss=getSmen_yuukou_suu();
 
 	private int get_s_top_id_without_rated_men(int ism) {//ism‚Ís–Ê‚Ìid
 //System.out.println("*********   get_s_top_id_without_rated_men   *************");
-		int Mensuu = s0[ism].getMenidsuu();//Smen‚Å‚Ì–Ê?”//Smen s0[];//Smen_zu‚©‚ç“¾‚ç‚ê‚éSmen
+		int Mensuu = s0[ism].getMenidsuu();//Smen‚Å‚Ì–Ê??//Smen s0[];//Smen_zu‚©‚ç“¾‚ç‚ê‚éSmen
 		for (int jyunban = 1; jyunban <= Mensuu; jyunban++) {
 			int im = s0[ism].uekara_kazoeta_Menid(jyunban);
 			if (i_men_rating[im] == 0) {
@@ -3297,7 +3300,7 @@ int ss; ss=getSmen_yuukou_suu();
 			i_make = i_make + get_smen_de_maketa_kazu_without_rated_men(ism, men_id);
 			if (i_make >= top_men_id_ga_maketa_kazu_goukei_without_rated_men) {
 				return i_make;
-			}//20180306?‚‘¬‰»‚Ì‚½‚ß‚±‚Ì‚P?s‚ğ“ü‚ê‚Ä‚¢‚é‚ª?A–{“–‚ÉŒø‰Ê‚ª‚ ‚é‚©‚Í•s–¾?B‚±‚Ì?s‚¾‚¯ƒRƒ?ƒ“ƒgƒAƒEƒg‚µ‚Ä‚à?³?í‚É‚Í“®‚­‚Í‚¸?B
+			}//20180306?‚‘¬‰»‚Ì‚½‚ß‚±‚Ì‚P?s‚ğ“ü‚ê‚Ä‚¢‚é‚ª?A–{“–‚ÉŒø‰Ê‚ª‚ ‚é‚©‚Í•s–¾?B‚±‚Ì?s‚¾‚¯ƒR??ƒ“ƒgƒAƒEƒg‚µ‚Ä‚à?³?úÉ‚Í“®‚­‚Í‚¸?B
 
 		}
 //System.out.println("*********   get_maketa_kazu_goukei_without_rated_men   end *************");
@@ -3308,7 +3311,7 @@ int ss; ss=getSmen_yuukou_suu();
 	//-----------------------------------
 	private int get_smen_de_maketa_kazu_without_rated_men(int ism, int men_id) {//ism‚Ísmen‚Ìid
 //System.out.println("*********   get_smen_de_maketa_kazu_without_rated_men   *************");
-		int Mensuu = s0[ism].getMenidsuu();//Smen‚Å‚Ì–Ê?”//Smen s0[];//Smen_zu‚©‚ç“¾‚ç‚ê‚éSmen
+		int Mensuu = s0[ism].getMenidsuu();//Smen‚Å‚Ì–Ê??//Smen s0[];//Smen_zu‚©‚ç“¾‚ç‚ê‚éSmen
 		int maketa_kazu = 0;
 //System.out.println("*********   get_smen_de_maketa_kazu_without_rated_men   ********Mensuu = "+Mensuu);
 //System.out.println("*********   get_smen_de_maketa_kazu_without_rated_men   ********men_id = "+men_id);

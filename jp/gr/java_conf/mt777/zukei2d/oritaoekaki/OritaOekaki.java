@@ -2,6 +2,7 @@ package jp.gr.java_conf.mt777.zukei2d.oritaoekaki;
 
 import jp.gr.java_conf.mt777.zukei2d.oritacalc.OritaCalc;
 import jp.gr.java_conf.mt777.zukei2d.senbun.Senbun;
+import jp.gr.java_conf.mt777.zukei2d.ten.Ten;
 
 import java.awt.*;
 //import java.awt.event.*;
@@ -11,7 +12,7 @@ import java.awt.*;
 public class OritaOekaki { //‚¨ŠG‚©‚«—p
     OritaCalc oc = new OritaCalc();
 
-    //‘¾?ü•`‰æ—p
+    //‘¾??•`‰æ—p
     public void habaLine(Graphics g, Ten a, Ten b, double haba, int icolor) {
         Senbun s = new Senbun(a, b);
         habaLine(g, s, haba, icolor);
@@ -81,29 +82,29 @@ public class OritaOekaki { //‚¨ŠG‚©‚«—p
     //Žw’è‚³‚ê‚½Ten‚ð’†?S‚ÉŽw?·‚µ?}‚ð•`‚­
     public void yubisasi1(Graphics g, Senbun s_tv, double nagasa, double haba, int icolor) {
         Graphics2D g2 = (Graphics2D) g;
-        //	g2.setStroke(new BasicStroke(15.0f, BasicStroke.CAP_ROUND, BasicStroke.JOIN_MITER));//?ü‚Ì‘¾‚³‚â?ü‚Ì––’[‚ÌŒ`?ó?A‚±‚±‚Å‚Í?Ü?ü‚Ì’[“_‚Ì?ü‚ÌŒ`?ó‚ÌŽw’è
+        //	g2.setStroke(new BasicStroke(15.0f, BasicStroke.CAP_ROUND, BasicStroke.JOIN_MITER));//??‚Ì‘¾‚³‚â??‚Ì––’[‚ÌŒ`???A‚±‚±‚Å‚Í?Ü??‚Ì’[“_‚Ì??‚ÌŒ`?ó‚ÌŽw’è
 
         g.setColor(new Color(255, 165, 0, 100));//g.setColor(Color.ORANGE);
-        g.drawLine((int) s_tv.getax(), (int) s_tv.getay(), (int) s_tv.getbx(), (int) s_tv.getby()); //’¼?ü
+        g.drawLine((int) s_tv.getax(), (int) s_tv.getay(), (int) s_tv.getbx(), (int) s_tv.getby()); //’¼??
     }
 
     //Žw’è‚³‚ê‚½Ten‚ð’†?S‚ÉŽw?·‚µ?}‚ð•`‚­
     public void yubisasi2(Graphics g, Senbun s_tv, double nagasa, double haba, int icolor) {
         Graphics2D g2 = (Graphics2D) g;
-        //	g2.setStroke(new BasicStroke(15.0f, BasicStroke.CAP_ROUND, BasicStroke.JOIN_MITER));//?ü‚Ì‘¾‚³‚â?ü‚Ì––’[‚ÌŒ`?ó?A‚±‚±‚Å‚Í?Ü?ü‚Ì’[“_‚Ì?ü‚ÌŒ`?ó‚ÌŽw’è
+        //	g2.setStroke(new BasicStroke(15.0f, BasicStroke.CAP_ROUND, BasicStroke.JOIN_MITER));//??‚Ì‘¾‚³‚â??‚Ì––’[‚ÌŒ`???A‚±‚±‚Å‚Í?Ü??‚Ì’[“_‚Ì??‚ÌŒ`?ó‚ÌŽw’è
 
         g.setColor(new Color(255, 165, 0, 100));//g.setColor(Color.ORANGE);
-        g.drawLine((int) s_tv.getax(), (int) s_tv.getay(), (int) s_tv.getbx(), (int) s_tv.getby()); //’¼?ü
+        g.drawLine((int) s_tv.getax(), (int) s_tv.getay(), (int) s_tv.getbx(), (int) s_tv.getby()); //’¼??
 
     }
 
     //Žw’è‚³‚ê‚½Ten‚ð’†?S‚ÉŽw?·‚µ?}‚ð•`‚­
     public void yubisasi3(Graphics g, Senbun s_tv, double nagasa, double haba, int icolor) {
         Graphics2D g2 = (Graphics2D) g;
-        //	g2.setStroke(new BasicStroke(15.0f, BasicStroke.CAP_ROUND, BasicStroke.JOIN_MITER));//?ü‚Ì‘¾‚³‚â?ü‚Ì––’[‚ÌŒ`?ó?A‚±‚±‚Å‚Í?Ü?ü‚Ì’[“_‚Ì?ü‚ÌŒ`?ó‚ÌŽw’è
+        //	g2.setStroke(new BasicStroke(15.0f, BasicStroke.CAP_ROUND, BasicStroke.JOIN_MITER));//??‚Ì‘¾‚³‚â??‚Ì––’[‚ÌŒ`???A‚±‚±‚Å‚Í?Ü??‚Ì’[“_‚Ì??‚ÌŒ`?ó‚ÌŽw’è
 
         g.setColor(new Color(255, 200, 0, 50));//g.setColor(Color.yellow);
-        g.drawLine((int) s_tv.getax(), (int) s_tv.getay(), (int) s_tv.getbx(), (int) s_tv.getby()); //’¼?ü
+        g.drawLine((int) s_tv.getax(), (int) s_tv.getay(), (int) s_tv.getbx(), (int) s_tv.getby()); //’¼??
     }
 
 
@@ -113,12 +114,12 @@ public class OritaOekaki { //‚¨ŠG‚©‚«—p
 //System.out.println("OO.yubisasi4 "+s_tv.getax()+", "+s_tv.getay()+" - "+s_tv.getbx()+", "+s_tv.getby());
 
         Graphics2D g2 = (Graphics2D) g;
-        //	g2.setStroke(new BasicStroke(15.0f, BasicStroke.CAP_ROUND, BasicStroke.JOIN_MITER));//?ü‚Ì‘¾‚³‚â?ü‚Ì––’[‚ÌŒ`?ó?A‚±‚±‚Å‚Í?Ü?ü‚Ì’[“_‚Ì?ü‚ÌŒ`?ó‚ÌŽw’è
+        //	g2.setStroke(new BasicStroke(15.0f, BasicStroke.CAP_ROUND, BasicStroke.JOIN_MITER));//??‚Ì‘¾‚³‚â??‚Ì––’[‚ÌŒ`???A‚±‚±‚Å‚Í?Ü??‚Ì’[“_‚Ì??‚ÌŒ`?ó‚ÌŽw’è
 
         g.setColor(new Color(255, 0, 147, icolor_toukado));
         //g.setColor(Color.PINK);
 
-        g.drawLine((int) s_tv.getax(), (int) s_tv.getay(), (int) s_tv.getbx(), (int) s_tv.getby()); //’¼?ü
+        g.drawLine((int) s_tv.getax(), (int) s_tv.getay(), (int) s_tv.getbx(), (int) s_tv.getby()); //’¼??
     }
 
 

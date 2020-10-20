@@ -4,8 +4,11 @@ import jp.gr.java_conf.mt777.kiroku.memo.Memo;
 import jp.gr.java_conf.mt777.origami.dougu.camera.Camera;
 import jp.gr.java_conf.mt777.origami.dougu.senbunsyuugou.Senbunsyuugou;
 import jp.gr.java_conf.mt777.origami.dougu.tensyuugou.Tensyuugou;
+import jp.gr.java_conf.mt777.origami.orihime.undo_box.Undo_Box;
+import jp.gr.java_conf.mt777.zukei2d.heikinzahyou.HeikinZahyou;
 import jp.gr.java_conf.mt777.zukei2d.oritacalc.OritaCalc;
 import jp.gr.java_conf.mt777.zukei2d.senbun.Senbun;
+import jp.gr.java_conf.mt777.zukei2d.ten.Ten;
 
 import java.awt.*;
 // -------------------------------------------------------------------------------------
@@ -13,25 +16,25 @@ import java.awt.*;
 // -------------------------------------------------------------------------------------
 
 public class Tenkaizu_Syokunin {//‚±‚Ì“WŠJ?}?E?lƒNƒ‰ƒX‚Í“WŠJ?}‚Æ‚µ‚Ä‚ÌTensyuugou c‚ð‚P‚Â‚¾‚¯‚à‚Â?B
-    //?Ü‚è?ô‚Ý“™‚ð‚â‚Á‚½Œ‹‰Ê“¾‚ç‚ê‚éTensyuugou‚ÍŠO•”‚É•Ô‚·‚æ‚¤‚É‚µ‚Ä?AŽ©•ªŽ©?g‚Å‚Í•ÛŽ?‚µ‚È‚¢?B
+    //?Ü‚è?ô‚Ý“™‚ð‚â‚Á‚½Œ‹‰Ê“¾‚ç‚ê‚éTensyuugou‚ÍŠO•”‚É•Ô‚·‚æ‚¤‚É‚µ‚Ä?AŽ©•ªŽ©?g‚Å‚Í•Û??‚µ‚È‚¢?B
     OritaCalc oc = new OritaCalc(); //ŠeŽíŒvŽZ—p‚ÌŠÖ?”‚ðŽg‚¤‚½‚ß‚ÌƒNƒ‰ƒX‚ÌƒCƒ“ƒXƒ^ƒ“ƒX‰»
-    double r = 3.0;                   //Šî–{Ž}?\‘¢‚Ì’¼?ü‚Ì—¼’[‚Ì‰~‚Ì”¼Œa?AŽ}‚ÆŠeŽíƒ|ƒCƒ“ƒg‚Ì‹ß‚³‚Ì”»’èŠî?€
+    double r = 3.0;                   //Šî–{Ž}?\‘¢‚Ì’¼??‚Ì—¼’[‚Ì‰~‚Ì”¼Œa?AŽ}‚ÆŠeŽíƒ|ƒCƒ“ƒg‚Ì‹ß‚³‚Ì”»’èŠî??
 
     Tensyuugou c = new Tensyuugou();    //“WŠJ?}
 
     Undo_Box Ubox = new Undo_Box();
 
-    //VVVVVVVVVVVV oritatami?@‚Æ?@oekaki ‚ÅŽg‚¤•Ï?”?@‚Ì’è‹`?@VVVVVVVVVVVVVVVVVVVVVVVVVVVVVVV
-    int[] iMeniti;//‚ ‚é–Ê‚ªŠî?€–Ê‚Æ‰½–Ê—£‚ê‚Ä‚¢‚é‚©‚ðŽ¦‚·?BŠî?€–Ê‚Å‚Í1?AŠî?€–Ê‚Ì—×‚Å‚Í2?A‚»‚Ì—×‚Å‚Í3‚Æ‚¢‚¤—l‚É’l‚ð“ü‚ê‚é
+    //VVVVVVVVVVVV oritatami?@‚Æ?@oekaki ‚ÅŽg‚¤•Ï???@‚Ì’è‹`?@VVVVVVVVVVVVVVVVVVVVVVVVVVVVVVV
+    int[] iMeniti;//‚ ‚é–Ê‚ªŠî??–Ê‚Æ‰½–Ê—£‚ê‚Ä‚¢‚é‚©‚ðŽ¦‚·?BŠî??–Ê‚Å‚Í1?AŠî??–Ê‚Ì—×‚Å‚Í2?A‚»‚Ì—×‚Å‚Í3‚Æ‚¢‚¤—l‚É’l‚ð“ü‚ê‚é
     int kijyunmen_id;
-    int[] tonariMenid;//‚ ‚é–Ê‚Ì—×‚Ì–Ê?iŠî?€–Ê‘¤?j‚Ìid
-    int[] kyoukaiBouid;//‚ ‚é–Ê‚Æ—×‚Ì–Ê?iŠî?€–Ê‘¤?j‚ÌŠÔ‚Ì–_‚Ìid
+    int[] tonariMenid;//‚ ‚é–Ê‚Ì—×‚Ì–Ê?iŠî??–Ê‘¤?j‚Ìid
+    int[] kyoukaiBouid;//‚ ‚é–Ê‚Æ—×‚Ì–Ê?iŠî??–Ê‘¤?j‚ÌŠÔ‚Ì–_‚Ìid
 
     HeikinZahyou[] tnew;//?Ü‚Á‚½Žž‚Ì“_‚ÌˆÊ’u‚ðŠi”[
 
     //  Ten naibuTen [] = new Ten[888];         //–Ê‚Ì“à•”‚Ì“_‚ðŠi”[
 
-    //ƒ}ƒEƒX‚ÅTen‚ð‘I‘ð‚µ‚½?ê?‡‚ÌTen‚Ì”Ô?†‚ðŠi”[
+    //ƒ}ƒEƒX‚ÅTen‚ð‘I‘ð‚µ‚½???‡‚ÌTen‚Ì”Ô??‚ðŠi”[
     public int i_ugokasuTen = 0;
 
     Camera camera = new Camera();
@@ -75,9 +78,9 @@ public class Tenkaizu_Syokunin {//‚±‚Ì“WŠJ?}?E?lƒNƒ‰ƒX‚Í“WŠJ?}‚Æ‚µ‚Ä‚ÌTensyuugou
         int[] i_Meniti = new int[Msuu + 1];
         iMeniti = i_Meniti;
         int[] tonari_Menid = new int[Msuu + 1];
-        tonariMenid = tonari_Menid;         //‚ ‚é–Ê‚Ì—×‚Ì–Ê?iŠî?€–Ê‘¤?j‚Ìid
+        tonariMenid = tonari_Menid;         //‚ ‚é–Ê‚Ì—×‚Ì–Ê?iŠî??–Ê‘¤?j‚Ìid
         int[] kyoukai_Bouid = new int[Msuu + 1];
-        kyoukaiBouid = kyoukai_Bouid;         //‚ ‚é–Ê‚Æ—×‚Ì–Ê?iŠî?€–Ê‘¤?j‚ÌŠÔ‚Ì–_‚Ìid
+        kyoukaiBouid = kyoukai_Bouid;         //‚ ‚é–Ê‚Æ—×‚Ì–Ê?iŠî??–Ê‘¤?j‚ÌŠÔ‚Ì–_‚Ìid
     }
 
     //---------------
@@ -139,14 +142,14 @@ public class Tenkaizu_Syokunin {//‚±‚Ì“WŠJ?}?E?lƒNƒ‰ƒX‚Í“WŠJ?}‚Æ‚µ‚Ä‚ÌTensyuugou
     }
 
 
-    //-----------‚±‚ê‚ÍŠî?€–ÊŽw’èƒ‚?[ƒh‚Åƒ}ƒEƒX‚ð‰Ÿ‚³‚ê‚½‚Æ‚«‚Ì‘Î‰ž201503
-    public int set_kijyunmen_id(Ten p0) {//ŽÀ?Û‚É—LŒø‚É‚È‚Á‚Ä‚¢‚éŠî?€–Êid‚ð•Ô‚·
+    //-----------‚±‚ê‚ÍŠî??–ÊŽw’èƒ‚?[ƒh‚Åƒ}ƒEƒX‚ð‰Ÿ‚³‚ê‚½‚Æ‚«‚Ì‘Î‰ž201503
+    public int set_kijyunmen_id(Ten p0) {//ŽÀ?Û‚É—LŒø‚É‚È‚Á‚Ä‚¢‚éŠî??–Êid‚ð•Ô‚·
         Ten p = new Ten();
         p.set(camera.TV2object(p0));
         if (c.naibu(p) > 0) {
             kijyunmen_id = c.naibu(p);
             ten_of_kijyunmen_ob.set(p);
-        }//c.naibu(p)=0‚È‚ç‚Ç‚Ì–Ê‚Ì“à•”‚É‚à‚È‚¢?Aƒ}ƒCƒiƒX‚È‚ç‹«ŠE?ü?ã?A?³‚Ì?”‚È‚ç“à•”?BŠY“–‚·‚é–Ê”Ô?†‚ª•¡?”‚ ‚é?ê?‡‚Í”Ô?†‚Ì?¬‚³‚¢‚Ù‚¤‚ª•Ô‚³‚ê‚é?B
+        }//c.naibu(p)=0‚È‚ç‚Ç‚Ì–Ê‚Ì“à•”‚É‚à‚È‚¢?Aƒ}ƒCƒiƒX‚È‚ç‹«ŠE?????A?³‚Ì?”‚È‚ç“à•”?BŠY“–‚·‚é–Ê”Ô??‚ª•¡?”‚?‚é???‡‚Í”Ô??‚Ì?¬‚³‚¢‚Ù‚¤‚ª•Ô‚³‚ê‚é?B
         return kijyunmen_id;
     }
 
@@ -155,35 +158,35 @@ public class Tenkaizu_Syokunin {//‚±‚Ì“WŠJ?}?E?lƒNƒ‰ƒX‚Í“WŠJ?}‚Æ‚µ‚Ä‚ÌTensyuugou
     public int naibu_hantei(Ten p0) {//ŽÀ?Û‚Ép0‚ª‚ ‚é–Êid‚ð•Ô‚·
         Ten p = new Ten();
         p.set(camera.TV2object(p0));
-        return c.naibu(p);//c.naibu(p)=0‚È‚ç‚Ç‚Ì–Ê‚Ì“à•”‚É‚à‚È‚¢?Aƒ}ƒCƒiƒX‚È‚ç‹«ŠE?ü?ã?A?³‚Ì?”‚È‚ç“à•”?BŠY“–‚·‚é–Ê”Ô?†‚ª•¡?”‚ ‚é?ê?‡‚Í”Ô?†‚Ì?¬‚³‚¢‚Ù‚¤‚ª•Ô‚³‚ê‚é?B
+        return c.naibu(p);//c.naibu(p)=0‚È‚ç‚Ç‚Ì–Ê‚Ì“à•”‚É‚à‚È‚¢?Aƒ}ƒCƒiƒX‚È‚ç‹«ŠE?????A?³‚Ì?”‚È‚ç“à•”?BŠY“–‚·‚é–Ê”Ô??‚ª•¡?”‚?‚é???‡‚Í”Ô??‚Ì?¬‚³‚¢‚Ù‚¤‚ª•Ô‚³‚ê‚é?B
     }
 
     //-----------Ten p0‚ª?Ü‚è?ã‚ª‚è?}(•\)‚Ì“à•”‚É—L‚é‚©‚Ç‚¤‚©‚ð”»’è‚·‚é
     public int naibu_hantei_omote(Ten p0) {//ŽÀ?Û‚Ép0‚ª‚ ‚é–Êid‚ð•Ô‚·
         Ten p = new Ten();
         p.set(cam_omote.TV2object(p0));
-        return c.naibu(p);//Tensyuugou c.naibu(p)=0‚È‚ç‚Ç‚Ì–Ê‚Ì“à•”‚É‚à‚È‚¢?Aƒ}ƒCƒiƒX‚È‚ç‹«ŠE?ü?ã?A?³‚Ì?”‚È‚ç“à•”?BŠY“–‚·‚é–Ê”Ô?†‚ª•¡?”‚ ‚é?ê?‡‚Í”Ô?†‚Ì?¬‚³‚¢‚Ù‚¤‚ª•Ô‚³‚ê‚é?B
+        return c.naibu(p);//Tensyuugou c.naibu(p)=0‚È‚ç‚Ç‚Ì–Ê‚Ì“à•”‚É‚à‚È‚¢?Aƒ}ƒCƒiƒX‚È‚ç‹«ŠE?????A?³‚Ì?”‚È‚ç“à•”?BŠY“–‚·‚é–Ê”Ô??‚ª•¡?”‚?‚é???‡‚Í”Ô??‚Ì?¬‚³‚¢‚Ù‚¤‚ª•Ô‚³‚ê‚é?B
     }
 
     //-----------Ten p0‚ª?Ü‚è?ã‚ª‚è?}(— )‚Ì“à•”‚É—L‚é‚©‚Ç‚¤‚©‚ð”»’è‚·‚é
     public int naibu_hantei_ura(Ten p0) {//ŽÀ?Û‚Ép0‚ª‚ ‚é–Êid‚ð•Ô‚·
         Ten p = new Ten();
         p.set(cam_ura.TV2object(p0));
-        return c.naibu(p);//Tensyuugou c.naibu(p)=0‚È‚ç‚Ç‚Ì–Ê‚Ì“à•”‚É‚à‚È‚¢?Aƒ}ƒCƒiƒX‚È‚ç‹«ŠE?ü?ã?A?³‚Ì?”‚È‚ç“à•”?BŠY“–‚·‚é–Ê”Ô?†‚ª•¡?”‚ ‚é?ê?‡‚Í”Ô?†‚Ì?¬‚³‚¢‚Ù‚¤‚ª•Ô‚³‚ê‚é?B
+        return c.naibu(p);//Tensyuugou c.naibu(p)=0‚È‚ç‚Ç‚Ì–Ê‚Ì“à•”‚É‚à‚È‚¢?Aƒ}ƒCƒiƒX‚È‚ç‹«ŠE?????A?³‚Ì?”‚È‚ç“à•”?BŠY“–‚·‚é–Ê”Ô??‚ª•¡?”‚?‚é???‡‚Í”Ô??‚Ì?¬‚³‚¢‚Ù‚¤‚ª•Ô‚³‚ê‚é?B
     }
 
     //-----------Ten p0‚ª?Ü‚è?ã‚ª‚è?}‚É•t‘®‚µ‚Ä•\Ž¦‚³‚ê‚é“§‰ß?}(•\)‚Ì“à•”‚É—L‚é‚©‚Ç‚¤‚©‚ð”»’è‚·‚é
     public int naibu_hantei_touka_omote(Ten p0) {//ŽÀ?Û‚Ép0‚ª‚ ‚é–Êid‚ð•Ô‚·
         Ten p = new Ten();
         p.set(cam_touka_omote.TV2object(p0));
-        return c.naibu(p);//Tensyuugou c.naibu(p)=0‚È‚ç‚Ç‚Ì–Ê‚Ì“à•”‚É‚à‚È‚¢?Aƒ}ƒCƒiƒX‚È‚ç‹«ŠE?ü?ã?A?³‚Ì?”‚È‚ç“à•”?BŠY“–‚·‚é–Ê”Ô?†‚ª•¡?”‚ ‚é?ê?‡‚Í”Ô?†‚Ì?¬‚³‚¢‚Ù‚¤‚ª•Ô‚³‚ê‚é?B
+        return c.naibu(p);//Tensyuugou c.naibu(p)=0‚È‚ç‚Ç‚Ì–Ê‚Ì“à•”‚É‚à‚È‚¢?Aƒ}ƒCƒiƒX‚È‚ç‹«ŠE?????A?³‚Ì?”‚È‚ç“à•”?BŠY“–‚·‚é–Ê”Ô??‚ª•¡?”‚?‚é???‡‚Í”Ô??‚Ì?¬‚³‚¢‚Ù‚¤‚ª•Ô‚³‚ê‚é?B
     }
 
     //-----------Ten p0‚ª?Ü‚è?ã‚ª‚è?}‚É•t‘®‚µ‚Ä•\Ž¦‚³‚ê‚é“§‰ß?}(— )‚Ì“à•”‚É—L‚é‚©‚Ç‚¤‚©‚ð”»’è‚·‚é
     public int naibu_hantei_touka_ura(Ten p0) {//ŽÀ?Û‚Ép0‚ª‚ ‚é–Êid‚ð•Ô‚·
         Ten p = new Ten();
         p.set(cam_touka_ura.TV2object(p0));
-        return c.naibu(p);//Tensyuugou c.naibu(p)=0‚È‚ç‚Ç‚Ì–Ê‚Ì“à•”‚É‚à‚È‚¢?Aƒ}ƒCƒiƒX‚È‚ç‹«ŠE?ü?ã?A?³‚Ì?”‚È‚ç“à•”?BŠY“–‚·‚é–Ê”Ô?†‚ª•¡?”‚ ‚é?ê?‡‚Í”Ô?†‚Ì?¬‚³‚¢‚Ù‚¤‚ª•Ô‚³‚ê‚é?B
+        return c.naibu(p);//Tensyuugou c.naibu(p)=0‚È‚ç‚Ç‚Ì–Ê‚Ì“à•”‚É‚à‚È‚¢?Aƒ}ƒCƒiƒX‚È‚ç‹«ŠE?????A?³‚Ì?”‚È‚ç“à•”?BŠY“–‚·‚é–Ê”Ô??‚ª•¡?”‚?‚é???‡‚Í”Ô??‚Ì?¬‚³‚¢‚Ù‚¤‚ª•Ô‚³‚ê‚é?B
     }
 
 
@@ -266,17 +269,17 @@ public class Tenkaizu_Syokunin {//‚±‚Ì“WŠJ?}?E?lƒNƒ‰ƒX‚Í“WŠJ?}‚Æ‚µ‚Ä‚ÌTensyuugou
         c.uragaesi();
     }
 
-    //–Ê‚Ì“à•”‚Ì“_‚ð‹?‚ß‚é//---------------------------------------
+    //–Ê‚Ì“à•”‚Ì“_‚ð??‚ß‚é//---------------------------------------
     public Ten naibuTen_motome(int i) {
         return c.naibuTen_motome(i);
     }
 
-    //“_?W?‡‚ÌŽ?‚Â–_‚Ì‘??”‚ð“¾‚é
+    //“_?W?‡‚Ì??‚Â–_‚Ì???”‚ð“¾‚é
     public int getBousuu() {
         return c.getBousuu();
     }
 
-    //“_?W?‡‚ÌŽ?‚Â–_‚Ì?F‚ð“¾‚é?i“_?W?‡‚ð“WŠJ?}‚Æ‚µ‚Äˆµ‚¤?ê?‡‚Å‚Í?A‚±‚Ì?F‚ÍŽR’J‚ð‚ ‚ç‚í‚·?j?B
+    //“_?W?‡‚Ì??‚Â–_‚Ì?F‚ð“¾‚é?i“_?W?‡‚ð“WŠJ?}‚Æ‚µ‚Äˆµ‚¤???‡‚Å‚Í?A‚±‚Ì?F‚ÍŽR’J‚ð‚ ‚ç‚í‚·?j?B
     public int getcolor(int i) {
         return c.getcolor(i);
     }
@@ -287,25 +290,25 @@ public class Tenkaizu_Syokunin {//‚±‚Ì“WŠJ?}?E?lƒNƒ‰ƒX‚Í“WŠJ?}‚Æ‚µ‚Ä‚ÌTensyuugou
     }
 
     //-------------------------------------------
-    //?Ü‚è‚½‚½‚Ý?„’è?i‚±‚±‚Å‚Å‚«‚é‚Ì‚Í–Ê‚Ì?d‚È‚è‚ð?l‚¦‚Ä‚¢‚È‚¢?j‹à?}?j
-    public Tensyuugou oritatami() {//?Ü‚è‚½‚½‚Ý?„’è
+    //?Ü‚è‚½‚½‚Ý??’è?i‚±‚±‚Å‚Å‚«‚é‚Ì‚Í–Ê‚Ì?d‚È‚è‚ð?l‚¦‚Ä‚¢‚È‚¢?j‹à?}?j
+    public Tensyuugou oritatami() {//?Ü‚è‚½‚½‚Ý??’è
         Tensyuugou cn = new Tensyuugou();    //“WŠJ?}
         cn.settei(c.getTensuu(), c.getBousuu(), c.getMensuu());
         cn.set(c);
 
 
-//System.out.println("?Ü‚è‚½‚½‚Ý?„’è001   c.getTenx(1) = "+c.getTenx(1)+"   :   cn.getTenx(1) = "+cn.getTenx(1));
+//System.out.println("?Ü‚è‚½‚½‚Ý??’è001   c.getTenx(1) = "+c.getTenx(1)+"   :   cn.getTenx(1) = "+cn.getTenx(1));
 
-        //kijyunmen_id=1;//Šî?€‚É‚È‚é–Ê‚ðŽw’è‚·‚é
+        //kijyunmen_id=1;//Šî??‚É‚È‚é–Ê‚ðŽw’è‚·‚é
 
         for (int i = 0; i <= c.getMensuu(); i++) {
             tonariMenid[i] = 0;
             kyoukaiBouid[i] = 0;
             iMeniti[i] = 0;
         }
-//System.out.println("?Ü‚è‚½‚½‚Ý?„’è002   c.getTenx(1) = "+c.getTenx(1)+"   :   cn.getTenx(1) = "+cn.getTenx(1));
-        //?Ü‚è‚½‚½‚Ý‚Ì?€”õ‚Æ‚µ‚Ä–Ê“¯Žm‚ÌˆÊ’uŠÖŒW‚ð”cˆ¬‚·‚é
-        System.out.println("?Ü‚è‚½‚½‚Ý‚Ì?€”õ‚Æ‚µ‚Ä–Ê“¯Žm‚ÌˆÊ’uŠÖŒW‚ð”cˆ¬‚·‚é");
+//System.out.println("?Ü‚è‚½‚½‚Ý??’è002   c.getTenx(1) = "+c.getTenx(1)+"   :   cn.getTenx(1) = "+cn.getTenx(1));
+        //?Ü‚è‚½‚½‚Ý‚Ì??”õ‚Æ‚µ‚Ä–Ê“¯Žm‚ÌˆÊ’uŠÖŒW‚ð”cˆ¬‚·‚é
+        System.out.println("?Ü‚è‚½‚½‚Ý‚Ì??”õ‚Æ‚µ‚Ä–Ê“¯Žm‚ÌˆÊ’uŠÖŒW‚ð”cˆ¬‚·‚é");
         iMeniti[kijyunmen_id] = 1;
 
         int imano_Meniti = 1;
@@ -337,13 +340,13 @@ public class Tenkaizu_Syokunin {//‚±‚Ì“WŠJ?}?E?lƒNƒ‰ƒX‚Í“WŠJ?}‚Æ‚µ‚Ä‚ÌTensyuugou
 
             System.out.println("nokori_Mensuu = " + nokori_Mensuu);
         }
-//System.out.println("?Ü‚è‚½‚½‚Ý?„’è003   c.getTenx(1) = "+c.getTenx(1)+"   :   cn.getTenx(1) = "+cn.getTenx(1));
-        System.out.println("?Ü‚Á‚½‚Æ‚«‚Ì“_‚ÌˆÊ’u‚ð‹?‚ß‚é?B");
-        //?Ü‚Á‚½‚Æ‚«‚Ì“_‚ÌˆÊ’u‚ð‹?‚ß‚é?B
-        //“_it‚ª–Êim‚ÉŠÜ‚Ü‚ê‚é?ê?‡‚É?A
-        //“WŠJ?}‚ª?Ü‚ç‚ê‚½‚Æ‚«‚É‚Ç‚±‚ÉˆÚ“®‚·‚é‚©‚ð?A–Êim‚ÌˆÚ“®‚É‚æ‚Á‚Ä‹?‚ß‚é?B
+//System.out.println("?Ü‚è‚½‚½‚Ý??’è003   c.getTenx(1) = "+c.getTenx(1)+"   :   cn.getTenx(1) = "+cn.getTenx(1));
+        System.out.println("?Ü‚Á‚½‚Æ‚«‚Ì“_‚ÌˆÊ’u‚ð??‚ß‚é?B");
+        //?Ü‚Á‚½‚Æ‚«‚Ì“_‚ÌˆÊ’u‚ð??‚ß‚é?B
+        //“_it‚ª–Êim‚ÉŠÜ‚Ü‚ê‚é???‡‚É?A
+        //“WŠJ?}‚ª?Ü‚ç‚ê‚½‚Æ‚«‚É‚Ç‚±‚ÉˆÚ“®‚·‚é‚©‚ð?A–Êim‚ÌˆÚ“®‚É‚æ‚Á‚Ä??‚ß‚é?B
 
-        System.out.println("?Ü‚Á‚½‚Æ‚«‚Ì“_‚ÌˆÊ’u‚ð‹?‚ß‚é?iŠJŽn?j");
+        System.out.println("?Ü‚Á‚½‚Æ‚«‚Ì“_‚ÌˆÊ’u‚ð??‚ß‚é?iŠJŽn?j");
         for (int it = 1; it <= c.getTensuu(); it++) {
             tnew[it].reset();
             for (int im = 1; im <= c.getMensuu(); im++) {
@@ -353,19 +356,19 @@ public class Tenkaizu_Syokunin {//‚±‚Ì“WŠJ?}?E?lƒNƒ‰ƒX‚Í“WŠJ?}‚Æ‚µ‚Ä‚ÌTensyuugou
                 }
             }
         }
-        System.out.println("?Ü‚Á‚½‚Æ‚«‚Ì“_‚ÌˆÊ’u‚ð‹?‚ß‚½?i?I—¹?j");
+        System.out.println("?Ü‚Á‚½‚Æ‚«‚Ì“_‚ÌˆÊ’u‚ð??‚ß‚½?i?I—¹?j");
 
-//System.out.println("?Ü‚è‚½‚½‚Ý?„’è004   c.getTenx(1) = "+c.getTenx(1)+"   :   cn.getTenx(1) = "+cn.getTenx(1));
+//System.out.println("?Ü‚è‚½‚½‚Ý??’è004   c.getTenx(1) = "+c.getTenx(1)+"   :   cn.getTenx(1) = "+cn.getTenx(1));
         return cn;
     }
 
     //------------------------------------------------------------
-    private Ten ori_idou(int it, int im) { //“_it‚ª–Êim‚Ìˆêˆõ‚Æ‚µ‚Ä?Ü‚ç‚ê‚½?ê?‡‚ÌˆÚ“®?æ‚ÌˆÊ’u‚ð‹?‚ß‚éŠÖ?”
+    private Ten ori_idou(int it, int im) { //“_it‚ª–Êim‚Ìˆêˆõ‚Æ‚µ‚Ä?Ü‚ç‚ê‚½???‡‚ÌˆÚ“®?æ‚ÌˆÊ’u‚ð??‚ß‚éŠÖ??
 
         Ten p = new Ten();  // p1.set(s.geta());
         p.set(c.getTen(it));
         int idousakino_Menid;
-        idousakino_Menid = im;//?Å?‰‚Ì–Ê‚Ìid”Ô?†?B‚±‚ê‚©‚çŠî?€–Ê‚Ì•ûŒü‚É—×?Ú‚·‚é–Ê‚ð‚½‚Ç‚Á‚Ä‚¢‚­?B
+        idousakino_Menid = im;//?Å?‰‚Ì–Ê‚Ìid”Ô???B‚±‚ê‚©‚çŠî??–Ê‚Ì•ûŒü‚É—×?Ú‚·‚é–Ê‚ð‚½‚Ç‚Á‚Ä‚¢‚­?B
         while (idousakino_Menid != kijyunmen_id) {
             //p.set(sentaisyou_ten_motome(c.getBou(kyoukaiBouid[idousakino_Menid]),p));
             p.set(sentaisyou_ten_motome(kyoukaiBouid[idousakino_Menid], p));
@@ -377,26 +380,26 @@ public class Tenkaizu_Syokunin {//‚±‚Ì“WŠJ?}?E?lƒNƒ‰ƒX‚Í“WŠJ?}‚Æ‚µ‚Ä‚ÌTensyuugou
 
 // ***********************************
 
-    //?Ü‚è‚½‚½‚Ý?„’è?i‚±‚±‚Å‚Å‚«‚é‚Ì‚Í–Ê‚Ì?d‚È‚è‚ð?l‚¦‚Ä‚¢‚È‚¢?j‹à?}?j
-    public Tensyuugou men_iti_motome() {//?Ü‚è‚½‚½‚Ý?„’è
+    //?Ü‚è‚½‚½‚Ý??’è?i‚±‚±‚Å‚Å‚«‚é‚Ì‚Í–Ê‚Ì?d‚È‚è‚ð?l‚¦‚Ä‚¢‚È‚¢?j‹à?}?j
+    public Tensyuugou men_iti_motome() {//?Ü‚è‚½‚½‚Ý??’è
 
         Tensyuugou cn = new Tensyuugou();    //“WŠJ?}
         cn.settei(c.getTensuu(), c.getBousuu(), c.getMensuu());
         cn.set(c);
 
 
-//System.out.println("?Ü‚è‚½‚½‚Ý?„’è001   c.getTenx(1) = "+c.getTenx(1)+"   :   cn.getTenx(1) = "+cn.getTenx(1));
+//System.out.println("?Ü‚è‚½‚½‚Ý??’è001   c.getTenx(1) = "+c.getTenx(1)+"   :   cn.getTenx(1) = "+cn.getTenx(1));
 
-        //kijyunmen_id=1;//Šî?€‚É‚È‚é–Ê‚ðŽw’è‚·‚é
+        //kijyunmen_id=1;//Šî??‚É‚È‚é–Ê‚ðŽw’è‚·‚é
 
         for (int i = 0; i <= c.getMensuu(); i++) {
             tonariMenid[i] = 0;
             kyoukaiBouid[i] = 0;
             iMeniti[i] = 0;
         }
-//System.out.println("?Ü‚è‚½‚½‚Ý?„’è002   c.getTenx(1) = "+c.getTenx(1)+"   :   cn.getTenx(1) = "+cn.getTenx(1));
-        //?Ü‚è‚½‚½‚Ý‚Ì?€”õ‚Æ‚µ‚Ä–Ê“¯Žm‚ÌˆÊ’uŠÖŒW‚ð”cˆ¬‚·‚é
-        System.out.println("?Ü‚è‚½‚½‚Ý‚Ì?€”õ‚Æ‚µ‚Ä–Ê“¯Žm‚ÌˆÊ’uŠÖŒW‚ð”cˆ¬‚·‚é");
+//System.out.println("?Ü‚è‚½‚½‚Ý??’è002   c.getTenx(1) = "+c.getTenx(1)+"   :   cn.getTenx(1) = "+cn.getTenx(1));
+        //?Ü‚è‚½‚½‚Ý‚Ì??”õ‚Æ‚µ‚Ä–Ê“¯Žm‚ÌˆÊ’uŠÖŒW‚ð”cˆ¬‚·‚é
+        System.out.println("?Ü‚è‚½‚½‚Ý‚Ì??”õ‚Æ‚µ‚Ä–Ê“¯Žm‚ÌˆÊ’uŠÖŒW‚ð”cˆ¬‚·‚é");
         iMeniti[kijyunmen_id] = 1;
 
         int imano_Meniti = 1;
@@ -430,7 +433,7 @@ public class Tenkaizu_Syokunin {//‚±‚Ì“WŠJ?}?E?lƒNƒ‰ƒX‚Í“WŠJ?}‚Æ‚µ‚Ä‚ÌTensyuugou
         }
 
 
-//System.out.println("?Ü‚è‚½‚½‚Ý?„’è004   c.getTenx(1) = "+c.getTenx(1)+"   :   cn.getTenx(1) = "+cn.getTenx(1));
+//System.out.println("?Ü‚è‚½‚½‚Ý??’è004   c.getTenx(1) = "+c.getTenx(1)+"   :   cn.getTenx(1) = "+cn.getTenx(1));
         return cn;
     }
 
@@ -438,7 +441,7 @@ public class Tenkaizu_Syokunin {//‚±‚Ì“WŠJ?}?E?lƒNƒ‰ƒX‚Í“WŠJ?}‚Æ‚µ‚Ä‚ÌTensyuugou
 // **********************************
 
 
-    private Ten sentaisyou_ten_motome(int bouid, Ten tn) {//–_‚Ìid‚Æ?A”CˆÓ‚Ì“_‚ð—^‚¦‚Ä?Aid‚ª‘Î‰ž‚·‚é–_‚É‘Î‚µ‚Ä?A—^‚¦‚½“_‚Ì?ü‘Î?Ì‚É‚È‚é“_‚ð•Ô‚·
+    private Ten sentaisyou_ten_motome(int bouid, Ten tn) {//–_‚Ìid‚Æ?A”CˆÓ‚Ì“_‚ð—^‚¦‚Ä?Aid‚ª‘Î‰ž‚·‚é–_‚É‘Î‚µ‚Ä?A—^‚¦‚½“_‚Ì??‘Î?Ì‚É‚È‚é“_‚ð•Ô‚·
         return oc.sentaisyou_ten_motome(c.get_maeTen_from_Bou_id(bouid), c.get_atoTen_from_Bou_id(bouid), tn);
     }
 
@@ -487,7 +490,7 @@ public class Tenkaizu_Syokunin {//‚±‚Ì“WŠJ?}?E?lƒNƒ‰ƒX‚Í“WŠJ?}‚Æ‚µ‚Ä‚ÌTensyuugou
         reset();
 
         //‚Ü‚¸?ATensyuugou“à‚Å“_‚ð’è‹`‚·‚é?B
-        System.out.println("?ü•ª?W?‡->“_?W?‡?F“_?W?‡“à‚Å“_‚Ì’è‹`");
+        System.out.println("??•ª?W??->“_?W???F“_?W?‡“à‚Å“_‚Ì’è‹`");
         int icol;
         int flag1;
         double x, y;
@@ -541,14 +544,14 @@ public class Tenkaizu_Syokunin {//‚±‚Ì“WŠJ?}?E?lƒNƒ‰ƒX‚Í“WŠJ?}‚Æ‚µ‚Ä‚ÌTensyuugou
             }
         }
 
-        System.out.print("“_‚Ì‘S?”?@addTensuu???@");
+        System.out.print("“_‚Ì‘S???@addTensuu???@");
         System.out.println(addTensuu);//System.out.println(c.getTensuu());
 
-        //settei(addTensuu,k.getsousuu(),k.getsousuu()-addTensuu+1);//      <<‚±‚±‚Í?A?ç’·?«Šm•Û‚Ì‚½‚ß‚à‚Á‚Æ—]—T‚ðŽ?‚½‚¹‚½‚Ù‚¤‚ª‚¢‚¢‚©‚à‚µ‚ê‚È‚¢?B
-        //c.settei(addTensuu,k.getsousuu(),k.getsousuu()-addTensuu+1);//      <<‚±‚±‚Í?A?ç’·?«Šm•Û‚Ì‚½‚ß‚à‚Á‚Æ—]—T‚ðŽ?‚½‚¹‚½‚Ù‚¤‚ª‚¢‚¢‚©‚à‚µ‚ê‚È‚¢?B
+        //settei(addTensuu,k.getsousuu(),k.getsousuu()-addTensuu+1);//      <<‚±‚±‚Í?A?ç’·?«Šm•Û‚Ì‚½‚ß‚à‚Á‚Æ—]—T‚ð??‚½‚¹‚½‚Ù‚¤‚ª‚¢‚¢‚©‚à‚µ‚ê‚È‚¢?B
+        //c.settei(addTensuu,k.getsousuu(),k.getsousuu()-addTensuu+1);//      <<‚±‚±‚Í?A?ç’·?«Šm•Û‚Ì‚½‚ß‚à‚Á‚Æ—]—T‚ð??‚½‚¹‚½‚Ù‚¤‚ª‚¢‚¢‚©‚à‚µ‚ê‚È‚¢?B
 
-        settei(addTensuu, k.getsousuu(), k.getsousuu() - addTensuu + 100);//      <<‚±‚±‚Í?A?ç’·?«Šm•Û‚Ì‚½‚ß‚à‚Á‚Æ—]—T‚ðŽ?‚½‚¹‚½‚Ù‚¤‚ª‚¢‚¢‚©‚à‚µ‚ê‚È‚¢?B—vŒŸ“¢20150315
-        c.settei(addTensuu, k.getsousuu(), k.getsousuu() - addTensuu + 100);//      <<‚±‚±‚Í?A?ç’·?«Šm•Û‚Ì‚½‚ß‚à‚Á‚Æ—]—T‚ðŽ?‚½‚¹‚½‚Ù‚¤‚ª‚¢‚¢‚©‚à‚µ‚ê‚È‚¢?B—vŒŸ“¢20150315
+        settei(addTensuu, k.getsousuu(), k.getsousuu() - addTensuu + 100);//      <<‚±‚±‚Í?A?ç’·?«Šm•Û‚Ì‚½‚ß‚à‚Á‚Æ—]—T‚ð??‚½‚¹‚½‚Ù‚¤‚ª‚¢‚¢‚©‚à‚µ‚ê‚È‚¢?B—vŒŸ“¢20150315
+        c.settei(addTensuu, k.getsousuu(), k.getsousuu() - addTensuu + 100);//      <<‚±‚±‚Í?A?ç’·?«Šm•Û‚Ì‚½‚ß‚à‚Á‚Æ—]—T‚ð??‚½‚¹‚½‚Ù‚¤‚ª‚¢‚¢‚©‚à‚µ‚ê‚È‚¢?B—vŒŸ“¢20150315
 
         for (int i = 1; i <= addTensuu; i++) {
             c.addTen(addTenx[i], addTeny[i]);
@@ -556,7 +559,7 @@ public class Tenkaizu_Syokunin {//‚±‚Ì“WŠJ?}?E?lƒNƒ‰ƒX‚Í“WŠJ?}‚Æ‚µ‚Ä‚ÌTensyuugou
         }
 
         //ŽŸ‚É?ATensyuugou“à‚Å–_‚ð’è‹`‚·‚é?B
-        System.out.println("?ü•ª?W?‡->“_?W?‡?F“_?W?‡“à‚Å–_‚Ì’è‹`");
+        System.out.println("??•ª?W??->“_?W???F“_?W?‡“à‚Å–_‚Ì’è‹`");
 
         int[] ika2ic = new int[k.getsousuu() + 1];
         int[] ikb2ic = new int[k.getsousuu() + 1];
@@ -581,26 +584,26 @@ public class Tenkaizu_Syokunin {//‚±‚Ì“WŠJ?}?E?lƒNƒ‰ƒX‚Í“WŠJ?}‚Æ‚µ‚Ä‚ÌTensyuugou
         }
 
 
-        System.out.print("–_‚Ì‘S?”?@???@");
+        System.out.print("–_‚Ì‘S???@???@");
         System.out.println(c.getBousuu());
         //
-        System.out.println("?ü•ª?W?‡->“_?W?‡?F“_?W?‡“à‚Å–Ê‚ð”­?¶?@ŠJŽn");
+        System.out.println("??•ª?W??->“_?W???F“_?W?‡“à‚Å–Ê‚ð”­?¶?@ŠJŽn");
         //‚»‚ÌŽŸ‚É?ATensyuugou“à‚Å–Ê‚ð”­?¶‚³‚¹‚é?B
         c.Menhassei();
 
-        System.out.println("?ü•ª?W?‡->“_?W?‡?F“_?W?‡“à‚Å–Ê‚ð”­?¶?@?I—¹");
+        System.out.println("??•ª?W??->“_?W???F“_?W?‡“à‚Å–Ê‚ð”­?¶?@?I—¹");
 
     }
 
 
 //----------------------------------------------------------------------------------------------------------------------------------------    
 
-    //–_ib‚ð‹«ŠE‚Æ‚µ‚ÄŠÜ‚Þ–Ê(?Å‘å‚Å2–Ê‚ ‚é)‚Ì‚¤‚¿‚ÅMenid‚Ì?¬‚³‚¢‚Ù‚¤‚ÌMenid‚ð•Ô‚·?B–_‚ð‹«ŠE‚Æ‚µ‚ÄŠÜ‚Þ–Ê‚ª–³‚¢?ê?‡‚Í0‚ð•Ô‚·
+    //–_ib‚ð‹«ŠE‚Æ‚µ‚ÄŠÜ‚Þ–Ê(?Å‘å‚Å2–Ê‚ ‚é)‚Ì‚¤‚¿‚ÅMenid‚Ì?¬‚³‚¢‚Ù‚¤‚ÌMenid‚ð•Ô‚·?B–_‚ð‹«ŠE‚Æ‚µ‚ÄŠÜ‚Þ–Ê‚ª–³‚¢???‡‚Í0‚ð•Ô‚·
     public int Bou_moti_Menid_min_motome(int ib) {
         return c.Bou_moti_Menid_min_motome(ib);
     }
 
-    //–_ib‚ð‹«ŠE‚Æ‚µ‚ÄŠÜ‚Þ–Ê(?Å‘å‚Å2–Ê‚ ‚é)‚Ì‚¤‚¿‚ÅMenid‚Ì‘å‚«‚¢‚Ù‚¤‚ÌMenid‚ð•Ô‚·?B–_‚ð‹«ŠE‚Æ‚µ‚ÄŠÜ‚Þ–Ê‚ª–³‚¢?ê?‡‚Í0‚ð•Ô‚·
+    //–_ib‚ð‹«ŠE‚Æ‚µ‚ÄŠÜ‚Þ–Ê(?Å‘å‚Å2–Ê‚ ‚é)‚Ì‚¤‚¿‚ÅMenid‚Ì‘å‚«‚¢‚Ù‚¤‚ÌMenid‚ð•Ô‚·?B–_‚ð‹«ŠE‚Æ‚µ‚ÄŠÜ‚Þ–Ê‚ª–³‚¢???‡‚Í0‚ð•Ô‚·
     public int Bou_moti_Menid_max_motome(int ib) {
         return c.Bou_moti_Menid_max_motome(ib);
     }
@@ -608,19 +611,19 @@ public class Tenkaizu_Syokunin {//‚±‚Ì“WŠJ?}?E?lƒNƒ‰ƒX‚Í“WŠJ?}‚Æ‚µ‚Ä‚ÌTensyuugou
     //?@‚±‚±‚Í class Tenkaizu_Syokunin  ‚Ì’†‚Å‚·
 
 
-    //ƒ}ƒEƒX‘€?ì(ƒ{ƒ^ƒ“‚ð‰Ÿ‚µ‚½‚Æ‚«)Žž‚Ì?ì‹Æ----------------------------------------------------
+    //ƒ}ƒEƒX‘€??(ƒ{ƒ^ƒ“‚ð‰Ÿ‚µ‚½‚Æ‚«)Žž‚Ì??‹Æ----------------------------------------------------
     public int mPressed(Ten p, int ura_omote) {
         //ƒ}ƒEƒX‚Æ‹ß‚¢ˆÊ’u‚É‚ ‚éTen‚ð’T‚·?B
         Ten pn = new Ten();
         pn.set(p);
         if (ura_omote == 1) {
             pn.setx(-p.getx() + 2.0 * 700.0);
-        }//— ‘¤•\Ž¦‚Ì?ê?‡‚Ì?ˆ—??B
+        }//— ‘¤•\Ž¦‚Ì???‡‚Ì?????B
         i_ugokasuTen = c.mottomo_tikai_Tenid(pn, r * 3);
         return i_ugokasuTen;
     }
 
-    //ƒ}ƒEƒX‘€?ì(ƒhƒ‰ƒbƒO‚µ‚½‚Æ‚«)‚ð?s‚¤ŠÖ?”----------------------------------------------------
+    //ƒ}ƒEƒX‘€??(ƒhƒ‰ƒbƒO‚µ‚½‚Æ‚«)‚ð?s‚¤ŠÖ??----------------------------------------------------
     public int mDragged(Ten p, int ura_omote) {
 
 
@@ -630,14 +633,14 @@ public class Tenkaizu_Syokunin {//‚±‚Ì“WŠJ?}?E?lƒNƒ‰ƒX‚Í“WŠJ?}‚Æ‚µ‚Ä‚ÌTensyuugou
             pn.set(p);
             if (ura_omote == 1) {
                 pn.setx(-p.getx() + 2.0 * 700.0);
-            }//— ‘¤•\Ž¦‚Ì?ê?‡‚Ì?ˆ—??B
+            }//— ‘¤•\Ž¦‚Ì???‡‚Ì?????B
             c.set(i_ugokasuTen, pn);
         }
         return i_ugokasuTen;
     }
 
 
-    //ƒ}ƒEƒX‘€?ì(ƒ{ƒ^ƒ“‚ð—£‚µ‚½‚Æ‚«)‚ð?s‚¤ŠÖ?”----------------------------------------------------
+    //ƒ}ƒEƒX‘€??(ƒ{ƒ^ƒ“‚ð—£‚µ‚½‚Æ‚«)‚ð?s‚¤ŠÖ??----------------------------------------------------
     public int mReleased(Ten p, int ura_omote) {
         int ireturn = 0;
 
@@ -646,7 +649,7 @@ public class Tenkaizu_Syokunin {//‚±‚Ì“WŠJ?}?E?lƒNƒ‰ƒX‚Í“WŠJ?}‚Æ‚µ‚Ä‚ÌTensyuugou
             pn.set(p);
             if (ura_omote == 1) {
                 pn.setx(-p.getx() + 2.0 * 700.0);
-            }//— ‘¤•\Ž¦‚Ì?ê?‡‚Ì?ˆ—??B
+            }//— ‘¤•\Ž¦‚Ì???‡‚Ì?????B
             c.set(i_ugokasuTen, pn);
         } //Ten‚ð•Ï?X
         ireturn = i_ugokasuTen;
@@ -656,9 +659,9 @@ public class Tenkaizu_Syokunin {//‚±‚Ì“WŠJ?}?E?lƒNƒ‰ƒX‚Í“WŠJ?}‚Æ‚µ‚Ä‚ÌTensyuugou
     }
 
 
-//ƒ}ƒEƒX‘€?ì with camera
+//ƒ}ƒEƒX‘€?? with camera
 
-    //ƒ}ƒEƒX‘€?ì(ƒ{ƒ^ƒ“‚ð‰Ÿ‚µ‚½‚Æ‚«)Žž‚Ì?ì‹Æ----------------------------------------------------
+    //ƒ}ƒEƒX‘€??(ƒ{ƒ^ƒ“‚ð‰Ÿ‚µ‚½‚Æ‚«)Žž‚Ì??‹Æ----------------------------------------------------
 
 
     public int mPressed_with_camera(Ten p0, int ip4) {
@@ -680,7 +683,7 @@ public class Tenkaizu_Syokunin {//‚±‚Ì“WŠJ?}?E?lƒNƒ‰ƒX‚Í“WŠJ?}‚Æ‚µ‚Ä‚ÌTensyuugou
     }
 
 
-    //ƒ}ƒEƒX‘€?ì(ƒhƒ‰ƒbƒO‚µ‚½‚Æ‚«)‚ð?s‚¤ŠÖ?”----------------------------------------------------
+    //ƒ}ƒEƒX‘€??(ƒhƒ‰ƒbƒO‚µ‚½‚Æ‚«)‚ð?s‚¤ŠÖ??----------------------------------------------------
 
 /*
 	public int mDragged_with_camera(Ten p0,int ip4) {   
@@ -781,7 +784,7 @@ public class Tenkaizu_Syokunin {//‚±‚Ì“WŠJ?}?E?lƒNƒ‰ƒX‚Í“WŠJ?}‚Æ‚µ‚Ä‚ÌTensyuugou
 
     }
 
-    //ƒ}ƒEƒX‘€?ì(ƒ{ƒ^ƒ“‚ð—£‚µ‚½‚Æ‚«)‚ð?s‚¤ŠÖ?”----------------------------------------------------
+    //ƒ}ƒEƒX‘€??(ƒ{ƒ^ƒ“‚ð—£‚µ‚½‚Æ‚«)‚ð?s‚¤ŠÖ??----------------------------------------------------
 
 
     public int mReleased_with_camera(Ten p0, int ip4) {
@@ -833,7 +836,7 @@ public class Tenkaizu_Syokunin {//‚±‚Ì“WŠJ?}?E?lƒNƒ‰ƒX‚Í“WŠJ?}‚Æ‚µ‚Ä‚ÌTensyuugou
     }
 
 
-    //?}‚ð‚©‚­?Û‚Ì?”’l•ÏŠ·—pŠÖ?”-----------------------------------------------------------------
+    //?}‚ð‚©‚­?Û‚Ì?”’l•ÏŠ·—pŠÖ??-----------------------------------------------------------------
 
     public int gx(double d) {
         return (int) d;
@@ -848,7 +851,7 @@ public class Tenkaizu_Syokunin {//‚±‚Ì“WŠJ?}?E?lƒNƒ‰ƒX‚Í“WŠJ?}‚Æ‚µ‚Ä‚ÌTensyuugou
     //?@‚±‚±‚Í class Tenkaizu_Syokunin  ‚Ì’†‚Å‚·
 
     public void oekaki(Graphics g) {
-        String text = "";//•¶Žš—ñ?ˆ—?—p‚ÌƒNƒ‰ƒX‚ÌƒCƒ“ƒXƒ^ƒ“ƒX‰»
+        String text = "";//•¶Žš—ñ????—p‚ÌƒNƒ‰ƒX‚ÌƒCƒ“ƒXƒ^ƒ“ƒX‰»
         //int ir=(int)r;
         //	for (int i=1; i<=c.getTensuu(); i++ ){ g.drawOval( gx(c.getTenx(i)-r),gy(c.getTeny(i)-r),2*ir,2*ir);} //‰~
         //	for (int i=1; i<=c.getTensuu(); i++ ){ g.drawOval( gx(tnew[i].getx()-r),gy(tnew[i].gety()-r),2*ir,2*ir);} //‰~
@@ -864,8 +867,8 @@ public class Tenkaizu_Syokunin {//‚±‚Ì“WŠJ?}?E?lƒNƒ‰ƒX‚Í“WŠJ?}‚Æ‚µ‚Ä‚ÌTensyuugou
             if (c.getcolor(i) == 2) {
                 g.setColor(Color.blue);
             }
-            g.drawLine(gx(c.getmaex(i)), gy(c.getmaey(i)), gx(c.getatox(i)), gy(c.getatoy(i))); //’¼?ü
-            //g.drawLine( gx(tnew[c.getmae(i)].getx()),gy(tnew[c.getmae(i)].gety()), gx(tnew[c.getato(i)].getx()),gy(tnew[c.getato(i)].gety())); //’¼?ü
+            g.drawLine(gx(c.getmaex(i)), gy(c.getmaey(i)), gx(c.getatox(i)), gy(c.getatoy(i))); //’¼??
+            //g.drawLine( gx(tnew[c.getmae(i)].getx()),gy(tnew[c.getmae(i)].gety()), gx(tnew[c.getato(i)].getx()),gy(tnew[c.getato(i)].gety())); //’¼??
         }
     }
 
@@ -875,7 +878,7 @@ public class Tenkaizu_Syokunin {//‚±‚Ì“WŠJ?}?E?lƒNƒ‰ƒX‚Í“WŠJ?}‚Æ‚µ‚Ä‚ÌTensyuugou
     public void oekaki_with_camera(Graphics g) {
 //System.out.println("?Ü‚è‚½‚½‚Ý oekaki 001   c.getTenx(1) = "+c.getTenx(1));	
         Senbun s_tv = new Senbun();
-        String text = "";//•¶Žš—ñ?ˆ—?—p‚ÌƒNƒ‰ƒX‚ÌƒCƒ“ƒXƒ^ƒ“ƒX‰»
+        String text = "";//•¶Žš—ñ????—p‚ÌƒNƒ‰ƒX‚ÌƒCƒ“ƒXƒ^ƒ“ƒX‰»
         g.setColor(Color.black);
         for (int i = 1; i <= c.getBousuu(); i++) {
             if (c.getcolor(i) == 0) {
@@ -890,7 +893,7 @@ public class Tenkaizu_Syokunin {//‚±‚Ì“WŠJ?}?E?lƒNƒ‰ƒX‚Í“WŠJ?}‚Æ‚µ‚Ä‚ÌTensyuugou
 
             s_tv.set(camera.object2TV(c.get_Senbun_from_Bou_id(i)));
 
-            g.drawLine(gx(s_tv.getax()), gy(s_tv.getay()), gx(s_tv.getbx()), gy(s_tv.getby())); //’¼?ü
+            g.drawLine(gx(s_tv.getax()), gy(s_tv.getay()), gx(s_tv.getbx()), gy(s_tv.getby())); //’¼??
         }
     }
 
@@ -899,7 +902,7 @@ public class Tenkaizu_Syokunin {//‚±‚Ì“WŠJ?}?E?lƒNƒ‰ƒX‚Í“WŠJ?}‚Æ‚µ‚Ä‚ÌTensyuugou
         Ten tn = new Ten();
         tn.set(camera.object2TV(c.getTen(i)));
         int ir = 7;//”¼Œa
-        g.setColor(new Color(0, 255, 255, 100));//?…?F
+        g.setColor(new Color(0, 255, 255, 100));//???F
         g.fillOval(gx(tn.getx()) - ir, gy(tn.gety()) - ir, 2 * ir, 2 * ir); //‰~
     }
 
@@ -944,7 +947,7 @@ public class Tenkaizu_Syokunin {//‚±‚Ì“WŠJ?}?E?lƒNƒ‰ƒX‚Í“WŠJ?}‚Æ‚µ‚Ä‚ÌTensyuugou
     public void oekaki_with_camera(Graphics g, int ip4) {
 
         Senbun s_tv = new Senbun();
-        String text = "";//•¶Žš—ñ?ˆ—?—p‚ÌƒNƒ‰ƒX‚ÌƒCƒ“ƒXƒ^ƒ“ƒX‰»
+        String text = "";//•¶Žš—ñ????—p‚ÌƒNƒ‰ƒX‚ÌƒCƒ“ƒXƒ^ƒ“ƒX‰»
         g.setColor(Color.black);
         for (int i = 1; i <= c.getBousuu(); i++) {
             if (c.getcolor(i) == 0) {
@@ -959,21 +962,21 @@ public class Tenkaizu_Syokunin {//‚±‚Ì“WŠJ?}?E?lƒNƒ‰ƒX‚Í“WŠJ?}‚Æ‚µ‚Ä‚ÌTensyuugou
 
             if (ip4 == 0) {
                 s_tv.set(cam_omote.object2TV(c.get_Senbun_from_Bou_id(i)));
-                g.drawLine(gx(s_tv.getax()), gy(s_tv.getay()), gx(s_tv.getbx()), gy(s_tv.getby())); //’¼?ü
+                g.drawLine(gx(s_tv.getax()), gy(s_tv.getay()), gx(s_tv.getbx()), gy(s_tv.getby())); //’¼??
             }
             if (ip4 == 1) {
                 s_tv.set(cam_ura.object2TV(c.get_Senbun_from_Bou_id(i)));
-                g.drawLine(gx(s_tv.getax()), gy(s_tv.getay()), gx(s_tv.getbx()), gy(s_tv.getby())); //’¼?ü
+                g.drawLine(gx(s_tv.getax()), gy(s_tv.getay()), gx(s_tv.getbx()), gy(s_tv.getby())); //’¼??
             }
             if ((ip4 == 2) || (ip4 == 3)) {
                 s_tv.set(cam_omote.object2TV(c.get_Senbun_from_Bou_id(i)));
-                g.drawLine(gx(s_tv.getax()), gy(s_tv.getay()), gx(s_tv.getbx()), gy(s_tv.getby())); //’¼?ü
+                g.drawLine(gx(s_tv.getax()), gy(s_tv.getay()), gx(s_tv.getbx()), gy(s_tv.getby())); //’¼??
                 s_tv.set(cam_ura.object2TV(c.get_Senbun_from_Bou_id(i)));
-                g.drawLine(gx(s_tv.getax()), gy(s_tv.getay()), gx(s_tv.getbx()), gy(s_tv.getby())); //’¼?ü
+                g.drawLine(gx(s_tv.getax()), gy(s_tv.getay()), gx(s_tv.getbx()), gy(s_tv.getby())); //’¼??
             }
 
 
-            //g.drawLine( gx(s_tv.getax()),gy(s_tv.getay()),gx(s_tv.getbx()),gy(s_tv.getby())); //’¼?ü
+            //g.drawLine( gx(s_tv.getax()),gy(s_tv.getay()),gx(s_tv.getbx()),gy(s_tv.getby())); //’¼??
         }
     }
 
@@ -1043,7 +1046,7 @@ public class Tenkaizu_Syokunin {//‚±‚Ì“WŠJ?}?E?lƒNƒ‰ƒX‚Í“WŠJ?}‚Æ‚µ‚Ä‚ÌTensyuugou
 
     double d_h_k = 10.0;//ˆê’è‚Ì‹——£‚æ‚è‹ß‚¢‹ß–T‚©‚Ì”»’è‹——£
 
-    //—^‚¦‚ç‚ê‚½?À•W‚Æˆê’è‚Ì‹——£‚æ‚è‹ß‚¢‹ß–T‚É‚ ‚Á‚Ä?A‚©‚Â?Å‚à‹ß‚¢“_‚Ì”Ô?†‚ð•Ô‚·?B‚à‚µ?Aˆê’è‚Ì‹——£ˆÈ“à‚ÉTen‚ª‚È‚¢‚È‚ç0‚ð•Ô‚·?B
+    //—^‚¦‚ç‚ê‚½?À•W‚Æˆê’è‚Ì‹——£‚æ‚è‹ß‚¢‹ß–T‚É‚ ‚Á‚Ä?A‚©‚Â?Å‚à‹ß‚¢“_‚Ì”Ô??‚ð•Ô‚·?B‚à‚µ?Aˆê’è‚Ì‹——£ˆÈ“à‚ÉTen‚ª‚È‚¢‚È‚ç0‚ð•Ô‚·?B
     public int mottomo_tikai_Tenid_with_camera(Ten p0) {//“WŠJ?}—p
         Ten p = new Ten();
         p.set(camera.TV2object(p0));
@@ -1052,7 +1055,7 @@ public class Tenkaizu_Syokunin {//‚±‚Ì“WŠJ?}?E?lƒNƒ‰ƒX‚Í“WŠJ?}‚Æ‚µ‚Ä‚ÌTensyuugou
     }
 
 
-    //—^‚¦‚ç‚ê‚½?À•W‚Æˆê’è‚Ì‹——£‚æ‚è‹ß‚¢‹ß–T‚É‚ ‚Á‚Ä?A‚©‚Â?Å‚à‹ß‚¢“_‚Ì”Ô?†‚ð•Ô‚·?B‚à‚µ?Aˆê’è‚Ì‹——£ˆÈ“à‚ÉTen‚ª‚È‚¢‚È‚ç0‚ð•Ô‚·?B
+    //—^‚¦‚ç‚ê‚½?À•W‚Æˆê’è‚Ì‹——£‚æ‚è‹ß‚¢‹ß–T‚É‚ ‚Á‚Ä?A‚©‚Â?Å‚à‹ß‚¢“_‚Ì”Ô??‚ð•Ô‚·?B‚à‚µ?Aˆê’è‚Ì‹——£ˆÈ“à‚ÉTen‚ª‚È‚¢‚È‚ç0‚ð•Ô‚·?B
     public int mottomo_tikai_Tenid_with_camera(Ten p0, int ip4) {//?Ü‚è?ã‚ª‚è?}—p
         Ten p = new Ten();
         if (ip4 == 0) {
@@ -1102,7 +1105,7 @@ public class Tenkaizu_Syokunin {//‚±‚Ì“WŠJ?}?E?lƒNƒ‰ƒX‚Í“WŠJ?}‚Æ‚µ‚Ä‚ÌTensyuugou
         Ubox.set_i_undo_suu(i);
     }
 
-//String s_title=new String(); //ƒtƒŒ?[ƒ€‚Ì?Å?ã’[‚É?o‚Ä‚­‚éƒ^ƒCƒgƒ‹‚ð•ÛŽ?‚·‚é‚½‚ß‚ÉŽg—p
+//String s_title=new String(); //ƒtƒŒ?[ƒ€‚Ì?Å?ã’[‚É?o‚Ä‚­‚éƒ^ƒCƒgƒ‹‚ð•Û??‚·‚é‚½‚ß‚ÉŽg—p
 
     public void kiroku() {
         Ubox.kiroku(getMemo());

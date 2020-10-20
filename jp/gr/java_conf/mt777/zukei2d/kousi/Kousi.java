@@ -3,6 +3,7 @@ package jp.gr.java_conf.mt777.zukei2d.kousi;
 import jp.gr.java_conf.mt777.origami.dougu.camera.Camera;
 import jp.gr.java_conf.mt777.zukei2d.oritacalc.OritaCalc;
 import jp.gr.java_conf.mt777.zukei2d.senbun.Senbun;
+import jp.gr.java_conf.mt777.zukei2d.ten.Ten;
 
 import java.awt.*;
 
@@ -18,7 +19,7 @@ public class Kousi {
 
     OritaCalc oc = new OritaCalc();          //ŠeŽíŒvŽZ—p‚ÌŠÖ?”‚ðŽg‚¤‚½‚ß‚ÌƒNƒ‰ƒX‚ÌƒCƒ“ƒXƒ^ƒ“ƒX‰»
 
-    double d_kousi_haba = 200.0;//<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<ŠiŽq•?(double)
+    double d_kousi_haba = 200.0;//<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<ŠiŽq??(double)
 
     double d_kousi_a_nagasa = 1.0;
     double d_kousi_b_nagasa = 1.0;
@@ -33,11 +34,11 @@ public class Kousi {
     double okx0 = -200.0;//obijectŒn‚Å‚ÌŠiŽq‚Ìx?À•W‚ÌŒ´“_
     double oky0 = +200.0;//obijectŒn‚Å‚ÌŠiŽq‚Ìy?À•W‚ÌŒ´“_
 
-    double taikakusen_max = 1.0;//’PˆÊ–E‚Ì‘ÎŠp?ü‚Ì’·‚¢‚Ù‚¤
-    double taikakusen_min = 1.0;//’PˆÊ–E‚Ì‘ÎŠp?ü‚Ì’Z‚¢‚Ù‚¤
+    double taikakusen_max = 1.0;//’PˆÊ–E‚Ì‘ÎŠp??‚Ì’·‚¢‚Ù‚¤
+    double taikakusen_min = 1.0;//’PˆÊ–E‚Ì‘ÎŠp??‚Ì’Z‚¢‚Ù‚¤
 
 
-    int i_kitei_jyoutai = 1;//Šî’ê?iŠiŽq?j‚Ì?ó‹µ=0‚Í‘Sˆæ‚Å–³Œø‚¾‚ª?AŠiŽq•?‚¾‚¯‚ÍŠù‘¶’[“_‚Ö‚Ìˆø‚«Šñ‚¹”¼Œa‚Ì?Ý’è‚ÉŽg‚¤‚Ì‚Å—LŒø?A?ó‹µ=1‚Í—pŽ†“à‚Ì‚Ý—LŒø?A?ó‹µ=2‚Í‘S—Ìˆæ‚Å—LŒø
+    int i_kitei_jyoutai = 1;//Šî’ê?iŠiŽq?j‚Ì?ó‹µ=0‚Í‘Sˆæ‚Å–³Œø‚¾‚ª?AŠiŽq??‚¾‚¯‚ÍŠù‘¶’[“_‚Ö‚Ìˆø‚«Šñ‚¹”¼Œa‚Ì?Ý’è‚ÉŽg‚¤‚Ì‚Å—LŒø?A?ó‹µ=1‚Í—pŽ†“à‚Ì‚Ý—LŒø?A?ó‹µ=2‚Í‘S—Ìˆæ‚Å—LŒø
 
 
     //—pŽ†‚Ì•ªŠ„‚È‚µ‚È‚çkousi_zahyou[0‚©‚ç1]‚È‚Ì‚Åkousi_bunkatu_suu‚Í‚P?Akousi_bunkatu_suu
@@ -57,10 +58,10 @@ public class Kousi {
     int b_to_heikouna_memori_kannkaku = 5;
     int b_to_heikouna_memori_iti = 0;
 
-    Color kousi_color = new Color(230, 230, 230);//ŠiŽq?ü‚Ì?F
-    Color kousi_memori_color = new Color(180, 200, 180);//ŠiŽq–Ú?·‚è?ü‚Ì?F
+    Color kousi_color = new Color(230, 230, 230);//ŠiŽq??‚Ì?F
+    Color kousi_memori_color = new Color(180, 200, 180);//ŠiŽq–Ú?·‚è??‚Ì?F
 
-    int kousi_senhaba = 1;//ŠiŽq‚Ì?ü•?
+    int kousi_senhaba = 1;//ŠiŽq‚Ì????
 
     public Kousi() {  //ƒRƒ“ƒXƒgƒ‰ƒNƒ^
 
@@ -233,13 +234,13 @@ public class Kousi {
         //     [d_kousi_ay, d_kousi_by]        [0]?@?@?@?@?@?@?@ ?@?@?@?@?@?@[0]
         //‚±‚Ì‹t?s—ñ‚É‚æ‚Á‚ÄobjŒn?À•W‚ÌTen‚ÍŠiŽq‚ÌŽw?”‚É•ÏŠ·‚³‚ê‚é?B
         //?@?@?@?@?@
-        //?s—ñ‚Ì‹L?†‚Ì’è‹`
+        //?s—ñ‚Ì‹L??‚Ì’è‹`
         double ax = d_kousi_ax;
         double ay = d_kousi_ay;
         double bx = d_kousi_bx;
         double by = d_kousi_by;
 
-        //‹t?s—ñ‚Ì‹L?†‚Ì’è‹`
+        //‹t?s—ñ‚Ì‹L??‚Ì’è‹`
         double det = ax * by - bx * ay;
         double gax = by / det;
         double gay = -ay / det;
@@ -258,15 +259,15 @@ public class Kousi {
     }
 
     // ----------------------------
-    public int get_a_sisuu_min(Ten p_a, Ten p_b, Ten p_c, Ten p_d) {//obj?À•WŒn‚Ì4‚Â‚Ì“_‚ðŽw’è‚µ?AŠe“_‚ÌaƒxƒNƒgƒ‹‚ÌŽw?”‚æ‚è?¬‚³‚¢?®?”‚ÌŽw?”‚ð“¾‚é?B
+    public int get_a_sisuu_min(Ten p_a, Ten p_b, Ten p_c, Ten p_d) {//obj?À•WŒn‚Ì4‚Â‚Ì“_‚ðŽw’è‚µ?AŠe“_‚ÌaƒxƒNƒgƒ‹‚ÌŽw?”‚æ‚??¬‚³‚¢?®?”‚ÌŽw?”‚ð“¾‚é?B
         Ten p_a_sisuu = new Ten();
-        p_a_sisuu.set(get_sisuu(p_a));//p_a‚ÌŠiŽqŒn‚ÌŽw?”
+        p_a_sisuu.set(get_sisuu(p_a));//p_a‚ÌŠiŽqŒn‚ÌŽw??
         Ten p_b_sisuu = new Ten();
-        p_b_sisuu.set(get_sisuu(p_b));//p_b‚ÌŠiŽqŒn‚ÌŽw?”
+        p_b_sisuu.set(get_sisuu(p_b));//p_b‚ÌŠiŽqŒn‚ÌŽw??
         Ten p_c_sisuu = new Ten();
-        p_c_sisuu.set(get_sisuu(p_c));//p_c‚ÌŠiŽqŒn‚ÌŽw?”
+        p_c_sisuu.set(get_sisuu(p_c));//p_c‚ÌŠiŽqŒn‚ÌŽw??
         Ten p_d_sisuu = new Ten();
-        p_d_sisuu.set(get_sisuu(p_d));//p_d‚ÌŠiŽqŒn‚ÌŽw?”
+        p_d_sisuu.set(get_sisuu(p_d));//p_d‚ÌŠiŽqŒn‚ÌŽw??
 
         double a_sisuu_max = p_a_sisuu.getx();
         if (p_b_sisuu.getx() > a_sisuu_max) {
@@ -320,13 +321,13 @@ public class Kousi {
     // ----------------------------
     public int get_a_sisuu_max(Ten p_a, Ten p_b, Ten p_c, Ten p_d) {//obj?À•WŒn‚Ì4‚Â‚Ì“_‚ðŽw’è‚µ?AŠe“_‚ÌaƒxƒNƒgƒ‹‚ÌŽw?”‚æ‚è‘å‚«‚¢?®?”‚ÌŽw?”‚ð“¾‚é?B
         Ten p_a_sisuu = new Ten();
-        p_a_sisuu.set(get_sisuu(p_a));//p_a‚ÌŠiŽqŒn‚ÌŽw?”
+        p_a_sisuu.set(get_sisuu(p_a));//p_a‚ÌŠiŽqŒn‚ÌŽw??
         Ten p_b_sisuu = new Ten();
-        p_b_sisuu.set(get_sisuu(p_b));//p_b‚ÌŠiŽqŒn‚ÌŽw?”
+        p_b_sisuu.set(get_sisuu(p_b));//p_b‚ÌŠiŽqŒn‚ÌŽw??
         Ten p_c_sisuu = new Ten();
-        p_c_sisuu.set(get_sisuu(p_c));//p_c‚ÌŠiŽqŒn‚ÌŽw?”
+        p_c_sisuu.set(get_sisuu(p_c));//p_c‚ÌŠiŽqŒn‚ÌŽw??
         Ten p_d_sisuu = new Ten();
-        p_d_sisuu.set(get_sisuu(p_d));//p_d‚ÌŠiŽqŒn‚ÌŽw?”
+        p_d_sisuu.set(get_sisuu(p_d));//p_d‚ÌŠiŽqŒn‚ÌŽw??
 
         double a_sisuu_max = p_a_sisuu.getx();
         if (p_b_sisuu.getx() > a_sisuu_max) {
@@ -378,15 +379,15 @@ public class Kousi {
     }
 
     // ----------------------------
-    public int get_b_sisuu_min(Ten p_a, Ten p_b, Ten p_c, Ten p_d) {//obj?À•WŒn‚Ì4‚Â‚Ì“_‚ðŽw’è‚µ?AŠe“_‚ÌbƒxƒNƒgƒ‹‚ÌŽw?”‚æ‚è?¬‚³‚¢?®?”‚ÌŽw?”‚ð“¾‚é?B
+    public int get_b_sisuu_min(Ten p_a, Ten p_b, Ten p_c, Ten p_d) {//obj?À•WŒn‚Ì4‚Â‚Ì“_‚ðŽw’è‚µ?AŠe“_‚ÌbƒxƒNƒgƒ‹‚ÌŽw?”‚æ‚??¬‚³‚¢?®?”‚ÌŽw?”‚ð“¾‚é?B
         Ten p_a_sisuu = new Ten();
-        p_a_sisuu.set(get_sisuu(p_a));//p_a‚ÌŠiŽqŒn‚ÌŽw?”
+        p_a_sisuu.set(get_sisuu(p_a));//p_a‚ÌŠiŽqŒn‚ÌŽw??
         Ten p_b_sisuu = new Ten();
-        p_b_sisuu.set(get_sisuu(p_b));//p_b‚ÌŠiŽqŒn‚ÌŽw?”
+        p_b_sisuu.set(get_sisuu(p_b));//p_b‚ÌŠiŽqŒn‚ÌŽw??
         Ten p_c_sisuu = new Ten();
-        p_c_sisuu.set(get_sisuu(p_c));//p_c‚ÌŠiŽqŒn‚ÌŽw?”
+        p_c_sisuu.set(get_sisuu(p_c));//p_c‚ÌŠiŽqŒn‚ÌŽw??
         Ten p_d_sisuu = new Ten();
-        p_d_sisuu.set(get_sisuu(p_d));//p_d‚ÌŠiŽqŒn‚ÌŽw?”
+        p_d_sisuu.set(get_sisuu(p_d));//p_d‚ÌŠiŽqŒn‚ÌŽw??
 
         double a_sisuu_max = p_a_sisuu.getx();
         if (p_b_sisuu.getx() > a_sisuu_max) {
@@ -440,13 +441,13 @@ public class Kousi {
     // ----------------------------
     public int get_b_sisuu_max(Ten p_a, Ten p_b, Ten p_c, Ten p_d) {//obj?À•WŒn‚Ì4‚Â‚Ì“_‚ðŽw’è‚µ?AŠe“_‚ÌbƒxƒNƒgƒ‹‚ÌŽw?”‚æ‚è‘å‚«‚¢?®?”‚ÌŽw?”‚ð“¾‚é?B
         Ten p_a_sisuu = new Ten();
-        p_a_sisuu.set(get_sisuu(p_a));//p_a‚ÌŠiŽqŒn‚ÌŽw?”
+        p_a_sisuu.set(get_sisuu(p_a));//p_a‚ÌŠiŽqŒn‚ÌŽw??
         Ten p_b_sisuu = new Ten();
-        p_b_sisuu.set(get_sisuu(p_b));//p_b‚ÌŠiŽqŒn‚ÌŽw?”
+        p_b_sisuu.set(get_sisuu(p_b));//p_b‚ÌŠiŽqŒn‚ÌŽw??
         Ten p_c_sisuu = new Ten();
-        p_c_sisuu.set(get_sisuu(p_c));//p_c‚ÌŠiŽqŒn‚ÌŽw?”
+        p_c_sisuu.set(get_sisuu(p_c));//p_c‚ÌŠiŽqŒn‚ÌŽw??
         Ten p_d_sisuu = new Ten();
-        p_d_sisuu.set(get_sisuu(p_d));//p_d‚ÌŠiŽqŒn‚ÌŽw?”
+        p_d_sisuu.set(get_sisuu(p_d));//p_d‚ÌŠiŽqŒn‚ÌŽw??
 
         double a_sisuu_max = p_a_sisuu.getx();
         if (p_b_sisuu.getx() > a_sisuu_max) {
@@ -516,8 +517,8 @@ public class Kousi {
 
 
     //•`‰æ-----------------------------------------------------------------
-    public void oekaki(Graphics g, Camera camera, int p0x_max, int p0y_max, int i_irokae) {    //i_irokae=1‚È‚çˆê’è?”‚²‚Æ‚ÉŠiŽq?ü‚Ì?F‚ð•Ï‚¦‚é
-        //“ü—Í‹K’è‚ª1‚©2?i?³•ûŠiŽq?j‚Ì?ê?‡‚ÌŠiŽq?ü‚Ì•`‰æ
+    public void oekaki(Graphics g, Camera camera, int p0x_max, int p0y_max, int i_irokae) {    //i_irokae=1‚È‚çˆê’è?”‚²‚Æ‚ÉŠiŽq??‚Ì?F‚ð•Ï‚¦‚é
+        //“ü—Í‹K’è‚ª1‚©2?i?³•ûŠiŽq?j‚Ì???‡‚ÌŠiŽq??‚Ì•`‰æ
         Graphics2D g2 = (Graphics2D) g;
 
         Senbun s_tv = new Senbun();
@@ -526,9 +527,9 @@ public class Kousi {
         Senbun s_ob = new Senbun();
 
 
-        //ŠiŽq?ü‚Ì•`‰æ
-        //g2.setStroke(new BasicStroke(1.0f, BasicStroke.CAP_BUTT, BasicStroke.JOIN_MITER));//?ü‚Ì‘¾‚³‚â?ü‚Ì––’[‚ÌŒ`?ó
-        g2.setStroke(new BasicStroke((float) kousi_senhaba, BasicStroke.CAP_BUTT, BasicStroke.JOIN_MITER));//?ü‚Ì‘¾‚³‚â?ü‚Ì––’[‚ÌŒ`?ó
+        //ŠiŽq??‚Ì•`‰æ
+        //g2.setStroke(new BasicStroke(1.0f, BasicStroke.CAP_BUTT, BasicStroke.JOIN_MITER));//??‚Ì‘¾‚³‚â??‚Ì––’[‚ÌŒ`??
+        g2.setStroke(new BasicStroke((float) kousi_senhaba, BasicStroke.CAP_BUTT, BasicStroke.JOIN_MITER));//??‚Ì‘¾‚³‚â??‚Ì––’[‚ÌŒ`??
 
 
         if (jyoutai() != 0) {
@@ -590,7 +591,7 @@ public class Kousi {
                             d_kousi_ax * i + d_kousi_bx * kousi_gamen_b_max + okx0,
                             d_kousi_ay * i + d_kousi_by * kousi_gamen_b_max + oky0);
                     s_tv.set(camera.object2TV(s_ob));
-                    g.drawLine((int) s_tv.getax(), (int) s_tv.getay(), (int) s_tv.getbx(), (int) s_tv.getby()); //’¼?ü
+                    g.drawLine((int) s_tv.getax(), (int) s_tv.getay(), (int) s_tv.getbx(), (int) s_tv.getby()); //’¼??
                 }
 
                 for (int i = kousi_gamen_b_min; i <= kousi_gamen_b_max; i++) {
@@ -603,10 +604,10 @@ public class Kousi {
 
 
                     s_tv.set(camera.object2TV(s_ob));
-                    g.drawLine((int) s_tv.getax(), (int) s_tv.getay(), (int) s_tv.getbx(), (int) s_tv.getby()); //’¼?ü
+                    g.drawLine((int) s_tv.getax(), (int) s_tv.getay(), (int) s_tv.getbx(), (int) s_tv.getby()); //’¼??
                 }
 
-                //ˆê’è?”‚²‚Æ‚ÉŠiŽq?ü‚Ì?F‚ð•Ï‚¦‚é-----------------------------------------------
+                //ˆê’è?”‚²‚Æ‚ÉŠiŽq??‚Ì?F‚ð•Ï‚¦‚é-----------------------------------------------
                 if (i_irokae == 1) {
 
                     //g.setColor(new Color(180, 200,180));
@@ -632,7 +633,7 @@ public class Kousi {
                                     d_kousi_ax * i + d_kousi_bx * kousi_gamen_b_max + okx0,
                                     d_kousi_ay * i + d_kousi_by * kousi_gamen_b_max + oky0);
                             s_tv.set(camera.object2TV(s_ob));
-                            g.drawLine((int) s_tv.getax(), (int) s_tv.getay(), (int) s_tv.getbx(), (int) s_tv.getby()); //’¼?ü
+                            g.drawLine((int) s_tv.getax(), (int) s_tv.getay(), (int) s_tv.getbx(), (int) s_tv.getby()); //’¼??
                         }
                     }
 
@@ -651,11 +652,11 @@ public class Kousi {
 
 
                             s_tv.set(camera.object2TV(s_ob));
-                            g.drawLine((int) s_tv.getax(), (int) s_tv.getay(), (int) s_tv.getbx(), (int) s_tv.getby()); //’¼?ü
+                            g.drawLine((int) s_tv.getax(), (int) s_tv.getay(), (int) s_tv.getbx(), (int) s_tv.getby()); //’¼??
                         }
                     }
 
-                    //ˆê’è?”‚²‚Æ‚ÉŠiŽq?ü‚Ì?F‚ð•Ï‚¦‚é?@‚±‚±‚Ü‚Å--------------------------------------------
+                    //ˆê’è?”‚²‚Æ‚ÉŠiŽq??‚Ì?F‚ð•Ï‚¦‚é?@‚±‚±‚Ü‚Å--------------------------------------------
 
                 }
 

@@ -1,6 +1,8 @@
 package jp.gr.java_conf.mt777.zukei2d.en;
 
+import jp.gr.java_conf.mt777.zukei2d.oritacalc.tyokusen.Tyokusen;
 import jp.gr.java_conf.mt777.zukei2d.senbun.Senbun;
+import jp.gr.java_conf.mt777.zukei2d.ten.Ten;
 
 import java.awt.*;
 
@@ -12,9 +14,9 @@ public class En {//“_‚Ì?À•W‚â•ûŒüƒxƒNƒgƒ‹‚È‚Ç‚ð‚ ‚ç‚í‚·‚Æ‚«‚É—p‚¢‚é
     double x, y, r;//’†?S‚Ì?À•W‚Æ”¼Œa
 
     int icol;//?F‚ÌŽw’è?@0=black,1=blue,2=red.
-    int tpp = 0;//“Á’?ƒvƒ?ƒpƒeƒBƒpƒ‰ƒ??[ƒ^?[
-    //Color tpp_color =new Color(100, 200, 200);//“Á’?‚ ‚é?ê?‡‚Ì?F
-    Color tpp_color = new Color(100, 200, 200);//“Á’?‚ ‚é?ê?‡‚Ì?F
+    int tpp = 0;//“Á??ƒv??ƒpƒeƒBƒpƒ‰???[ƒ^?[
+    //Color tpp_color =new Color(100, 200, 200);//“Á??‚ ‚é???‡‚Ì?F
+    Color tpp_color = new Color(100, 200, 200);//“Á??‚ ‚é???‡‚Ì?F
 
     public En() {
         x = 0.0;
@@ -38,7 +40,7 @@ public class En {//“_‚Ì?À•W‚â•ûŒüƒxƒNƒgƒ‹‚È‚Ç‚ð‚ ‚ç‚í‚·‚Æ‚«‚É—p‚¢‚é
         icol = m;
     } //ƒRƒ“ƒXƒgƒ‰ƒNƒ^
 
-    public En(Senbun s0, int m) {//ƒRƒ“ƒXƒgƒ‰ƒNƒ^ ?ü•ª‚ð’¼Œa‚Æ‚·‚é‰~
+    public En(Senbun s0, int m) {//ƒRƒ“ƒXƒgƒ‰ƒNƒ^ ??•ª‚ð’¼Œa‚Æ‚·‚é‰~
         x = (s0.getax() + s0.getbx()) / 2.0;
         y = (s0.getay() + s0.getby()) / 2.0;
         r = s0.getnagasa() / 2.0;
@@ -155,7 +157,7 @@ public class En {//“_‚Ì?À•W‚â•ûŒüƒxƒNƒgƒ‹‚È‚Ç‚ð‚ ‚ç‚í‚·‚Æ‚«‚É—p‚¢‚é
     }
 
 /*
-	//‘¼‚Ì“_‚Æ‚Ì‹——£?idouble?j‚ð‹?‚ß‚éŠÖ?”----------------------------------------------------
+	//‘¼‚Ì“_‚Æ‚Ì‹——£?idouble?j‚ð??‚ß‚éŠÖ??----------------------------------------------------
 	public double kyori(Ten p){
 		//double x1=p.getx(),y1=p.gety();
 		//return Math.sqrt((x1-x)*(x1-x)+(y1-y)*(y1-y));
@@ -167,7 +169,7 @@ public class En {//“_‚Ì?À•W‚â•ûŒüƒxƒNƒgƒ‹‚È‚Ç‚ð‚ ‚ç‚í‚·‚Æ‚«‚É—p‚¢‚é
 
 
 
-	//‘¼‚Ì“_‚Æ‚Ì‹——£‚Ì2?æ?idouble?j‚ð‹?‚ß‚éŠÖ?”----------------------------------------------------
+	//‘¼‚Ì“_‚Æ‚Ì‹——£‚Ì2???idouble?j‚ð??‚ß‚éŠÖ??----------------------------------------------------
 	public double kyori2jyou(Ten p){
 		double x1=p.getx()-x,y1=p.gety()-y;
 		return x1*x1+y1*y1;
@@ -175,7 +177,7 @@ public class En {//“_‚Ì?À•W‚â•ûŒüƒxƒNƒgƒ‹‚È‚Ç‚ð‚ ‚ç‚í‚·‚Æ‚«‚É—p‚¢‚é
 
 
 
-        //Ž©Ten‚ðŠî?€‚Æ‚µ‚Ä‚Ý‚½‚Æ‚«?A‘¼‚Ì“_‚ÌˆÊ’u‚ðTen‚Å•Ô‚·?B
+        //Ž©Ten‚ðŠî??‚Æ‚µ‚Ä‚Ý‚½‚Æ‚«?A‘¼‚Ì“_‚ÌˆÊ’u‚ðTen‚Å•Ô‚·?B
 	public Ten tano_Ten_iti(Ten taten){
 		Ten rten =new Ten();
 		rten.setx(taten.getx()-x);
@@ -189,7 +191,7 @@ public class En {//“_‚Ì?À•W‚â•ûŒüƒxƒNƒgƒ‹‚È‚Ç‚ð‚ ‚ç‚í‚·‚Æ‚«‚É—p‚¢‚é
 	}
 */
 
-    //‘¼‚Ì“_‚ð”½“]‚·‚éŠÖ?”----------------------------------------------------
+    //‘¼‚Ì“_‚ð”½“]‚·‚éŠÖ??----------------------------------------------------
     public Ten hanten(Ten t0) {//t0‚Æ(x,y)‚ª“¯‚¶ˆÊ’u‚Ì‚Æ‚«‚ÍƒGƒ‰?[‚Æ‚È‚é?B
         double x1 = t0.getx() - x, y1 = t0.gety() - y;
         double d1 = Math.sqrt(x1 * x1 + y1 * y1);
@@ -207,7 +209,7 @@ public class En {//“_‚Ì?À•W‚â•ûŒüƒxƒNƒgƒ‹‚È‚Ç‚ð‚ ‚ç‚í‚·‚Æ‚«‚É—p‚¢‚é
         return new Ten(x3, y3);
     }
 
-    //‘¼‚Ì‰~‚ð‰~‚É”½“]‚·‚éŠÖ?”----------------------------------------------------
+    //‘¼‚Ì‰~‚ð‰~‚É”½“]‚·‚éŠÖ??----------------------------------------------------
     public En hanten(En e0) {//e0‚Ì‰~Žü‚ª(x,y)‚ð’Ê‚ç‚È‚¢‚Æ‚«—p?@//e0‚Ì‰~Žü‚ª(x,y)‚ð’Ê‚é‚Æ‚«‚ÍƒGƒ‰?[‚Æ‚È‚é?B‚Ü‚½e0‚Ì‰~Žü‚Ì“à•”‚É(x,y)‚ª‚­‚é‚Æ‚«‚à‚¨‚©‚µ‚ÈŒ‹‰Ê‚É‚È‚é‚Á‚Û‚¢?B
         double x1 = e0.getx() - x, y1 = e0.gety() - y;
         double d1 = Math.sqrt(x1 * x1 + y1 * y1);
@@ -244,7 +246,7 @@ public class En {//“_‚Ì?À•W‚â•ûŒüƒxƒNƒgƒ‹‚È‚Ç‚ð‚ ‚ç‚í‚·‚Æ‚«‚É—p‚¢‚é
         return new En(new Senbun(hanten(new Ten(xa0, ya0)), hanten(new Ten(xb0, yb0))), ic);
     }
 
-    //(x,y)‚ð’Ê‚é‘¼‚Ì‰~‚ð?ü•ª‚É”½“]‚·‚éŠÖ?”----------------------------------------------------
+    //(x,y)‚ð’Ê‚é‘¼‚Ì‰~‚ð??•ª‚É”½“]‚·‚éŠÖ??----------------------------------------------------
     public Senbun hanten_En2Senbun(En e0) {//e0‚Ì‰~Žü‚ª(x,y)‚ð’Ê‚é‚Æ‚«—p?@//e0‚Ì‰~Žü‚ª(x,y)‚ð’Ê‚ç‚È‚¢‚Æ‚«‚Í‚¨‚©‚µ‚ÈŒ‹‰Ê‚É‚È‚é?B
         double x1 = e0.getx() - x, y1 = e0.gety() - y;
         Ten th = new Ten();
@@ -259,7 +261,7 @@ public class En {//“_‚Ì?À•W‚â•ûŒüƒxƒNƒgƒ‹‚È‚Ç‚ð‚ ‚ç‚í‚·‚Æ‚«‚É—p‚¢‚é
     }
 
 
-    //(x,y)‚ð’Ê‚ç‚È‚¢?ü•ª‚ð‘¼‚Ì‰~‚É”½“]‚·‚éŠÖ?”----------------------------------------------------
+    //(x,y)‚ð’Ê‚ç‚È‚¢??•ª‚ð‘¼‚Ì‰~‚É”½“]‚·‚éŠÖ??----------------------------------------------------
     public En hanten_Senbun2En(Senbun s0) {//s0‚ª(x,y)‚ð’Ê‚é‚Æ‚«‚Í‚¨‚©‚µ‚ÈŒ‹‰Ê‚É‚È‚é?B
         Tyokusen ty = new Tyokusen(s0);
         Ten t0 = new Ten();

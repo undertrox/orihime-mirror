@@ -12,8 +12,10 @@ import jp.gr.java_conf.mt777.origami.dougu.senbunsyuugou.Senbunsyuugou;
 import jp.gr.java_conf.mt777.origami.orihime.egaki_syokunin.Egaki_Syokunin;
 import jp.gr.java_conf.mt777.origami.orihime.oriagari_zu.Oriagari_Zu;
 import jp.gr.java_conf.mt777.origami.orihime.oriagari_zu.Oriagari_Zu_01;
+import jp.gr.java_conf.mt777.zukei2d.kousi.Kousi;
 import jp.gr.java_conf.mt777.zukei2d.oritacalc.OritaCalc;
 import jp.gr.java_conf.mt777.zukei2d.senbun.Senbun;
+import jp.gr.java_conf.mt777.zukei2d.ten.Ten;
 
 import javax.imageio.ImageIO;
 import javax.swing.*;
@@ -35,9 +37,9 @@ import java.util.ArrayList;
 //public class ap extends Frame implements ActionListener,MouseListener, MouseMotionListener,MouseWheelListener,KeyListener{                                                                  
 public class ap extends Frame implements ActionListener, MouseListener, MouseMotionListener, MouseWheelListener {
 
-    ////b* ƒAƒvƒŠƒP?[ƒVƒ‡ƒ“—p?B?æ“ª‚ª?^?–?^?^?^‚ÅŽn‚Ü‚é?s‚É‚Í‚³‚Ü‚ê‚½•”•ª‚Í–³Ž‹‚³‚ê‚é?B
+    ////b* ƒAƒvƒŠƒP?[ƒVƒ‡ƒ“—p?B?æ“ª‚ª?^???^?^?^‚ÅŽn‚Ü‚é?s‚É‚Í‚³‚Ü‚ê‚½•”•ª‚Í–³Ž‹‚³‚ê‚é?B
     FileDialog fd;
-    double r = 3.0;                   //Šî–{Ž}?\‘¢‚Ì’¼?ü‚Ì—¼’[‚Ì‰~‚Ì”¼Œa?AŽ}‚ÆŠeŽíƒ|ƒCƒ“ƒg‚Ì‹ß‚³‚Ì”»’èŠî?€
+    double r = 3.0;                   //Šî–{Ž}?\‘¢‚Ì’¼??‚Ì—¼’[‚Ì‰~‚Ì”¼Œa?AŽ}‚ÆŠeŽíƒ|ƒCƒ“ƒg‚Ì‹ß‚³‚Ì”»’èŠî??
     Memo memo1 = new Memo();
 
     File_keisiki_henkan file_henkan = new File_keisiki_henkan();
@@ -61,12 +63,12 @@ public class ap extends Frame implements ActionListener, MouseListener, MouseMot
 
     public Senbunsyuugou Ss0;//?Ü?ô‚Ý—\‘ª‚Ì?Å?‰‚É?Ats1.Senbunsyuugou2Tensyuugou(Ss0)‚Æ‚µ‚ÄŽg‚¤?B?@Ss0‚Í?Aes1.get_for_oritatami()‚©es1.get_for_select_oritatami()‚Å“¾‚é?B
 
-    int i_OAZ = 0;//OAZ‚Ì‰½”Ô–Ú‚ÌOriagari_Zu‚ªƒ{ƒ^ƒ“‘€?ì‚â•ÏŒ`‘€?ì‚Ì‘Î?Û‚Æ‚È‚é‚©‚ðŽw’è
+    int i_OAZ = 0;//OAZ‚Ì‰½”Ô–Ú‚ÌOriagari_Zu‚ªƒ{ƒ^ƒ“‘€??‚â•ÏŒ`‘€??‚Ì‘Î?Û‚Æ‚È‚é‚©‚ðŽw’è
 
 
     public Kousi kus = es1.kus;
 
-    Moji_sousa ms = new Moji_sousa(); //•¶Žš—ñ‘€?ì—p‚ÌŠÖ?”‚ð?W‚ß‚½ƒNƒ‰ƒX
+    Moji_sousa ms = new Moji_sousa(); //•¶Žš—ñ‘€??—p‚ÌŠÖ?”‚??W‚ß‚½ƒNƒ‰ƒX
 
     public Keijiban keijiban = new Keijiban(this);
 
@@ -74,15 +76,15 @@ public class ap extends Frame implements ActionListener, MouseListener, MouseMot
 
     Haikei_camera h_cam = new Haikei_camera();
 
-    Ten mouse_temp0 = new Ten();//ƒ}ƒEƒX‚Ì“®?ì‘Î‰žŽž‚É?AˆêŽž“I‚ÉŽg‚¤Ten
+    Ten mouse_temp0 = new Ten();//ƒ}ƒEƒX‚Ì“®??‘Î‰žŽž‚É?AˆêŽž“I‚ÉŽg‚¤Ten
 
-    int icol;//Šî–{Ž}?E?l‚ÌŽ}‚Ì?F‚ðŽw’è‚·‚é?B0‚Í?•?A1‚Í?Ô?A2‚Í?Ô?B//icol=0 black	//icol=1 red	//icol=2 blue	//icol=3 cyan	//icol=4 orange	//icol=5 mazenta	//icol=6 green	//icol=7 yellow	//icol=8 new Color(210,0,255) //Ž‡
-    int h_icol;//•â?•?ü‚ÌŽ}‚Ì?F‚ðŽw’è‚·‚é?B
+    int icol;//Šî–{Ž}?E?l‚ÌŽ}‚Ì?F‚ðŽw’è‚·‚é?B0‚Í???A1‚Í?Ô?A2‚Í?Ô?B//icol=0 black	//icol=1 red	//icol=2 blue	//icol=3 cyan	//icol=4 orange	//icol=5 mazenta	//icol=6 green	//icol=7 yellow	//icol=8 new Color(210,0,255) //Ž‡
+    int h_icol;//•â????‚ÌŽ}‚Ì?F‚ðŽw’è‚·‚é?B
 
-    int iro_sitei_ato_ni_jissisuru_sagyou_bangou = 1;//?•?Ô?Â?…‚Ì?FŽw’èŒã‚ÉŽÀŽ{‚·‚é?ì‹Æ‚Ì”Ô?†
+    int iro_sitei_ato_ni_jissisuru_sagyou_bangou = 1;//???Ô?Â??‚Ì?FŽw’èŒã‚ÉŽÀŽ{‚·‚é??‹Æ‚Ì”Ô??
 
 
-    boolean w_image_jikkoutyuu = false;//?Ü?ô‚Ý‚Ü‚Æ‚ßŽÀ?s‚Ì?B’Pˆê‰ñ‚ÌƒCƒ??[ƒW?‘‚«?o‚µ‚ªŽÀ?s’†‚È‚çture‚É‚È‚é?B
+    boolean w_image_jikkoutyuu = false;//?Ü?ô‚Ý‚Ü‚Æ‚ßŽÀ?s‚Ì?B’Pˆê‰ñ‚ÌƒC???[ƒW?‘‚«?o‚µ‚ªŽÀ?s’†‚È‚çture‚É‚È‚é?B
     //boolean matome_write_image_jikkoutyuu = false;//matome_write_image‚ªŽÀ?s’†‚È‚çture‚É‚È‚é?B‚±‚ê‚Í?A•¡?”‚Ì?Ü‚è‚ ‚ª‚èŒ`‚Ì—\‘ª‚Ì?‘‚«?o‚µ‚ª‚©‚·‚ê‚È‚¢‚æ‚¤‚ÉŽg‚¤?B20170613
 
     String fname_and_number;//‚Ü‚Æ‚ß?‘‚«?o‚µ‚ÉŽg‚¤?B
@@ -93,19 +95,19 @@ public class ap extends Frame implements ActionListener, MouseListener, MouseMot
 
     public int ir_ten = 1;//“WŠJ?}‚Ì“_‚ÌŒ`?ó‚ðŽw’è
 
-    public int i_orisen_hyougen = 1;//?Ü?ü‚Ì•\Œ»?A1???F?A2=?F‚ÆŒ`?ó?A3=?•‚Å1“_?½?ü?A4=?•‚Å2“_?½?ü
+    public int i_orisen_hyougen = 1;//?Ü??‚Ì•\Œ»?A1???F?A2=?F‚ÆŒ`???A3=?•‚Å1“_?½???A4=?•‚Å2“_?½??
 
     //ŠeŽí•Ï?”‚Ì’è‹`
-    public String c = "";                //•¶Žš—ñ?ˆ—?—p‚ÌƒNƒ‰ƒX‚ÌƒCƒ“ƒXƒ^ƒ“ƒX‰»
+    public String c = "";                //•¶Žš—ñ????—p‚ÌƒNƒ‰ƒX‚ÌƒCƒ“ƒXƒ^ƒ“ƒX‰»
     //public String text_kekka=new String();                //Œ‹‰Ê•\Ž¦—p•¶Žš—ñ‚ÌƒNƒ‰ƒX‚ÌƒCƒ“ƒXƒ^ƒ“ƒX‰»
     String frame_title_0 = "";//ƒtƒŒ?[ƒ€‚Ìƒ^ƒCƒgƒ‹‚Ì?ª–{•”•ª
     String frame_title = "";//ƒtƒŒ?[ƒ€‚Ìƒ^ƒCƒgƒ‹‚Ì‘S‘Ì
 
-    //JDialog dialog = new JDialog(this , "‚±‚ñ‚É‚¿‚Í" , true);//ƒ_ƒCƒAƒ?ƒO‚Ìƒ^ƒCƒgƒ‹
+    //JDialog dialog = new JDialog(this , "‚±‚ñ‚É‚¿‚Í" , true);//ƒ_ƒCƒA??ƒO‚Ìƒ^ƒCƒgƒ‹
 
-    //int step;                             //‘€?ì‚ÌŽw’è
+    //int step;                             //‘€??‚ÌŽw’è
 
-    int i_orisen_hojyosen = 0;//=0‚Í?Ü?ü“ü—Í?@=1‚Í•â?•?ü“ü—Íƒ‚?[ƒh
+    int i_orisen_hojyosen = 0;//=0‚Í?Ü??“ü—Í?@=1‚Í•â????“ü—Íƒ‚?[ƒh
 
 
     //ƒAƒvƒŒƒbƒg—ppublic void init()‚Ü‚½‚Í?AƒAƒvƒŠƒP?[ƒVƒ‡ƒ“—ppublic ap() ˆÈŠO‚ÌƒNƒ‰ƒX‚Å‚àŽg—p‚³‚ê‚éƒpƒlƒ‹‚Ì•”•i‚Ì?éŒ¾‚Í‚±‚±‚Å‚µ‚Ä‚¨‚­?B
@@ -116,65 +118,65 @@ public class ap extends Frame implements ActionListener, MouseListener, MouseMot
     //Button	Button0 ;
     //Button	Button0a ;
 
-    int kakudokei_input_id = 1;//Šp“xŒn‚Ì“ü—Í•û–@‚ÌŽw’è?@kakudokei_input_id=1‚Í?ü•ªŽw’è?A2‚Í2“_Žw’è
+    int kakudokei_input_id = 1;//Šp“xŒn‚Ì“ü—Í•û–@‚ÌŽw’è?@kakudokei_input_id=1‚Í??•ªŽw’è?A2‚Í2“_Žw’è
 
     int id_kakudo_kei_a = 12;//Šp“xŒn‚Ì180“x‚ðŠ„‚é?”‚ÌŠi”[_a
     int id_kakudo_kei_b = 8;//Šp“xŒn‚Ì180“x‚ðŠ„‚é?”‚ÌŠi”[_b
 
 
-    //int i_fold_type=0;//=0‚Í’Ê?í‚Ì“WŠJ?}‚Ì‘S?Ü?ü‚ð‘Î?Û‚Æ‚µ‚½?Ü‚è?ô‚Ý?„’è?A=1‚Íselect‚³‚ê‚½?Ü?ü‚ð‘Î?Û‚Æ‚µ‚½?Ü‚è?ô‚Ý?„’è?A
-    //int i_fold_type=0;//=0‚È‚É‚à‚µ‚È‚¢?A=1’Ê?í‚Ì“WŠJ?}‚Ì‘S?Ü?ü‚ð‘Î?Û‚Æ‚µ‚½?Ü‚è?ô‚Ý?„’è?A=2‚Íselect‚³‚ê‚½?Ü?ü‚ð‘Î?Û‚Æ‚µ‚½?Ü‚è?ô‚Ý?„’è?A=3‚Í?Ü?ô‚Ý?ó‘Ô‚ð•Ï?X
+    //int i_fold_type=0;//=0‚Í’Ê?úžÌ“WŠJ?}‚Ì‘S?Ü??‚ð‘Î?Û‚Æ‚µ‚½?Ü‚è?ô‚Ý??’è?A=1‚Íselect‚³‚ê‚½?Ü??‚ð‘Î?Û‚Æ‚µ‚½?Ü‚è?ô‚Ý??’è?A
+    //int i_fold_type=0;//=0‚È‚É‚à‚µ‚È‚¢?A=1’Ê?úžÌ“WŠJ?}‚Ì‘S?Ü??‚ð‘Î?Û‚Æ‚µ‚½?Ü‚è?ô‚Ý??’è?A=2‚Íselect‚³‚ê‚½?Ü??‚ð‘Î?Û‚Æ‚µ‚½?Ü‚è?ô‚Ý??’è?A=3‚Í?Ü?ô‚Ý?ó‘Ô‚ð•Ï?X
 
     JButton Button0b;                    //‘Î?Ì?«‚ÌŽw’è‚É—p‚¢‚é
-    //Button Button1   ;                    //‘€?ì‚ÌŽw’è‚É—p‚¢‚é
-    JButton Button3;                    //‘€?ì‚ÌŽw’è‚É—p‚¢‚é?i’Ç‰Á?„’èˆêŒÂ‚¾‚¯?j
-    JButton Button_AS_matome;                    //‘€?ì‚ÌŽw’è‚É—p‚¢‚é?i’Ç‰Á?„’è100ŒÂ?j
+    //Button Button1   ;                    //‘€??‚ÌŽw’è‚É—p‚¢‚é
+    JButton Button3;                    //‘€??‚ÌŽw’è‚É—p‚¢‚é?i’Ç‰Á??’èˆêŒÂ‚¾‚¯?j
+    JButton Button_AS_matome;                    //‘€??‚ÌŽw’è‚É—p‚¢‚é?i’Ç‰Á??’è100ŒÂ?j
     JButton Button_bangou_sitei_suitei_hyouji;
 
 
     JButton Button_kitei;
     JButton Button_kitei2;
-    //Button ButtonCol_gray   ;                    //?Ü?ü‚Ì?F‚ÌŽw’è‚É—p‚¢‚é
-    JButton ButtonCol_black;                    //?Ü?ü‚Ì?F‚ÌŽw’è‚É—p‚¢‚é
-    JButton ButtonCol_blue;                    //?Ü?ü‚Ì?F‚ÌŽw’è‚É—p‚¢‚é
-    JButton ButtonCol_red;                    //?Ü?ü‚Ì?F‚ÌŽw’è‚É—p‚¢‚é
-    JButton ButtonCol_cyan;                    //?Ü?ü(•â?•?ü)‚Ì?F‚ÌŽw’è‚É—p‚¢‚é
+    //Button ButtonCol_gray   ;                    //?Ü??‚Ì?F‚ÌŽw’è‚É—p‚¢‚é
+    JButton ButtonCol_black;                    //?Ü??‚Ì?F‚ÌŽw’è‚É—p‚¢‚é
+    JButton ButtonCol_blue;                    //?Ü??‚Ì?F‚ÌŽw’è‚É—p‚¢‚é
+    JButton ButtonCol_red;                    //?Ü??‚Ì?F‚ÌŽw’è‚É—p‚¢‚é
+    JButton ButtonCol_cyan;                    //?Ü??(•â????)‚Ì?F‚ÌŽw’è‚É—p‚¢‚é
 
 
-    JButton Button_Col_orange;                    //•â?•?ü1‚Ì?F‚ÌŽw’è‚É—p‚¢‚é
-    JButton Button_Col_yellow;                    //•â?•?ü2‚Ì?F‚ÌŽw’è‚É—p‚¢‚é
+    JButton Button_Col_orange;                    //•â????1‚Ì?F‚ÌŽw’è‚É—p‚¢‚é
+    JButton Button_Col_yellow;                    //•â????2‚Ì?F‚ÌŽw’è‚É—p‚¢‚é
 
 
-    JButton Button_haikei_Lock_on;//”wŒi‚Ìƒ?ƒbƒNƒIƒ“
+    JButton Button_haikei_Lock_on;//”wŒi‚Ì??ƒbƒNƒIƒ“
     JButton Button_haikei_kirikae;//”wŒi‚ð•\Ž¦‚·‚é‚©‚Ç‚¤‚©‚ÌŽw’è
 
-    //Button ButtonCol_green15   ;                    //?Ü?ü‚Ì?F‚ÌŽw’è‚É—p‚¢‚é
-    //Button ButtonCol_green20  ;                    //?Ü?ü‚Ì?F‚ÌŽw’è‚É—p‚¢‚é
-    //Button ButtonCol_green22p5   ;                    //?Ü?ü‚Ì?F‚ÌŽw’è‚É—p‚¢‚é
+    //Button ButtonCol_green15   ;                    //?Ü??‚Ì?F‚ÌŽw’è‚É—p‚¢‚é
+    //Button ButtonCol_green20  ;                    //?Ü??‚Ì?F‚ÌŽw’è‚É—p‚¢‚é
+    //Button ButtonCol_green22p5   ;                    //?Ü??‚Ì?F‚ÌŽw’è‚É—p‚¢‚é
 
     JButton Button_kakudo_kei_a;            //Šp“xŒn‚Å180‚ðŠ„‚é?”‚ðŠi”[_a
     JButton Button_kakudo_kei_b;            //Šp“xŒn‚Å180‚ðŠ„‚é?”‚ðŠi”[_b
 
-    JButton Button_M_nisuru;                    //Œ³‚ª‚Ç‚ñ‚ÈŽí—Þ‚Ì?Ü?ü‚Å‚à?AŽR?Ü‚è‚É‚·‚é
-    JButton Button_V_nisuru;                    //Œ³‚ª‚Ç‚ñ‚ÈŽí—Þ‚Ì?Ü?ü‚Å‚à?A’J?Ü‚è‚É‚·‚é
-    JButton Button_E_nisuru;                    //Œ³‚ª‚Ç‚ñ‚ÈŽí—Þ‚Ì?Ü?ü‚Å‚à?A‹«ŠE?ü‚à‚µ‚­‚ÍŽR’J–¢?Ý’è?ü‚É‚·‚é
-    JButton Button_HK_nisuru;                    //Œ³‚ª‚Ç‚ñ‚ÈŽí—Þ‚Ì?Ü?ü‚Å‚à?A•â?•Šˆ?ü‚É‚·‚é
+    JButton Button_M_nisuru;                    //Œ³‚ª‚Ç‚ñ‚ÈŽí—Þ‚Ì?Ü??‚Å‚à?AŽR?Ü‚è‚É‚·‚é
+    JButton Button_V_nisuru;                    //Œ³‚ª‚Ç‚ñ‚ÈŽí—Þ‚Ì?Ü??‚Å‚à?A’J?Ü‚è‚É‚·‚é
+    JButton Button_E_nisuru;                    //Œ³‚ª‚Ç‚ñ‚ÈŽí—Þ‚Ì?Ü??‚Å‚à?A‹«ŠE??‚à‚µ‚­‚ÍŽR’J–¢?Ý’è??‚É‚·‚é
+    JButton Button_HK_nisuru;                    //Œ³‚ª‚Ç‚ñ‚ÈŽí—Þ‚Ì?Ü??‚Å‚à?A•â?•Š???‚É‚·‚é
 
-    JButton Button_senbun_henkan2;//?ü•ª‚Ì?F‚ð?Ô‚©‚ç?Â?A?Â‚©‚ç?Ô‚É•ÏŠ·
+    JButton Button_senbun_henkan2;//??•ª‚Ì?F‚ð?Ô‚©‚ç?Â?A?Â‚©‚ç?Ô‚É•ÏŠ·
 
 
     public JButton Button_F_color;                    //?Ü‚è?ã‚ª‚è?}‚Ì•\‚Ì?F‚ÌŽw’è‚É—p‚¢‚é
     public JButton Button_B_color;                    //?Ü‚è?ã‚ª‚è?}‚Ì— ‚Ì?F‚ÌŽw’è‚É—p‚¢‚é
-    public JButton Button_L_color;                    //?Ü‚è?ã‚ª‚è?}‚Ì?ü‚Ì?F‚ÌŽw’è‚É—p‚¢‚é
+    public JButton Button_L_color;                    //?Ü‚è?ã‚ª‚è?}‚Ì??‚Ì?F‚ÌŽw’è‚É—p‚¢‚é
 
-    public Color sen_tokutyuu_color = new Color(100, 200, 200);//•â?•?ü‚â‰~‚Ì?F‚ð“Á’?“I‚É•Ï‚¦‚é?ê?‡‚ÌŽw’è?F
+    public Color sen_tokutyuu_color = new Color(100, 200, 200);//•â????‚â‰~‚Ì?F‚ð“Á??“I‚É•Ï‚¦‚é???‡‚ÌŽw’è?F
     public JButton Button_sen_tokutyuu_color;                    //?Ü‚è?ã‚ª‚è?}‚Ì•\‚Ì?F‚ÌŽw’è‚É—p‚¢‚é
 
 
     public JTextField text1;
-    public int nyuuryoku_kitei = 0;    //ŠiŽq‚Ì•ªŠ„?”?@?@?@?@?i“ü—Í‹K’è‚ÌŽw’è?B0‚È‚ç‹K’è–³‚µ?A1‚È‚çŽÖ• “ü—Í?B
+    public int nyuuryoku_kitei = 0;    //ŠiŽq‚Ì•ªŠ„???@?@?@?@?i“ü—Í‹K’è‚ÌŽw’è?B0‚È‚ç‹K’è–³‚µ?A1‚È‚çŽÖ• “ü—Í?B
     JTextField text2;
-    int i_orisen_bunkatu_suu = 1;//free?Ü?ü“ü—Í‚Å?A?Ü?ü‚Ì“™•ªŠ„‚³‚ê‚Ä‚¢‚é?”
+    int i_orisen_bunkatu_suu = 1;//free?Ü??“ü—Í‚Å?A?Ü??‚Ì“™•ªŠ„‚³‚ê‚Ä‚¢‚é??
 
     JTextField text3;
     double d_orisen_naibun_a = 1.0;
@@ -232,14 +234,14 @@ public class ap extends Frame implements ActionListener, MouseListener, MouseMot
     public int memori_kankaku = 5;
 
     JTextField text26;
-    int i_oritatami_bangou = 1;//?Ü‚è?ô‚Ý?„’è‚Ì‰½”Ô–Ú‚ð•\Ž¦‚·‚é‚©Žw’è
+    int i_oritatami_bangou = 1;//?Ü‚è?ô‚Ý??’è‚Ì‰½”Ô–Ú‚ð•\Ž¦‚·‚é‚©Žw’è
 
     JTextField text27;
-    double d_syukusyaku_keisuu = 1.0;//?kŽÚŒW?”
+    double d_syukusyaku_keisuu = 1.0;//?kŽÚŒW??
     JTextField text28;
     double d_kaiten_hosei = 0.0;//‰ñ“]•\Ž¦Šp“x‚Ì•â?³Šp“x
 
-    public JTextField text29;//double d_oriagarizu_syukusyaku_keisuu=1.0;//?Ü‚è?ã‚ª‚è?}‚Ì?kŽÚŒW?”
+    public JTextField text29;//double d_oriagarizu_syukusyaku_keisuu=1.0;//?Ü‚è?ã‚ª‚è?}‚Ì?kŽÚŒW??
     public JTextField text30;
     double d_oriagarizu_kaiten_hosei = 0.0;//?Ü‚è?ã‚ª‚è?}‚Ì‰ñ“]•\Ž¦Šp“x‚Ì•â?³Šp“x
 
@@ -247,27 +249,27 @@ public class ap extends Frame implements ActionListener, MouseListener, MouseMot
     int i_undo_suu_om = 5;//text31‚Ítext10‚ðŽQ?l‚É‚µ‚Ä‚¢‚é
 
 
-    public JCheckBox ckbox_mouse_settei;//ƒ}ƒEƒX‚Ì?Ý’è?Bƒ`ƒFƒbƒN‚ª‚ ‚é‚Æ?AƒzƒC?[ƒ‹ƒ}ƒEƒX‚Æ‚µ‚Ä“®?ì?Ý’è
+    public JCheckBox ckbox_mouse_settei;//ƒ}ƒEƒX‚Ì?Ý’è?Bƒ`ƒFƒbƒN‚ª‚ ‚é‚Æ?AƒzƒC?[ƒ‹ƒ}ƒEƒX‚Æ‚µ‚Ä“®???Ý’è
     public JCheckBox ckbox_ten_sagasi;//“_‚ð’T‚·”ÍˆÍ
     public JCheckBox ckbox_ten_hanasi;//“_‚ð—£‚·‚©‚Ç‚¤‚©
     public JCheckBox ckbox_kou_mitudo_nyuuryoku;//?‚–§“x—p“ü—Í‚ð‚·‚é‚©‚Ç‚¤‚©
     public JCheckBox ckbox_bun;//•¶?Í
-    public JCheckBox ckbox_cp;//?Ü?ü
-    public JCheckBox ckbox_a0;//•â?•Šˆ?ücyan
-    public JCheckBox ckbox_a1;//•â?•‰æ?ü
+    public JCheckBox ckbox_cp;//?Ü??
+    public JCheckBox ckbox_a0;//•â?•Š???cyan
+    public JCheckBox ckbox_a1;//•â?•‰???
 
     public JCheckBox ckbox_check1;//check1
     public JCheckBox ckbox_check2;//check2
     public JCheckBox ckbox_check3;//check3
     public JCheckBox ckbox_check4;//check4
 
-    public JCheckBox ckbox_mejirusi;//?\Žš‚âŠî?€–Ê‚È‚Ç‚Ì–Úˆó‰æ?ü
+    public JCheckBox ckbox_mejirusi;//?\Žš‚âŠî??–Ê‚È‚Ç‚Ì–Úˆó‰æ??
     public JCheckBox ckbox_cp_ue;//“WŠJ?}‚ð?Ü‚è?ã‚ª‚è—\‘z?}‚Ì?ã‚É•`‚­
     public JCheckBox ckbox_oritatami_keika;//?Ü‚è?ã‚ª‚è—\‘z‚Ì“r’†Œo‰ß‚Ì?‘‚«?o‚µ
 
 
     public JCheckBox ckbox_cp_kaizen_oritatami;//cp‚ð?Ü?ô‚Ý‘O‚ÉŽ©“®‰ü‘P‚·‚é?B
-    public JCheckBox ckbox_select_nokosi;//select?ó‘Ô‚ð‘¼‚Ì‘€?ì‚ð‚µ‚Ä‚à‚È‚é‚×‚­Žc‚·
+    public JCheckBox ckbox_select_nokosi;//select?ó‘Ô‚ð‘¼‚Ì‘€??‚ð‚µ‚Ä‚à‚È‚é‚×‚­Žc‚·
 
     public JCheckBox ckbox_toukazu_color;//“§‰ß?}‚ðƒJƒ‰?[‰»‚·‚é?B
 
@@ -303,30 +305,30 @@ public class ap extends Frame implements ActionListener, MouseListener, MouseMot
 
     // ƒoƒbƒtƒ@?[‰æ–Ê—p?Ý’è‚Í‚±‚±‚Ü‚ÅAAAAAAAAAAAAAAAAAAA
 
-    int i_Lock_on_ori = 0;//”wŒi‚ðƒ?ƒbƒNƒIƒ“‚·‚é??‚P?A‚µ‚È‚¢??‚O
-    int i_Lock_on = 0;//”wŒi‚ðƒ?ƒbƒNƒIƒ“‚·‚é??‚P?A‚µ‚È‚¢??‚O
+    int i_Lock_on_ori = 0;//”wŒi‚ð??ƒbƒNƒIƒ“‚·‚é??‚P?A‚µ‚È‚¢??‚O
+    int i_Lock_on = 0;//”wŒi‚ð??ƒbƒNƒIƒ“‚·‚é??‚P?A‚µ‚È‚¢??‚O
 
     Ten p_mouse_object_iti = new Ten();//ƒ}ƒEƒX‚ÌƒIƒuƒWƒFƒNƒg?À•W?ã‚ÌˆÊ’u
     Ten p_mouse_TV_iti = new Ten();//ƒ}ƒEƒX‚ÌTV?À•W?ã‚ÌˆÊ’u
 
-    // ƒAƒvƒŒƒbƒg‚Ì•?‚Æ?‚‚³
+    // ƒAƒvƒŒƒbƒg‚Ì??‚Æ?‚‚³
     Dimension dim;
 
 
     int ihaikeihyouji = 0;//0‚È‚ç”wŒi‚ð•\Ž¦‚µ‚È‚¢?B1‚È‚ç•\Ž¦‚·‚é?B2‚Í–³‚¢?B
     int ikaisetuhyouji = 1;//0‚È‚ç‰ð?à‚ð•\Ž¦‚µ‚È‚¢?B1‚È‚ç•\Ž¦‚·‚é?B2‚Í–³‚¢?B
-    public int iTenkaizuSenhaba = 1;//“WŠJ?}‚Ì?ü‚Ì‘¾‚³?B
-    public int i_h_TenkaizuSenhaba = 3;//”ñŠ±?Â•â?•?ü‚Ì?ü‚Ì‘¾‚³
+    public int iTenkaizuSenhaba = 1;//“WŠJ?}‚Ì??‚Ì‘¾‚³?B
+    public int i_h_TenkaizuSenhaba = 3;//”ñŠ±?Â•â????‚Ì??‚Ì‘¾‚³
     float fTenkaizuSenhaba = (float) iTenkaizuSenhaba;
     float f_h_TenkaizuSenhaba = (float) i_h_TenkaizuSenhaba;
 
-    int nyuuryoku_houhou = 0;    //“ü—Í•û–@‚ÌŽw’è?B0‚È‚ç’Ê?í‚Ì•û–@?A1‚È‚ç‘½ŠpŒ`“ü—Í?A‚Q‚È‚ç’¼?ü‚ðŽw’è‚µ‚½“_‚Éˆø‚«Šñ‚¹‚é
-    int kensa_houhou = 0;        //?}‚ÌŒŸ?¸•û–@‚ÌŽw’è?B0‚È‚çŒŸ?¸‚µ‚È‚¢?B1‚È‚ç?ü•ª?W?‡‚ÌŒŸ?¸‚ð‚·‚é?B
+    int nyuuryoku_houhou = 0;    //“ü—Í•û–@‚ÌŽw’è?B0‚È‚ç’Ê?úžÌ•û–@?A1‚È‚ç‘½ŠpŒ`“ü—Í?A‚Q‚È‚ç’¼??‚ðŽw’è‚µ‚½“_‚Éˆø‚«Šñ‚¹‚é
+    int kensa_houhou = 0;        //?}‚ÌŒŸ?¸•û–@‚ÌŽw’è?B0‚È‚çŒŸ?¸‚µ‚È‚¢?B1‚È‚ç??•ª?W?‡‚ÌŒŸ?¸‚ð‚·‚é?B
 
-    public int i_mouse_modeA = 1;//ƒ}ƒEƒX‚Ì“®?ì‚É‘Î‚·‚é”½‰ž‚ð‹K’è‚·‚é?B1‚È‚ç?ü•ª“ü—Íƒ‚?[ƒh?B2‚È‚ç“WŠJ?}’²?®(ˆÚ“®)?B101‚È‚ç?Ü‚è?ã‚ª‚è?}‚Ì‘€?ì?B
+    public int i_mouse_modeA = 1;//ƒ}ƒEƒX‚Ì“®??‚É‘Î‚·‚é”½‰ž‚ð‹K’è‚·‚é?B1‚È‚ç??•ª“ü—Íƒ‚?[ƒh?B2‚È‚ç“WŠJ?}’²?®(ˆÚ“®)?B101‚È‚ç?Ü‚è?ã‚ª‚è?}‚Ì‘€???B
 
     int i_mouseDragged_yuukou = 0;
-    int i_mouseReleased_yuukou = 0;//0‚Í?Aƒ}ƒEƒX‘€?ì‚ð–³Ž‹?B1‚Íƒ}ƒEƒX‘€?ì—LŒø?Bƒtƒ@ƒCƒ‹ƒ{ƒbƒNƒX‚Ìon-off‚È‚Ç‚Å?A—\Šú‚¹‚ÊmouseDragged‚âmouseReleased‚ª”­?¶‚µ‚½‚Æ‚«?A‚»‚ê‚ð?E‚í‚È‚¢‚æ‚¤‚É0‚É?Ý’è‚·‚é?B‚±‚ê‚ç‚Í?Aƒ}ƒEƒX‚ªƒNƒŠƒbƒN‚³‚ê‚½‚Æ‚«‚É?A1—LŒøŽw’è‚É‚·‚é?B
+    int i_mouseReleased_yuukou = 0;//0‚Í?Aƒ}ƒEƒX‘€??‚ð–³Ž‹?B1‚Íƒ}ƒEƒX‘€??—LŒø?Bƒtƒ@ƒCƒ‹ƒ{ƒbƒNƒX‚Ìon-off‚È‚Ç‚Å?A—\Šú‚¹‚ÊmouseDragged‚âmouseReleased‚ª”­?¶‚µ‚½‚Æ‚«?A‚»‚ê‚ð?E‚í‚È‚¢‚æ‚¤‚É0‚É?Ý’è‚·‚é?B‚±‚ê‚ç‚Í?Aƒ}ƒEƒX‚ªƒNƒŠƒbƒN‚³‚ê‚½‚Æ‚«‚É?A1—LŒøŽw’è‚É‚·‚é?B
 
     double sokutei_nagasa_1 = 0.0;
     double sokutei_nagasa_2 = 0.0;
@@ -335,23 +337,23 @@ public class ap extends Frame implements ActionListener, MouseListener, MouseMot
     double sokutei_kakudo_2 = 0.0;
     double sokutei_kakudo_3 = 0.0;
 
-    //int i_AS_matome =100;//?Ü?ô‚Ý?„’è‚Ì•Ê‰ð‚ð‚Ü‚Æ‚ß‚Ä?o‚·ŒÂ?”
-    //int i_AS_matome_mode =0;//1=?Ü?ô‚Ý?„’è‚Ì•Ê‰ð‚ð‚Ü‚Æ‚ß‚Ä?o‚·?B0=?Ü?ô‚Ý?„’è‚Ì•Ê‰ð‚ð‚Ü‚Æ‚ß‚Ä?o‚·ƒ‚?[ƒh‚Å‚Í‚È‚¢?B‚±‚Ì•Ï?”‚ÍƒTƒuƒXƒŒƒbƒh‚Ì“®?ì•Ï?X‚É‚Â‚©‚¤‚¾‚¯?B20170611‚ÉVe r3.008‚©‚ç’Ç‰Á
+    //int i_AS_matome =100;//?Ü?ô‚Ý??’è‚Ì•Ê‰ð‚ð‚Ü‚Æ‚ß‚Ä?o‚·ŒÂ??
+    //int i_AS_matome_mode =0;//1=?Ü?ô‚Ý??’è‚Ì•Ê‰ð‚ð‚Ü‚Æ‚ß‚Ä?o‚·?B0=?Ü?ô‚Ý??’è‚Ì•Ê‰ð‚ð‚Ü‚Æ‚ß‚Ä?o‚·ƒ‚?[ƒh‚Å‚Í‚È‚¢?B‚±‚Ì•Ï?”‚ÍƒTƒuƒXƒŒƒbƒh‚Ì“®??•Ï?X‚É‚Â‚©‚¤‚¾‚¯?B20170611‚ÉVe r3.008‚©‚ç’Ç‰Á
 
     int i_sub_mode = 0;
-    //i_sub_mode ƒTƒuƒXƒŒƒbƒh‚Ì“®?ì‹K’è?B
-    //0=?Ü?ô?„’è5‚ÌŽÀ?s?B?Ü?ô‚Ý?„’è‚Ì•Ê‰ð‚ð‚Ü‚Æ‚ß‚Ä?o‚·ƒ‚?[ƒh‚Å‚Í‚È‚¢?B
-    //1=?Ü?ô?„’è5‚ÌŽÀ?s?B?Ü?ô‚Ý?„’è‚Ì•Ê‰ð‚ð‚Ü‚Æ‚ß‚Ä?o‚·?B
+    //i_sub_mode ƒTƒuƒXƒŒƒbƒh‚Ì“®??‹K’è?B
+    //0=?Ü????’è5‚ÌŽÀ?s?B?Ü?ô‚Ý??’è‚Ì•Ê‰ð‚ð‚Ü‚Æ‚ß‚Ä?o‚·ƒ‚?[ƒh‚Å‚Í‚È‚¢?B
+    //1=?Ü????’è5‚ÌŽÀ?s?B?Ü?ô‚Ý??’è‚Ì•Ê‰ð‚ð‚Ü‚Æ‚ß‚Ä?o‚·?B
     //2=
 
 
     Thread myTh;                              //ƒXƒŒƒbƒhƒNƒ‰ƒX‚ÌƒCƒ“ƒXƒ^ƒ“ƒX‰»
-    //RunnableƒCƒ“ƒ^?[ƒtƒFƒCƒX‚ðŽÀ‘•‚µ‚Ä‚¢‚é‚Ì‚Å?AmyThƒXƒŒƒbƒh‚ÌŽÀ?s“à—e‚Írunƒ?ƒ\ƒbƒh‚É?‘‚©‚ê‚é
+    //RunnableƒCƒ“ƒ^?[ƒtƒFƒCƒX‚ðŽÀ‘•‚µ‚Ä‚¢‚é‚Ì‚Å?AmyThƒXƒŒƒbƒh‚ÌŽÀ?s“à—e‚Írun??ƒ\ƒbƒh‚É?‘‚©‚ê‚é
     //ƒAƒvƒŒƒbƒg‚Å‚ÌƒXƒŒƒbƒh‚ÌŽg‚¢•û‚Í?A?h?‰‘ÌŒ±Java?h‚ÌP231ŽQ?Æ
 
 
-    //‰æ‘œ?o—Í‚·‚é‚½‚ß20170107_old‚Æ?‘‚©‚ê‚½?s‚ðƒRƒ?ƒ“ƒgƒAƒEƒg‚µ?A20170107_new‚Ì?s‚ð—LŒø‚É‚µ‚½?B
-    //‰æ‘œ?o—Í•s—v‚ÅŒ³‚É‚à‚Ç‚·‚È‚ç?A20170107_old‚Æ?‘‚©‚ê‚½?s‚ð—LŒø‚É‚µ?A20170107_new‚Ì?s‚ðƒRƒ?ƒ“ƒgƒAƒEƒg‚É‚·‚ê‚Î‚æ‚¢?B?i‚±‚Ì•Ï?X‚ÍOrihime.java‚Ì’†‚¾‚¯‚É2‰Ó?Š‚ ‚é?j
+    //‰æ‘œ?o—Í‚·‚é‚½‚ß20170107_old‚Æ?‘‚©‚ê‚½?s‚ðƒR??ƒ“ƒgƒAƒEƒg‚µ?A20170107_new‚Ì?s‚ð—LŒø‚É‚µ‚½?B
+    //‰æ‘œ?o—Í•s—v‚ÅŒ³‚É‚à‚Ç‚·‚È‚ç?A20170107_old‚Æ?‘‚©‚ê‚½?s‚ð—LŒø‚É‚µ?A20170107_new‚Ì?s‚ðƒR??ƒ“ƒgƒAƒEƒg‚É‚·‚ê‚Î‚æ‚¢?B?i‚±‚Ì•Ï?X‚ÍOrihime.java‚Ì’†‚¾‚¯‚É2‰Ó?Š‚?‚é?j
     // ƒIƒtƒXƒNƒŠ?[ƒ“
     //Image offscreen;															//20170107_old
     //BufferedImage  offscreen = new BufferedImage(1, 1,  BufferedImage.TYPE_INT_BGR);							//20170107_new
@@ -361,11 +363,11 @@ public class ap extends Frame implements ActionListener, MouseListener, MouseMot
 
     int flg61 = 0;//˜g?Ý’èŽž‚É‚Â‚©‚¤?@20180524
 
-    int flg_wi = 0;//writeimageŽž‚É‚Â‚©‚¤?@1‚É‚·‚é‚Æpaint‚ÌŠÖ?”‚Ì?I—¹•”‚Éwriteimage‚·‚é‚æ‚¤‚É‚·‚é?B‚±‚ê‚Í?Apaint‚Ì•Ï?X‚ª?‘‚«?o‚³‚ê‚éƒCƒ??[ƒW‚É”½‰f‚³‚ê‚È‚¢‚±‚Æ‚ð–h‚®‚½‚ß‚Ì?H•v?B20180528
+    int flg_wi = 0;//writeimageŽž‚É‚Â‚©‚¤?@1‚É‚·‚é‚Æpaint‚ÌŠÖ?”‚Ì?I—¹•”‚Éwriteimage‚·‚é‚æ‚¤‚É‚·‚é?B‚±‚ê‚Í?Apaint‚Ì•Ï?X‚ª?‘‚«?o‚³‚ê‚éƒC???[ƒW‚É”½‰f‚³‚ê‚È‚¢‚±‚Æ‚ð–h‚®‚½‚ß‚Ì?H•v?B20180528
     String fname_wi;
 
 
-    public int i_sel_mou_mode;//ƒZƒŒƒNƒg‚µ‚Äƒ}ƒEƒX‘€?ì‚ð‚·‚é?Û‚É‚Ç‚Ì‘€?ì‚ð‚·‚é‚©‚ÌŽw’è?BƒZƒŒƒNƒgŒã‚ÉƒZƒŒƒNƒg?Ï‚Ý‚Ì“_‚ð‘I‘ð‚µŽ©“®“I‚ÉƒZƒŒƒNƒg‘O’ñ‚Ìƒ}ƒEƒX‘€?ì‚É?Ø‚è‘Ö‚¦‚é‚Æ‚«‚ÉŽg‚¤?B
+    public int i_sel_mou_mode;//ƒZƒŒƒNƒg‚µ‚Äƒ}ƒEƒX‘€??‚ð‚·‚é?Û‚É‚Ç‚Ì‘€??‚ð‚·‚é‚©‚ÌŽw’è?BƒZƒŒƒNƒgŒã‚ÉƒZƒŒƒNƒg?Ï‚Ý‚Ì“_‚ð‘I‘ð‚µŽ©“®“I‚ÉƒZƒŒƒNƒg‘O’ñ‚Ìƒ}ƒEƒX‘€??‚É?Ø‚è‘Ö‚¦‚é‚Æ‚«‚ÉŽg‚¤?B
     //=1‚Ímove?A=2‚Ímove4p?A=3‚Ícopy?A=4‚Ícopy4p?A=5‚Í‹¾‰f‘œ
 
 
@@ -375,7 +377,7 @@ public class ap extends Frame implements ActionListener, MouseListener, MouseMot
     JButton Button_copy_paste_2p2p;
     JButton Button_kyouei;
 
-    //ƒEƒBƒ“ƒhƒE“§–¾‰»—p‚Ìƒpƒ‰ƒ??[ƒ^
+    //ƒEƒBƒ“ƒhƒE“§–¾‰»—p‚Ìƒpƒ‰???[ƒ^
     BufferedImage imageT;
     int i_toumeika = 0;//0‚È‚ç“§–¾‰»‚µ‚È‚¢?B1‚È‚ç“§–¾‰»‚·‚é?B
 
@@ -402,7 +404,7 @@ public class ap extends Frame implements ActionListener, MouseListener, MouseMot
         }
     }
 
-    ////b* ƒAƒvƒŠƒP?[ƒVƒ‡ƒ“—p?B?æ“ª‚ª?^?–?^?^?^‚ÅŽn‚Ü‚é?s‚É‚Í‚³‚Ü‚ê‚½•”•ª‚Í–³Ž‹‚³‚ê‚é?B
+    ////b* ƒAƒvƒŠƒP?[ƒVƒ‡ƒ“—p?B?æ“ª‚ª?^???^?^?^‚ÅŽn‚Ü‚é?s‚É‚Í‚³‚Ü‚ê‚½•”•ª‚Í–³Ž‹‚³‚ê‚é?B
     public ap() {
 
 
@@ -413,31 +415,31 @@ public class ap extends Frame implements ActionListener, MouseListener, MouseMot
 
         addWindowListener(new WindowAdapter() {//?I—¹ƒ{ƒ^ƒ“‚ð—LŒø‰»
             public void windowClosing(WindowEvent evt) {
-                //owari();//ƒEƒBƒ“ƒhƒE?ã•Ó‰E’[‚ÌX‚ð‰Ÿ‚µ‚½‚Æ‚«‚É?s‚¤?ì‹Æ
+                //owari();//ƒEƒBƒ“ƒhƒE?ã•Ó‰E’[‚ÌX‚ð‰Ÿ‚µ‚½‚Æ‚«‚É?s‚¤??‹Æ
                 System.exit(0);
             }
 
         });//?I—¹ƒ{ƒ^ƒ“‚ð—LŒø‰» ‚±‚±‚Ü‚Å?B
 
         show();                 //ƒAƒvƒŒƒbƒg‚ÌŽž‚ÍŽg‚í‚È‚¢?BƒAƒvƒŠƒP?[ƒVƒ‡ƒ“‚ÌŽž‚ÍŽg‚¤?B‚©‚È
-////b* ƒAƒvƒŠƒP?[ƒVƒ‡ƒ“—p?B?æ“ª‚ª?^?–?^?^?^‚ÅŽn‚Ü‚é?s‚É‚Í‚³‚Ü‚ê‚½•”•ª‚Í–³Ž‹‚³‚ê‚é?B
+////b* ƒAƒvƒŠƒP?[ƒVƒ‡ƒ“—p?B?æ“ª‚ª?^???^?^?^‚ÅŽn‚Ü‚é?s‚É‚Í‚³‚Ü‚ê‚½•”•ª‚Í–³Ž‹‚³‚ê‚é?B
 
         //ƒoƒbƒtƒ@?[‰æ–Ê‚Ì?Ý’è ------------------------------------------------------------------
-        // •?‚Æ?‚‚³‚ð‚½‚¸‚Ë‚é
+        // ??‚Æ?‚‚³‚ð‚½‚¸‚Ë‚é
         dim = getSize();
-        System.out.println(" dim 001 :" + dim.width + " , " + dim.height);//‘½•ª?í?œ‰Â”\
+        System.out.println(" dim 001 :" + dim.width + " , " + dim.height);//‘½•ª???œ‰Â”\
 
-        //‰æ‘œ?o—Í‚·‚é‚½‚ß20170107_old‚Æ?‘‚©‚ê‚½?s‚ðƒRƒ?ƒ“ƒgƒAƒEƒg‚µ?A20170107_new‚Ì?s‚ð—LŒø‚É‚µ‚½?B
-        //‰æ‘œ?o—Í•s—v‚ÅŒ³‚É‚à‚Ç‚·‚È‚ç?A20170107_old‚Æ?‘‚©‚ê‚½?s‚ð—LŒø‚É‚µ?A20170107_new‚Ì?s‚ðƒRƒ?ƒ“ƒgƒAƒEƒg‚É‚·‚ê‚Î‚æ‚¢?B?i‚±‚Ì•Ï?X‚ÍOrihime.java‚Ì’†‚¾‚¯‚É2‰Ó?Š‚ ‚é?j
+        //‰æ‘œ?o—Í‚·‚é‚½‚ß20170107_old‚Æ?‘‚©‚ê‚½?s‚ðƒR??ƒ“ƒgƒAƒEƒg‚µ?A20170107_new‚Ì?s‚ð—LŒø‚É‚µ‚½?B
+        //‰æ‘œ?o—Í•s—v‚ÅŒ³‚É‚à‚Ç‚·‚È‚ç?A20170107_old‚Æ?‘‚©‚ê‚½?s‚ð—LŒø‚É‚µ?A20170107_new‚Ì?s‚ðƒR??ƒ“ƒgƒAƒEƒg‚É‚·‚ê‚Î‚æ‚¢?B?i‚±‚Ì•Ï?X‚ÍOrihime.java‚Ì’†‚¾‚¯‚É2‰Ó?Š‚?‚é?j
         //offscreen = createImage(2000,1100)					;	bufferGraphics = offscreen.getGraphics();	//20170107_old
         offscreen = new BufferedImage(2000, 1100, BufferedImage.TYPE_INT_BGR);
         bufferGraphics = offscreen.createGraphics();    //20170107_new
 
         //ƒAƒvƒŒƒbƒg‚Å‚ÍˆÈ‘O‚Ídim = getSize()‚µ‚Ä?AcreateImage(dim.width,dim.height);‚Æ‚µ‚½‚ª?A?Å?‰‚©‚çcreateImage(2000,1100); ‚Ì‚Ù‚¤‚ª?AƒEƒBƒ“ƒhŠg‘åŽž‚à‚¿‚á‚ñ‚Æ?‘‚¯‚é?B
         //‚½‚¾‚µ?AƒAƒvƒŒƒbƒg‚Å?Å?‰‚©‚ç(2000,1100)‚æ‚è‘å‚«‚¢ƒEƒBƒ“ƒh•\Ž¦Žž‚Í’[‚ª‚¿‚á‚ñ‚Æ?‘‚¯‚È‚­‚È‚Á‚Ä‚µ‚Ü‚¤‚Í‚¸?B
-////b* ƒAƒvƒŠƒP?[ƒVƒ‡ƒ“—p?B?æ“ª‚ª?^?–?^?^?^‚ÅŽn‚Ü‚é?s‚É‚Í‚³‚Ü‚ê‚½•”•ª‚Í–³Ž‹‚³‚ê‚é?B
+////b* ƒAƒvƒŠƒP?[ƒVƒ‡ƒ“—p?B?æ“ª‚ª?^???^?^?^‚ÅŽn‚Ü‚é?s‚É‚Í‚³‚Ü‚ê‚½•”•ª‚Í–³Ž‹‚³‚ê‚é?B
 //		offscreen = createImage(2000,1100);
-////b* ƒAƒvƒŠƒP?[ƒVƒ‡ƒ“—p?B?æ“ª‚ª?^?–?^?^?^‚ÅŽn‚Ü‚é?s‚É‚Í‚³‚Ü‚ê‚½•”•ª‚Í–³Ž‹‚³‚ê‚é
+////b* ƒAƒvƒŠƒP?[ƒVƒ‡ƒ“—p?B?æ“ª‚ª?^???^?^?^‚ÅŽn‚Ü‚é?s‚É‚Í‚³‚Ü‚ê‚½•”•ª‚Í–³Ž‹‚³‚ê‚é
 
 
         //ƒoƒbƒtƒ@?[‰æ–Ê‚Ì?Ý’è‚Í‚±‚±‚Ü‚Å----------------------------------------------------
@@ -454,7 +456,7 @@ public class ap extends Frame implements ActionListener, MouseListener, MouseMot
         OZ = (Oriagari_Zu) OAZ.get(0);//?Ü‚è‚ ‚ª‚è?}
 
 
-        //ƒJƒ?ƒ‰‚Ì?Ý’è ------------------------------------------------------------------
+        //ƒJ??ƒ‰‚Ì?Ý’è ------------------------------------------------------------------
         //camera_of_orisen_nyuuryokuzu	;
         camera_of_orisen_nyuuryokuzu.set_camera_ichi_x(0.0);
         camera_of_orisen_nyuuryokuzu.set_camera_ichi_y(0.0);
@@ -469,7 +471,7 @@ public class ap extends Frame implements ActionListener, MouseListener, MouseMot
 
 
         //camera_haikei	;
-        //ƒJƒ?ƒ‰‚Ì?Ý’è‚Í‚±‚±‚Ü‚Å----------------------------------------------------
+        //ƒJ??ƒ‰‚Ì?Ý’è‚Í‚±‚±‚Ü‚Å----------------------------------------------------
 
 
         //text_kekka="";
@@ -486,7 +488,7 @@ public class ap extends Frame implements ActionListener, MouseListener, MouseMot
         //addEdge() ;
         setBackground(Color.white);
 
-        // ƒŒƒCƒAƒEƒg‚Ì?ì?¬ƒŒƒCƒAƒEƒg‚Ì?ì?¬‚Ì•”•ª‚Í?h?‰‘ÌŒ±Java?h‚ÌP179“™‚ðŽQ?Æ
+        // ƒŒƒCƒAƒEƒg‚Ì???¬ƒŒƒCƒAƒEƒg‚Ì???¬‚Ì•”•ª‚Í?h?‰‘ÌŒ±Java?h‚ÌP179“™‚ðŽQ?Æ
 
         setLayout(new BorderLayout());//Frame—p
         //Container contentPane = getContentPane();//JFrame—p
@@ -494,13 +496,13 @@ public class ap extends Frame implements ActionListener, MouseListener, MouseMot
 
 //System.exit(0);
 
-//setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE);//JFrame—p ƒ_ƒCƒAƒ?ƒOƒ{ƒbƒNƒX‚Å?uƒLƒƒƒ“ƒZƒ‹?v‚ª‘I‚Î‚ê‚½Žž‚É?AŒ³‚Ì?ó‘Ô‚ð•Û‚Â‚æ‚¤‚É‚·‚é‚½‚ß‚É?A‚í‚´‚ÆƒNƒ??[ƒYƒ{ƒ^ƒ“‚ª‰Ÿ‚³‚ê‚Ä‚à‰½‚à?s‚í‚È‚¢ƒIƒvƒVƒ‡ƒ“‚ð?Ý’è‚µ‚½?B
+//setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE);//JFrame—p ƒ_ƒCƒA??ƒOƒ{ƒbƒNƒX‚Å?uƒLƒƒƒ“ƒZƒ‹?v‚ª‘I‚Î‚ê‚½Žž‚É?AŒ³‚Ì?ó‘Ô‚ð•Û‚Â‚æ‚¤‚É‚·‚é‚½‚ß‚É?A‚í‚´‚ÆƒN???[ƒYƒ{ƒ^ƒ“‚ª‰Ÿ‚³‚ê‚Ä‚à‰½‚à?s‚í‚È‚¢ƒIƒvƒVƒ‡ƒ“‚ð?Ý’è‚µ‚½?B
 
 
         // *************************************************
         //?ã•Ó?i–k‘¤?jƒpƒlƒ‹‚Ì?\’z*************************
         // *************************************************
-        //?ã•Ó?i–k‘¤?jƒpƒlƒ‹‚Ì?ì?¬
+        //?ã•Ó?i–k‘¤?jƒpƒlƒ‹‚Ì???¬
 //pnln10’è‹`?Ï
 //pnln11’è‹`?Ï
 //pnln12’è‹`?Ï
@@ -522,8 +524,8 @@ public class ap extends Frame implements ActionListener, MouseListener, MouseMot
         //contentPane.add(pnln, BorderLayout.NORTH);//JFrame—p
 
 
-        //Button‚ð?ì‚Á‚Äƒpƒlƒ‹‚É‚Í‚è‚Â‚¯‚é?B
-////b* ƒAƒvƒŠƒP?[ƒVƒ‡ƒ“—p?B?æ“ª‚ª?^?–?^?^?^‚ÅŽn‚Ü‚é?s‚É‚Í‚³‚Ü‚ê‚½•”•ª‚Í–³Ž‹‚³‚ê‚é?B
+        //Button‚ð??‚Á‚Äƒpƒlƒ‹‚É‚Í‚è‚Â‚¯‚é?B
+////b* ƒAƒvƒŠƒP?[ƒVƒ‡ƒ“—p?B?æ“ª‚ª?^???^?^?^‚ÅŽn‚Ü‚é?s‚É‚Í‚³‚Ü‚ê‚½•”•ª‚Í–³Ž‹‚³‚ê‚é?B
 
 // ****************************************************************************************************************************
 
@@ -570,17 +572,17 @@ public class ap extends Frame implements ActionListener, MouseListener, MouseMot
                     //“WŠJ?}‚Ì?‰Šú‰»?@ŠJŽn
                     //settei_syokika_cp();
                     tenkaizu_syokika();
-                    //“WŠJ?}ƒpƒ‰ƒ??[ƒ^‚Ì?‰Šú‰»
+                    //“WŠJ?}ƒpƒ‰???[ƒ^‚Ì?‰Šú‰»
                     es1.reset();                                                //•`‚«?E?l‚Ì?‰Šú‰»
 
-                    //nyuuryoku_kitei=8; es1.set_kousi_bunkatu_suu(nyuuryoku_kitei); //es1.reset_2();				//ŠiŽq•?‚ÌŽw’è
+                    //nyuuryoku_kitei=8; es1.set_kousi_bunkatu_suu(nyuuryoku_kitei); //es1.reset_2();				//ŠiŽq??‚ÌŽw’è
                     es1.set_i_kitei_jyoutai(0);
 
                     icol = 1;
-                    es1.setcolor(icol);                                        //?Å?‰‚Ì?Ü?ü‚Ì?F‚ðŽw’è‚·‚é?B0‚Í?•?A1‚Í?Ô?A2‚Í?Â?B
+                    es1.setcolor(icol);                                        //?Å?‰‚Ì?Ü??‚Ì?F‚ðŽw’è‚·‚é?B0‚Í???A1‚Í?Ô?A2‚Í?Â?B
                     ButtonCol_irokesi();
                     ButtonCol_red.setForeground(Color.black);
-                    ButtonCol_red.setBackground(Color.red);    //?Ü?ü‚Ìƒ{ƒ^ƒ“‚Ì?F?Ý’è
+                    ButtonCol_red.setBackground(Color.red);    //?Ü??‚Ìƒ{ƒ^ƒ“‚Ì?F?Ý’è
                     //“WŠJ?}‚Ì?‰Šú‰»?@?I—¹
 
 
@@ -596,22 +598,22 @@ public class ap extends Frame implements ActionListener, MouseListener, MouseMot
                     Button_L_color.setBackground(OZ.oriagarizu_L_color);    //ƒ{ƒ^ƒ“‚Ì?F?Ý’è
                     //?Ü?ô—\‘ª?}‚Ì‚Ì?‰Šú‰»?@?I—¹
 
-                    es1.setCamera(camera_of_orisen_nyuuryokuzu);//20170702‚±‚Ì‚P?s‚ð“ü‚ê‚é‚Æ?A‰ð“€‚µ‚½jarƒtƒ@ƒCƒ‹‚ÅŽÀ?s‚µ?A?Å?‰‚Éƒf?[ƒ^“Ç‚Ý?ž‚ñ‚¾’¼Œã‚ÍƒzƒC?[ƒ‹‚Å‚Ì“WŠJ?}Šg‘å?k?¬‚ª‚Å‚«‚È‚­‚È‚é?Bjar‚Ì‚Ü‚Ü‚ÅŽÀ?s‚³‚¹‚½?ê?‡‚Í‚à‚ñ‚¾‚¢‚È‚¢‚æ‚¤‚¾?BŒ´ˆö•s–¾?B
+                    es1.setCamera(camera_of_orisen_nyuuryokuzu);//20170702‚±‚Ì‚P?s‚ð“ü‚ê‚é‚Æ?A‰ð“€‚µ‚½jarƒtƒ@ƒCƒ‹‚ÅŽÀ?s‚µ?A?Å?‰‚Éƒf?[ƒ^“Ç‚Ý?ž‚ñ‚¾’¼Œã‚ÍƒzƒC?[ƒ‹‚Å‚Ì“WŠJ?}Šg‘å?k?¬‚ª‚Å‚«‚È‚­‚È‚é?Bjar‚Ì‚Ü‚Ü‚ÅŽÀ?s‚³‚¹‚½???‡‚Í‚à‚ñ‚¾‚¢‚È‚¢‚æ‚¤‚¾?BŒ´ˆö•s–¾?B
                     es1.setMemo_for_yomikomi(memo_temp);
                     es1.kiroku();
 
 
 // -----------------20180503’Ç‰Á
                     d_syukusyaku_keisuu = camera_of_orisen_nyuuryokuzu.get_camera_bairitsu_x();
-                    text27.setText(String.valueOf(d_syukusyaku_keisuu)); //?kŽÚŒW?”
+                    text27.setText(String.valueOf(d_syukusyaku_keisuu)); //?kŽÚŒW??
                     text27.setCaretPosition(0);
 
                     d_kaiten_hosei = camera_of_orisen_nyuuryokuzu.get_camera_kakudo();
-                    text28.setText(String.valueOf(d_kaiten_hosei));//‰ñ“]•\Ž¦Šp“x‚Ì•â?³ŒW?”
+                    text28.setText(String.valueOf(d_kaiten_hosei));//‰ñ“]•\Ž¦Šp“x‚Ì•â?³ŒW??
                     text28.setCaretPosition(0);
 
 
-                    //	OZ.d_oriagarizu_syukusyaku_keisuu=1.0	;text29.setText(String.valueOf(OZ.d_oriagarizu_syukusyaku_keisuu));//?Ü‚è?ã‚ª‚è?}‚Ì?kŽÚŒW?”
+                    //	OZ.d_oriagarizu_syukusyaku_keisuu=1.0	;text29.setText(String.valueOf(OZ.d_oriagarizu_syukusyaku_keisuu));//?Ü‚è?ã‚ª‚è?}‚Ì?kŽÚŒW??
                     //	OZ.d_oriagarizu_kaiten_hosei=0.0		;text30.setText(String.valueOf(OZ.d_oriagarizu_kaiten_hosei));//?Ü‚è?ã‚ª‚è?}‚Ì‰ñ“]•\Ž¦Šp“x‚Ì•â?³Šp“x
 
 // -----------------20180503’Ç‰Á‚±‚±‚Ü‚Å
@@ -628,9 +630,9 @@ public class ap extends Frame implements ActionListener, MouseListener, MouseMot
         //Button_yomi.setIcon(icon);
         pnln1.add(Button_yomi);
 
-        //?d—v’?ˆÓ?@“Ç‚Ý?ž‚Ý‚â?‘‚«?o‚µ‚Åƒtƒ@ƒCƒ‹ƒ_ƒCƒAƒ?ƒO‚Ìƒ{ƒbƒNƒX‚ªŠJ‚­‚Æ?A‚»‚ê‚ðƒtƒŒ?[ƒ€‚É?d‚È‚éˆÊ’u‚Å‘€?ì‚µ‚½?ê?‡?Aƒtƒ@ƒCƒ‹ƒ{ƒbƒNƒX‚ª?Á‚¦‚½‚Æ‚«‚É?A
-        //ƒ}ƒEƒX‚Ìƒhƒ‰ƒbƒO‚ÆƒŠƒŠ?[ƒX‚ª”­?¶‚·‚é?B‚±‚Ì‚½‚ß?A—]Œv‚È‘€?ì‚ª‚³‚ê‚Ä‚µ‚Ü‚¤‰Â”\?«‚ª‚ ‚é?B‚È‚¨?A‚±‚Ì‚Æ‚«ƒ}ƒEƒXƒNƒŠƒbƒN‚Í”­?¶‚µ‚È‚¢?B
-        // i_mouseDragged_yuukou=0;‚â i_mouseReleased_yuukou=0;‚Í?A‚±‚Ì—]Œv‚È‘€?ì‚ð–h‚®‚½‚ß‚ÉŽw’è‚µ‚Ä‚¢‚é?B
+        //?d—v??ˆÓ?@“Ç‚Ý?ž‚Ý‚â?‘‚«?o‚µ‚Åƒtƒ@ƒCƒ‹ƒ_ƒCƒA??ƒO‚Ìƒ{ƒbƒNƒX‚ªŠJ‚­‚Æ?A‚»‚ê‚ðƒtƒŒ?[ƒ€‚É?d‚È‚éˆÊ’u‚Å‘€??‚µ‚½?????Aƒtƒ@ƒCƒ‹ƒ{ƒbƒNƒX‚ª?Á‚¦‚½‚Æ‚«‚É?A
+        //ƒ}ƒEƒX‚Ìƒhƒ‰ƒbƒO‚ÆƒŠƒŠ?[ƒX‚ª”­?¶‚·‚é?B‚±‚Ì‚½‚ß?A—]Œv‚È‘€??‚ª‚³‚ê‚Ä‚µ‚Ü‚¤‰Â”\?«‚ª‚ ‚é?B‚È‚¨?A‚±‚Ì‚Æ‚«ƒ}ƒEƒXƒNƒŠƒbƒN‚Í”­?¶‚µ‚È‚¢?B
+        // i_mouseDragged_yuukou=0;‚â i_mouseReleased_yuukou=0;‚Í?A‚±‚Ì—]Œv‚È‘€??‚ð–h‚®‚½‚ß‚ÉŽw’è‚µ‚Ä‚¢‚é?B
 
 
 // ******************************************************************************ƒf?[ƒ^?‘‚«?o‚µ
@@ -660,8 +662,8 @@ public class ap extends Frame implements ActionListener, MouseListener, MouseMot
             public void actionPerformed(ActionEvent e) {
                 img_kaisetu_fname = "qqq/tyouhoukei_select.png";
                 readImageFromFile3();
-                i_orisen_hojyosen = 0;//=0‚Í?Ü?ü“ü—Í?@=1‚Í•â?•?ü“ü—Íƒ‚?[ƒh
-                es1.set_i_orisen_hojyosen(i_orisen_hojyosen);//‚±‚Ìƒ{ƒ^ƒ“‚Æ‹@”\‚Í•â?•ŠG?ü‹¤’Ê‚ÉŽg‚Á‚Ä‚¢‚é‚Ì‚Åi_orisen_hojyosen‚ÌŽw’è‚ª‚¢‚é
+                i_orisen_hojyosen = 0;//=0‚Í?Ü??“ü—Í?@=1‚Í•â????“ü—Íƒ‚?[ƒh
+                es1.set_i_orisen_hojyosen(i_orisen_hojyosen);//‚±‚Ìƒ{ƒ^ƒ“‚Æ‹@”\‚Í•â?•ŠG??‹¤’Ê‚ÉŽg‚Á‚Ä‚¢‚é‚Ì‚Åi_orisen_hojyosen‚ÌŽw’è‚ª‚¢‚é
                 i_mouse_modeA = 61;
                 iro_sitei_ato_ni_jissisuru_sagyou_bangou = 1;
                 System.out.println("i_mouse_modeA = " + i_mouse_modeA);
@@ -735,9 +737,9 @@ public class ap extends Frame implements ActionListener, MouseListener, MouseMot
                                bounds.height - insets.top - insets.bottom);
 
         hide();
-try{Thread.sleep(50);}catch (InterruptedException ie){}//30‚¾‚¯‘Ò‚½‚¹‚é‚½‚ß‚Ì?s?B‚±‚Ì?s‚ª‚È‚¢‚Æ?Ajarƒtƒ@ƒCƒ‹‚ÅŽÀ?s‚µ‚½‚Æ‚«?AƒIƒŠƒqƒ?Ž©?g‚ðƒLƒƒƒvƒ`ƒƒ‚·‚é‚¨‚»‚ê‚ ‚è?BInterruptedException ie‚Ìie‚Í?Å?‰‚Íe‚¾‚Á‚½?B20181125
+try{Thread.sleep(50);}catch (InterruptedException ie){}//30‚¾‚¯‘Ò‚½‚¹‚é‚½‚ß‚Ì?s?B‚±‚Ì?s‚ª‚È‚¢‚Æ?Ajarƒtƒ@ƒCƒ‹‚ÅŽÀ?s‚µ‚½‚Æ‚«?AƒIƒŠƒq??Ž©?g‚ðƒLƒƒƒvƒ`ƒƒ‚·‚é‚¨‚»‚ê‚ ‚è?BInterruptedException ie‚Ìie‚Í?Å?‰‚Íe‚¾‚Á‚½?B20181125
         imageT = robot.createScreenCapture(bounds);
-try{Thread.sleep(50);}catch (InterruptedException ie){}////30‚¾‚¯‘Ò‚½‚¹‚é‚½‚ß‚Ì?s?B‚±‚Ì?s‚ª‚È‚¢‚Æ?Ajarƒtƒ@ƒCƒ‹‚ÅŽÀ?s‚µ‚½‚Æ‚«?AƒIƒŠƒqƒ?Ž©?g‚ðƒLƒƒƒvƒ`ƒƒ‚·‚é‚¨‚»‚ê‚ ‚è?BInterruptedException ie‚Ìie‚Í?Å?‰‚Íe‚¾‚Á‚½?B20181125
+try{Thread.sleep(50);}catch (InterruptedException ie){}////30‚¾‚¯‘Ò‚½‚¹‚é‚½‚ß‚Ì?s?B‚±‚Ì?s‚ª‚È‚¢‚Æ?Ajarƒtƒ@ƒCƒ‹‚ÅŽÀ?s‚µ‚½‚Æ‚«?AƒIƒŠƒq??Ž©?g‚ðƒLƒƒƒvƒ`ƒƒ‚·‚é‚¨‚»‚ê‚ ‚è?BInterruptedException ie‚Ìie‚Í?Å?‰‚Íe‚¾‚Á‚½?B20181125
         show();
 
 
@@ -762,7 +764,7 @@ try{Thread.sleep(50);}catch (InterruptedException ie){}////30‚¾‚¯‘Ò‚½‚¹‚é‚½‚ß‚Ì?
 
 
 // ******************************************************************************
-////b* ƒAƒvƒŠƒP?[ƒVƒ‡ƒ“—p?B?æ“ª‚ª?^?–?^?^?^‚ÅŽn‚Ü‚é?s‚É‚Í‚³‚Ü‚ê‚½•”•ª‚Í–³Ž‹‚³‚ê‚é?B
+////b* ƒAƒvƒŠƒP?[ƒVƒ‡ƒ“—p?B?æ“ª‚ª?^???^?^?^‚ÅŽn‚Ü‚é?s‚É‚Í‚³‚Ü‚ê‚½•”•ª‚Í–³Ž‹‚³‚ê‚é?B
 // ******************************************************************************
 
 
@@ -888,7 +890,7 @@ try{Thread.sleep(50);}catch (InterruptedException ie){}////30‚¾‚¯‘Ò‚½‚¹‚é‚½‚ß‚Ì?
         ckbox_bun.setMargin(new Insets(0, 0, 0, 0));
         pnln13.add(ckbox_bun);
 // -------------------------------------------------------------------
-//?Ü?ü•\Ž¦
+//?Ü??•\Ž¦
         ckbox_cp = new JCheckBox("");
         ckbox_cp.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
@@ -902,7 +904,7 @@ try{Thread.sleep(50);}catch (InterruptedException ie){}////30‚¾‚¯‘Ò‚½‚¹‚é‚½‚ß‚Ì?
         ckbox_cp.setMargin(new Insets(0, 0, 0, 0));
         pnln13.add(ckbox_cp);
 // -------------------------------------------------------------------
-//•â?•Šˆ?ü•\Ž¦
+//•â?•Š???•\Ž¦
         ckbox_a0 = new JCheckBox("");
         ckbox_a0.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
@@ -919,7 +921,7 @@ try{Thread.sleep(50);}catch (InterruptedException ie){}////30‚¾‚¯‘Ò‚½‚¹‚é‚½‚ß‚Ì?
         ckbox_a0.setMargin(new Insets(0, 0, 0, 0));
         pnln13.add(ckbox_a0);
 // -------------------------------------------------------------------
-//•â?•‰æ?ü•\Ž¦
+//•â?•‰???•\Ž¦
         ckbox_a1 = new JCheckBox("");
         ckbox_a1.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
@@ -933,7 +935,7 @@ try{Thread.sleep(50);}catch (InterruptedException ie){}////30‚¾‚¯‘Ò‚½‚¹‚é‚½‚ß‚Ì?
         ckbox_a1.setMargin(new Insets(0, 0, 0, 0));
         pnln13.add(ckbox_a1);
 // -------------------------------------------------------------------
-//?\Žš‚âŠî?€–Ê‚È‚Ç‚Ì–Úˆó‰æ?ü
+//?\Žš‚âŠî??–Ê‚È‚Ç‚Ì–Úˆó‰æ??
         ckbox_mejirusi = new JCheckBox("");
         ckbox_mejirusi.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
@@ -954,7 +956,7 @@ try{Thread.sleep(50);}catch (InterruptedException ie){}////30‚¾‚¯‘Ò‚½‚¹‚é‚½‚ß‚Ì?
                 ckbox_mejirusi);
 
 // -------------------------------------------------------------------
-//?Ü‚è‚ ‚ª‚è?}‚ð•â?•?ü‚ÌŽè‘O‘¤‚É‚·‚é‚©‚Ç‚¤‚©
+//?Ü‚è‚ ‚ª‚è?}‚ð•â????‚ÌŽè‘O‘¤‚É‚·‚é‚©‚Ç‚¤‚©
         ckbox_cp_ue = new JCheckBox("");
         ckbox_cp_ue.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
@@ -1007,8 +1009,8 @@ try{Thread.sleep(50);}catch (InterruptedException ie){}////30‚¾‚¯‘Ò‚½‚¹‚é‚½‚ß‚Ì?
 
         pnln.add(pnln10);
         //------------------------------------------------
-// ******–k************************************************************************?ü•ª“ü—Íƒ‚?[ƒh?B”ä—¦“ü—Í
-// -----1;?ü•ª“ü—Íƒ‚?[ƒh?B”ä—¦“ü—Í
+// ******–k************************************************************************??•ª“ü—Íƒ‚?[ƒh?B”ä—¦“ü—Í
+// -----1;??•ª“ü—Íƒ‚?[ƒh?B”ä—¦“ü—Í
 
         //------------------------------------------------
         JPanel pnln11 = new JPanel();
@@ -1101,10 +1103,10 @@ try{Thread.sleep(50);}catch (InterruptedException ie){}////30‚¾‚¯‘Ò‚½‚¹‚é‚½‚ß‚Ì?
         pnln12.add(text8);
 
 
-// -------------------------------------------------------------------------------?ü•ª“ü—Íƒ‚?[ƒh?B”ä—¦set
+// -------------------------------------------------------------------------------??•ª“ü—Íƒ‚?[ƒh?B”ä—¦set
 
         //Button	Button_senbun_naibun_set
-// -----1;?ü•ª”ä—¦set
+// -----1;??•ª”ä—¦set
         JButton Button_senbun_naibun_set = new JButton("Set");
         Button_senbun_naibun_set.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
@@ -1127,13 +1129,13 @@ try{Thread.sleep(50);}catch (InterruptedException ie){}////30‚¾‚¯‘Ò‚½‚¹‚é‚½‚ß‚Ì?
         //Button_senbun_bunkatu_set.setIcon(new ImageIcon(getClass().getClassLoader().getResource(
         //"ppp/senbun_bunkatu_set.png")));
 
-// ------1;?ü•ª”ä—¦set?B‚±‚±‚Ü‚Å
+// ------1;??•ª”ä—¦set?B‚±‚±‚Ü‚Å
 
 
-// -------------------------------------------------------------------------------?ü•ª“ü—Íƒ‚?[ƒh?B”ä—¦•ªŠ„
+// -------------------------------------------------------------------------------??•ª“ü—Íƒ‚?[ƒh?B”ä—¦•ªŠ„
 
         //Button	Button_senbun_nyuryoku	= new Button(	"L_draw"	);Button_senbun_nyuryoku.addActionListener(new ActionListener(){public void actionPerformed(ActionEvent e) {
-// -----28;?ü•ª“ü—Íƒ‚?[ƒh?B
+// -----28;??•ª“ü—Íƒ‚?[ƒh?B
         JButton Button_senbun_n_nyuryoku = new JButton("");
         Button_senbun_n_nyuryoku.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
@@ -1157,7 +1159,7 @@ try{Thread.sleep(50);}catch (InterruptedException ie){}////30‚¾‚¯‘Ò‚½‚¹‚é‚½‚ß‚Ì?
         Button_senbun_n_nyuryoku.setIcon(new ImageIcon(getClass().getClassLoader().getResource(
                 "ppp/senbun_n_nyuryoku.png")));
 
-// ------28;?ü•ª“ü—Íƒ‚?[ƒh?B‚±‚±‚Ü‚Å
+// ------28;??•ª“ü—Íƒ‚?[ƒh?B‚±‚±‚Ü‚Å
 
 
 //-----------------------------------------------------------------------------------
@@ -1600,19 +1602,19 @@ try{Thread.sleep(50);}catch (InterruptedException ie){}////30‚¾‚¯‘Ò‚½‚¹‚é‚½‚ß‚Ì?
                 try {
                     Thread.sleep(100);
                 } catch (InterruptedException ie) {
-                }//100‚¾‚¯‘Ò‚½‚¹‚é‚½‚ß‚Ì?s?B‚±‚Ì?s‚ª‚È‚¢‚Æ?Ajarƒtƒ@ƒCƒ‹‚ÅŽÀ?s‚µ‚½‚Æ‚«?AƒIƒŠƒqƒ?Ž©?g‚ðƒLƒƒƒvƒ`ƒƒ‚·‚é‚¨‚»‚ê‚ ‚è?BInterruptedException ie‚Ìie‚Í?Å?‰‚Íe‚¾‚Á‚½?B20181125
+                }//100‚¾‚¯‘Ò‚½‚¹‚é‚½‚ß‚Ì?s?B‚±‚Ì?s‚ª‚È‚¢‚Æ?Ajarƒtƒ@ƒCƒ‹‚ÅŽÀ?s‚µ‚½‚Æ‚«?AƒIƒŠƒq??Ž©?g‚ðƒLƒƒƒvƒ`ƒƒ‚·‚é‚¨‚»‚ê‚ ‚è?BInterruptedException ie‚Ìie‚Í?Å?‰‚Íe‚¾‚Á‚½?B20181125
                 imageT = robot.createScreenCapture(bounds);
                 try {
                     Thread.sleep(100);
                 } catch (InterruptedException ie) {
-                }//100‚¾‚¯‘Ò‚½‚¹‚é‚½‚ß‚Ì?s?B‚±‚Ì?s‚ª‚È‚¢‚Æ?Ajarƒtƒ@ƒCƒ‹‚ÅŽÀ?s‚µ‚½‚Æ‚«?AƒIƒŠƒqƒ?Ž©?g‚ðƒLƒƒƒvƒ`ƒƒ‚·‚é‚¨‚»‚ê‚ ‚è?BInterruptedException ie‚Ìie‚Í?Å?‰‚Íe‚¾‚Á‚½?B20181125
+                }//100‚¾‚¯‘Ò‚½‚¹‚é‚½‚ß‚Ì?s?B‚±‚Ì?s‚ª‚È‚¢‚Æ?Ajarƒtƒ@ƒCƒ‹‚ÅŽÀ?s‚µ‚½‚Æ‚«?AƒIƒŠƒq??Ž©?g‚ðƒLƒƒƒvƒ`ƒƒ‚·‚é‚¨‚»‚ê‚ ‚è?BInterruptedException ie‚Ìie‚Í?Å?‰‚Íe‚¾‚Á‚½?B20181125
                 show();
 
                 img_haikei = imageT;
-//oc.hyouji("‹Œ”wŒiƒJƒ?ƒ‰ƒŠƒZƒbƒg");
+//oc.hyouji("‹Œ”wŒiƒJ??ƒ‰ƒŠƒZƒbƒg");
 //h_cam.reset();
 //oc.hyouji(" ");
-                oc.hyouji("?V”wŒiƒJƒ?ƒ‰ƒCƒ“ƒXƒ^ƒ“ƒX‰»");
+                oc.hyouji("?V”wŒiƒJ??ƒ‰ƒCƒ“ƒXƒ^ƒ“ƒX‰»");
                 h_cam = new Haikei_camera();//20181202
 
                 double dvx = hidari_ue_ix;
@@ -1645,16 +1647,16 @@ try{Thread.sleep(50);}catch (InterruptedException ie){}////30‚¾‚¯‘Ò‚½‚¹‚é‚½‚ß‚Ì?
 
 //Image img;
 //img=(Image)imageT;
-//g2_toumei.drawImage(img,h_cam.get_x0(),h_cam.get_y0(),h_cam.get_x1(),h_cam.get_y1(),null);//null‚¾‚ÆƒRƒ“ƒpƒCƒ‹’Ê‚é‚ªthis‚¾‚Æƒ_ƒ?20181125
-//g2_toumei.drawImage(img,-100,-100,null);//null‚¾‚ÆƒRƒ“ƒpƒCƒ‹’Ê‚é‚ªthis‚¾‚Æƒ_ƒ?20181125
+//g2_toumei.drawImage(img,h_cam.get_x0(),h_cam.get_y0(),h_cam.get_x1(),h_cam.get_y1(),null);//null‚¾‚ÆƒRƒ“ƒpƒCƒ‹’Ê‚é‚ªthis‚¾‚Æƒ_??20181125
+//g2_toumei.drawImage(img,-100,-100,null);//null‚¾‚ÆƒRƒ“ƒpƒCƒ‹’Ê‚é‚ªthis‚¾‚Æƒ_??20181125
 
 //drawImage
-//  img - •`‰æ‚³‚ê‚éŽw’èƒCƒ??[ƒW?Bimg ‚ª null ‚Ì?ê?‡‚É‚Í‰½‚à?s‚í‚È‚¢
+//  img - •`‰æ‚³‚ê‚éŽw’èƒC???[ƒW?Bimg ‚ª null ‚Ì???‡‚É‚Í‰½‚à?s‚í‚È‚¢
 //  x - x ?À•W
 //  y - y ?À•W
-//  width - ‹éŒ`‚Ì•?
+//  width - ‹éŒ`‚Ì??
 //  height - ‹éŒ`‚Ì?‚‚³
-//  observer - ƒCƒ??[ƒW‚ª‚³‚ç‚É•ÏŠ·‚³‚ê‚é‚±‚Æ‚ª’Ê’m‚³‚ê‚éƒIƒuƒWƒFƒNƒg
+//  observer - ƒC???[ƒW‚ª‚³‚ç‚É•ÏŠ·‚³‚ê‚é‚±‚Æ‚ª’Ê’m‚³‚ê‚éƒIƒuƒWƒFƒNƒg
 
 // *****–k*************************************************************************
         JButton Button_haikei_trim = new JButton("Tr");
@@ -1672,13 +1674,13 @@ try{Thread.sleep(50);}catch (InterruptedException ie){}////30‚¾‚¯‘Ò‚½‚¹‚é‚½‚ß‚Ì?
                 Graphics2D g2_haikei = (Graphics2D) bufferGraphics_haikei;
                 //”wŒi•\Ž¦
                 if ((img_haikei != null) && (ihaikeihyouji >= 1)) {
-                    int iw = img_haikei.getWidth(null);//ƒCƒ??[ƒW‚Ì•?‚ðŽæ“¾
-                    int ih = img_haikei.getHeight(null);//ƒCƒ??[ƒW‚Ì?‚‚³‚ðŽæ“¾
+                    int iw = img_haikei.getWidth(null);//ƒC???[ƒW‚Ì??‚ðŽæ“¾
+                    int ih = img_haikei.getHeight(null);//ƒC???[ƒW‚Ì?‚‚³‚ðŽæ“¾
 
-                    //System.out.println("paint•???"+iw);
+                    //System.out.println("paint????"+iw);
                     //System.out.println("paint?‚‚³??"+ih);
-                    h_cam.set_haikei_haba((double) iw);
-                    h_cam.set_haikei_takasa((double) ih);
+                    h_cam.set_haikei_haba(iw);
+                    h_cam.set_haikei_takasa(ih);
 
                     //if(i_Lock_on==1){
                     haikei_byouga(g2_haikei, img_haikei);
@@ -1688,7 +1690,7 @@ try{Thread.sleep(50);}catch (InterruptedException ie){}////30‚¾‚¯‘Ò‚½‚¹‚é‚½‚ß‚Ì?
 
 
 //˜g?Ý’èŽž‚Ì”wŒi‚ð˜g“à‚Ì‚ÝŽc‚µ‚ÄƒgƒŠƒ€ 20181204
-                if ((i_mouse_modeA == 61) && (es1.get_i_egaki_dankai() == 4)) {//˜g?ü‚ª•\Ž¦‚³‚ê‚Ä‚¢‚é?ó‘Ô
+                if ((i_mouse_modeA == 61) && (es1.get_i_egaki_dankai() == 4)) {//˜g??‚ª•\Ž¦‚³‚ê‚Ä‚¢‚é?ó‘Ô
                     int xmin = (int) es1.p61_TV_hako.get_x_min();
                     int xmax = (int) es1.p61_TV_hako.get_x_max();
                     int ymin = (int) es1.p61_TV_hako.get_y_min();
@@ -1738,7 +1740,7 @@ write.setRGB(w, h, offsc_haikei.getRGB(w,h));
 */
 // *******–k***********************************************************************
 
-////b* ƒAƒvƒŠƒP?[ƒVƒ‡ƒ“—p?B?æ“ª‚ª?^?–?^?^?^‚ÅŽn‚Ü‚é?s‚É‚Í‚³‚Ü‚ê‚½•”•ª‚Í–³Ž‹‚³‚ê‚é?B
+////b* ƒAƒvƒŠƒP?[ƒVƒ‡ƒ“—p?B?æ“ª‚ª?^???^?^?^‚ÅŽn‚Ü‚é?s‚É‚Í‚³‚Ü‚ê‚½•”•ª‚Í–³Ž‹‚³‚ê‚é?B
 
         //------------------------------------------------
         Panel pnln9 = new Panel();
@@ -1874,7 +1876,7 @@ write.setRGB(w, h, offsc_haikei.getRGB(w,h));
         pnln9.add(Button_haikei_Lock_on);
 
 
-// ******–k************************************************************************?@?ü•ª?œ‚¯‚Ä?üŽí•ÏŠ·
+// ******–k************************************************************************?@??•ª?œ‚¯‚Ä??Ží•ÏŠ·
 
         JButton Button_senbun_yoke_henkan = new JButton("");//new JButton(	"L_chan"	);
         Button_senbun_yoke_henkan.addActionListener(new ActionListener() {
@@ -1898,11 +1900,11 @@ write.setRGB(w, h, offsc_haikei.getRGB(w,h));
 
 
 // ******************************************************************************
-////b* ƒAƒvƒŠƒP?[ƒVƒ‡ƒ“—p?B?æ“ª‚ª?^?–?^?^?^‚ÅŽn‚Ü‚é?s‚É‚Í‚³‚Ü‚ê‚½•”•ª‚Í–³Ž‹‚³‚ê‚é?B
+////b* ƒAƒvƒŠƒP?[ƒVƒ‡ƒ“—p?B?æ“ª‚ª?^???^?^?^‚ÅŽn‚Ü‚é?s‚É‚Í‚³‚Ü‚ê‚½•”•ª‚Í–³Ž‹‚³‚ê‚é?B
 // ******************************************************************************
 
 
-// *******–k*********************************************************************** ‰ð?à
+// *******–k*********************************************************************** ‰ð??
         //JButton	Button_kaisetu		= new JButton(	"kaisetu"		);Button_kaisetu.addActionListener(new ActionListener(){public void actionPerformed(ActionEvent e) {
         JButton Button_kaisetu = new JButton("Help");
         Button_kaisetu.addActionListener(new ActionListener() {
@@ -1936,7 +1938,7 @@ write.setRGB(w, h, offsc_haikei.getRGB(w,h));
         // *************************************************
         //?¶•Ó?i?¼‘¤?jƒpƒlƒ‹‚Ì?\’z*************************
         // *************************************************
-        //?¶•Ó?i?¼‘¤?jƒpƒlƒ‹‚Ì?ì?¬
+        //?¶•Ó?i?¼‘¤?jƒpƒlƒ‹‚Ì???¬
 
 
         Panel pnlw = new Panel();
@@ -2048,7 +2050,7 @@ write.setRGB(w, h, offsc_haikei.getRGB(w,h));
         pnlw22.add(pnlw23);
         //------------------------------------------------
 
-// ****?¼*********************?@?ü•??@‰º‚°?@*****************************************************
+// ****?¼*********************?@?????@‰º‚°?@*****************************************************
         JButton Button_senhaba_sage = new JButton("");
         Button_senhaba_sage.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
@@ -2069,7 +2071,7 @@ write.setRGB(w, h, offsc_haikei.getRGB(w,h));
         Button_senhaba_sage.setIcon(new ImageIcon(getClass().getClassLoader().getResource(
                 "ppp/senhaba_sage.png")));
 
-// ****?¼********************?@?ü•??@?ã‚°?@******************************************************
+// ****?¼********************?@?????@?ã‚°?@******************************************************
 
         JButton Button_senhaba_age = new JButton("");
         Button_senhaba_age.addActionListener(new ActionListener() {
@@ -2097,7 +2099,7 @@ write.setRGB(w, h, offsc_haikei.getRGB(w,h));
         //------------------------------------------------
 
 
-// ****?¼********************************?@“_•??@‰º‚°?@******************************************“_•?
+// ****?¼********************************?@“_???@‰º‚°?@******************************************“_??
 
         JButton Button_tenhaba_sage = new JButton("");
         Button_tenhaba_sage.addActionListener(new ActionListener() {
@@ -2121,7 +2123,7 @@ write.setRGB(w, h, offsc_haikei.getRGB(w,h));
         Button_tenhaba_sage.setIcon(new ImageIcon(getClass().getClassLoader().getResource(
                 "ppp/tenhaba_sage.png")));
 
-// ****?¼*******************************?@“_•??@?ã‚°?@*******************************************
+// ****?¼*******************************?@“_???@?ã‚°?@*******************************************
         JButton Button_tenhaba_age = new JButton("");
         Button_tenhaba_age.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
@@ -2142,7 +2144,7 @@ write.setRGB(w, h, offsc_haikei.getRGB(w,h));
         Button_tenhaba_age.setIcon(new ImageIcon(getClass().getClassLoader().getResource(
                 "ppp/tenhaba_age.png")));
 
-// ******?¼*************“WŠJ?}‚Ì?ü‚ðƒAƒ“ƒ`ƒGƒCƒŠƒAƒX•\Ž¦‚É‚·‚é***********************************************************
+// ******?¼*************“WŠJ?}‚Ì??‚ðƒAƒ“ƒ`ƒGƒCƒŠƒAƒX•\Ž¦‚É‚·‚é***********************************************************
         JButton Button_anti_alias = new JButton("a_a");
         Button_anti_alias.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
@@ -2188,7 +2190,7 @@ write.setRGB(w, h, offsc_haikei.getRGB(w,h));
 
         pnlw27.add(pnlw30);
         //------------------------------------------------
-// ********************************************************?Ü?ü‚Ì•\Œ»•û–@
+// ********************************************************?Ü??‚Ì•\Œ»•û–@
 
         JButton Button_orisen_hyougen = new JButton("");
         Button_orisen_hyougen.addActionListener(new ActionListener() {
@@ -2346,14 +2348,14 @@ write.setRGB(w, h, offsc_haikei.getRGB(w,h));
 
 
         //Button	Button_senbun_nyuryoku	= new Button(	"L_draw"	);Button_senbun_nyuryoku.addActionListener(new ActionListener(){public void actionPerformed(ActionEvent e) {
-// -----1;?ü•ª“ü—Íƒ‚?[ƒh?B
+// -----1;??•ª“ü—Íƒ‚?[ƒh?B
         JButton Button_senbun_nyuryoku = new JButton("");
         Button_senbun_nyuryoku.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
                 img_kaisetu_fname = "qqq/senbun_nyuryoku.png";
                 readImageFromFile3();
-                i_orisen_hojyosen = 0;//=0‚Í?Ü?ü“ü—Í?@=1‚Í•â?•?ü“ü—Íƒ‚?[ƒh
-                es1.set_i_orisen_hojyosen(i_orisen_hojyosen);//‚±‚Ìƒ{ƒ^ƒ“‚Æ‹@”\‚Í•â?•ŠG?ü‹¤’Ê‚ÉŽg‚Á‚Ä‚¢‚é‚Ì‚Åi_orisen_hojyosen‚ÌŽw’è‚ª‚¢‚é
+                i_orisen_hojyosen = 0;//=0‚Í?Ü??“ü—Í?@=1‚Í•â????“ü—Íƒ‚?[ƒh
+                es1.set_i_orisen_hojyosen(i_orisen_hojyosen);//‚±‚Ìƒ{ƒ^ƒ“‚Æ‹@”\‚Í•â?•ŠG??‹¤’Ê‚ÉŽg‚Á‚Ä‚¢‚é‚Ì‚Åi_orisen_hojyosen‚ÌŽw’è‚ª‚¢‚é
                 i_mouse_modeA = 1;
                 iro_sitei_ato_ni_jissisuru_sagyou_bangou = 1;
                 System.out.println("i_mouse_modeA = " + i_mouse_modeA);
@@ -2370,10 +2372,10 @@ write.setRGB(w, h, offsc_haikei.getRGB(w,h));
         Button_senbun_nyuryoku.setIcon(new ImageIcon(getClass().getClassLoader().getResource(
                 "ppp/senbun_nyuryoku.png")));
 
-// ------1;?ü•ª“ü—Íƒ‚?[ƒh?B‚±‚±‚Ü‚Å
+// ------1;??•ª“ü—Íƒ‚?[ƒh?B‚±‚±‚Ü‚Å
 
 
-// -------------11;?ü•ª“ü—Íƒ‚?[ƒh?B
+// -------------11;??•ª“ü—Íƒ‚?[ƒh?B
         JButton Button_senbun_nyuryoku11 = new JButton("");
         Button_senbun_nyuryoku11.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
@@ -2397,17 +2399,17 @@ write.setRGB(w, h, offsc_haikei.getRGB(w,h));
                 "ppp/senbun_nyuryoku11.png")));
 
 
-// -------------11;?ü•ª“ü—Íƒ‚?[ƒh?B‚±‚±‚Ü‚Å
+// -------------11;??•ª“ü—Íƒ‚?[ƒh?B‚±‚±‚Ü‚Å
 
-// -----62 62 62 ƒ{ƒ?ƒmƒC?}?BVoronoi 20181020
+// -----62 62 62 ƒ{??ƒmƒC?}?BVoronoi 20181020
 
         JButton Button_Voronoi = new JButton("");
         Button_Voronoi.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
                 img_kaisetu_fname = "qqq/Voronoi.png";
                 readImageFromFile3();
-                i_orisen_hojyosen = 0;//=0‚Í?Ü?ü“ü—Í?@=1‚Í•â?•?ü“ü—Íƒ‚?[ƒh
-                es1.set_i_orisen_hojyosen(i_orisen_hojyosen);//‚±‚Ìƒ{ƒ^ƒ“‚Æ‹@”\‚Í•â?•ŠG?ü‹¤’Ê‚ÉŽg‚Á‚Ä‚¢‚é‚Ì‚Åi_orisen_hojyosen‚ÌŽw’è‚ª‚¢‚é
+                i_orisen_hojyosen = 0;//=0‚Í?Ü??“ü—Í?@=1‚Í•â????“ü—Íƒ‚?[ƒh
+                es1.set_i_orisen_hojyosen(i_orisen_hojyosen);//‚±‚Ìƒ{ƒ^ƒ“‚Æ‹@”\‚Í•â?•ŠG??‹¤’Ê‚ÉŽg‚Á‚Ä‚¢‚é‚Ì‚Åi_orisen_hojyosen‚ÌŽw’è‚ª‚¢‚é
                 i_mouse_modeA = 62;
                 iro_sitei_ato_ni_jissisuru_sagyou_bangou = 62;
                 System.out.println("i_mouse_modeA = " + i_mouse_modeA);
@@ -2424,9 +2426,9 @@ write.setRGB(w, h, offsc_haikei.getRGB(w,h));
         Button_Voronoi.setIcon(new ImageIcon(getClass().getClassLoader().getResource(
                 "ppp/Voronoi.png")));
 
-// ------1;?ü•ª“ü—Íƒ‚?[ƒh?B‚±‚±‚Ü‚Å
+// ------1;??•ª“ü—Íƒ‚?[ƒh?B‚±‚±‚Ü‚Å
 // *******?¼***********************************************************************
-// -------------38;?Ü‚è?ô‚Ý‰Â”\?ü“ü—Í
+// -------------38;?Ü‚è?ô‚Ý‰Â”\??“ü—Í
         JButton Button_oritatami_kanousen = new JButton("");
         Button_oritatami_kanousen.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
@@ -2449,7 +2451,7 @@ write.setRGB(w, h, offsc_haikei.getRGB(w,h));
                 "ppp/oritatami_kanousen.png")));
 
 
-// -------------38;?Ü‚è?ô‚Ý‰Â”\?ü“ü—Í?B‚±‚±‚Ü‚Å
+// -------------38;?Ü‚è?ô‚Ý‰Â”\??“ü—Í?B‚±‚±‚Ü‚Å
 
 // *******?¼***********************************************************************
 
@@ -2460,7 +2462,7 @@ write.setRGB(w, h, offsc_haikei.getRGB(w,h));
         pnlw.add(pnlw2);//ƒpƒlƒ‹pnlw2‚ðpnlw‚É“\‚è•t‚¯
 
 // ******************************************************************************
-// -------------5;?ü•ª‰„’·ƒ‚?[ƒh?B
+// -------------5;??•ª‰„’·ƒ‚?[ƒh?B
         JButton Button_senbun_entyou = new JButton("");//Button_senbun_entyou	= new JButton(	"L_en"	);
         Button_senbun_entyou.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
@@ -2487,11 +2489,11 @@ write.setRGB(w, h, offsc_haikei.getRGB(w,h));
         Button_senbun_entyou.setIcon(new ImageIcon(getClass().getClassLoader().getResource(
                 "ppp/senbun_entyou.png")));
 
-// -------------5;?ü•ª‰„’·ƒ‚?[ƒh?B‚±‚±‚Ü‚Å
+// -------------5;??•ª‰„’·ƒ‚?[ƒh?B‚±‚±‚Ü‚Å
 // ******************************************************************************
 
 // ******************************************************************************
-// -------------5_2;?ü•ª‰„’·ƒ‚?[ƒh?B
+// -------------5_2;??•ª‰„’·ƒ‚?[ƒh?B
         JButton Button_senbun_entyou_2 = new JButton("");//Button_senbun_entyou	= new JButton(	"L_en"	);
         Button_senbun_entyou_2.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
@@ -2518,11 +2520,11 @@ write.setRGB(w, h, offsc_haikei.getRGB(w,h));
         Button_senbun_entyou_2.setIcon(new ImageIcon(getClass().getClassLoader().getResource(
                 "ppp/senbun_entyou_2.png")));
 
-// -------------5;?ü•ª‰„’·ƒ‚?[ƒh?B‚±‚±‚Ü‚Å
+// -------------5;??•ª‰„’·ƒ‚?[ƒh?B‚±‚±‚Ü‚Å
 // ******************************************************************************
 
 
-// -------------7;Šp“ñ“™•ª?üƒ‚?[ƒh?B
+// -------------7;Šp“ñ“™•ª??ƒ‚?[ƒh?B
         JButton Button_kaku_toubun = new JButton("");//Button_kaku_toubun	= new JButton(	"kaku_toubun"	);
         Button_kaku_toubun.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
@@ -2544,7 +2546,7 @@ write.setRGB(w, h, offsc_haikei.getRGB(w,h));
         Button_kaku_toubun.setIcon(new ImageIcon(getClass().getClassLoader().getResource(
                 "ppp/kaku_toubun.png")));
 
-// -------------7;Šp“ñ“™•ª?üƒ‚?[ƒh?B‚±‚±‚Ü‚Å
+// -------------7;Šp“ñ“™•ª??ƒ‚?[ƒh?B‚±‚±‚Ü‚Å
 
 // ******************************************************************************
 // -------------8;“à?Sƒ‚?[ƒh?B
@@ -2583,7 +2585,7 @@ write.setRGB(w, h, offsc_haikei.getRGB(w,h));
 
 
 // *******?¼***********************************************************************
-// -------------9;?‚?ü‚¨‚ë‚µƒ‚?[ƒh?B
+// -------------9;????‚¨‚ë‚µƒ‚?[ƒh?B
         JButton Button_suisen = new JButton("");//Button_suisen	= new JButton(	"suisen"	);
         Button_suisen.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
@@ -2606,7 +2608,7 @@ write.setRGB(w, h, offsc_haikei.getRGB(w,h));
                 "ppp/suisen.png")));
 
 
-// -------------9;?‚?ü‚¨‚ë‚µƒ‚?[ƒh?B‚±‚±‚Ü‚Å
+// -------------9;????‚¨‚ë‚µƒ‚?[ƒh?B‚±‚±‚Ü‚Å
 
 
 // *******?¼***********************************************************************
@@ -2672,7 +2674,7 @@ write.setRGB(w, h, offsc_haikei.getRGB(w,h));
 
 
 // *******?¼***********************************************************************
-// -------------40;•½?s?ü“ü—Íƒ‚?[ƒh?B
+// -------------40;•½?s??“ü—Íƒ‚?[ƒh?B
         JButton Button_heikousen = new JButton("");//Button_suisen	= new JButton(	"suisen"	);
         Button_heikousen.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
@@ -2691,9 +2693,9 @@ write.setRGB(w, h, offsc_haikei.getRGB(w,h));
         Button_heikousen.setMargin(new Insets(0, 0, 0, 0));
         Button_heikousen.setIcon(new ImageIcon(getClass().getClassLoader().getResource(
                 "ppp/heikousen.png")));
-// -------------40;•½?s?ü“ü—Íƒ‚?[ƒh?B‚±‚±‚Ü‚Å
+// -------------40;•½?s??“ü—Íƒ‚?[ƒh?B‚±‚±‚Ü‚Å
 
-// -------------51;•½?s?ü?@•?Žw’è“ü—Íƒ‚?[ƒh?B
+// -------------51;•½?s???@??Žw’è“ü—Íƒ‚?[ƒh?B
         JButton Button_heikousen_haba_sitei = new JButton("");
         Button_heikousen_haba_sitei.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
@@ -2712,11 +2714,11 @@ write.setRGB(w, h, offsc_haikei.getRGB(w,h));
         Button_heikousen_haba_sitei.setMargin(new Insets(0, 0, 0, 0));
         Button_heikousen_haba_sitei.setIcon(new ImageIcon(getClass().getClassLoader().getResource(
                 "ppp/heikousen_haba_sitei.png")));
-// -------------51;•½?s?ü?@•?Žw’è“ü—Íƒ‚?[ƒh?B‚±‚±‚Ü‚Å
+// -------------51;•½?s???@??Žw’è“ü—Íƒ‚?[ƒh?B‚±‚±‚Ü‚Å
 
 
 // *******?¼***********************************************************************
-// -------------39;?Ü‚è?ô‚Ý‰Â”\?ü+ŠiŽq“_Œn“ü—Í
+// -------------39;?Ü‚è?ô‚Ý‰Â”\??+ŠiŽq“_Œn“ü—Í
         JButton Button_oritatami_kanousen_and_kousitenkei = new JButton("");
         Button_oritatami_kanousen_and_kousitenkei.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
@@ -2739,7 +2741,7 @@ write.setRGB(w, h, offsc_haikei.getRGB(w,h));
                 "ppp/oritatami_kanousen_and_kousitenkei.png")));
 
 
-// -------------39;?Ü‚è?ô‚Ý‰Â”\?ü+ŠiŽq“_Œn“ü—Í?B‚±‚±‚Ü‚Å
+// -------------39;?Ü‚è?ô‚Ý‰Â”\??+ŠiŽq“_Œn“ü—Í?B‚±‚±‚Ü‚Å
 
         //------------------------------------------------
         Panel pnlw29 = new Panel();
@@ -2749,7 +2751,7 @@ write.setRGB(w, h, offsc_haikei.getRGB(w,h));
         //------------------------------------------------
 
 
-// ******?¼**********‘Skouho?ü•ª(?ü•ª“ü—ÍŽž‚ÌˆêŽž“I‚È?ü•ª)‚ðŽÀ?Ü?ü‚É•ÏŠ·ƒ‚?[ƒh**************************************************************
+// ******?¼**********‘Skouho??•ª(??•ª“ü—ÍŽž‚ÌˆêŽž“I‚È??•ª)‚ðŽÀ?Ü??‚É•ÏŠ·ƒ‚?[ƒh**************************************************************
         JButton Button_all_s_step_to_orisen = new JButton("");//
         Button_all_s_step_to_orisen.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
@@ -2774,7 +2776,7 @@ write.setRGB(w, h, offsc_haikei.getRGB(w,h));
         //Button_v_del_all.setBackground(Color.green);
 
 // ********?¼**********************************************************************
-// -------------33;‹›‚Ì?œƒ‚?[ƒh?B
+// -------------33;‹›‚Ì?œƒ??[ƒh?B
 
         JButton Button_sakananohone = new JButton("");
         Button_sakananohone.addActionListener(new ActionListener() {
@@ -2798,7 +2800,7 @@ write.setRGB(w, h, offsc_haikei.getRGB(w,h));
                 "ppp/sakananohone.png")));
 
 
-// -------------10;‹›‚Ì?œƒ‚?[ƒh?B‚±‚±‚Ü‚Å
+// -------------10;‹›‚Ì?œƒ??[ƒh?B‚±‚±‚Ü‚Å
 
 
 // *******?¼***********************************************************************
@@ -2840,7 +2842,7 @@ write.setRGB(w, h, offsc_haikei.getRGB(w,h));
         //------------------------------------------------
 
 // ******?¼************************************************************************
-// -----1;?ü•ª“ü—Íƒ‚?[ƒh?B•ªŠ„?”“ü—Í
+// -----1;??•ª“ü—Íƒ‚?[ƒh?B•ªŠ„?”“?—Í
         text2 = new JTextField("", 2);
         text2.setHorizontalAlignment(JTextField.RIGHT);
         pnlw15.add(text2);
@@ -2849,7 +2851,7 @@ write.setRGB(w, h, offsc_haikei.getRGB(w,h));
 // -------------------------------------------------------------------------------
 
         //Button	Button_senbun_bunkatu_set
-// -----1;?ü•ª•ªŠ„?”set
+// -----1;??•ª•ªŠ„?”set
         JButton Button_senbun_bunkatu_set = new JButton("Set");
         Button_senbun_bunkatu_set.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
@@ -2878,13 +2880,13 @@ write.setRGB(w, h, offsc_haikei.getRGB(w,h));
         //Button_senbun_bunkatu_set.setIcon(new ImageIcon(getClass().getClassLoader().getResource(
         //"ppp/senbun_bunkatu_set.png")));
 
-// ------1;?ü•ª•ªŠ„?”set?B‚±‚±‚Ü‚Å
+// ------1;??•ª•ªŠ„?”set?B‚±‚±‚Ü‚Å
 
 
 // -------------------------------------------------------------------------------
 
 
-// -----27;?ü•ª•ªŠ„“ü—Íƒ‚?[ƒh?B
+// -----27;??•ª•ªŠ„“ü—Íƒ‚?[ƒh?B
         JButton Button_senbun_b_nyuryoku = new JButton("");
         Button_senbun_b_nyuryoku.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
@@ -2914,7 +2916,7 @@ write.setRGB(w, h, offsc_haikei.getRGB(w,h));
         Button_senbun_b_nyuryoku.setIcon(new ImageIcon(getClass().getClassLoader().getResource(
                 "ppp/senbun_b_nyuryoku.png")));
 
-// ------27;?ü•ª“ü—Íƒ‚?[ƒh?B‚±‚±‚Ü‚Å
+// ------27;??•ª“ü—Íƒ‚?[ƒh?B‚±‚±‚Ü‚Å
 
 
         //------------------------------------------------
@@ -2930,8 +2932,8 @@ write.setRGB(w, h, offsc_haikei.getRGB(w,h));
 		JButton	Button_tyouhoukei_select	= new JButton(	""	);
 			Button_tyouhoukei_select.addActionListener(new ActionListener(){public void actionPerformed(ActionEvent e) {
 	img_kaisetu_fname="qqq/tyouhoukei_select.png";readImageFromFile3();
-						i_orisen_hojyosen=0;//=0‚Í?Ü?ü“ü—Í?@=1‚Í•â?•?ü“ü—Íƒ‚?[ƒh
-						es1.set_i_orisen_hojyosen(i_orisen_hojyosen);//‚±‚Ìƒ{ƒ^ƒ“‚Æ‹@”\‚Í•â?•ŠG?ü‹¤’Ê‚ÉŽg‚Á‚Ä‚¢‚é‚Ì‚Åi_orisen_hojyosen‚ÌŽw’è‚ª‚¢‚é
+						i_orisen_hojyosen=0;//=0‚Í?Ü??“ü—Í?@=1‚Í•â????“ü—Íƒ‚?[ƒh
+						es1.set_i_orisen_hojyosen(i_orisen_hojyosen);//‚±‚Ìƒ{ƒ^ƒ“‚Æ‹@”\‚Í•â?•ŠG??‹¤’Ê‚ÉŽg‚Á‚Ä‚¢‚é‚Ì‚Åi_orisen_hojyosen‚ÌŽw’è‚ª‚¢‚é
 						i_mouse_modeA=61;iro_sitei_ato_ni_jissisuru_sagyou_bangou=1;
 						System.out.println("i_mouse_modeA = "+i_mouse_modeA);
 
@@ -3204,7 +3206,7 @@ write.setRGB(w, h, offsc_haikei.getRGB(w,h));
 
 
 // *******?¼***********************************************************************
-// -------------;select‚µ‚½?Ü?ü‚Ì?í?œ
+// -------------;select‚µ‚½?Ü??‚Ì????
         JButton Button_del_selected_senbun = new JButton("d_s_L");//new JButton(	"del_sel_L"	);
         Button_del_selected_senbun.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
@@ -3223,7 +3225,7 @@ write.setRGB(w, h, offsc_haikei.getRGB(w,h));
         // "ppp/del_selected_senbun.png")));
 
 
-// -------------select‚µ‚½?Ü?ü‚Ì?í?œ?B‚±‚±‚Ü‚Å
+// -------------select‚µ‚½?Ü??‚Ì?????B‚±‚±‚Ü‚Å
 
 
         //JSeparator separator = new JSeparator(SwingConstants.HORIZONTAL);
@@ -3240,7 +3242,7 @@ write.setRGB(w, h, offsc_haikei.getRGB(w,h));
 
 // ******?¼************************************************************************ ?Á‚µƒSƒ€
 
-// -------------;?ü•ª?í?œƒ‚?[ƒh?B
+// -------------;??•ª???œƒ??[ƒh?B
         JButton Button_senbun_sakujyo = new JButton("");//JButton	Button_senbun_sakujyo	= new JButton(	"L_del"	);
         Button_senbun_sakujyo.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
@@ -3251,7 +3253,7 @@ write.setRGB(w, h, offsc_haikei.getRGB(w,h));
                 System.out.println("i_mouse_modeA = " + i_mouse_modeA);
 
 
-                i_orisen_hojyosen = 0;//=0‚Í?Ü?ü“ü—Í?@=1‚Í•â?•?ü“ü—Íƒ‚?[ƒh
+                i_orisen_hojyosen = 0;//=0‚Í?Ü??“ü—Í?@=1‚Í•â????“ü—Íƒ‚?[ƒh
                 es1.set_i_orisen_hojyosen(i_orisen_hojyosen);
 
                 es1.unselect_all();
@@ -3266,9 +3268,9 @@ write.setRGB(w, h, offsc_haikei.getRGB(w,h));
                 "ppp/senbun_sakujyo.png")));
 
 
-// ******?¼************************************************************************ ?•?ü‚Ì‚Ý‚Ì?Á‚µƒSƒ€
+// ******?¼************************************************************************ ????‚Ì‚Ý‚Ì?Á‚µƒSƒ€
 
-// -------------;?•?ü‚Ì‚Ý‚Ì?ü•ª?í?œƒ‚?[ƒh?B
+// -------------;????‚Ì‚Ý‚Ì??•ª???œƒ??[ƒh?B
         JButton Button_kuro_senbun_sakujyo = new JButton("");//JButton	Button_senbun_sakujyo	= new JButton(	"L_del"	);
         Button_kuro_senbun_sakujyo.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
@@ -3279,7 +3281,7 @@ write.setRGB(w, h, offsc_haikei.getRGB(w,h));
                 System.out.println("i_mouse_modeA = " + i_mouse_modeA);
 
 
-                i_orisen_hojyosen = 2;//=2‚Í?•‚Ì?Ü?ü?í?œƒ‚?[ƒh
+                i_orisen_hojyosen = 2;//=2‚Í?•‚Ì?Ü?????œƒ??[ƒh
                 es1.set_i_orisen_hojyosen(i_orisen_hojyosen);
 
                 es1.unselect_all();
@@ -3294,9 +3296,9 @@ write.setRGB(w, h, offsc_haikei.getRGB(w,h));
                 "ppp/kuro_senbun_sakujyo.png")));
 
 
-// ******?¼************************************************************************ ?Á‚µƒSƒ€(•â?•Šˆ?ü‚Ì‚Ý)
+// ******?¼************************************************************************ ?Á‚µƒSƒ€(•â?•Š???‚Ì‚Ý)
 
-// -------------;?ü•ª?í?œƒ‚?[ƒh?B?Á‚µƒSƒ€(•â?•Šˆ?ü‚Ì‚Ý)
+// -------------;??•ª???œƒ??[ƒh?B?Á‚µƒSƒ€(•â?•Š???‚Ì‚Ý)
         JButton Button_senbun3_sakujyo = new JButton("");//JButton	Button_senbun_sakujyo	= new JButton(	"L_del"	);
         Button_senbun3_sakujyo.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
@@ -3307,7 +3309,7 @@ write.setRGB(w, h, offsc_haikei.getRGB(w,h));
                 System.out.println("i_mouse_modeA = " + i_mouse_modeA);
 
 
-                i_orisen_hojyosen = 3;//=0‚Í?Ü?ü“ü—Í?@=1‚Í•â?•?ü“ü—Íƒ‚?[ƒh =3‚Í•â?•Šˆ?ü‚Ì‚Ý‘Î?Û
+                i_orisen_hojyosen = 3;//=0‚Í?Ü??“ü—Í?@=1‚Í•â????“ü—Íƒ‚?[ƒh =3‚Í•â?•Š???‚Ì‚Ý‘Î?Û
                 es1.set_i_orisen_hojyosen(i_orisen_hojyosen);
 
                 es1.unselect_all();
@@ -3442,7 +3444,7 @@ write.setRGB(w, h, offsc_haikei.getRGB(w,h));
 
 // ******************************************************************************
 
-        Button_HK_nisuru = new JButton(" ");//HK‚Æ‚Í•â?•Šˆ?ü‚Ì‚±‚Æ
+        Button_HK_nisuru = new JButton(" ");//HK‚Æ‚Í•â?•Š???‚Ì‚±‚Æ
         Button_HK_nisuru.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
                 img_kaisetu_fname = "qqq/HK_nisuru.png";
@@ -3492,7 +3494,7 @@ write.setRGB(w, h, offsc_haikei.getRGB(w,h));
         });
         pnlw28.add(Button_zen_yama_tani_henkan);
         Button_zen_yama_tani_henkan.setMargin(new Insets(0, 0, 0, 0));
-// ******?¼************************************************************************?ü•ª‚Ì?F‚ð?Ô‚©‚ç?Â?A?Â‚©‚ç?Ô‚É•ÏŠ·
+// ******?¼************************************************************************??•ª‚Ì?F‚ð?Ô‚©‚ç?Â?A?Â‚©‚ç?Ô‚É•ÏŠ·
 
         //JButton	Button_senbun_henkan2	= new JButton(	""	);//new JButton(	"L_chan"	);
         Button_senbun_henkan2 = new JButton("");//new JButton(	"L_chan"	);
@@ -3521,7 +3523,7 @@ write.setRGB(w, h, offsc_haikei.getRGB(w,h));
         Button_senbun_henkan2.setIcon(new ImageIcon(getClass().getClassLoader().getResource(
                 "ppp/senbun_henkan2.png")));
 
-// ******?¼************************************************************************?ü•ª‚Ì?F‚ð?•?A?Ô?A?A?Â?A?•‚Ì?‡‚É•ÏŠ·
+// ******?¼************************************************************************??•ª‚Ì?F‚ð???A?Ô?A?A?Â?A?•‚Ì?‡‚É•ÏŠ·
 
         JButton Button_senbun_henkan = new JButton("");//new JButton(	"L_chan"	);
         Button_senbun_henkan.addActionListener(new ActionListener() {
@@ -3555,7 +3557,7 @@ write.setRGB(w, h, offsc_haikei.getRGB(w,h));
         //------------------------------------------------
         pnlw.add(pnlw21);
 
-// ****************************************************************************** //?ü“à?F•ÏŠ·
+// ****************************************************************************** //??“à?F•ÏŠ·
 
         JButton Button_in_L_col_change = new JButton("");//new JButton(	"in_L_col_change"	);
         Button_in_L_col_change.addActionListener(new ActionListener() {
@@ -3570,10 +3572,10 @@ write.setRGB(w, h, offsc_haikei.getRGB(w,h));
 
                 if (icol == 0) {
                     icol = 1;
-                    es1.setcolor(icol);                                        //?Å?‰‚Ì?Ü?ü‚Ì?F‚ðŽw’è‚·‚é?B0‚Í?•?A1‚Í?Ô?A2‚Í?Â?B
+                    es1.setcolor(icol);                                        //?Å?‰‚Ì?Ü??‚Ì?F‚ðŽw’è‚·‚é?B0‚Í???A1‚Í?Ô?A2‚Í?Â?B
                     ButtonCol_irokesi();
                     ButtonCol_red.setForeground(Color.black);
-                    ButtonCol_red.setBackground(Color.red);    //?Ü?ü‚Ìƒ{ƒ^ƒ“‚Ì?F?Ý’è
+                    ButtonCol_red.setBackground(Color.red);    //?Ü??‚Ìƒ{ƒ^ƒ“‚Ì?F?Ý’è
                 }
 
 
@@ -3589,7 +3591,7 @@ write.setRGB(w, h, offsc_haikei.getRGB(w,h));
                 "ppp/in_L_col_change.png")));
 
 
-// ****************************************************************************** //?üXŒð?·?F•ÏŠ·
+// ****************************************************************************** //??XŒð?·?F•ÏŠ·
 
         JButton Button_on_L_col_change = new JButton("");//new JButton(	"on_L_col_change"	);
         Button_on_L_col_change.addActionListener(new ActionListener() {
@@ -3603,10 +3605,10 @@ write.setRGB(w, h, offsc_haikei.getRGB(w,h));
 
                 if (icol == 0) {
                     icol = 2;
-                    es1.setcolor(icol);                                        //?Å?‰‚Ì?Ü?ü‚Ì?F‚ðŽw’è‚·‚é?B0‚Í?•?A1‚Í?Ô?A2‚Í?Â?B
+                    es1.setcolor(icol);                                        //?Å?‰‚Ì?Ü??‚Ì?F‚ðŽw’è‚·‚é?B0‚Í???A1‚Í?Ô?A2‚Í?Â?B
                     ButtonCol_irokesi();
                     ButtonCol_blue.setForeground(Color.black);
-                    ButtonCol_blue.setBackground(Color.blue);    //?Ü?ü‚Ìƒ{ƒ^ƒ“‚Ì?F?Ý’è
+                    ButtonCol_blue.setBackground(Color.blue);    //?Ü??‚Ìƒ{ƒ^ƒ“‚Ì?F?Ý’è
                 }
 
 
@@ -3656,7 +3658,7 @@ write.setRGB(w, h, offsc_haikei.getRGB(w,h));
 // -------------14;“_’Ç‰Áƒ‚?[ƒh?B‚±‚±‚Ü‚Å
 
 // ******************************************************************************
-// -------------15;“_?í?œƒ‚?[ƒh?B
+// -------------15;“_???œƒ??[ƒh?B
         JButton Button_v_del = new JButton("");//new JButton(	"V_del"	);
         Button_v_del.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
@@ -3678,10 +3680,10 @@ write.setRGB(w, h, offsc_haikei.getRGB(w,h));
                 "ppp/v_del.png")));
 
 
-// -------------15;“_?í?œƒ‚?[ƒh?B‚±‚±‚Ü‚Å
+// -------------15;“_???œƒ??[ƒh?B‚±‚±‚Ü‚Å
 
 
-// -------------15;“_?í?œƒ‚?[ƒh?iƒJƒ‰?[ƒ`ƒFƒ“ƒW?j?B
+// -------------15;“_???œƒ??[ƒh?iƒJƒ‰?[ƒ`ƒFƒ“ƒW?j?B
         JButton Button_v_del_cc = new JButton("");//new JButton(	"V_del"	);
         Button_v_del_cc.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
@@ -3703,7 +3705,7 @@ write.setRGB(w, h, offsc_haikei.getRGB(w,h));
                 "ppp/v_del_cc.png")));
 
 
-// -------------15;“_?í?œƒ‚?[ƒh?B‚±‚±‚Ü‚Å
+// -------------15;“_???œƒ??[ƒh?B‚±‚±‚Ü‚Å
 
 // ****?¼**************************************************************************
 
@@ -3718,7 +3720,7 @@ write.setRGB(w, h, offsc_haikei.getRGB(w,h));
 
 
 // ******************************************************************************
-// ******?¼**********‘S“_?í?œƒ‚?[ƒh?B*****(—¼‘¤‚Ì?Ü?ü‚Ì?F‚ª“¯‚¶‚à‚Ì‚ÉŽÀ?s)?B*********************************************************
+// ******?¼**********‘S“_???œƒ??[ƒh?B*****(—¼‘¤‚Ì?Ü??‚Ì?F‚ª“¯‚¶‚à‚Ì‚ÉŽÀ?s)?B*********************************************************
         JButton Button_v_del_all = new JButton("");//
         Button_v_del_all.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
@@ -3740,7 +3742,7 @@ write.setRGB(w, h, offsc_haikei.getRGB(w,h));
         //Button_v_del_all.setBackground(Color.green);
 
 
-// ******?¼**********‘S“_?í?œƒ‚?[ƒh(—¼‘¤‚Ì?Ü?ü‚Ì?F‚ªˆá‚Á‚Ä‚àŽÀ?s)?B**************************************************************
+// ******?¼**********‘S“_???œƒ??[ƒh(—¼‘¤‚Ì?Ü??‚Ì?F‚ªˆá‚Á‚Ä‚àŽÀ?s)?B**************************************************************
         JButton Button_v_del_all_cc = new JButton("");//
         Button_v_del_all_cc.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
@@ -3914,7 +3916,7 @@ write.setRGB(w, h, offsc_haikei.getRGB(w,h));
 
 //------------------------------------//System.out.println("__");----
 
-// -------------ŠiŽq?ü‚Ì?F‚Ì‘I‘ð
+// -------------ŠiŽq??‚Ì?F‚Ì‘I‘ð
         JButton Button_kousi_color = new JButton("C");
         Button_kousi_color.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
@@ -3939,9 +3941,9 @@ write.setRGB(w, h, offsc_haikei.getRGB(w,h));
         Button_kousi_color.setMargin(new Insets(0, 0, 0, 0));
         pnlw9.add(Button_kousi_color);
 
-        //?d—v’?ˆÓ?@“Ç‚Ý?ž‚Ý‚â?‘‚«?o‚µ‚Åƒtƒ@ƒCƒ‹ƒ_ƒCƒAƒ?ƒO‚Ìƒ{ƒbƒNƒX‚ªŠJ‚­‚Æ?A‚»‚ê‚ðƒtƒŒ?[ƒ€‚É?d‚È‚éˆÊ’u‚Å‘€?ì‚µ‚½?ê?‡?Aƒtƒ@ƒCƒ‹ƒ{ƒbƒNƒX‚ª?Á‚¦‚½‚Æ‚«‚É?A
-        //ƒ}ƒEƒX‚Ìƒhƒ‰ƒbƒO‚ÆƒŠƒŠ?[ƒX‚ª”­?¶‚·‚é?B‚±‚Ì‚½‚ß?A—]Œv‚È‘€?ì‚ª‚³‚ê‚Ä‚µ‚Ü‚¤‰Â”\?«‚ª‚ ‚é?B‚È‚¨?A‚±‚Ì‚Æ‚«ƒ}ƒEƒXƒNƒŠƒbƒN‚Í”­?¶‚µ‚È‚¢?B
-        // i_mouseDragged_yuukou=0;‚â i_mouseReleased_yuukou=0;‚Í?A‚±‚Ì—]Œv‚È‘€?ì‚ð–h‚®‚½‚ß‚ÉŽw’è‚µ‚Ä‚¢‚é?B
+        //?d—v??ˆÓ?@“Ç‚Ý?ž‚Ý‚â?‘‚«?o‚µ‚Åƒtƒ@ƒCƒ‹ƒ_ƒCƒA??ƒO‚Ìƒ{ƒbƒNƒX‚ªŠJ‚­‚Æ?A‚»‚ê‚ðƒtƒŒ?[ƒ€‚É?d‚È‚éˆÊ’u‚Å‘€??‚µ‚½?????Aƒtƒ@ƒCƒ‹ƒ{ƒbƒNƒX‚ª?Á‚¦‚½‚Æ‚«‚É?A
+        //ƒ}ƒEƒX‚Ìƒhƒ‰ƒbƒO‚ÆƒŠƒŠ?[ƒX‚ª”­?¶‚·‚é?B‚±‚Ì‚½‚ß?A—]Œv‚È‘€??‚ª‚³‚ê‚Ä‚µ‚Ü‚¤‰Â”\?«‚ª‚ ‚é?B‚È‚¨?A‚±‚Ì‚Æ‚«ƒ}ƒEƒXƒNƒŠƒbƒN‚Í”­?¶‚µ‚È‚¢?B
+        // i_mouseDragged_yuukou=0;‚â i_mouseReleased_yuukou=0;‚Í?A‚±‚Ì—]Œv‚È‘€??‚ð–h‚®‚½‚ß‚ÉŽw’è‚µ‚Ä‚¢‚é?B
 
 // ********?¼**********************************************************************
         //------------------------------------------------
@@ -3990,7 +3992,7 @@ write.setRGB(w, h, offsc_haikei.getRGB(w,h));
 // ---------------------------------------------------
 
 
-        //Šî’ê?iŠiŽq?j‚Ì?ó‹µ   =0‚Í‘Sˆæ‚Å–³Œø‚¾‚ª?AŠiŽq•?‚¾‚¯‚ÍŠù‘¶’[“_‚Ö‚Ìˆø‚«Šñ‚¹”¼Œa‚Ì?Ý’è‚ÉŽg‚¤‚Ì‚Å—LŒø?A?ó‹µ=1‚Í—pŽ†“à‚Ì‚Ý—LŒø?A?ó‹µ=2‚Í‘S—Ìˆæ‚Å—LŒø
+        //Šî’ê?iŠiŽq?j‚Ì?ó‹µ   =0‚Í‘Sˆæ‚Å–³Œø‚¾‚ª?AŠiŽq??‚¾‚¯‚ÍŠù‘¶’[“_‚Ö‚Ìˆø‚«Šñ‚¹”¼Œa‚Ì?Ý’è‚ÉŽg‚¤‚Ì‚Å—LŒø?A?ó‹µ=1‚Í—pŽ†“à‚Ì‚Ý—LŒø?A?ó‹µ=2‚Í‘S—Ìˆæ‚Å—LŒø
         JButton Button_i_kitei_jyoutai = new JButton("");
         Button_i_kitei_jyoutai.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
@@ -4100,7 +4102,7 @@ write.setRGB(w, h, offsc_haikei.getRGB(w,h));
                 "ppp/memori_yoko_idou.png")));
 
 
-// -------------ŠiŽq–Ú?·‚è?ü‚Ì?F‚Ì‘I‘ð
+// -------------ŠiŽq–Ú?·‚è??‚Ì?F‚Ì‘I‘ð
         JButton Button_kousi_memori_color = new JButton("C");
         Button_kousi_memori_color.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
@@ -4128,9 +4130,9 @@ write.setRGB(w, h, offsc_haikei.getRGB(w,h));
         pnlw33.add(Button_kousi_memori_color);
 
 
-        //?d—v’?ˆÓ?@“Ç‚Ý?ž‚Ý‚â?‘‚«?o‚µ‚Åƒtƒ@ƒCƒ‹ƒ_ƒCƒAƒ?ƒO‚Ìƒ{ƒbƒNƒX‚ªŠJ‚­‚Æ?A‚»‚ê‚ðƒtƒŒ?[ƒ€‚É?d‚È‚éˆÊ’u‚Å‘€?ì‚µ‚½?ê?‡?Aƒtƒ@ƒCƒ‹ƒ{ƒbƒNƒX‚ª?Á‚¦‚½‚Æ‚«‚É?A
-        //ƒ}ƒEƒX‚Ìƒhƒ‰ƒbƒO‚ÆƒŠƒŠ?[ƒX‚ª”­?¶‚·‚é?B‚±‚Ì‚½‚ß?A—]Œv‚È‘€?ì‚ª‚³‚ê‚Ä‚µ‚Ü‚¤‰Â”\?«‚ª‚ ‚é?B‚È‚¨?A‚±‚Ì‚Æ‚«ƒ}ƒEƒXƒNƒŠƒbƒN‚Í”­?¶‚µ‚È‚¢?B
-        // i_mouseDragged_yuukou=0;‚â i_mouseReleased_yuukou=0;‚Í?A‚±‚Ì—]Œv‚È‘€?ì‚ð–h‚®‚½‚ß‚ÉŽw’è‚µ‚Ä‚¢‚é?B
+        //?d—v??ˆÓ?@“Ç‚Ý?ž‚Ý‚â?‘‚«?o‚µ‚Åƒtƒ@ƒCƒ‹ƒ_ƒCƒA??ƒO‚Ìƒ{ƒbƒNƒX‚ªŠJ‚­‚Æ?A‚»‚ê‚ðƒtƒŒ?[ƒ€‚É?d‚È‚éˆÊ’u‚Å‘€??‚µ‚½?????Aƒtƒ@ƒCƒ‹ƒ{ƒbƒNƒX‚ª?Á‚¦‚½‚Æ‚«‚É?A
+        //ƒ}ƒEƒX‚Ìƒhƒ‰ƒbƒO‚ÆƒŠƒŠ?[ƒX‚ª”­?¶‚·‚é?B‚±‚Ì‚½‚ß?A—]Œv‚È‘€??‚ª‚³‚ê‚Ä‚µ‚Ü‚¤‰Â”\?«‚ª‚ ‚é?B‚È‚¨?A‚±‚Ì‚Æ‚«ƒ}ƒEƒXƒNƒŠƒbƒN‚Í”­?¶‚µ‚È‚¢?B
+        // i_mouseDragged_yuukou=0;‚â i_mouseReleased_yuukou=0;‚Í?A‚±‚Ì—]Œv‚È‘€??‚ð–h‚®‚½‚ß‚ÉŽw’è‚µ‚Ä‚¢‚é?B
 
 
 // ********************************************************
@@ -4258,7 +4260,7 @@ write.setRGB(w, h, offsc_haikei.getRGB(w,h));
         // *************************************************
         //‰E•Ó?i“Œ‘¤?jƒpƒlƒ‹‚Ì?\’z*************************
         // *************************************************
-        //‰E•Ó?i“Œ‘¤?jƒpƒlƒ‹‚Ì?ì?¬
+        //‰E•Ó?i“Œ‘¤?jƒpƒlƒ‹‚Ì???¬
         Panel pnle = new Panel();
         pnle.setBackground(Color.PINK);
         pnle.setLayout(new GridLayout(28, 1));
@@ -5118,7 +5120,7 @@ write.setRGB(w, h, offsc_haikei.getRGB(w,h));
                 "ppp/deg3.png")));
 // ------“Œ-------17;Šp“xŒnƒ‚?[ƒh?B‚±‚±‚Ü‚Å
 
-// -------------37;Šp“x‹KŠi‰»?ü•ª“ü—Íƒ‚?[ƒh?B
+// -------------37;Šp“x‹KŠi‰»??•ª“ü—Íƒ‚?[ƒh?B
         JButton Button_senbun_nyuryoku37 = new JButton("");
         Button_senbun_nyuryoku37.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
@@ -5144,7 +5146,7 @@ write.setRGB(w, h, offsc_haikei.getRGB(w,h));
                 "ppp/senbun_nyuryoku37.png")));
 
 
-// -------------37;Šp“x‹KŠi‰»?ü•ª“ü—Íƒ‚?[ƒh?B‚±‚±‚Ü‚Å
+// -------------37;Šp“x‹KŠi‰»??•ª“ü—Íƒ‚?[ƒh?B‚±‚±‚Ü‚Å
 
 
         //------------------------------------------------
@@ -5213,7 +5215,7 @@ write.setRGB(w, h, offsc_haikei.getRGB(w,h));
         //------------------------------------------------
 
 // ******“Œ************************************************************************
-// -----1;sei ?³‘½ŠpŒ`“ü—Íƒ‚?[ƒh?BŠp?”“ü—Í
+// -----1;sei ?³‘½ŠpŒ`“ü—Íƒ‚?[ƒh?BŠp?”“?—Í
         text9 = new JTextField("", 2);
         text9.setHorizontalAlignment(JTextField.RIGHT);
         pnle5.add(text9);
@@ -5299,7 +5301,7 @@ write.setRGB(w, h, offsc_haikei.getRGB(w,h));
         //------------------------------------------------
 
 
-// *************** ‰~?@?Ü?ü‚Æ‚Í‘ŠŒÝ?ì—p‚·‚é•â?•?ü‚Æ‚µ‚Ä“­‚­ *************************************
+// *************** ‰~?@?Ü??‚Æ‚Í‘ŠŒÝ??—p‚·‚é•â????‚Æ‚µ‚Ä“­‚­ *************************************
 
 // ********“Œ******************************
         //------------------------------------------------
@@ -5391,7 +5393,7 @@ write.setRGB(w, h, offsc_haikei.getRGB(w,h));
         //------------------------------------------------
 
 
-// -------------48;‰~?@“¯?S‰~’Ç‰Áƒ‚?[ƒh?B(Œ³‰~‚Ì‰~Žü‚Æ“¯?S‰~‚Ì‰~Žü‚Æ‚Ì•?‚Í?ü•ª‚ÅŽw’è‚·‚é)
+// -------------48;‰~?@“¯?S‰~’Ç‰Áƒ‚?[ƒh?B(Œ³‰~‚Ì‰~Žü‚Æ“¯?S‰~‚Ì‰~Žü‚Æ‚Ì??‚Í??•ª‚ÅŽw’è‚·‚é)
         JButton Button_dousin_en_tuika_s = new JButton("");
         Button_dousin_en_tuika_s.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
@@ -5414,7 +5416,7 @@ write.setRGB(w, h, offsc_haikei.getRGB(w,h));
 
 // -------------48;‰~?@“¯?S‰~’Ç‰Áƒ‚?[ƒh?B‚±‚±‚Ü‚Å
 
-// -------------49;‰~?@“¯?S‰~’Ç‰Áƒ‚?[ƒh?B(Œ³‰~‚Ì‰~Žü‚Æ“¯?S‰~‚Ì‰~Žü‚Æ‚Ì•?‚Í‘¼‚Ì“¯?S‰~‚Ì‘g‚ÅŽw’è‚·‚é)
+// -------------49;‰~?@“¯?S‰~’Ç‰Áƒ‚?[ƒh?B(Œ³‰~‚Ì‰~Žü‚Æ“¯?S‰~‚Ì‰~Žü‚Æ‚Ì??‚Í‘¼‚Ì“¯?S‰~‚Ì‘g‚ÅŽw’è‚·‚é)
         JButton Button_dousin_en_tuika_d = new JButton("");
         Button_dousin_en_tuika_d.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
@@ -5449,7 +5451,7 @@ write.setRGB(w, h, offsc_haikei.getRGB(w,h));
         //------------------------------------------------
 
 
-// -------------50;2‰~‚ðŽw’è‚µ?A‚»‚ê‚¼‚ê‚Ì‰~‚É“¯?S‰~‚ð‰Á‚¦‚é?B‚»‚ê‚¼‚ê‚Ì“¯?S‰~‚Ì‘g‚É‚Å‚«‚é‘Ñ—Ìˆæ‚Ì•?‚ª“™‚µ‚­‚È‚é‚æ‚¤‚É‚µ‚Ä?A‰Á‚¦‚ç‚ê‚½“¯?S‰~“¯Žm‚ª?Ú‚·‚é‚æ‚¤‚É‚·‚é?B
+// -------------50;2‰~‚ðŽw’è‚µ?A‚»‚ê‚¼‚ê‚Ì‰~‚É“¯?S‰~‚ð‰Á‚¦‚é?B‚»‚ê‚¼‚ê‚Ì“¯?S‰~‚Ì‘g‚É‚Å‚«‚é‘Ñ—Ìˆæ‚Ì??‚ª“™‚µ‚­‚È‚é‚æ‚¤‚É‚µ‚Ä?A‰Á‚¦‚ç‚ê‚½“¯?S‰~“¯Žm‚ª?Ú‚·‚é‚æ‚¤‚É‚·‚é?B
         JButton Button_en_en_dousin_en = new JButton("");
         Button_en_en_dousin_en.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
@@ -5470,10 +5472,10 @@ write.setRGB(w, h, offsc_haikei.getRGB(w,h));
         Button_en_en_dousin_en.setIcon(new ImageIcon(getClass().getClassLoader().getResource(
                 "ppp/en_en_dousin_en.png")));
 
-// -------------50;2‰~‚Ì‹¤’Ê?Ú?ü“ü—Íƒ‚?[ƒh?B‚±‚±‚Ü‚Å
+// -------------50;2‰~‚Ì‹¤’Ê?Ú??“ü—Íƒ‚?[ƒh?B‚±‚±‚Ü‚Å
 
 
-// -------------45;2‰~‚Ì‹¤’Ê?Ú?ü“ü—Íƒ‚?[ƒh?B
+// -------------45;2‰~‚Ì‹¤’Ê?Ú??“ü—Íƒ‚?[ƒh?B
         JButton Button_en_en_sessen = new JButton("");
         Button_en_en_sessen.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
@@ -5494,7 +5496,7 @@ write.setRGB(w, h, offsc_haikei.getRGB(w,h));
         Button_en_en_sessen.setIcon(new ImageIcon(getClass().getClassLoader().getResource(
                 "ppp/en_en_sessen.png")));
 
-// -------------45;2‰~‚Ì‹¤’Ê?Ú?ü“ü—Íƒ‚?[ƒh?B‚±‚±‚Ü‚Å
+// -------------45;2‰~‚Ì‹¤’Ê?Ú??“ü—Íƒ‚?[ƒh?B‚±‚±‚Ü‚Å
 
 
 // ********“Œ******************************
@@ -5571,7 +5573,7 @@ write.setRGB(w, h, offsc_haikei.getRGB(w,h));
         //------------------------------------------------
         pnle.add(pnle8);
 
-// ---------•â?•?ü‚â‰~‚Ì?F‚ð“Á’?‚Å•Ï‚¦‚é‚³‚¢‚ÌŽw’è?F‚ÌŽw’è
+// ---------•â????‚â‰~‚Ì?F‚ð“Á??‚Å•Ï‚¦‚é‚³‚¢‚ÌŽw’è?F‚ÌŽw’è
         Button_sen_tokutyuu_color = new JButton("C_col ");
         Button_sen_tokutyuu_color.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
@@ -5605,12 +5607,12 @@ write.setRGB(w, h, offsc_haikei.getRGB(w,h));
         //  "ppp/sen_tokutyuu_color.png")));
         pnle8.add(Button_sen_tokutyuu_color);
 
-        //?d—v’?ˆÓ?@“Ç‚Ý?ž‚Ý‚â?‘‚«?o‚µ‚Åƒtƒ@ƒCƒ‹ƒ_ƒCƒAƒ?ƒO‚Ìƒ{ƒbƒNƒX‚ªŠJ‚­‚Æ?A‚»‚ê‚ðƒtƒŒ?[ƒ€‚É?d‚È‚éˆÊ’u‚Å‘€?ì‚µ‚½?ê?‡?Aƒtƒ@ƒCƒ‹ƒ{ƒbƒNƒX‚ª?Á‚¦‚½‚Æ‚«‚É?A
-        //ƒ}ƒEƒX‚Ìƒhƒ‰ƒbƒO‚ÆƒŠƒŠ?[ƒX‚ª”­?¶‚·‚é?B‚±‚Ì‚½‚ß?A—]Œv‚È‘€?ì‚ª‚³‚ê‚Ä‚µ‚Ü‚¤‰Â”\?«‚ª‚ ‚é?B‚È‚¨?A‚±‚Ì‚Æ‚«ƒ}ƒEƒXƒNƒŠƒbƒN‚Í”­?¶‚µ‚È‚¢?B
-        // i_mouseDragged_yuukou=0;‚â i_mouseReleased_yuukou=0;‚Í?A‚±‚Ì—]Œv‚È‘€?ì‚ð–h‚®‚½‚ß‚ÉŽw’è‚µ‚Ä‚¢‚é?B
+        //?d—v??ˆÓ?@“Ç‚Ý?ž‚Ý‚â?‘‚«?o‚µ‚Åƒtƒ@ƒCƒ‹ƒ_ƒCƒA??ƒO‚Ìƒ{ƒbƒNƒX‚ªŠJ‚­‚Æ?A‚»‚ê‚ðƒtƒŒ?[ƒ€‚É?d‚È‚éˆÊ’u‚Å‘€??‚µ‚½?????Aƒtƒ@ƒCƒ‹ƒ{ƒbƒNƒX‚ª?Á‚¦‚½‚Æ‚«‚É?A
+        //ƒ}ƒEƒX‚Ìƒhƒ‰ƒbƒO‚ÆƒŠƒŠ?[ƒX‚ª”­?¶‚·‚é?B‚±‚Ì‚½‚ß?A—]Œv‚È‘€??‚ª‚³‚ê‚Ä‚µ‚Ü‚¤‰Â”\?«‚ª‚ ‚é?B‚È‚¨?A‚±‚Ì‚Æ‚«ƒ}ƒEƒXƒNƒŠƒbƒN‚Í”­?¶‚µ‚È‚¢?B
+        // i_mouseDragged_yuukou=0;‚â i_mouseReleased_yuukou=0;‚Í?A‚±‚Ì—]Œv‚È‘€??‚ð–h‚®‚½‚ß‚ÉŽw’è‚µ‚Ä‚¢‚é?B
 // --------------------------------------
 
-// -------------;?ü•ª?F“Á’?•Ï?X(•â?•Šˆ?ü‚Ì‚Ý)
+// -------------;??•ª?F“Á??•Ï?X(•â?•Š???‚Ì‚Ý)
         JButton Button_sen_tokutyuu_color_henkou = new JButton("");//JButton	Button_senbun_sakujyo	= new JButton(	"L_del"	);
         Button_sen_tokutyuu_color_henkou.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
@@ -5642,7 +5644,7 @@ write.setRGB(w, h, offsc_haikei.getRGB(w,h));
         //pnle.add(pnle15);
 
 
-// *************** •â?•?ü?@?Ü?ü‚Æ‚Í‘ŠŒÝ?ì—p‚¹‚¸?A‚½‚¾‚ÌŠG‚Æ‚µ‚Ä?U•‘‚¤ *************************************
+// *************** •â?????@?Ü??‚Æ‚Í‘ŠŒÝ??—p‚¹‚¸?A‚½‚¾‚ÌŠG‚Æ‚µ‚Ä?U•‘‚¤ *************************************
 
 
 // ****“Œ**************************************************************************
@@ -5747,7 +5749,7 @@ write.setRGB(w, h, offsc_haikei.getRGB(w,h));
         //------------------------------------------------
         pnle11.add(pnle14);
 
-// ****“Œ**************************************************************************•â?•?ü‚Ì•??¬‚³‚­
+// ****“Œ**************************************************************************•â????‚Ì???¬‚³‚­
         JButton Button_h_senhaba_sage = new JButton("");
         Button_h_senhaba_sage.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
@@ -5768,7 +5770,7 @@ write.setRGB(w, h, offsc_haikei.getRGB(w,h));
         Button_h_senhaba_sage.setIcon(new ImageIcon(getClass().getClassLoader().getResource(
                 "ppp/h_senhaba_sage.png")));
 
-// ****“Œ**************************************************************************•â?•?ü‚Ì•?‘å‚«‚­
+// ****“Œ**************************************************************************•â????‚Ì??‘å‚«‚­
 
         JButton Button_h_senhaba_age = new JButton("");
         Button_h_senhaba_age.addActionListener(new ActionListener() {
@@ -5833,7 +5835,7 @@ write.setRGB(w, h, offsc_haikei.getRGB(w,h));
         //------------------------------------------------
         pnle.add(pnle13);
 
-// -------------h_1;•â?•?ü“ü—Íƒ‚?[ƒh?B
+// -------------h_1;•â????“ü—Íƒ‚?[ƒh?B
         JButton Button_h_senbun_nyuryoku = new JButton("");
         Button_h_senbun_nyuryoku.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
@@ -5845,7 +5847,7 @@ write.setRGB(w, h, offsc_haikei.getRGB(w,h));
                 es1.unselect_all();
                 Button_kyoutuu_sagyou();
                 repaint();
-                i_orisen_hojyosen = 1;//=0‚Í?Ü?ü“ü—Í?@=1‚Í•â?•?ü“ü—Íƒ‚?[ƒh
+                i_orisen_hojyosen = 1;//=0‚Í?Ü??“ü—Í?@=1‚Í•â????“ü—Íƒ‚?[ƒh
                 es1.set_i_orisen_hojyosen(i_orisen_hojyosen);
             }
         });
@@ -5857,10 +5859,10 @@ write.setRGB(w, h, offsc_haikei.getRGB(w,h));
                 "ppp/h_senbun_nyuryoku.png")));
 
 
-// -------------h_1;•â?•?ü“ü—Íƒ‚?[ƒh?B‚±‚±‚Ü‚Å
+// -------------h_1;•â????“ü—Íƒ‚?[ƒh?B‚±‚±‚Ü‚Å
 
 // ******“Œ************************************************************************ ?Á‚µƒSƒ€
-// -------------;h_?ü•ª?í?œƒ‚?[ƒh?B
+// -------------;h_??•ª???œƒ??[ƒh?B
 
         JButton Button_h_senbun_sakujyo = new JButton("");//JButton	Button_senbun_sakujyo	= new JButton(	"L_del"	);
         Button_h_senbun_sakujyo.addActionListener(new ActionListener() {
@@ -5872,7 +5874,7 @@ write.setRGB(w, h, offsc_haikei.getRGB(w,h));
                 System.out.println("i_mouse_modeA = " + i_mouse_modeA);
 
 
-                i_orisen_hojyosen = 1;//=0‚Í?Ü?ü“ü—Í?@=1‚Í•â?•?ü“ü—Íƒ‚?[ƒh
+                i_orisen_hojyosen = 1;//=0‚Í?Ü??“ü—Í?@=1‚Í•â????“ü—Íƒ‚?[ƒh
                 es1.set_i_orisen_hojyosen(i_orisen_hojyosen);
 
                 es1.unselect_all();
@@ -6085,7 +6087,7 @@ write.setRGB(w, h, offsc_haikei.getRGB(w,h));
         // *************************************************
         //‰º•Ó?i“ì‘¤?jƒpƒlƒ‹‚Ì?\’z*************************
         // *************************************************
-        //‰º•Ó?i“ì‘¤?jƒpƒlƒ‹‚Ì?ì?¬
+        //‰º•Ó?i“ì‘¤?jƒpƒlƒ‹‚Ì???¬
         //Panel pnls = new Panel();pnls.setBackground(new Color(0,70,0));
         Panel pnls = new Panel();
         pnls.setBackground(Color.PINK);
@@ -6176,7 +6178,7 @@ write.setRGB(w, h, offsc_haikei.getRGB(w,h));
                 ckbox_cp_kaizen_oritatami);
         ckbox_cp_kaizen_oritatami.setBounds(31, 0, 20, 21);
 // -------------------------------------------------------------------
-//select?ó‘Ô‚ð‘¼‚Ì‘€?ì‚ð‚µ‚Ä‚à‚È‚é‚×‚­Žc‚·
+//select?ó‘Ô‚ð‘¼‚Ì‘€??‚ð‚µ‚Ä‚à‚È‚é‚×‚­Žc‚·
         ckbox_select_nokosi = new JCheckBox("");
         ckbox_select_nokosi.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
@@ -6207,8 +6209,8 @@ write.setRGB(w, h, offsc_haikei.getRGB(w,h));
                 //	i_fold_type=1;
                 Ss0 = es1.get_for_select_oritatami();
 
-                if (es1.get_orisensuu_for_select_oritatami() == 0) {        //?Ü‚è?ü‘I‘ð–³‚µ
-                    keikoku_sentaku_sareta_orisen_ga_nai();//Œx???@‘I‘ð‚³‚ê‚½?Ü?ü‚ª‚È‚¢
+                if (es1.get_orisensuu_for_select_oritatami() == 0) {        //?Ü‚è??‘I‘ð–³‚µ
+                    keikoku_sentaku_sareta_orisen_ga_nai();//Œx???@‘I‘ð‚³‚ê‚½?Ü??‚ª‚È‚¢
 
 
                 } else if (es1.get_orisensuu_for_select_oritatami() > 0) {
@@ -6219,7 +6221,7 @@ write.setRGB(w, h, offsc_haikei.getRGB(w,h));
                     if (i_SubThread == 0) {
                         i_SubThread = 1;
                         i_sub_mode = 4;
-                        mks();//?V‚µ‚¢ƒXƒŒƒbƒh‚ð?ì‚é
+                        mks();//?V‚µ‚¢ƒXƒŒƒbƒh‚ð??‚é
                         sub.start();
                     }
                 }
@@ -6459,7 +6461,7 @@ write.setRGB(w, h, offsc_haikei.getRGB(w,h));
                 img_kaisetu_fname = "qqq/suitei_04.png";
                 readImageFromFile3();
 
-                //i_fold_type=0;//=0‚È‚É‚à‚µ‚È‚¢?A=1’Ê?í‚Ì“WŠJ?}‚Ì‘S?Ü?ü‚ð‘Î?Û‚Æ‚µ‚½?Ü‚è?ô‚Ý?„’è?A=2‚Íselect‚³‚ê‚½?Ü?ü‚ð‘Î?Û‚Æ‚µ‚½?Ü‚è?ô‚Ý?„’è?A=3‚Í?Ü?ô‚Ý?ó‘Ô‚ð•Ï?X
+                //i_fold_type=0;//=0‚È‚É‚à‚µ‚È‚¢?A=1’Ê?úžÌ“WŠJ?}‚Ì‘S?Ü??‚ð‘Î?Û‚Æ‚µ‚½?Ü‚è?ô‚Ý??’è?A=2‚Íselect‚³‚ê‚½?Ü??‚ð‘Î?Û‚Æ‚µ‚½?Ü‚è?ô‚Ý??’è?A=3‚Í?Ü?ô‚Ý?ó‘Ô‚ð•Ï?X
 
                 System.out.println("20180220 get_i_fold_type() = " + get_i_fold_type());
                 oritatame(get_i_fold_type(), 5);//ˆø?”‚ÌˆÓ–¡‚Í(i_fold_type , i_suitei_meirei);
@@ -6490,14 +6492,14 @@ write.setRGB(w, h, offsc_haikei.getRGB(w,h));
                 img_kaisetu_fname = "qqq/Button3.png";
                 readImageFromFile3();
 
-                //OZ.i_suitei_jissi_umu=0;//i_suitei_jissi_umu‚Í?A?Ü‚è?ô‚Ý?„’è‚ÌŒvŽZ‚ðŽÀŽ{‚µ‚½‚©‚Ç‚¤‚©‚ð•\‚·?Bint i_suitei_jissi_umu=0‚È‚çŽÀŽ{‚µ‚È‚¢?B1‚È‚çŽÀŽ{‚µ‚½?B
+                //OZ.i_suitei_jissi_umu=0;//i_suitei_jissi_umu‚Í?A?Ü‚è?ô‚Ý??’è‚ÌŒvŽZ‚ðŽÀŽ{‚µ‚½‚©‚Ç‚¤‚©‚ð•\‚·?Bint i_suitei_jissi_umu=0‚È‚çŽÀŽ{‚µ‚È‚¢?B1‚È‚çŽÀŽ{‚µ‚½?B
                 OZ.i_suitei_meirei = 6;
 
 
-                i_sub_mode = 0;//1=?Ü?ô‚Ý?„’è‚Ì•Ê‰ð‚ð‚Ü‚Æ‚ß‚Ä?o‚·?B0=?Ü?ô‚Ý?„’è‚Ì•Ê‰ð‚ð‚Ü‚Æ‚ß‚Ä?o‚·ƒ‚?[ƒh‚Å‚Í‚È‚¢?B‚±‚Ì•Ï?”‚ÍƒTƒuƒXƒŒƒbƒh‚Ì“®?ì•Ï?X‚É‚Â‚©‚¤?B
+                i_sub_mode = 0;//1=?Ü?ô‚Ý??’è‚Ì•Ê‰ð‚ð‚Ü‚Æ‚ß‚Ä?o‚·?B0=?Ü?ô‚Ý??’è‚Ì•Ê‰ð‚ð‚Ü‚Æ‚ß‚Ä?o‚·ƒ‚?[ƒh‚Å‚Í‚È‚¢?B‚±‚Ì•Ï?”‚ÍƒTƒuƒXƒŒƒbƒh‚Ì“®??•Ï?X‚É‚Â‚©‚¤?B
                 if (i_SubThread == 0) {
                     i_SubThread = 1;
-                    mks();//?V‚µ‚¢ƒXƒŒƒbƒh‚ð?ì‚é
+                    mks();//?V‚µ‚¢ƒXƒŒƒbƒh‚ð??‚é
                     sub.start();
                 }
             }
@@ -6539,18 +6541,18 @@ write.setRGB(w, h, offsc_haikei.getRGB(w,h));
         Button_AS_matome.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
 
-//i_AS_matome_mode =1;//1=?Ü?ô‚Ý?„’è‚Ì•Ê‰ð‚ð‚Ü‚Æ‚ß‚Ä?o‚·?B0=?Ü?ô‚Ý?„’è‚Ì•Ê‰ð‚ð‚Ü‚Æ‚ß‚Ä?o‚·ƒ‚?[ƒh‚Å‚Í‚È‚¢?B‚±‚Ì•Ï?”‚ÍƒTƒuƒXƒŒƒbƒh‚Ì“®?ì•Ï?X‚É‚Â‚©‚¤‚¾‚¯?B20170611‚ÉVer3.008‚©‚ç’Ç‰Á
+//i_AS_matome_mode =1;//1=?Ü?ô‚Ý??’è‚Ì•Ê‰ð‚ð‚Ü‚Æ‚ß‚Ä?o‚·?B0=?Ü?ô‚Ý??’è‚Ì•Ê‰ð‚ð‚Ü‚Æ‚ß‚Ä?o‚·ƒ‚?[ƒh‚Å‚Í‚È‚¢?B‚±‚Ì•Ï?”‚ÍƒTƒuƒXƒŒƒbƒh‚Ì“®??•Ï?X‚É‚Â‚©‚¤‚¾‚¯?B20170611‚ÉVer3.008‚©‚ç’Ç‰Á
                 i_sub_mode = 1;
                 img_kaisetu_fname =
                         "qqq/AS_matome.png";
                 readImageFromFile3();
                 if (OZ.betu_sagasi_flg == 1) {
-                    //OZ.i_suitei_jissi_umu=0;//i_suitei_jissi_umu‚Í?A?Ü‚è?ô‚Ý?„’è‚ÌŒvŽZ‚ðŽÀŽ{‚µ‚½‚©‚Ç‚¤‚©‚ð•\‚·?Bint i_suitei_jissi_umu=0‚È‚çŽÀŽ{‚µ‚È‚¢?B1‚È‚çŽÀŽ{‚µ‚½?B
+                    //OZ.i_suitei_jissi_umu=0;//i_suitei_jissi_umu‚Í?A?Ü‚è?ô‚Ý??’è‚ÌŒvŽZ‚ðŽÀŽ{‚µ‚½‚©‚Ç‚¤‚©‚ð•\‚·?Bint i_suitei_jissi_umu=0‚È‚çŽÀŽ{‚µ‚È‚¢?B1‚È‚çŽÀŽ{‚µ‚½?B
                     OZ.i_suitei_meirei = 6;
 
                     if (i_SubThread == 0) {
                         i_SubThread = 1;
-                        mks();//?V‚µ‚¢ƒXƒŒƒbƒh‚ð?ì‚é
+                        mks();//?V‚µ‚¢ƒXƒŒƒbƒh‚ð??‚é
                         sub.start();
 
                     }
@@ -6577,7 +6579,7 @@ write.setRGB(w, h, offsc_haikei.getRGB(w,h));
         text26.setHorizontalAlignment(JTextField.RIGHT);
         pnls1.add(text26);
 // -------------------------------------------------------------------------------
-// -----;	//?Ü‚è?ô‚Ý?„’è‚ÌŽw’è”Ô–Ú‚ð•\Ž¦‚·‚é
+// -----;	//?Ü‚è?ô‚Ý??’è‚ÌŽw’è”Ô–Ú‚ð•\Ž¦‚·‚é
         Button_bangou_sitei_suitei_hyouji = new JButton("Go");
         Button_bangou_sitei_suitei_hyouji.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
@@ -6594,17 +6596,17 @@ write.setRGB(w, h, offsc_haikei.getRGB(w,h));
 
                 if (i_oritatami_bangou < OZ.hakkenn_sita_kazu) {
                     settei_syokika_yosoku();//?Ü‚è?ã‚ª‚è—\‘z‚Ì”pŠü
-                    OZ.i_suitei_meirei = 51;    //i_suitei_meirei=51‚Íoritatami_suitei‚Ì?Å?‰‚Ì?„’è?}—pƒJƒ?ƒ‰‚Ì?Ý’è‚Í‘f’Ê‚è‚·‚é‚½‚ß‚Ì?Ý’è?B?„’è?}—pƒJƒ?ƒ‰‚Ì?Ý’è‚ð‘f’Ê‚è‚µ‚½‚ç?Ai_suitei_meirei=5‚É•Ï?X‚³‚ê‚é?B
+                    OZ.i_suitei_meirei = 51;    //i_suitei_meirei=51‚Íoritatami_suitei‚Ì?Å?‰‚Ì??’è?}—pƒJ??ƒ‰‚Ì?Ý’è‚Í‘f’Ê‚è‚·‚é‚½‚ß‚Ì?Ý’è?B??’è?}—pƒJ??ƒ‰‚Ì?Ý’è‚ð‘f’Ê‚è‚µ‚½‚ç?Ai_suitei_meirei=5‚É•Ï?X‚³‚ê‚é?B
                     //1—á–Ú‚Ì?Ü‚è?ã‚ª‚è—\‘z‚Íi_suitei_meirei=5‚ðŽw’è?A2—á–ÚˆÈ?~‚Ì?Ü‚è?ã‚ª‚è—\‘z‚Íi_suitei_meirei=6‚ÅŽÀŽ{‚³‚ê‚é
                     //betu_sagasi_flg=1;
                 }
 
-                //OZ.i_suitei_jissi_umu=0;//i_suitei_jissi_umu‚Í?A?Ü‚è?ô‚Ý?„’è‚ÌŒvŽZ‚ðŽÀŽ{‚µ‚½‚©‚Ç‚¤‚©‚ð•\‚·?Bint i_suitei_jissi_umu=0‚È‚çŽÀŽ{‚µ‚È‚¢?B1‚È‚çŽÀŽ{‚µ‚½?B
+                //OZ.i_suitei_jissi_umu=0;//i_suitei_jissi_umu‚Í?A?Ü‚è?ô‚Ý??’è‚ÌŒvŽZ‚ðŽÀŽ{‚µ‚½‚©‚Ç‚¤‚©‚ð•\‚·?Bint i_suitei_jissi_umu=0‚È‚çŽÀŽ{‚µ‚È‚¢?B1‚È‚çŽÀŽ{‚µ‚½?B
 
                 i_sub_mode = 2;
                 if (i_SubThread == 0) {
                     i_SubThread = 1;
-                    mks();//?V‚µ‚¢ƒXƒŒƒbƒh‚ð?ì‚é
+                    mks();//?V‚µ‚¢ƒXƒŒƒbƒh‚ð??‚é
                     sub.start();
                 }
 
@@ -6700,7 +6702,7 @@ write.setRGB(w, h, offsc_haikei.getRGB(w,h));
 
 
 // ******“ì*******************************************************************
-        JButton Button_oriagari_sousa = new JButton("");//?Ü‚è?ã‚ª‚è?}‘€?ì?@?j‹à?}(	"F_Modify"		)
+        JButton Button_oriagari_sousa = new JButton("");//?Ü‚è?ã‚ª‚è?}‘€???@?j‹à?}(	"F_Modify"		)
         Button_oriagari_sousa.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
                 img_kaisetu_fname = "qqq/oriagari_sousa.png";
@@ -7103,9 +7105,9 @@ write.setRGB(w, h, offsc_haikei.getRGB(w,h));
         pnls.add(Button_F_color);
 
 
-        //?d—v’?ˆÓ?@“Ç‚Ý?ž‚Ý‚â?‘‚«?o‚µ‚Åƒtƒ@ƒCƒ‹ƒ_ƒCƒAƒ?ƒO‚Ìƒ{ƒbƒNƒX‚ªŠJ‚­‚Æ?A‚»‚ê‚ðƒtƒŒ?[ƒ€‚É?d‚È‚éˆÊ’u‚Å‘€?ì‚µ‚½?ê?‡?Aƒtƒ@ƒCƒ‹ƒ{ƒbƒNƒX‚ª?Á‚¦‚½‚Æ‚«‚É?A
-        //ƒ}ƒEƒX‚Ìƒhƒ‰ƒbƒO‚ÆƒŠƒŠ?[ƒX‚ª”­?¶‚·‚é?B‚±‚Ì‚½‚ß?A—]Œv‚È‘€?ì‚ª‚³‚ê‚Ä‚µ‚Ü‚¤‰Â”\?«‚ª‚ ‚é?B‚È‚¨?A‚±‚Ì‚Æ‚«ƒ}ƒEƒXƒNƒŠƒbƒN‚Í”­?¶‚µ‚È‚¢?B
-        // i_mouseDragged_yuukou=0;‚â i_mouseReleased_yuukou=0;‚Í?A‚±‚Ì—]Œv‚È‘€?ì‚ð–h‚®‚½‚ß‚ÉŽw’è‚µ‚Ä‚¢‚é?B
+        //?d—v??ˆÓ?@“Ç‚Ý?ž‚Ý‚â?‘‚«?o‚µ‚Åƒtƒ@ƒCƒ‹ƒ_ƒCƒA??ƒO‚Ìƒ{ƒbƒNƒX‚ªŠJ‚­‚Æ?A‚»‚ê‚ðƒtƒŒ?[ƒ€‚É?d‚È‚éˆÊ’u‚Å‘€??‚µ‚½?????Aƒtƒ@ƒCƒ‹ƒ{ƒbƒNƒX‚ª?Á‚¦‚½‚Æ‚«‚É?A
+        //ƒ}ƒEƒX‚Ìƒhƒ‰ƒbƒO‚ÆƒŠƒŠ?[ƒX‚ª”­?¶‚·‚é?B‚±‚Ì‚½‚ß?A—]Œv‚È‘€??‚ª‚³‚ê‚Ä‚µ‚Ü‚¤‰Â”\?«‚ª‚ ‚é?B‚È‚¨?A‚±‚Ì‚Æ‚«ƒ}ƒEƒXƒNƒŠƒbƒN‚Í”­?¶‚µ‚È‚¢?B
+        // i_mouseDragged_yuukou=0;‚â i_mouseReleased_yuukou=0;‚Í?A‚±‚Ì—]Œv‚È‘€??‚ð–h‚®‚½‚ß‚ÉŽw’è‚µ‚Ä‚¢‚é?B
 
 
 // -------------?Ü‚è?ã‚ª‚è—\‘ª?}— –Ê‚Ì?F‚Ì‘I‘ð
@@ -7141,12 +7143,12 @@ write.setRGB(w, h, offsc_haikei.getRGB(w,h));
         pnls.add(Button_B_color);
 
 
-        //?d—v’?ˆÓ?@“Ç‚Ý?ž‚Ý‚â?‘‚«?o‚µ‚Åƒtƒ@ƒCƒ‹ƒ_ƒCƒAƒ?ƒO‚Ìƒ{ƒbƒNƒX‚ªŠJ‚­‚Æ?A‚»‚ê‚ðƒtƒŒ?[ƒ€‚É?d‚È‚éˆÊ’u‚Å‘€?ì‚µ‚½?ê?‡?Aƒtƒ@ƒCƒ‹ƒ{ƒbƒNƒX‚ª?Á‚¦‚½‚Æ‚«‚É?A
-        //ƒ}ƒEƒX‚Ìƒhƒ‰ƒbƒO‚ÆƒŠƒŠ?[ƒX‚ª”­?¶‚·‚é?B‚±‚Ì‚½‚ß?A—]Œv‚È‘€?ì‚ª‚³‚ê‚Ä‚µ‚Ü‚¤‰Â”\?«‚ª‚ ‚é?B‚È‚¨?A‚±‚Ì‚Æ‚«ƒ}ƒEƒXƒNƒŠƒbƒN‚Í”­?¶‚µ‚È‚¢?B
-        // i_mouseDragged_yuukou=0;‚â i_mouseReleased_yuukou=0;‚Í?A‚±‚Ì—]Œv‚È‘€?ì‚ð–h‚®‚½‚ß‚ÉŽw’è‚µ‚Ä‚¢‚é?B
+        //?d—v??ˆÓ?@“Ç‚Ý?ž‚Ý‚â?‘‚«?o‚µ‚Åƒtƒ@ƒCƒ‹ƒ_ƒCƒA??ƒO‚Ìƒ{ƒbƒNƒX‚ªŠJ‚­‚Æ?A‚»‚ê‚ðƒtƒŒ?[ƒ€‚É?d‚È‚éˆÊ’u‚Å‘€??‚µ‚½?????Aƒtƒ@ƒCƒ‹ƒ{ƒbƒNƒX‚ª?Á‚¦‚½‚Æ‚«‚É?A
+        //ƒ}ƒEƒX‚Ìƒhƒ‰ƒbƒO‚ÆƒŠƒŠ?[ƒX‚ª”­?¶‚·‚é?B‚±‚Ì‚½‚ß?A—]Œv‚È‘€??‚ª‚³‚ê‚Ä‚µ‚Ü‚¤‰Â”\?«‚ª‚ ‚é?B‚È‚¨?A‚±‚Ì‚Æ‚«ƒ}ƒEƒXƒNƒŠƒbƒN‚Í”­?¶‚µ‚È‚¢?B
+        // i_mouseDragged_yuukou=0;‚â i_mouseReleased_yuukou=0;‚Í?A‚±‚Ì—]Œv‚È‘€??‚ð–h‚®‚½‚ß‚ÉŽw’è‚µ‚Ä‚¢‚é?B
 
 
-// -------------?Ü‚è?ã‚ª‚è—\‘ª?}?@?ü‚Ì?F‚Ì‘I‘ð
+// -------------?Ü‚è?ã‚ª‚è—\‘ª?}?@??‚Ì?F‚Ì‘I‘ð
 
         Button_L_color = new JButton(" ");
         Button_L_color.addActionListener(new ActionListener() {
@@ -7182,9 +7184,9 @@ write.setRGB(w, h, offsc_haikei.getRGB(w,h));
         pnls.add(Button_L_color);
 
 
-        //?d—v’?ˆÓ?@“Ç‚Ý?ž‚Ý‚â?‘‚«?o‚µ‚Åƒtƒ@ƒCƒ‹ƒ_ƒCƒAƒ?ƒO‚Ìƒ{ƒbƒNƒX‚ªŠJ‚­‚Æ?A‚»‚ê‚ðƒtƒŒ?[ƒ€‚É?d‚È‚éˆÊ’u‚Å‘€?ì‚µ‚½?ê?‡?Aƒtƒ@ƒCƒ‹ƒ{ƒbƒNƒX‚ª?Á‚¦‚½‚Æ‚«‚É?A
-        //ƒ}ƒEƒX‚Ìƒhƒ‰ƒbƒO‚ÆƒŠƒŠ?[ƒX‚ª”­?¶‚·‚é?B‚±‚Ì‚½‚ß?A—]Œv‚È‘€?ì‚ª‚³‚ê‚Ä‚µ‚Ü‚¤‰Â”\?«‚ª‚ ‚é?B‚È‚¨?A‚±‚Ì‚Æ‚«ƒ}ƒEƒXƒNƒŠƒbƒN‚Í”­?¶‚µ‚È‚¢?B
-        // i_mouseDragged_yuukou=0;‚â i_mouseReleased_yuukou=0;‚Í?A‚±‚Ì—]Œv‚È‘€?ì‚ð–h‚®‚½‚ß‚ÉŽw’è‚µ‚Ä‚¢‚é?B
+        //?d—v??ˆÓ?@“Ç‚Ý?ž‚Ý‚â?‘‚«?o‚µ‚Åƒtƒ@ƒCƒ‹ƒ_ƒCƒA??ƒO‚Ìƒ{ƒbƒNƒX‚ªŠJ‚­‚Æ?A‚»‚ê‚ðƒtƒŒ?[ƒ€‚É?d‚È‚éˆÊ’u‚Å‘€??‚µ‚½?????Aƒtƒ@ƒCƒ‹ƒ{ƒbƒNƒX‚ª?Á‚¦‚½‚Æ‚«‚É?A
+        //ƒ}ƒEƒX‚Ìƒhƒ‰ƒbƒO‚ÆƒŠƒŠ?[ƒX‚ª”­?¶‚·‚é?B‚±‚Ì‚½‚ß?A—]Œv‚È‘€??‚ª‚³‚ê‚Ä‚µ‚Ü‚¤‰Â”\?«‚ª‚ ‚é?B‚È‚¨?A‚±‚Ì‚Æ‚«ƒ}ƒEƒXƒNƒŠƒbƒN‚Í”­?¶‚µ‚È‚¢?B
+        // i_mouseDragged_yuukou=0;‚â i_mouseReleased_yuukou=0;‚Í?A‚±‚Ì—]Œv‚È‘€??‚ð–h‚®‚½‚ß‚ÉŽw’è‚µ‚Ä‚¢‚é?B
 
 
 // *******“ì******************************************************************
@@ -7245,7 +7247,7 @@ write.setRGB(w, h, offsc_haikei.getRGB(w,h));
         Button_settei_syokika.setIcon(new ImageIcon(getClass().getClassLoader().getResource(
                 "ppp/settei_syokika.png")));
 
-// *******“ì*************bbbbbbbbbb*****************************************************‘S‘€?ì”pŠü (ÉToT)É „²:¥'.::¥  ****************************************************
+// *******“ì*************bbbbbbbbbb*****************************************************‘S‘€??”pŠü (ÉToT)É „²:¥'.::¥  ****************************************************
 
         JButton Button_zen_syokika = new JButton("");//new JButton(	"Del_all"	);
         Button_zen_syokika.addActionListener(new ActionListener() {
@@ -7255,7 +7257,7 @@ write.setRGB(w, h, offsc_haikei.getRGB(w,h));
                 readImageFromFile3();
 
                 //“WŠJ?}‚Ì?‰Šú‰»?@ŠJŽn
-                //settei_syokika_cp();//“WŠJ?}ƒpƒ‰ƒ??[ƒ^‚Ì?‰Šú‰»
+                //settei_syokika_cp();//“WŠJ?}ƒpƒ‰???[ƒ^‚Ì?‰Šú‰»
                 tenkaizu_syokika();
                 //“WŠJ?}‚Ì?‰Šú‰»?@?I—¹
                 //
@@ -7285,7 +7287,7 @@ write.setRGB(w, h, offsc_haikei.getRGB(w,h));
 // *******“ì*********ƒ{ƒ^ƒ“‚Ì’è‹`‚Í‚±‚±‚Ü‚Å*******************************************************************************************************************************
 
         //“WŠJ?}‚Ì?‰Šú‰»?@ŠJŽn
-        //settei_syokika_cp();//“WŠJ?}ƒpƒ‰ƒ??[ƒ^‚Ì?‰Šú‰»
+        //settei_syokika_cp();//“WŠJ?}ƒpƒ‰???[ƒ^‚Ì?‰Šú‰»
         tenkaizu_syokika();
         //“WŠJ?}‚Ì?‰Šú‰»?@?I—¹
 
@@ -7301,7 +7303,7 @@ write.setRGB(w, h, offsc_haikei.getRGB(w,h));
         es1.set_b_to_heikouna_memori_kannkaku(memori_kankaku);
 
         i_sel_mou_mode = 1;
-        Button_sel_mou_wakukae();//ƒZƒŒƒNƒg‚³‚ê‚½?Ü?ü‚ª‚ ‚é?ó‘Ô‚Å?AƒZƒŒƒNƒg‚³‚ê‚Ä‚¢‚é?Ü?ü‚Ì’¸“_‚ðƒNƒŠƒbƒN‚µ‚½?ê?‡‚Ì“®?ìƒ‚?[ƒh‚Ì?‰Šú?Ý’è
+        Button_sel_mou_wakukae();//ƒZƒŒƒNƒg‚³‚ê‚½?Ü??‚ª‚ ‚é?ó‘Ô‚Å?AƒZƒŒƒNƒg‚³‚ê‚Ä‚¢‚é?Ü??‚Ì’¸“_‚ðƒNƒŠƒbƒN‚µ‚½???‡‚Ì“®??ƒ‚?[ƒh‚Ì?‰Š??Ý’è
 
         //?Ü?ô—\‘ª?}‚Ì‚Ì?‰Šú‰»?@ŠJŽn
         settei_syokika_yosoku();
@@ -7314,7 +7316,7 @@ write.setRGB(w, h, offsc_haikei.getRGB(w,h));
         img_kaisetu_fname = "qqq/a__hajimeni.png";
         readImageFromFile3();
 
-        Button_sen_tokutyuu_color.setBackground(sen_tokutyuu_color);//“Á’??F‚ÌŽw’è?F•\Ž¦
+        Button_sen_tokutyuu_color.setBackground(sen_tokutyuu_color);//“Á???F‚ÌŽw’è?F•\Ž¦
 
         // ‘ª’è’·‚³‚ÆŠp“x‚Ì•\Ž¦
 
@@ -7328,7 +7330,7 @@ write.setRGB(w, h, offsc_haikei.getRGB(w,h));
         //?Ü‚è?ã‚ª‚è?}‚Ì?FŽw’è
         //Color oriagarizu_F_color=new Color(255,255,50);//?Ü‚è?ã‚ª‚è?}‚Ì•\–Ê‚Ì?F
         //Color oriagarizu_B_color=new Color(233,233,233);//?Ü‚è?ã‚ª‚è?}‚Ì— –Ê‚Ì?F
-        //Color oriagarizu_L_color=Color.black;//?Ü‚è?ã‚ª‚è?}‚Ì?ü‚Ì?F
+        //Color oriagarizu_L_color=Color.black;//?Ü‚è?ã‚ª‚è?}‚Ì??‚Ì?F
 
 
         OZ.js.set_F_color(OZ.oriagarizu_F_color); //?Ü‚è?ã‚ª‚è?}‚Ì•\–Ê‚Ì?F
@@ -7337,7 +7339,7 @@ write.setRGB(w, h, offsc_haikei.getRGB(w,h));
         OZ.js.set_B_color(OZ.oriagarizu_B_color);//?Ü‚è?ã‚ª‚è?}‚Ì— –Ê‚Ì?F
         Button_B_color.setBackground(OZ.oriagarizu_B_color);//ƒ{ƒ^ƒ“‚Ì?F?Ý’è
 
-        OZ.js.set_L_color(OZ.oriagarizu_L_color);        //?Ü‚è?ã‚ª‚è?}‚Ì?ü‚Ì?F
+        OZ.js.set_L_color(OZ.oriagarizu_L_color);        //?Ü‚è?ã‚ª‚è?}‚Ì??‚Ì?F
         Button_L_color.setBackground(OZ.oriagarizu_L_color);        //ƒ{ƒ^ƒ“‚Ì?F?Ý’è
 
 
@@ -7352,14 +7354,14 @@ write.setRGB(w, h, offsc_haikei.getRGB(w,h));
 
     private int get_i_fold_type() {
 
-        int i_fold_type = 0;//=0‚È‚É‚à‚µ‚È‚¢?A=1’Ê?í‚Ì“WŠJ?}‚Ì‘S?Ü?ü‚ð‘Î?Û‚Æ‚µ‚½?Ü‚è?ô‚Ý?„’è?A=2‚Íselect‚³‚ê‚½?Ü?ü‚ð‘Î?Û‚Æ‚µ‚½?Ü‚è?ô‚Ý?„’è?A=3‚Í?Ü?ô‚Ý?ó‘Ô‚ð•Ï?X
+        int i_fold_type = 0;//=0‚È‚É‚à‚µ‚È‚¢?A=1’Ê?úžÌ“WŠJ?}‚Ì‘S?Ü??‚ð‘Î?Û‚Æ‚µ‚½?Ü‚è?ô‚Ý??’è?A=2‚Íselect‚³‚ê‚½?Ü??‚ð‘Î?Û‚Æ‚µ‚½?Ü‚è?ô‚Ý??’è?A=3‚Í?Ü?ô‚Ý?ó‘Ô‚ð•Ï?X
         System.out.println("OAZ.size() = " + OAZ.size() + "    : i_OAZ = " + i_OAZ + "    : es1.get_orisensuu_for_select_oritatami() = " + es1.get_orisensuu_for_select_oritatami());
         i_fold_type = 0;
         if (OAZ.size() == 1) {                        //?Ü‚è?ã‚ª‚èŒn?}–³‚µ
             if (i_OAZ == 0) {                            //“WŠJ?}Žw’è
-                if (es1.get_orisensuu_for_select_oritatami() == 0) {        //?Ü‚è?ü‘I‘ð–³‚µ
+                if (es1.get_orisensuu_for_select_oritatami() == 0) {        //?Ü‚è??‘I‘ð–³‚µ
                     i_fold_type = 1;//‘S“WŠJ?}‚Å?Ü?ô‚Ý
-                } else if (es1.get_orisensuu_for_select_oritatami() > 0) {        //?Ü‚è?ü‘I‘ð—L‚è
+                } else if (es1.get_orisensuu_for_select_oritatami() > 0) {        //?Ü‚è??‘I‘ð—L‚è
                     i_fold_type = 2;//‘I‘ð‚³‚ê‚½“WŠJ?}‚Å?Ü?ô‚Ý
                 }
             } else if (i_OAZ > 0) {                        //?Ü‚è?ã‚ª‚èŒn?}Žw’è
@@ -7367,17 +7369,17 @@ write.setRGB(w, h, offsc_haikei.getRGB(w,h));
             }
         } else if (OAZ.size() > 1) {                        //?Ü‚è?ã‚ª‚èŒn?}—L‚è
             if (i_OAZ == 0) {                            //“WŠJ?}Žw’è
-                if (es1.get_orisensuu_for_select_oritatami() == 0) {        //?Ü‚è?ü‘I‘ð–³‚µ
+                if (es1.get_orisensuu_for_select_oritatami() == 0) {        //?Ü‚è??‘I‘ð–³‚µ
                     System.out.println("get_i_fold_type() 20180108");
                     i_fold_type = 0;//‰½‚à‚µ‚È‚¢
                     //i_fold_type=1;//‘S“WŠJ?}‚Å?Ü?ô‚Ý
-                } else if (es1.get_orisensuu_for_select_oritatami() > 0) {        //?Ü‚è?ü‘I‘ð—L‚è
+                } else if (es1.get_orisensuu_for_select_oritatami() > 0) {        //?Ü‚è??‘I‘ð—L‚è
                     i_fold_type = 2;//‘I‘ð‚³‚ê‚½“WŠJ?}‚Å?Ü?ô‚Ý
                 }
             } else if (i_OAZ > 0) {                        //?Ü‚è?ã‚ª‚èŒn?}Žw’è
-                if (es1.get_orisensuu_for_select_oritatami() == 0) {        //?Ü‚è?ü‘I‘ð–³‚µ
+                if (es1.get_orisensuu_for_select_oritatami() == 0) {        //?Ü‚è??‘I‘ð–³‚µ
                     i_fold_type = 3;//Žw’è‚³‚ê‚½?Ü‚è?ã‚ª‚èŒn?}‚Å?Ü?ô‚Ý
-                } else if (es1.get_orisensuu_for_select_oritatami() > 0) {        //?Ü‚è?ü‘I‘ð—L‚è
+                } else if (es1.get_orisensuu_for_select_oritatami() > 0) {        //?Ü‚è??‘I‘ð—L‚è
                     i_fold_type = 2;//‘I‘ð‚³‚ê‚½“WŠJ?}‚Å?Ü?ô‚Ý
                 }
             }
@@ -7388,12 +7390,12 @@ write.setRGB(w, h, offsc_haikei.getRGB(w,h));
     }
 
     // ------------------------------------------------------------------------
-    public Ten ten_of_kijyunmen_old = new Ten(); //ten_of_kijyunmen_old.set(OZ.ts1.get_ten_of_kijyunmen_tv());//20180222?Ü‚è?ü‘I‘ð?ó‘Ô‚Å?Ü‚è?ô‚Ý?„’è‚ð‚·‚é?Û?AˆÈ‘O‚ÉŽw’è‚³‚ê‚Ä‚¢‚½Šî?€–Ê‚ðˆø‚«Œp‚®‚½‚ß‚É’Ç‰Á
+    public Ten ten_of_kijyunmen_old = new Ten(); //ten_of_kijyunmen_old.set(OZ.ts1.get_ten_of_kijyunmen_tv());//20180222?Ü‚è??‘I‘ð?ó‘Ô‚Å?Ü‚è?ô‚Ý??’è‚ð‚·‚é?Û?AˆÈ‘O‚ÉŽw’è‚³‚ê‚Ä‚¢‚½Šî??–Ê‚ðˆø‚«Œp‚®‚½‚ß‚É’Ç‰Á
 
     //
     private void oritatame(int i_fold_type, int i_suitei_meirei) {//ˆø?”‚ÌˆÓ–¡‚Í(i_fold_type , i_suitei_meirei)
         //i_fold_type‚Íget_i_fold_type()ŠÖ?”‚ÅŽæ“¾‚·‚é?B
-        //i_fold_type=0‚È‚É‚à‚µ‚È‚¢?A=1’Ê?í‚Ì“WŠJ?}‚Ì‘S?Ü?ü‚ð‘Î?Û‚Æ‚µ‚½?Ü‚è?ô‚Ý?„’è?A=2‚Íselect‚³‚ê‚½?Ü?ü‚ð‘Î?Û‚Æ‚µ‚½?Ü‚è?ô‚Ý?„’è?A=3‚Í?Ü?ô‚Ý?ó‘Ô‚ð•Ï?X
+        //i_fold_type=0‚È‚É‚à‚µ‚È‚¢?A=1’Ê?úžÌ“WŠJ?}‚Ì‘S?Ü??‚ð‘Î?Û‚Æ‚µ‚½?Ü‚è?ô‚Ý??’è?A=2‚Íselect‚³‚ê‚½?Ü??‚ð‘Î?Û‚Æ‚µ‚½?Ü‚è?ô‚Ý??’è?A=3‚Í?Ü?ô‚Ý?ó‘Ô‚ð•Ï?X
         if (i_fold_type == 0) {
             System.out.println(" oritatame 20180108");
         } else if ((i_fold_type == 1) || (i_fold_type == 2)) {
@@ -7401,7 +7403,7 @@ write.setRGB(w, h, offsc_haikei.getRGB(w,h));
                 es1.select_all();
             }
             //
-            if (ckbox_cp_kaizen_oritatami.isSelected()) {//“WŠJ?}‚Ì‚¨‚©‚µ‚¢?Š?iŽ}?ó‚Ì?Ü‚è?ü“™?j‚ðŽ©“®?C?³‚·‚é
+            if (ckbox_cp_kaizen_oritatami.isSelected()) {//“WŠJ?}‚Ì‚¨‚©‚µ‚¢???iŽ}?ó‚Ì?Ü‚è??“™?j‚ðŽ©“®?C?³‚·‚é
                 Egaki_Syokunin es2 = new Egaki_Syokunin(r, this);    //Šî–{Ž}?E?l?Bƒ}ƒEƒX‚©‚ç‚Ì“ü—Í‚ðŽó‚¯•t‚¯‚é?B
                 es2.setMemo_for_yomikomi(es1.ori_s.getMemo_for_select_oritatami());
                 es2.ten_sakujyo();
@@ -7418,20 +7420,20 @@ write.setRGB(w, h, offsc_haikei.getRGB(w,h));
 
             //
             //Ten ten_of_kijyunmen_old =new Ten(); ten_of_kijyunmen_old.set(OZ.ts1.get_ten_of_kijyunmen_tv());
-            ten_of_kijyunmen_old.set(OZ.ts1.get_ten_of_kijyunmen_tv());//20180222?Ü‚è?ü‘I‘ð?ó‘Ô‚Å?Ü‚è?ô‚Ý?„’è‚ð‚·‚é?Û?AˆÈ‘O‚ÉŽw’è‚³‚ê‚Ä‚¢‚½Šî?€–Ê‚ðˆø‚«Œp‚®‚½‚ß‚É’Ç‰Á
+            ten_of_kijyunmen_old.set(OZ.ts1.get_ten_of_kijyunmen_tv());//20180222?Ü‚è??‘I‘ð?ó‘Ô‚Å?Ü‚è?ô‚Ý??’è‚ð‚·‚é?Û?AˆÈ‘O‚ÉŽw’è‚³‚ê‚Ä‚¢‚½Šî??–Ê‚ðˆø‚«Œp‚®‚½‚ß‚É’Ç‰Á
             //‚±‚ê‚æ‚è‘O‚ÌOZ‚ÍŒÃ‚¢OZ
-            oritatami_jyunbi();//OAZ‚ÌƒAƒŒƒCƒŠƒXƒg‚É?A?V‚µ‚­?Ü‚è?ã‚ª‚è?}‚ð‚Ð‚Æ‚Â’Ç‰Á‚µ?A‚»‚ê‚ð‘€?ì‘Î?Û‚ÉŽw’è‚µ?AOAZ(0)‹¤’Êƒpƒ‰ƒ??[ƒ^‚ðˆø‚«Œp‚ª‚¹‚é?B
+            oritatami_jyunbi();//OAZ‚ÌƒAƒŒƒCƒŠƒXƒg‚É?A?V‚µ‚­?Ü‚è?ã‚ª‚è?}‚ð‚Ð‚Æ‚Â’Ç‰Á‚µ?A‚»‚ê‚ð‘€??‘Î?Û‚ÉŽw’è‚µ?AOAZ(0)‹¤’Êƒpƒ‰???[ƒ^‚ðˆø‚«Œp‚ª‚¹‚é?B
             //‚±‚ê‚æ‚èŒã‚ÌOZ‚Í?V‚µ‚¢OZ‚É•Ï‚í‚é
             //OZ.ts1.set_kijyunmen_id(ten_of_kijyunmen_old);
 
 
-            //OZ.i_suitei_jissi_umu=0;	//i_suitei_jissi_umu‚Í?A?Ü‚è?ô‚Ý?„’è‚ÌŒvŽZ‚ðŽÀŽ{‚µ‚½‚©‚Ç‚¤‚©‚ð•\‚·?Bint i_suitei_jissi_umu=0‚È‚çŽÀŽ{‚µ‚È‚¢?B1‚È‚çŽÀŽ{‚µ‚½?B
+            //OZ.i_suitei_jissi_umu=0;	//i_suitei_jissi_umu‚Í?A?Ü‚è?ô‚Ý??’è‚ÌŒvŽZ‚ðŽÀŽ{‚µ‚½‚©‚Ç‚¤‚©‚ð•\‚·?Bint i_suitei_jissi_umu=0‚È‚çŽÀŽ{‚µ‚È‚¢?B1‚È‚çŽÀŽ{‚µ‚½?B
             OZ.i_suitei_meirei = i_suitei_meirei;
 
             if (i_SubThread == 0) {
                 i_SubThread = 1;
-                i_sub_mode = 0;//1=?Ü?ô‚Ý?„’è‚Ì•Ê‰ð‚ð‚Ü‚Æ‚ß‚Ä?o‚·?B0=?Ü?ô‚Ý?„’è‚Ì•Ê‰ð‚ð‚Ü‚Æ‚ß‚Ä?o‚·ƒ‚?[ƒh‚Å‚Í‚È‚¢?B‚±‚Ì•Ï?”‚ÍƒTƒuƒXƒŒƒbƒh‚Ì“®?ì•Ï?X‚É‚Â‚©‚¤‚¾‚¯?B20170611‚ÉVer3.008‚©‚ç’Ç‰Á
-                mks();//?V‚µ‚¢ƒXƒŒƒbƒh‚ð?ì‚é
+                i_sub_mode = 0;//1=?Ü?ô‚Ý??’è‚Ì•Ê‰ð‚ð‚Ü‚Æ‚ß‚Ä?o‚·?B0=?Ü?ô‚Ý??’è‚Ì•Ê‰ð‚ð‚Ü‚Æ‚ß‚Ä?o‚·ƒ‚?[ƒh‚Å‚Í‚È‚¢?B‚±‚Ì•Ï?”‚ÍƒTƒuƒXƒŒƒbƒh‚Ì“®??•Ï?X‚É‚Â‚©‚¤‚¾‚¯?B20170611‚ÉVer3.008‚©‚ç’Ç‰Á
+                mks();//?V‚µ‚¢ƒXƒŒƒbƒh‚ð??‚é
                 sub.start();
             }
 
@@ -7441,8 +7443,8 @@ write.setRGB(w, h, offsc_haikei.getRGB(w,h));
 
             if (i_SubThread == 0) {
                 i_SubThread = 1;
-                i_sub_mode = 0;//1=?Ü?ô‚Ý?„’è‚Ì•Ê‰ð‚ð‚Ü‚Æ‚ß‚Ä?o‚·?B0=?Ü?ô‚Ý?„’è‚Ì•Ê‰ð‚ð‚Ü‚Æ‚ß‚Ä?o‚·ƒ‚?[ƒh‚Å‚Í‚È‚¢?B‚±‚Ì•Ï?”‚ÍƒTƒuƒXƒŒƒbƒh‚Ì“®?ì•Ï?X‚É‚Â‚©‚¤‚¾‚¯?B20170611‚ÉVer3.008‚©‚ç’Ç‰Á
-                mks();//?V‚µ‚¢ƒXƒŒƒbƒh‚ð?ì‚é
+                i_sub_mode = 0;//1=?Ü?ô‚Ý??’è‚Ì•Ê‰ð‚ð‚Ü‚Æ‚ß‚Ä?o‚·?B0=?Ü?ô‚Ý??’è‚Ì•Ê‰ð‚ð‚Ü‚Æ‚ß‚Ä?o‚·ƒ‚?[ƒh‚Å‚Í‚È‚¢?B‚±‚Ì•Ï?”‚ÍƒTƒuƒXƒŒƒbƒh‚Ì“®??•Ï?X‚É‚Â‚©‚¤‚¾‚¯?B20170611‚ÉVer3.008‚©‚ç’Ç‰Á
+                mks();//?V‚µ‚¢ƒXƒŒƒbƒh‚ð??‚é
                 sub.start();
             }
         }
@@ -7452,18 +7454,18 @@ write.setRGB(w, h, offsc_haikei.getRGB(w,h));
 // ------------------------------------------------------------------------
 
 
-    void oritatami_jyunbi() {//OAZ‚ÌƒAƒŒƒCƒŠƒXƒg‚É?A?V‚µ‚­?Ü‚è?ã‚ª‚è?}‚ð‚Ð‚Æ‚Â’Ç‰Á‚µ?A‚»‚ê‚ð‘€?ì‘Î?Û‚ÉŽw’è‚µ?AOAZ(0)‹¤’Êƒpƒ‰ƒ??[ƒ^‚ðˆø‚«Œp‚ª‚¹‚é?B
+    void oritatami_jyunbi() {//OAZ‚ÌƒAƒŒƒCƒŠƒXƒg‚É?A?V‚µ‚­?Ü‚è?ã‚ª‚è?}‚ð‚Ð‚Æ‚Â’Ç‰Á‚µ?A‚»‚ê‚ð‘€??‘Î?Û‚ÉŽw’è‚µ?AOAZ(0)‹¤’Êƒpƒ‰???[ƒ^‚ðˆø‚«Œp‚ª‚¹‚é?B
 
         System.out.println(" oritatami_jyunbi 20180107");
 
         OAZ_add_new_Oriagari_Zu(); //OAZ‚ÌƒAƒŒƒCƒŠƒXƒg‚É?A?V‚µ‚­?Ü‚è?ã‚ª‚è?}‚ð‚Ð‚Æ‚Â’Ç‰Á‚·‚é?B
 
-        set_i_OAZ(OAZ.size() - 1);//i_OAZ=i;OZ = (Oriagari_Zu)OAZ.get(i_OAZ); OZ(Še‘€?ì‚Ì‘Î?Û‚Æ‚È‚é?Ü?ã‚ª‚è?}?j‚É?AƒAƒŒƒCƒŠƒXƒg‚É?Å?V‚É’Ç‰Á‚³‚ê‚½?Ü?ã‚ª‚è?}‚ðŠ„‚è“–‚Ä‚é)
+        set_i_OAZ(OAZ.size() - 1);//i_OAZ=i;OZ = (Oriagari_Zu)OAZ.get(i_OAZ); OZ(Še‘€??‚Ì‘Î?Û‚Æ‚È‚é?Ü?ã‚ª‚è?}?j‚É?AƒAƒŒƒCƒŠƒXƒg‚É?Å?V‚É’Ç‰Á‚³‚ê‚½?Ü?ã‚ª‚è?}‚ðŠ„‚è“–‚Ä‚é)
 
         Oriagari_Zu orz;
-        orz = (Oriagari_Zu) OAZ.get(0);//OAZ(0)(‹¤’Êƒpƒ‰ƒ??[ƒ^‚ð•ÛŽ?‚·‚é?Ü?ã‚ª‚è?}?j‚ðorz‚ÉŠ„‚è•t‚¯‚é
+        orz = (Oriagari_Zu) OAZ.get(0);//OAZ(0)(‹¤’Êƒpƒ‰???[ƒ^‚ð•Û??‚·‚é?Ü?ã‚ª‚è?}?j‚ðorz‚ÉŠ„‚è•t‚¯‚é
 
-        //ˆÈ‰º‚Å‚ÍOAZ(0)‚Ì‹¤’Êƒpƒ‰ƒ??[ƒ^‚ð?AŒ»?Ý‘€?ì‘Î?Û‚Æ‚È‚Á‚Ä‚¢‚éOZ‚É“n‚·
+        //ˆÈ‰º‚Å‚ÍOAZ(0)‚Ì‹¤’Êƒpƒ‰???[ƒ^‚ð?AŒ»?Ý‘€??‘Î?Û‚Æ‚È‚Á‚Ä‚¢‚éOZ‚É“n‚·
         OZ.oriagarizu_F_color = orz.js.get_F_color();//20171223?Ü‚è?ã‚ª‚è?}‚Ì•\–Ê‚Ì?F‚Ì•Ï?X‚ÍOZ.oriagarizu_F_color‚ÆOZ.js.set_F_color‚Ì—¼•û‚â‚é•K—v‚ ‚è
         OZ.js.set_F_color(OZ.oriagarizu_F_color); //?Ü‚è?ã‚ª‚è?}‚Ì•\–Ê‚Ì?F
         Button_F_color.setBackground(OZ.oriagarizu_F_color);    //ƒ{ƒ^ƒ“‚Ì?F?Ý’è
@@ -7475,7 +7477,7 @@ write.setRGB(w, h, offsc_haikei.getRGB(w,h));
         OZ.oriagarizu_L_color = orz.js.get_L_color();//20171223?Ü‚è?ã‚ª‚è?}‚Ì•\–Ê‚Ì?F‚Ì•Ï?X‚ÍOZ.oriagarizu_F_color‚ÆOZ.js.set_F_color‚Ì—¼•û‚â‚é•K—v‚ ‚è
         OZ.js.set_L_color(OZ.oriagarizu_L_color); //?Ü‚è?ã‚ª‚è?}‚Ì•\–Ê‚Ì?F
         Button_L_color.setBackground(OZ.oriagarizu_L_color);    //ƒ{ƒ^ƒ“‚Ì?F?Ý’è
-        //ˆÈ?ã‚ÅOAZ(0)‚Ì‹¤’Êƒpƒ‰ƒ??[ƒ^‚ð?AOZ‚É“n‚·?ì‹Æ‚Í?I—¹
+        //ˆÈ?ã‚ÅOAZ(0)‚Ì‹¤’Êƒpƒ‰???[ƒ^‚ð?AOZ‚É“n‚·??‹Æ‚Í?I—¹
 
     }
 
@@ -7512,8 +7514,8 @@ write.setRGB(w, h, offsc_haikei.getRGB(w,h));
 
     public void iro_sitei_ato_ni_jissisuru_sagyou() {
         if (iro_sitei_ato_ni_jissisuru_sagyou_bangou == 1) {
-            i_orisen_hojyosen = 0;//=0‚Í?Ü?ü“ü—Í?@=1‚Í•â?•?ü“ü—Íƒ‚?[ƒh
-            es1.set_i_orisen_hojyosen(i_orisen_hojyosen);//‚±‚Ìƒ{ƒ^ƒ“‚Æ‹@”\‚Í•â?•ŠG?ü‹¤’Ê‚ÉŽg‚Á‚Ä‚¢‚é‚Ì‚Åi_orisen_hojyosen‚ÌŽw’è‚ª‚¢‚é
+            i_orisen_hojyosen = 0;//=0‚Í?Ü??“ü—Í?@=1‚Í•â????“ü—Íƒ‚?[ƒh
+            es1.set_i_orisen_hojyosen(i_orisen_hojyosen);//‚±‚Ìƒ{ƒ^ƒ“‚Æ‹@”\‚Í•â?•ŠG??‹¤’Ê‚ÉŽg‚Á‚Ä‚¢‚é‚Ì‚Åi_orisen_hojyosen‚ÌŽw’è‚ª‚¢‚é
             i_mouse_modeA = 1;
             System.out.println("i_mouse_modeA = " + i_mouse_modeA);
 
@@ -7647,7 +7649,7 @@ write.setRGB(w, h, offsc_haikei.getRGB(w,h));
         es1.setCamera(camera_of_orisen_nyuuryokuzu);
         OZ.ts1.setCamera(camera_of_orisen_nyuuryokuzu);
 
-        //?Ü?ü“ü—Í‚©•â?•?ü“ü—Í‚©
+        //?Ü??“ü—Í‚©•â????“ü—Í‚©
         i_orisen_hojyosen = 0;
 
 
@@ -7659,18 +7661,18 @@ write.setRGB(w, h, offsc_haikei.getRGB(w,h));
         ckbox_kou_mitudo_nyuuryoku.setSelected(false);
         es1.set_i_kou_mitudo_nyuuryoku(0);          //?‚–§“x“ü—Í‚·‚é‚©‚Ç‚¤‚©‚Ì‘I‘ð
         ckbox_bun.setSelected(true);//•¶‚ð•\Ž¦‚·‚é‚©‚Ç‚¤‚©‚Ì‘I‘ð
-        ckbox_cp.setSelected(true);//?Ü?ü‚ð•\Ž¦‚·‚é‚©‚Ç‚¤‚©‚Ì‘I‘ð
-        ckbox_a0.setSelected(true);//•â?•Šˆ?ü‚ð•\Ž¦‚·‚é‚©‚Ç‚¤‚©‚Ì‘I‘ð
-        ckbox_a1.setSelected(true);//•â?•‰æ?ü‚ð•\Ž¦‚·‚é‚©‚Ç‚¤‚©‚Ì‘I‘ð
-        ckbox_mejirusi.setSelected(true);//?\Žš‚âŠî?€–Ê‚È‚Ç‚Ì–Úˆó‰æ?ü
+        ckbox_cp.setSelected(true);//?Ü??‚ð•\Ž¦‚·‚é‚©‚Ç‚¤‚©‚Ì‘I‘ð
+        ckbox_a0.setSelected(true);//•â?•Š???‚ð•\Ž¦‚·‚é‚©‚Ç‚¤‚©‚Ì‘I‘ð
+        ckbox_a1.setSelected(true);//•â?•‰???‚ð•\Ž¦‚·‚é‚©‚Ç‚¤‚©‚Ì‘I‘ð
+        ckbox_mejirusi.setSelected(true);//?\Žš‚âŠî??–Ê‚È‚Ç‚Ì–Úˆó‰æ??
         ckbox_cp_ue.setSelected(false);//“WŠJ?}‚ð?Ü‚è?ã‚ª‚è—\‘z?}‚Ì?ã‚É•`‚­
         ckbox_oritatami_keika.setSelected(false);//?Ü‚è?ã‚ª‚è—\‘z‚Ì“r’†Œo‰ß‚Ì?‘‚«?o‚µ
         ckbox_cp_kaizen_oritatami.setSelected(false);//cp‚ð?Ü?ô‚Ý‘O‚ÉŽ©“®‰ü‘P‚·‚é
-        ckbox_select_nokosi.setSelected(false);//select?ó‘Ô‚ð?Ü?ô‚Ý‘€?ì‚ð‚µ‚Ä‚à‚È‚é‚×‚­Žc‚·
+        ckbox_select_nokosi.setSelected(false);//select?ó‘Ô‚ð?Ü?ô‚Ý‘€??‚ð‚µ‚Ä‚à‚È‚é‚×‚­Žc‚·
         ckbox_toukazu_color.setSelected(false);//“§‰ß?}‚ðƒJƒ‰?[‰»‚·‚é?B
 
 
-        //“à•ª‚³‚ê‚½?Ü?ü‚ÌŽw’è
+        //“à•ª‚³‚ê‚½?Ü??‚ÌŽw’è
         d_orisen_naibun_a = 1.0;
         text3.setText(String.valueOf(d_orisen_naibun_a));
         d_orisen_naibun_b = 0.0;
@@ -7686,12 +7688,12 @@ write.setRGB(w, h, offsc_haikei.getRGB(w,h));
 
         //
         d_syukusyaku_keisuu = 1.0;
-        text27.setText(String.valueOf(d_syukusyaku_keisuu)); //?kŽÚŒW?”
+        text27.setText(String.valueOf(d_syukusyaku_keisuu)); //?kŽÚŒW??
         d_kaiten_hosei = 0.0;
-        text28.setText(String.valueOf(d_kaiten_hosei));//‰ñ“]•\Ž¦Šp“x‚Ì•â?³ŒW?”
+        text28.setText(String.valueOf(d_kaiten_hosei));//‰ñ“]•\Ž¦Šp“x‚Ì•â?³ŒW??
 
         OZ.d_oriagarizu_syukusyaku_keisuu = 1.0;
-        text29.setText(String.valueOf(OZ.d_oriagarizu_syukusyaku_keisuu));//?Ü‚è?ã‚ª‚è?}‚Ì?kŽÚŒW?”
+        text29.setText(String.valueOf(OZ.d_oriagarizu_syukusyaku_keisuu));//?Ü‚è?ã‚ª‚è?}‚Ì?kŽÚŒW??
         OZ.d_oriagarizu_kaiten_hosei = 0.0;
         text30.setText(String.valueOf(OZ.d_oriagarizu_kaiten_hosei));//?Ü‚è?ã‚ª‚è?}‚Ì‰ñ“]•\Ž¦Šp“x‚Ì•â?³Šp“x
 
@@ -7700,7 +7702,7 @@ write.setRGB(w, h, offsc_haikei.getRGB(w,h));
         ihaikeihyouji = 1;
         Button_haikei_kirikae.setBackground(Color.ORANGE);
 
-        //”wŒiƒ?ƒbƒNƒIƒ“
+        //”wŒi??ƒbƒNƒIƒ“
         i_Lock_on = 0;
         i_Lock_on_ori = 0;
         Button_haikei_Lock_on.setBackground(Color.gray);
@@ -7708,32 +7710,32 @@ write.setRGB(w, h, offsc_haikei.getRGB(w,h));
 //?¼•Ó
 
 
-        //“WŠJ?}‚Ì?ü‚Ì‘¾‚³?B
+        //“WŠJ?}‚Ì??‚Ì‘¾‚³?B
         iTenkaizuSenhaba = 1;
 
-        //’¸“_‚Ì‚µ‚é‚µ‚Ì•?
+        //’¸“_‚Ì‚µ‚é‚µ‚Ì??
         ir_ten = 1;
 
 
-        //Šî–{Ž}?\‘¢‚Ì’¼?ü‚Ì—¼’[‚Ì‰~‚Ì”¼Œa?A?iˆÈ‘O‚ÍŽ}‚ÆŠeŽíƒ|ƒCƒ“ƒg‚Ì‹ß‚³‚Ì”»’èŠî?€?j
+        //Šî–{Ž}?\‘¢‚Ì’¼??‚Ì—¼’[‚Ì‰~‚Ì”¼Œa?A?iˆÈ‘O‚ÍŽ}‚ÆŠeŽíƒ|ƒCƒ“ƒg‚Ì‹ß‚³‚Ì”»’èŠî???j
         //double r=3.0;
         //es1.set_r(r);
 
-        //?Ü?ü•\Œ»‚ð?F‚Å•\‚·
+        //?Ü??•\Œ»‚ð?F‚Å•\‚·
         i_orisen_hyougen = 1;
 
         //ƒyƒ“‚Ì?F‚ÌŽw’è
         icol = 1;
-        es1.setcolor(icol);    //?Å?‰‚Ì?Ü?ü‚Ì?F‚ðŽw’è‚·‚é?B0‚Í?•?A1‚Í?Ô?A2‚Í?Â?B
+        es1.setcolor(icol);    //?Å?‰‚Ì?Ü??‚Ì?F‚ðŽw’è‚·‚é?B0‚Í???A1‚Í?Ô?A2‚Í?Â?B
         ButtonCol_irokesi();
         ButtonCol_red.setForeground(Color.black);
-        ButtonCol_red.setBackground(Color.red);    //?Ü?ü‚Ìƒ{ƒ^ƒ“‚Ì?F?Ý’è
+        ButtonCol_red.setBackground(Color.red);    //?Ü??‚Ìƒ{ƒ^ƒ“‚Ì?F?Ý’è
 
 
-        //?Ü?ü•ªŠ„?”
+        //?Ü??•ªŠ„??
         i_orisen_bunkatu_suu = 2;
         text2.setText(String.valueOf(i_orisen_bunkatu_suu));
-        es1.set_i_orisen_bunkatu_suu(i_orisen_bunkatu_suu);//ƒtƒŠ?[?Ü?ü“ü—ÍŽž‚Ì•ªŠ„?”
+        es1.set_i_orisen_bunkatu_suu(i_orisen_bunkatu_suu);//ƒtƒŠ?[?Ü??“ü—ÍŽž‚Ì•ªŠ„??
 
 
         //ŠiŽq•ªŠ„?”‚ÌŽw’è
@@ -7782,16 +7784,16 @@ write.setRGB(w, h, offsc_haikei.getRGB(w,h));
         d_jiyuu_kaku_c = 100.0;
         text17.setText(String.valueOf(d_jiyuu_kaku_f));
 
-        //‘½ŠpŒ`‚ÌŠp?”
+        //‘½ŠpŒ`‚ÌŠp??
         i_sei_takakukei = 5;
         text9.setText(String.valueOf(i_sei_takakukei));
 
-        //•â?•‰æ?ü‚Ì?F
+        //•â?•‰???‚Ì?F
         h_icol = 4;
-        es1.h_setcolor(h_icol);                                        //?Å?‰‚Ì•â?•?ü‚Ì?F‚ðŽw’è‚·‚é?B4‚ÍƒIƒŒƒ“ƒW?A7‚Í‰©?B
+        es1.h_setcolor(h_icol);                                        //?Å?‰‚Ì•â????‚Ì?F‚ðŽw’è‚·‚é?B4‚ÍƒIƒŒƒ“ƒW?A7‚Í‰©?B
         Button_h_Col_irokesi();
         Button_Col_orange.setForeground(Color.black);
-        Button_Col_orange.setBackground(Color.ORANGE);    //•â?•?ü‚Ìƒ{ƒ^ƒ“‚Ì?F?Ý’è
+        Button_Col_orange.setBackground(Color.ORANGE);    //•â????‚Ìƒ{ƒ^ƒ“‚Ì?F?Ý’è
 
         //ckbox_check1.setSelected(false);//check‚·‚é‚©‚Ç‚¤‚©‚Ì‘I‘ð
         //ckbox_check2.setSelected(false);//check‚·‚é‚©‚Ç‚¤‚©‚Ì‘I‘ð
@@ -7978,7 +7980,7 @@ write.setRGB(w, h, offsc_haikei.getRGB(w,h));
 // *******************************************************************************************************
 
 
-    //ƒ{ƒ^ƒ“‚ð‰Ÿ‚³‚ê‚½‚Æ‚«‚Ì?ˆ—?----------------
+    //ƒ{ƒ^ƒ“‚ð‰Ÿ‚³‚ê‚½‚Æ‚«‚Ì????----------------
     public void actionPerformed(ActionEvent e) {
 
     }
@@ -8014,7 +8016,7 @@ write.setRGB(w, h, offsc_haikei.getRGB(w,h));
         Button_M_nisuru.setForeground(Color.black);
         Button_V_nisuru.setForeground(Color.black);
         Button_E_nisuru.setForeground(Color.black);
-        Button_HK_nisuru.setForeground(Color.black); //HK‚Æ‚Í•â?•Šˆ?ü‚Ì‚±‚Æ
+        Button_HK_nisuru.setForeground(Color.black); //HK‚Æ‚Í•â?•Š???‚Ì‚±‚Æ
         Button_senbun_henkan2.setForeground(Color.black);
 
         //Button_M_nisuru.setBackground(new Color(150,150,150));
@@ -8051,13 +8053,13 @@ write.setRGB(w, h, offsc_haikei.getRGB(w,h));
     }
 
 
-    //ƒAƒvƒŒƒbƒg‚Ì?‰Šú‰»‚ð?s‚¤ŠÖ?”----------------------------------------------------
+    //ƒAƒvƒŒƒbƒg‚Ì?‰Šú‰»‚ð?s‚¤ŠÖ??----------------------------------------------------
     //public void start() {;}
 
-    //ƒAƒvƒŒƒbƒg‚ÌŒã?ˆ—?‚ð?s‚¤ŠÖ?”----------------------------------------------------
+    //ƒAƒvƒŒƒbƒg‚ÌŒã????‚ð?s‚¤ŠÖ??----------------------------------------------------
     //public void stop() {;}
 
-    //ƒAƒvƒŒƒbƒg‚Ì?Å?I?ˆ—?‚ð?s‚¤ŠÖ?”----------------------------------------------------
+    //ƒAƒvƒŒƒbƒg‚Ì?Å?I????‚ð?s‚¤ŠÖ??----------------------------------------------------
     public void destroy() {
         removeMouseListener(this);
     }//removeMouseMotionListener‚âremoveMouseWheelListener‚Í‚Ç‚¤‚È‚é?H?@20170401
@@ -8066,13 +8068,13 @@ write.setRGB(w, h, offsc_haikei.getRGB(w,h));
     void Button_kyoutuu_sagyou() {
         es1.set_i_egaki_dankai(0);
         es1.set_i_en_egaki_dankai(0);
-        es1.set_s_step_iactive(3);//—v’?ˆÓ?@es1‚Å‚¤‚Á‚©‚ès_step‚Éset.(senbun)‚â‚é‚ÆƒAƒNƒeƒBƒ”‚Å‚È‚¢‚Ì‚Å•\Ž¦‚ª?¬‚³‚­‚È‚é20170507
+        es1.set_s_step_iactive(3);//—v??ˆÓ?@es1‚Å‚¤‚Á‚©‚ès_step‚Éset.(senbun)‚â‚é‚ÆƒAƒNƒeƒBƒ”‚Å‚È‚¢‚Ì‚Å•\Ž¦‚ª?¬‚³‚­‚È‚é20170507
         es1.ori_v.reset();
     }
 
 
     // *******************************************************************************************zzzzzzzzzzzz
-    public void i_cp_or_oriagari_hantei(Ten p) {//ƒ}ƒEƒX‚Å“¾‚ç‚ê‚½Ten‚ª?A“WŠJ?}‚â?Ü‚è?ã‚ª‚è?}‚È‚Ç‚Ì‚Ç‚ê‚ðŽw‚µ‚Ä‚¢‚é‚Ì‚©”»’è‚·‚éŠÖ?”
+    public void i_cp_or_oriagari_hantei(Ten p) {//ƒ}ƒEƒX‚Å“¾‚ç‚ê‚½Ten‚ª?A“WŠJ?}‚â?Ü‚è?ã‚ª‚è?}‚È‚Ç‚Ì‚Ç‚ê‚ðŽw‚µ‚Ä‚¢‚é‚Ì‚©”»’è‚·‚éŠÖ??
         //20171216
         //hyouji_flg==2,ip4==0  omote
         //hyouji_flg==2,ip4==1	ura
@@ -8178,7 +8180,7 @@ write.setRGB(w, h, offsc_haikei.getRGB(w,h));
     }
 
     // *******************************************************************************************cccccccccc
-    void set_i_OAZ(int i) {//OZ‚ª?Ø‚è‘Ö‚í‚é‚Æ‚«‚Ì?ˆ—?
+    void set_i_OAZ(int i) {//OZ‚ª?Ø‚è‘Ö‚í‚é‚Æ‚«‚Ì????
         System.out.println("i_OAZ = " + i_OAZ);
         i_OAZ = i;
         OZ = (Oriagari_Zu) OAZ.get(i_OAZ);
@@ -8199,7 +8201,7 @@ write.setRGB(w, h, offsc_haikei.getRGB(w,h));
 
 
     //=============================================================================
-    //ƒ}ƒEƒX‚ÌƒzƒC?[ƒ‹‚ª‰ñ“]‚µ‚½Žž‚ÉŒÄ‚Î‚ê‚éƒ?ƒ\ƒbƒh
+    //ƒ}ƒEƒX‚ÌƒzƒC?[ƒ‹‚ª‰ñ“]‚µ‚½Žž‚ÉŒÄ‚Î‚ê‚é??ƒ\ƒbƒh
     //=============================================================================
 
     public void mouseWheelMoved(MouseWheelEvent e) {
@@ -8318,7 +8320,7 @@ write.setRGB(w, h, offsc_haikei.getRGB(w,h));
 
 
     //----------------------------------------------------------------------
-    //ƒ}ƒEƒX‘€?ì(ˆÚ“®‚âƒ{ƒ^ƒ“‘€?ì)‚ð?s‚¤ŠÖ?”------------------------------
+    //ƒ}ƒEƒX‘€??(ˆÚ“®‚âƒ{ƒ^ƒ“‘€??)‚ð?s‚¤ŠÖ??------------------------------
     //----------------------------------------------------------------------
 
 
@@ -8332,34 +8334,34 @@ write.setRGB(w, h, offsc_haikei.getRGB(w,h));
     }
 
 
-//i_mouse_modeA;ƒ}ƒEƒX‚Ì“®?ì‚É‘Î‚·‚é”½‰ž‚ð‹K’è‚·‚é?B
-// -------------1;?ü•ª“ü—Íƒ‚?[ƒh?B
+//i_mouse_modeA;ƒ}ƒEƒX‚Ì“®??‚É‘Î‚·‚é”½‰ž‚ð‹K’è‚·‚é?B
+// -------------1;??•ª“ü—Íƒ‚?[ƒh?B
 //2;“WŠJ?}’²?®(ˆÚ“®)?B
 //3;"L_del"
 //4;"L_chan"
 
-// -------------5;?ü•ª‰„’·ƒ‚?[ƒh?B
-// -------------6;2“_‚©‚ç“™‹——£?ü•ªƒ‚?[ƒh?B
-// -------------7;Šp“ñ“™•ª?üƒ‚?[ƒh?B
+// -------------5;??•ª‰„’·ƒ‚?[ƒh?B
+// -------------6;2“_‚©‚ç“™‹——£??•ªƒ‚?[ƒh?B
+// -------------7;Šp“ñ“™•ª??ƒ‚?[ƒh?B
 // -------------8;“à?Sƒ‚?[ƒh?B
-// -------------9;?‚?ü‚¨‚ë‚µƒ‚?[ƒh?B
+// -------------9;????‚¨‚ë‚µƒ‚?[ƒh?B
 // -------------10;?Ü‚è•Ô‚µƒ‚?[ƒh?B
-// -------------11;?ü•ª“ü—Íƒ‚?[ƒh?B
+// -------------11;??•ª“ü—Íƒ‚?[ƒh?B
 // -------------12;‹¾‰fƒ‚?[ƒh?B
 // -------------13;15“x“ü—Íƒ‚?[ƒh?B
 
 
-//101:?Ü‚è?ã‚ª‚è?}‚Ì‘€?ì?B
+//101:?Ü‚è?ã‚ª‚è?}‚Ì‘€???B
 //102;F_move
 //103;S_face
 
-//10001;test1 “ü—Í?€”õ‚Æ‚µ‚Ä“_‚ð‚R‚ÂŽw’è‚·‚é
+//10001;test1 “ü—Í??”õ‚Æ‚µ‚Ä“_‚ð‚R‚ÂŽw’è‚·‚é
 
 
-    // ƒ}ƒEƒX‘€?ì(ƒ}ƒEƒX‚ª“®‚¢‚½Žž)‚ð?s‚¤ŠÖ?”----------------------------------------------------
+    // ƒ}ƒEƒX‘€??(ƒ}ƒEƒX‚ª“®‚¢‚½Žž)‚ð?s‚¤ŠÖ??----------------------------------------------------
     public void mouseMoved(MouseEvent e) {
         //‰½‚à‚µ‚È‚¢
-        //  final Point mouseLocation = MouseInfo.getPointerInfo().getLocation();//‚±‚ê‚Í‘½•ªJ2SE 5.0?uTiger?vˆÈ?~‚Å?ì“®‚·‚éƒR?[ƒh
+        //  final Point mouseLocation = MouseInfo.getPointerInfo().getLocation();//‚±‚ê‚Í‘½•ªJ2SE 5.0?uTiger?vˆÈ?~‚Å??“®‚·‚éƒR?[ƒh
 
         Ten p = new Ten(e2p(e));
         mouse_object_iti(p);
@@ -8367,19 +8369,19 @@ write.setRGB(w, h, offsc_haikei.getRGB(w,h));
         } else if (i_mouse_modeA == 1) {
             es1.setCamera(camera_of_orisen_nyuuryokuzu);
             es1.mMoved_A_01(p);
-        }   //1 ?ü•ª“ü—Íƒ‚?[ƒh?iƒtƒŠ?[?j
+        }   //1 ??•ª“ü—Íƒ‚?[ƒh?iƒtƒŠ?[?j
         //else if(i_mouse_modeA==2)  {		}						       //2 “WŠJ?}ˆÚ“®?B
-        //else if(i_mouse_modeA==3)  { es1.setCamera(camera_of_orisen_nyuuryokuzu);es1.mMoved_A_03(p);}//?ü•ª?í?œƒ‚?[ƒh?B
-        //else if(i_mouse_modeA==4)  { es1.setCamera(camera_of_orisen_nyuuryokuzu);es1.mMoved_A_04(p);}//senbun_henkan ?•?Ô?Â
+        //else if(i_mouse_modeA==3)  { es1.setCamera(camera_of_orisen_nyuuryokuzu);es1.mMoved_A_03(p);}//??•ª???œƒ??[ƒh?B
+        //else if(i_mouse_modeA==4)  { es1.setCamera(camera_of_orisen_nyuuryokuzu);es1.mMoved_A_04(p);}//senbun_henkan ???Ô?Â
         else if (i_mouse_modeA == 5) {
             es1.setCamera(camera_of_orisen_nyuuryokuzu);
             es1.mMoved_A_05(p);
-        }//?ü•ª‰„’·ƒ‚?[ƒh?B
-        //else if(i_mouse_modeA==6)  { es1.setCamera(camera_of_orisen_nyuuryokuzu);es1.mMoved_A_06(p);}//2“_‚©‚ç“™‹——£?ü•ªƒ‚?[ƒh?B
+        }//??•ª‰„’·ƒ‚?[ƒh?B
+        //else if(i_mouse_modeA==6)  { es1.setCamera(camera_of_orisen_nyuuryokuzu);es1.mMoved_A_06(p);}//2“_‚©‚ç“™‹——£??•ªƒ‚?[ƒh?B
         else if (i_mouse_modeA == 7) {
             es1.setCamera(camera_of_orisen_nyuuryokuzu);
             es1.mMoved_A_07(p);
-        }//Šp“ñ“™•ª?üƒ‚?[ƒh?B
+        }//Šp“ñ“™•ª??ƒ‚?[ƒh?B
         else if (i_mouse_modeA == 8) {
             es1.setCamera(camera_of_orisen_nyuuryokuzu);
             es1.mMoved_A_08(p);
@@ -8387,7 +8389,7 @@ write.setRGB(w, h, offsc_haikei.getRGB(w,h));
         else if (i_mouse_modeA == 9) {
             es1.setCamera(camera_of_orisen_nyuuryokuzu);
             es1.mMoved_A_09(p);
-        }//?‚?ü‚¨‚ë‚µƒ‚?[ƒh?B
+        }//????‚¨‚ë‚µƒ‚?[ƒh?B
         else if (i_mouse_modeA == 10) {
             es1.setCamera(camera_of_orisen_nyuuryokuzu);
             es1.mMoved_A_10(p);
@@ -8395,18 +8397,18 @@ write.setRGB(w, h, offsc_haikei.getRGB(w,h));
         else if (i_mouse_modeA == 11) {
             es1.setCamera(camera_of_orisen_nyuuryokuzu);
             es1.mMoved_A_11(p);
-        }//?ü•ª“ü—Íƒ‚?[ƒh?B(?§ŒÀ)
+        }//??•ª“ü—Íƒ‚?[ƒh?B(?§ŒÀ)
         else if (i_mouse_modeA == 12) {
             es1.setCamera(camera_of_orisen_nyuuryokuzu);
             es1.mMoved_A_12(p);
         }//‹¾‰fƒ‚?[ƒh?B
-        //else if(i_mouse_modeA==13) { es1.setCamera(camera_of_orisen_nyuuryokuzu);es1.mMoved_A_13(p);}//Šp“xŒnƒ‚?[ƒh?i‚P”Ô–Ú?j?B//?ü•ªŽw’è?AŒð“_‚Ü‚Å
+        //else if(i_mouse_modeA==13) { es1.setCamera(camera_of_orisen_nyuuryokuzu);es1.mMoved_A_13(p);}//Šp“xŒnƒ‚?[ƒh?i‚P”Ô–Ú?j?B//??•ªŽw’è?AŒð“_‚Ü‚Å
         //else if(i_mouse_modeA==14) { es1.setCamera(camera_of_orisen_nyuuryokuzu);es1.mMoved_A_14(p);}//“_’Ç‰Áƒ‚?[ƒh?B
-        //else if(i_mouse_modeA==15) { es1.setCamera(camera_of_orisen_nyuuryokuzu);es1.mMoved_A_15(p);}//“_?í?œƒ‚?[ƒh?B
+        //else if(i_mouse_modeA==15) { es1.setCamera(camera_of_orisen_nyuuryokuzu);es1.mMoved_A_15(p);}//“_???œƒ??[ƒh?B
         else if (i_mouse_modeA == 16) {
             es1.setCamera(camera_of_orisen_nyuuryokuzu);
             es1.mMoved_A_16(p);
-        }//Šp“xŒnƒ‚?[ƒh?i‚S”Ô–Ú?j?B2“_Žw’è‚µ?A?ü•ª‚Ü‚Å
+        }//Šp“xŒnƒ‚?[ƒh?i‚S”Ô–Ú?j?B2“_Žw’è‚µ?A??•ª‚Ü‚Å
         else if (i_mouse_modeA == 17) {
             es1.setCamera(camera_of_orisen_nyuuryokuzu);
             es1.mMoved_A_17(p);
@@ -8432,16 +8434,16 @@ write.setRGB(w, h, offsc_haikei.getRGB(w,h));
         else if (i_mouse_modeA == 27) {
             es1.setCamera(camera_of_orisen_nyuuryokuzu);
             es1.mMoved_A_27(p);
-        }//?ü•ª•ªŠ„“ü—Í?@‚ÉŽg‚¤
+        }//??•ª•ªŠ„“ü—Í?@‚ÉŽg‚¤
         else if (i_mouse_modeA == 28) {
             es1.setCamera(camera_of_orisen_nyuuryokuzu);
             es1.mMoved_A_28(p);
-        }//?ü•ª“à•ª“ü—Í?@‚ÉŽg‚¤
+        }//??•ª“à•ª“ü—Í?@‚ÉŽg‚¤
         else if (i_mouse_modeA == 29) {
             es1.setCamera(camera_of_orisen_nyuuryokuzu);
             es1.mMoved_A_29(p);
         }//?³‘½ŠpŒ`“ü—Í?@‚ÉŽg‚¤
-        //else if(i_mouse_modeA==30) { es1.setCamera(camera_of_orisen_nyuuryokuzu);es1.mMoved_A_30(p);}//?œ‚¯_?ü•ÏŠ·?@‚ÉŽg‚¤
+        //else if(i_mouse_modeA==30) { es1.setCamera(camera_of_orisen_nyuuryokuzu);es1.mMoved_A_30(p);}//?œ‚¯_??•ÏŠ·?@‚ÉŽg‚¤
         else if (i_mouse_modeA == 31) {
             es1.setCamera(camera_of_orisen_nyuuryokuzu);
             es1.mMoved_A_31(p);
@@ -8453,46 +8455,46 @@ write.setRGB(w, h, offsc_haikei.getRGB(w,h));
         else if (i_mouse_modeA == 33) {
             es1.setCamera(camera_of_orisen_nyuuryokuzu);
             es1.mMoved_A_33(p);
-        }//‹›‚Ì?œ?@‚ÉŽg‚¤
+        }//‹›‚Ì???@‚ÉŽg‚¤
         else if (i_mouse_modeA == 34) {
             es1.setCamera(camera_of_orisen_nyuuryokuzu);
             es1.mMoved_A_34(p);
-        }//?€”õ‚Æ‚µ‚Ä‚¾‚¯Žg‚¤?ü•ª‚É?d•¡‚µ‚Ä‚¢‚é?Ü?ü‚ð?‡‚ÉŽR’J‚É‚·‚é‚Ì?@‚ÉŽg‚¤
+        }//??”õ‚Æ‚µ‚Ä‚¾‚¯Žg‚¤??•ª‚É?d•¡‚µ‚Ä‚¢‚é?Ü??‚ð?‡‚ÉŽR’J‚É‚·‚é‚Ì?@‚ÉŽg‚¤
         else if (i_mouse_modeA == 35) {
             es1.setCamera(camera_of_orisen_nyuuryokuzu);
             es1.mMoved_A_35(p);
-        }//•¡?Ü‚è•Ô‚µ?@“ü—Í‚µ‚½?ü•ª‚É?Ú?G‚µ‚Ä‚¢‚é?Ü?ü‚ð?Ü‚è•Ô‚µ?@‚ÉŽg‚¤
+        }//•¡?Ü‚è•Ô‚µ?@“ü—Í‚µ‚½??•ª‚É?Ú?G‚µ‚Ä‚¢‚é?Ü??‚ð?Ü‚è•Ô‚µ?@‚ÉŽg‚¤
         else if (i_mouse_modeA == 36) {
             es1.setCamera(camera_of_orisen_nyuuryokuzu);
             es1.mMoved_A_36(p);
-        }//?€”õ‚Æ‚µ‚Ä‚¾‚¯Žg‚¤?ü•ª‚ÉXŒð?·‚µ‚Ä‚¢‚é?Ü?ü‚ð?‡‚ÉŽR’J‚É‚·‚é‚Ì?@‚ÉŽg‚¤
+        }//??”õ‚Æ‚µ‚Ä‚¾‚¯Žg‚¤??•ª‚ÉXŒð?·‚µ‚Ä‚¢‚é?Ü??‚ð?‡‚ÉŽR’J‚É‚·‚é‚Ì?@‚ÉŽg‚¤
         else if (i_mouse_modeA == 37) {
             es1.setCamera(camera_of_orisen_nyuuryokuzu);
             es1.mMoved_A_37(p);
-        }//Šp“xŒnƒ‚?[ƒh?i‚R”Ô–Ú?j?BŠp“x‹KŠi‰»?ü•ª“ü—Íƒ‚?[ƒh?BŠp“x‹KŠi‰»?Ü?ü“ü—Í?@‚ÉŽg‚¤
+        }//Šp“xŒnƒ‚?[ƒh?i‚R”Ô–Ú?j?BŠp“x‹KŠi‰»??•ª“ü—Íƒ‚?[ƒh?BŠp“x‹KŠi‰»?Ü??“ü—Í?@‚ÉŽg‚¤
         else if (i_mouse_modeA == 38) {
             es1.setCamera(camera_of_orisen_nyuuryokuzu);
             es1.mMoved_A_38(p);
-        }//?Ü‚è?ô‚Ý‰Â”\?ü’Ç‰Á
+        }//?Ü‚è?ô‚Ý‰Â”\??’Ç‰Á
         else if (i_mouse_modeA == 39) {
             es1.setCamera(camera_of_orisen_nyuuryokuzu);
             es1.mMoved_A_39(p);
-        }//?Ü‚è?ô‚Ý‰Â”\?ü+ŠiŽq“_Œn“ü—Í
+        }//?Ü‚è?ô‚Ý‰Â”\??+ŠiŽq“_Œn“ü—Í
         else if (i_mouse_modeA == 40) {
             es1.setCamera(camera_of_orisen_nyuuryokuzu);
             es1.mMoved_A_40(p);
-        }//•½?s?ü“ü—Í
-        //else if(i_mouse_modeA==41) { es1.setCamera(camera_of_orisen_nyuuryokuzu);es1.mMoved_A_41(p);}//“_?í?œ?i?üƒJƒ‰?[ƒ`ƒFƒ“ƒW?j?@‚ÉŽg‚¤
+        }//•½?s??“ü—Í
+        //else if(i_mouse_modeA==41) { es1.setCamera(camera_of_orisen_nyuuryokuzu);es1.mMoved_A_41(p);}//“_?????i??ƒJƒ‰?[ƒ`ƒFƒ“ƒW?j?@‚ÉŽg‚¤
         //else if(i_mouse_modeA==42) { es1.setCamera(camera_of_orisen_nyuuryokuzu);es1.mMoved_A_42(p);}//‰~“ü—Í?@‚ÉŽg‚¤
         //else if(i_mouse_modeA==43) { es1.setCamera(camera_of_orisen_nyuuryokuzu);es1.mMoved_A_43(p);}//‰~‚Ì3“_“ü—Í?@‚ÉŽg‚¤
         //else if(i_mouse_modeA==44) { es1.setCamera(camera_of_orisen_nyuuryokuzu);es1.mMoved_A_44(p);}//‰~?@•ª—£“ü—Í?@‚ÉŽg‚¤
-        //else if(i_mouse_modeA==45) { es1.setCamera(camera_of_orisen_nyuuryokuzu);es1.mMoved_A_45(p);}//2‰~‚Ì?Ú?ü?@‚ÉŽg‚¤
+        //else if(i_mouse_modeA==45) { es1.setCamera(camera_of_orisen_nyuuryokuzu);es1.mMoved_A_45(p);}//2‰~‚Ì?Ú???@‚ÉŽg‚¤
         //else if(i_mouse_modeA==46) { es1.setCamera(camera_of_orisen_nyuuryokuzu);es1.mMoved_A_46(p);}//”½“]?@‚ÉŽg‚¤
         //else if(i_mouse_modeA==47) { es1.setCamera(camera_of_orisen_nyuuryokuzu);es1.mMoved_A_47(p);}//‰~“ü—Íƒ‚?[ƒh?B(ƒtƒŠ?[)
-        //else if(i_mouse_modeA==48) { es1.setCamera(camera_of_orisen_nyuuryokuzu);es1.mMoved_A_48(p);}//‰~?@“¯?S‰~’Ç‰Áƒ‚?[ƒh?B(Œ³‰~‚Ì‰~Žü‚Æ“¯?S‰~‚Ì‰~Žü‚Æ‚Ì•?‚Í?ü•ª‚ÅŽw’è‚·‚é)
-        //else if(i_mouse_modeA==49) { es1.setCamera(camera_of_orisen_nyuuryokuzu);es1.mMoved_A_49(p);}//‰~?@“¯?S‰~’Ç‰Áƒ‚?[ƒh?B(Œ³‰~‚Ì‰~Žü‚Æ“¯?S‰~‚Ì‰~Žü‚Æ‚Ì•?‚Í‘¼‚Ì“¯?S‰~‚Ì‘g‚ÅŽw’è‚·‚é)
-        //else if(i_mouse_modeA==50) { es1.setCamera(camera_of_orisen_nyuuryokuzu);es1.mMoved_A_50(p);}//2‰~‚ðŽw’è‚µ?A‚»‚ê‚¼‚ê‚Ì‰~‚É“¯?S‰~‚ð‰Á‚¦‚é?B‚»‚ê‚¼‚ê‚Ì“¯?S‰~‚Ì‘g‚É‚Å‚«‚é‘Ñ—Ìˆæ‚Ì•?‚ª“™‚µ‚­‚È‚é‚æ‚¤‚É‚µ‚Ä?A‰Á‚¦‚ç‚ê‚½“¯?S‰~“¯Žm‚ª?Ú‚·‚é‚æ‚¤‚É‚·‚é?B
-        //else if(i_mouse_modeA==51) { es1.setCamera(camera_of_orisen_nyuuryokuzu);es1.mMoved_A_51(p);}//•½?s?ü?@•?Žw’è“ü—Íƒ‚?[ƒh?B
+        //else if(i_mouse_modeA==48) { es1.setCamera(camera_of_orisen_nyuuryokuzu);es1.mMoved_A_48(p);}//‰~?@“¯?S‰~’Ç‰Áƒ‚?[ƒh?B(Œ³‰~‚Ì‰~Žü‚Æ“¯?S‰~‚Ì‰~Žü‚Æ‚Ì??‚Í??•ª‚ÅŽw’è‚·‚é)
+        //else if(i_mouse_modeA==49) { es1.setCamera(camera_of_orisen_nyuuryokuzu);es1.mMoved_A_49(p);}//‰~?@“¯?S‰~’Ç‰Áƒ‚?[ƒh?B(Œ³‰~‚Ì‰~Žü‚Æ“¯?S‰~‚Ì‰~Žü‚Æ‚Ì??‚Í‘¼‚Ì“¯?S‰~‚Ì‘g‚ÅŽw’è‚·‚é)
+        //else if(i_mouse_modeA==50) { es1.setCamera(camera_of_orisen_nyuuryokuzu);es1.mMoved_A_50(p);}//2‰~‚ðŽw’è‚µ?A‚»‚ê‚¼‚ê‚Ì‰~‚É“¯?S‰~‚ð‰Á‚¦‚é?B‚»‚ê‚¼‚ê‚Ì“¯?S‰~‚Ì‘g‚É‚Å‚«‚é‘Ñ—Ìˆæ‚Ì??‚ª“™‚µ‚­‚È‚é‚æ‚¤‚É‚µ‚Ä?A‰Á‚¦‚ç‚ê‚½“¯?S‰~“¯Žm‚ª?Ú‚·‚é‚æ‚¤‚É‚·‚é?B
+        //else if(i_mouse_modeA==51) { es1.setCamera(camera_of_orisen_nyuuryokuzu);es1.mMoved_A_51(p);}//•½?s???@??Žw’è“ü—Íƒ‚?[ƒh?B
         else if (i_mouse_modeA == 52) {
             es1.setCamera(camera_of_orisen_nyuuryokuzu);
             es1.mMoved_A_52(p);
@@ -8518,8 +8520,8 @@ write.setRGB(w, h, offsc_haikei.getRGB(w,h));
             es1.mMoved_A_57(p);
         }//Šp“x‘ª’è‚R?@‚ÉŽg‚¤
         //else if(i_mouse_modeA==58) { es1.setCamera(camera_of_orisen_nyuuryokuzu);es1.mMoved_A_58(p);}//senbun_henkan ?Ô?Â
-        //else if(i_mouse_modeA==59) { es1.setCamera(camera_of_orisen_nyuuryokuzu);es1.mMoved_A_59(p);}//“Á’?ƒvƒ?ƒpƒeƒBŽw’è
-        //else if(i_mouse_modeA==60) { es1.setCamera(camera_of_orisen_nyuuryokuzu);es1.mMoved_A_60(p);}//--->HK?@‚ÉŽg‚¤//HK‚Æ‚Í•â?•Šˆ?ü‚Ì‚±‚Æ
+        //else if(i_mouse_modeA==59) { es1.setCamera(camera_of_orisen_nyuuryokuzu);es1.mMoved_A_59(p);}//“Á??ƒv??ƒpƒeƒBŽw’è
+        //else if(i_mouse_modeA==60) { es1.setCamera(camera_of_orisen_nyuuryokuzu);es1.mMoved_A_60(p);}//--->HK?@‚ÉŽg‚¤//HK‚Æ‚Í•â?•Š???‚Ì‚±‚Æ
 
         else if (i_mouse_modeA == 61) {
             es1.setCamera(camera_of_orisen_nyuuryokuzu);
@@ -8528,7 +8530,7 @@ write.setRGB(w, h, offsc_haikei.getRGB(w,h));
         else if (i_mouse_modeA == 62) {
             es1.setCamera(camera_of_orisen_nyuuryokuzu);
             es1.mMoved_A_62(p);
-        }//ƒ{ƒ?ƒmƒC?}?@‚ÉŽg‚¤
+        }//ƒ{??ƒmƒC?}?@‚ÉŽg‚¤
         //else if(i_mouse_modeA==63) { es1.setCamera(camera_of_orisen_nyuuryokuzu);es1.mMoved_A_63(p);}//unselect?@‚ÉŽg‚¤
         //else if(i_mouse_modeA==64) { es1.setCamera(camera_of_orisen_nyuuryokuzu);es1.mMoved_A_64(p);}//unselect?@‚ÉŽg‚¤
         //else if(i_mouse_modeA==65) { es1.setCamera(camera_of_orisen_nyuuryokuzu);es1.mMoved_A_65(p);}//unselect?@‚ÉŽg‚¤
@@ -8542,10 +8544,10 @@ write.setRGB(w, h, offsc_haikei.getRGB(w,h));
         //else if(i_mouse_modeA==10001)  { es1.setCamera(camera_of_orisen_nyuuryokuzu);es1.mMoved_A_10001(p);}
         //else if(i_mouse_modeA==10002)  { es1.setCamera(camera_of_orisen_nyuuryokuzu);es1.mMoved_A_10002(p);}
 
-        //else if(i_mouse_modeA==101){		}	//?Ü‚è?ã‚ª‚è?}‘€?ì
+        //else if(i_mouse_modeA==101){		}	//?Ü‚è?ã‚ª‚è?}‘€??
         //else if(i_mouse_modeA==102){		}	//?Ü‚è?ã‚ª‚è?}ˆÚ“®
 
-        //else if(i_mouse_modeA==103){		}//Šî?€–ÊŽw’è
+        //else if(i_mouse_modeA==103){		}//Šî??–ÊŽw’è
         //else if(i_mouse_modeA==7){;}
         //else if(i_mouse_modeA==8){;}
         else {
@@ -8559,7 +8561,7 @@ write.setRGB(w, h, offsc_haikei.getRGB(w,h));
     int i_ClickCount = 0;//‚±‚Ì•Ï?”‚¢‚ç‚È‚¢‚Ì‚Å‚Í?H21181208
 
 
-    //ƒ}ƒEƒX‘€?ì(ƒ{ƒ^ƒ“‚ð‰Ÿ‚µ‚½‚Æ‚«)‚ð?s‚¤ŠÖ?”----------------------------------------------------
+    //ƒ}ƒEƒX‘€??(ƒ{ƒ^ƒ“‚ð‰Ÿ‚µ‚½‚Æ‚«)‚ð?s‚¤ŠÖ??----------------------------------------------------
     public void mousePressed(MouseEvent e) {
 
         //Ten p =new Ten(e.getX(),e.getY());
@@ -8578,7 +8580,7 @@ write.setRGB(w, h, offsc_haikei.getRGB(w,h));
             btn = e.getButton();
             i_ClickCount = e.getClickCount();
 
-            //---------ƒ{ƒ^ƒ“‚ÌŽí—Þ‚É‚æ‚é“®?ì•Ï?X-----------------------------------------
+            //---------ƒ{ƒ^ƒ“‚ÌŽí—Þ‚É‚æ‚é“®??•Ï?X-----------------------------------------
 
 
             if (btn == MouseEvent.BUTTON1) {
@@ -8617,15 +8619,15 @@ write.setRGB(w, h, offsc_haikei.getRGB(w,h));
 
             } else if (btn == MouseEvent.BUTTON3) {//‰Eƒ{ƒ^ƒ“ƒNƒŠƒbƒN
                 //System.out.println("‰Eƒ{ƒ^ƒ“ƒNƒŠƒbƒN");
-                if (i_mouse_modeA == 62) {//ƒ{ƒ?ƒmƒC?}“ü—ÍŽž‚Í?A“ü—Í“r’†‚Ìƒ{ƒ?ƒmƒC•ê“_‚ª?Á‚¦‚È‚¢‚æ‚¤‚É?A‰EƒNƒŠƒbƒN‚É”½‰ž‚³‚¹‚È‚¢?B20181208
+                if (i_mouse_modeA == 62) {//ƒ{??ƒmƒC?}“ü—ÍŽž‚Í?A“ü—Í“r’†‚Ìƒ{??ƒmƒC•ê“_‚ª?Á‚¦‚È‚¢‚æ‚¤‚É?A‰EƒNƒŠƒbƒN‚É”½‰ž‚³‚¹‚È‚¢?B20181208
                 } else {
                     i_mouse_right_button_on = 1;
 
-                    //?ü•ª?í?œƒ‚?[ƒh?B
+                    //??•ª???œƒ??[ƒh?B
                     es1.setCamera(camera_of_orisen_nyuuryokuzu);
                     es1.mPressed_A_03(p);
 
-                    i_orisen_hojyosen = 4;//=0‚Í?Ü?ü“ü—Í?@=1‚Í•â?•?ü“ü—Íƒ‚?[ƒh?A‚S‚Í—¼•û‚É?ì—p
+                    i_orisen_hojyosen = 4;//=0‚Í?Ü??“ü—Í?@=1‚Í•â????“ü—Íƒ‚?[ƒh?A‚S‚Í—¼•û‚É??—p
                     es1.set_i_orisen_hojyosen(i_orisen_hojyosen);
 
                 }
@@ -8641,30 +8643,30 @@ write.setRGB(w, h, offsc_haikei.getRGB(w,h));
         } else if (i_mouse_modeA == 1) {
             es1.setCamera(camera_of_orisen_nyuuryokuzu);
             es1.mPressed_A_01(p);
-        }   //1 ?ü•ª“ü—Íƒ‚?[ƒh?iƒtƒŠ?[?j
+        }   //1 ??•ª“ü—Íƒ‚?[ƒh?iƒtƒŠ?[?j
         else if (i_mouse_modeA == 2) {                                       //2 “WŠJ?}ˆÚ“®?B
             camera_of_orisen_nyuuryokuzu.camera_ichi_sitei_from_TV(p);
             mouse_temp0.set(p);
         } else if (i_mouse_modeA == 3) {
             es1.setCamera(camera_of_orisen_nyuuryokuzu);
             es1.mPressed_A_03(p);
-        }//?ü•ª?í?œƒ‚?[ƒh?B
+        }//??•ª???œƒ??[ƒh?B
         else if (i_mouse_modeA == 4) {
             es1.setCamera(camera_of_orisen_nyuuryokuzu);
             es1.mPressed_A_04(p);
-        }//senbun_henkan ?•?Ô?Â
+        }//senbun_henkan ???Ô?Â
         else if (i_mouse_modeA == 5) {
             es1.setCamera(camera_of_orisen_nyuuryokuzu);
             es1.mPressed_A_05(p);
-        }//?ü•ª‰„’·ƒ‚?[ƒh?B
+        }//??•ª‰„’·ƒ‚?[ƒh?B
         else if (i_mouse_modeA == 6) {
             es1.setCamera(camera_of_orisen_nyuuryokuzu);
             es1.mPressed_A_06(p);
-        }//2“_‚©‚ç“™‹——£?ü•ªƒ‚?[ƒh?B
+        }//2“_‚©‚ç“™‹——£??•ªƒ‚?[ƒh?B
         else if (i_mouse_modeA == 7) {
             es1.setCamera(camera_of_orisen_nyuuryokuzu);
             es1.mPressed_A_07(p);
-        }//Šp“ñ“™•ª?üƒ‚?[ƒh?B
+        }//Šp“ñ“™•ª??ƒ‚?[ƒh?B
         else if (i_mouse_modeA == 8) {
             es1.setCamera(camera_of_orisen_nyuuryokuzu);
             es1.mPressed_A_08(p);
@@ -8672,7 +8674,7 @@ write.setRGB(w, h, offsc_haikei.getRGB(w,h));
         else if (i_mouse_modeA == 9) {
             es1.setCamera(camera_of_orisen_nyuuryokuzu);
             es1.mPressed_A_09(p);
-        }//?‚?ü‚¨‚ë‚µƒ‚?[ƒh?B
+        }//????‚¨‚ë‚µƒ‚?[ƒh?B
         else if (i_mouse_modeA == 10) {
             es1.setCamera(camera_of_orisen_nyuuryokuzu);
             es1.mPressed_A_10(p);
@@ -8680,7 +8682,7 @@ write.setRGB(w, h, offsc_haikei.getRGB(w,h));
         else if (i_mouse_modeA == 11) {
             es1.setCamera(camera_of_orisen_nyuuryokuzu);
             es1.mPressed_A_11(p);
-        }//?ü•ª“ü—Íƒ‚?[ƒh?B(?§ŒÀ)
+        }//??•ª“ü—Íƒ‚?[ƒh?B(?§ŒÀ)
         else if (i_mouse_modeA == 12) {
             es1.setCamera(camera_of_orisen_nyuuryokuzu);
             es1.mPressed_A_12(p);
@@ -8688,7 +8690,7 @@ write.setRGB(w, h, offsc_haikei.getRGB(w,h));
         else if (i_mouse_modeA == 13) {
             es1.setCamera(camera_of_orisen_nyuuryokuzu);
             es1.mPressed_A_13(p);
-        }//Šp“xŒnƒ‚?[ƒh?i‚P”Ô–Ú?j?B//?ü•ªŽw’è?AŒð“_‚Ü‚Å
+        }//Šp“xŒnƒ‚?[ƒh?i‚P”Ô–Ú?j?B//??•ªŽw’è?AŒð“_‚Ü‚Å
         else if (i_mouse_modeA == 14) {
             es1.setCamera(camera_of_orisen_nyuuryokuzu);
             es1.mPressed_A_14(p);
@@ -8696,11 +8698,11 @@ write.setRGB(w, h, offsc_haikei.getRGB(w,h));
         else if (i_mouse_modeA == 15) {
             es1.setCamera(camera_of_orisen_nyuuryokuzu);
             es1.mPressed_A_15(p);
-        }//“_?í?œƒ‚?[ƒh?B
+        }//“_???œƒ??[ƒh?B
         else if (i_mouse_modeA == 16) {
             es1.setCamera(camera_of_orisen_nyuuryokuzu);
             es1.mPressed_A_16(p);
-        }//Šp“xŒnƒ‚?[ƒh?i‚S”Ô–Ú?j?B2“_Žw’è‚µ?A?ü•ª‚Ü‚Å
+        }//Šp“xŒnƒ‚?[ƒh?i‚S”Ô–Ú?j?B2“_Žw’è‚µ?A??•ª‚Ü‚Å
         else if (i_mouse_modeA == 17) {
             es1.setCamera(camera_of_orisen_nyuuryokuzu);
             es1.mPressed_A_17(p);
@@ -8744,11 +8746,11 @@ write.setRGB(w, h, offsc_haikei.getRGB(w,h));
         else if (i_mouse_modeA == 27) {
             es1.setCamera(camera_of_orisen_nyuuryokuzu);
             es1.mPressed_A_27(p);
-        }//?ü•ª•ªŠ„“ü—Í?@‚ÉŽg‚¤
+        }//??•ª•ªŠ„“ü—Í?@‚ÉŽg‚¤
         else if (i_mouse_modeA == 28) {
             es1.setCamera(camera_of_orisen_nyuuryokuzu);
             es1.mPressed_A_28(p);
-        }//?ü•ª“à•ª“ü—Í?@‚ÉŽg‚¤
+        }//??•ª“à•ª“ü—Í?@‚ÉŽg‚¤
         else if (i_mouse_modeA == 29) {
             es1.setCamera(camera_of_orisen_nyuuryokuzu);
             es1.mPressed_A_29(p);
@@ -8756,7 +8758,7 @@ write.setRGB(w, h, offsc_haikei.getRGB(w,h));
         else if (i_mouse_modeA == 30) {
             es1.setCamera(camera_of_orisen_nyuuryokuzu);
             es1.mPressed_A_30(p);
-        }//?œ‚¯_?ü•ÏŠ·?@‚ÉŽg‚¤
+        }//?œ‚¯_??•ÏŠ·?@‚ÉŽg‚¤
         else if (i_mouse_modeA == 31) {
             es1.setCamera(camera_of_orisen_nyuuryokuzu);
             es1.mPressed_A_31(p);
@@ -8768,39 +8770,39 @@ write.setRGB(w, h, offsc_haikei.getRGB(w,h));
         else if (i_mouse_modeA == 33) {
             es1.setCamera(camera_of_orisen_nyuuryokuzu);
             es1.mPressed_A_33(p);
-        }//‹›‚Ì?œ?@‚ÉŽg‚¤
+        }//‹›‚Ì???@‚ÉŽg‚¤
         else if (i_mouse_modeA == 34) {
             es1.setCamera(camera_of_orisen_nyuuryokuzu);
             es1.mPressed_A_34(p);
-        }//?€”õ‚Æ‚µ‚Ä‚¾‚¯Žg‚¤?ü•ª‚É?d•¡‚µ‚Ä‚¢‚é?Ü?ü‚ð?‡‚ÉŽR’J‚É‚·‚é‚Ì?@‚ÉŽg‚¤
+        }//??”õ‚Æ‚µ‚Ä‚¾‚¯Žg‚¤??•ª‚É?d•¡‚µ‚Ä‚¢‚é?Ü??‚ð?‡‚ÉŽR’J‚É‚·‚é‚Ì?@‚ÉŽg‚¤
         else if (i_mouse_modeA == 35) {
             es1.setCamera(camera_of_orisen_nyuuryokuzu);
             es1.mPressed_A_35(p);
-        }//•¡?Ü‚è•Ô‚µ?@“ü—Í‚µ‚½?ü•ª‚É?Ú?G‚µ‚Ä‚¢‚é?Ü?ü‚ð?Ü‚è•Ô‚µ?@‚ÉŽg‚¤
+        }//•¡?Ü‚è•Ô‚µ?@“ü—Í‚µ‚½??•ª‚É?Ú?G‚µ‚Ä‚¢‚é?Ü??‚ð?Ü‚è•Ô‚µ?@‚ÉŽg‚¤
         else if (i_mouse_modeA == 36) {
             es1.setCamera(camera_of_orisen_nyuuryokuzu);
             es1.mPressed_A_36(p);
-        }//?€”õ‚Æ‚µ‚Ä‚¾‚¯Žg‚¤?ü•ª‚ÉXŒð?·‚µ‚Ä‚¢‚é?Ü?ü‚ð?‡‚ÉŽR’J‚É‚·‚é‚Ì?@‚ÉŽg‚¤
+        }//??”õ‚Æ‚µ‚Ä‚¾‚¯Žg‚¤??•ª‚ÉXŒð?·‚µ‚Ä‚¢‚é?Ü??‚ð?‡‚ÉŽR’J‚É‚·‚é‚Ì?@‚ÉŽg‚¤
         else if (i_mouse_modeA == 37) {
             es1.setCamera(camera_of_orisen_nyuuryokuzu);
             es1.mPressed_A_37(p);
-        }//Šp“xŒnƒ‚?[ƒh?i‚R”Ô–Ú?j?BŠp“x‹KŠi‰»?ü•ª“ü—Íƒ‚?[ƒh?BŠp“x‹KŠi‰»?Ü?ü“ü—Í?@‚ÉŽg‚¤
+        }//Šp“xŒnƒ‚?[ƒh?i‚R”Ô–Ú?j?BŠp“x‹KŠi‰»??•ª“ü—Íƒ‚?[ƒh?BŠp“x‹KŠi‰»?Ü??“ü—Í?@‚ÉŽg‚¤
         else if (i_mouse_modeA == 38) {
             es1.setCamera(camera_of_orisen_nyuuryokuzu);
             es1.mPressed_A_38(p);
-        }//?Ü‚è?ô‚Ý‰Â”\?ü’Ç‰Á
+        }//?Ü‚è?ô‚Ý‰Â”\??’Ç‰Á
         else if (i_mouse_modeA == 39) {
             es1.setCamera(camera_of_orisen_nyuuryokuzu);
             es1.mPressed_A_39(p);
-        }//?Ü‚è?ô‚Ý‰Â”\?ü+ŠiŽq“_Œn“ü—Í
+        }//?Ü‚è?ô‚Ý‰Â”\??+ŠiŽq“_Œn“ü—Í
         else if (i_mouse_modeA == 40) {
             es1.setCamera(camera_of_orisen_nyuuryokuzu);
             es1.mPressed_A_40(p);
-        }//•½?s?ü“ü—Í
+        }//•½?s??“ü—Í
         else if (i_mouse_modeA == 41) {
             es1.setCamera(camera_of_orisen_nyuuryokuzu);
             es1.mPressed_A_41(p);
-        }//“_?í?œ?i?üƒJƒ‰?[ƒ`ƒFƒ“ƒW?j?@‚ÉŽg‚¤
+        }//“_?????i??ƒJƒ‰?[ƒ`ƒFƒ“ƒW?j?@‚ÉŽg‚¤
         else if (i_mouse_modeA == 42) {
             es1.setCamera(camera_of_orisen_nyuuryokuzu);
             es1.mPressed_A_42(p);
@@ -8816,7 +8818,7 @@ write.setRGB(w, h, offsc_haikei.getRGB(w,h));
         else if (i_mouse_modeA == 45) {
             es1.setCamera(camera_of_orisen_nyuuryokuzu);
             es1.mPressed_A_45(p);
-        }//2‰~‚Ì?Ú?ü?@‚ÉŽg‚¤
+        }//2‰~‚Ì?Ú???@‚ÉŽg‚¤
         else if (i_mouse_modeA == 46) {
             es1.setCamera(camera_of_orisen_nyuuryokuzu);
             es1.mPressed_A_46(p);
@@ -8828,19 +8830,19 @@ write.setRGB(w, h, offsc_haikei.getRGB(w,h));
         else if (i_mouse_modeA == 48) {
             es1.setCamera(camera_of_orisen_nyuuryokuzu);
             es1.mPressed_A_48(p);
-        }//‰~?@“¯?S‰~’Ç‰Áƒ‚?[ƒh?B(Œ³‰~‚Ì‰~Žü‚Æ“¯?S‰~‚Ì‰~Žü‚Æ‚Ì•?‚Í?ü•ª‚ÅŽw’è‚·‚é)
+        }//‰~?@“¯?S‰~’Ç‰Áƒ‚?[ƒh?B(Œ³‰~‚Ì‰~Žü‚Æ“¯?S‰~‚Ì‰~Žü‚Æ‚Ì??‚Í??•ª‚ÅŽw’è‚·‚é)
         else if (i_mouse_modeA == 49) {
             es1.setCamera(camera_of_orisen_nyuuryokuzu);
             es1.mPressed_A_49(p);
-        }//‰~?@“¯?S‰~’Ç‰Áƒ‚?[ƒh?B(Œ³‰~‚Ì‰~Žü‚Æ“¯?S‰~‚Ì‰~Žü‚Æ‚Ì•?‚Í‘¼‚Ì“¯?S‰~‚Ì‘g‚ÅŽw’è‚·‚é)
+        }//‰~?@“¯?S‰~’Ç‰Áƒ‚?[ƒh?B(Œ³‰~‚Ì‰~Žü‚Æ“¯?S‰~‚Ì‰~Žü‚Æ‚Ì??‚Í‘¼‚Ì“¯?S‰~‚Ì‘g‚ÅŽw’è‚·‚é)
         else if (i_mouse_modeA == 50) {
             es1.setCamera(camera_of_orisen_nyuuryokuzu);
             es1.mPressed_A_50(p);
-        }//2‰~‚ðŽw’è‚µ?A‚»‚ê‚¼‚ê‚Ì‰~‚É“¯?S‰~‚ð‰Á‚¦‚é?B‚»‚ê‚¼‚ê‚Ì“¯?S‰~‚Ì‘g‚É‚Å‚«‚é‘Ñ—Ìˆæ‚Ì•?‚ª“™‚µ‚­‚È‚é‚æ‚¤‚É‚µ‚Ä?A‰Á‚¦‚ç‚ê‚½“¯?S‰~“¯Žm‚ª?Ú‚·‚é‚æ‚¤‚É‚·‚é?B
+        }//2‰~‚ðŽw’è‚µ?A‚»‚ê‚¼‚ê‚Ì‰~‚É“¯?S‰~‚ð‰Á‚¦‚é?B‚»‚ê‚¼‚ê‚Ì“¯?S‰~‚Ì‘g‚É‚Å‚«‚é‘Ñ—Ìˆæ‚Ì??‚ª“™‚µ‚­‚È‚é‚æ‚¤‚É‚µ‚Ä?A‰Á‚¦‚ç‚ê‚½“¯?S‰~“¯Žm‚ª?Ú‚·‚é‚æ‚¤‚É‚·‚é?B
         else if (i_mouse_modeA == 51) {
             es1.setCamera(camera_of_orisen_nyuuryokuzu);
             es1.mPressed_A_51(p);
-        }//•½?s?ü?@•?Žw’è“ü—Íƒ‚?[ƒh?B
+        }//•½?s???@??Žw’è“ü—Íƒ‚?[ƒh?B
         else if (i_mouse_modeA == 52) {
             es1.setCamera(camera_of_orisen_nyuuryokuzu);
             es1.mPressed_A_52(p);
@@ -8872,11 +8874,11 @@ write.setRGB(w, h, offsc_haikei.getRGB(w,h));
         else if (i_mouse_modeA == 59) {
             es1.setCamera(camera_of_orisen_nyuuryokuzu);
             es1.mPressed_A_59(p);
-        }//“Á’?ƒvƒ?ƒpƒeƒBŽw’è
+        }//“Á??ƒv??ƒpƒeƒBŽw’è
         else if (i_mouse_modeA == 60) {
             es1.setCamera(camera_of_orisen_nyuuryokuzu);
             es1.mPressed_A_60(p);
-        }//--->HK?@‚ÉŽg‚¤//HK‚Æ‚Í•â?•Šˆ?ü‚Ì‚±‚Æ
+        }//--->HK?@‚ÉŽg‚¤//HK‚Æ‚Í•â?•Š???‚Ì‚±‚Æ
 
         else if (i_mouse_modeA == 61) {
             es1.setCamera(camera_of_orisen_nyuuryokuzu);
@@ -8885,7 +8887,7 @@ write.setRGB(w, h, offsc_haikei.getRGB(w,h));
         else if (i_mouse_modeA == 62) {
             es1.setCamera(camera_of_orisen_nyuuryokuzu);
             es1.mPressed_A_62(p);
-        }//ƒ{ƒ?ƒmƒC?}?@‚ÉŽg‚¤
+        }//ƒ{??ƒmƒC?}?@‚ÉŽg‚¤
         //else if(i_mouse_modeA==63) { es1.setCamera(camera_of_orisen_nyuuryokuzu);es1.mPressed_A_63(p);}//unselect?@‚ÉŽg‚¤
         //else if(i_mouse_modeA==64) { es1.setCamera(camera_of_orisen_nyuuryokuzu);es1.mPressed_A_64(p);}//unselect?@‚ÉŽg‚¤
         //else if(i_mouse_modeA==65) { es1.setCamera(camera_of_orisen_nyuuryokuzu);es1.mPressed_A_65(p);}//unselect?@‚ÉŽg‚¤
@@ -8902,7 +8904,7 @@ write.setRGB(w, h, offsc_haikei.getRGB(w,h));
         } else if (i_mouse_modeA == 10002) {
             es1.setCamera(camera_of_orisen_nyuuryokuzu);
             es1.mPressed_A_10002(p);
-        } else if (i_mouse_modeA == 101) {        //?Ü‚è?ã‚ª‚è?}‘€?ì
+        } else if (i_mouse_modeA == 101) {        //?Ü‚è?ã‚ª‚è?}‘€??
             OZ.oriagari_sousa_mouse_on(p);
         } else if (i_mouse_modeA == 102) {//?Ü‚è?ã‚ª‚è?}ˆÚ“®
             OZ.camera_of_oriagarizu.camera_ichi_sitei_from_TV(p);
@@ -8915,7 +8917,7 @@ write.setRGB(w, h, offsc_haikei.getRGB(w,h));
             mouse_temp0.set(p);
         } else if (i_mouse_modeA == 103) {
             //ts1.set_kijyunmen_id(p);
-        }//Šî?€–ÊŽw’è
+        }//Šî??–ÊŽw’è
         else if (i_mouse_modeA == 7) {
         } else if (i_mouse_modeA == 8) {
         } else {
@@ -8924,7 +8926,7 @@ write.setRGB(w, h, offsc_haikei.getRGB(w,h));
         repaint();
     }
 
-    //ƒ}ƒEƒX‘€?ì(ƒhƒ‰ƒbƒO‚µ‚½‚Æ‚«)‚ð?s‚¤ŠÖ?”---------- System.out.println("A");------------------------------------------
+    //ƒ}ƒEƒX‘€??(ƒhƒ‰ƒbƒO‚µ‚½‚Æ‚«)‚ð?s‚¤ŠÖ??---------- System.out.println("A");------------------------------------------
     public void mouseDragged(MouseEvent e) {
 
         if (i_mouseDragged_yuukou == 1) {
@@ -8934,7 +8936,7 @@ write.setRGB(w, h, offsc_haikei.getRGB(w,h));
             mouse_object_iti(p);
 
             if (ckbox_mouse_settei.isSelected()) {
-                //---------ƒ{ƒ^ƒ“‚ÌŽí—Þ‚É‚æ‚é“®?ì•Ï?X-----------------------------------------
+                //---------ƒ{ƒ^ƒ“‚ÌŽí—Þ‚É‚æ‚é“®??•Ï?X-----------------------------------------
                 if (btn == MouseEvent.BUTTON1) {
 
 
@@ -8965,13 +8967,13 @@ write.setRGB(w, h, offsc_haikei.getRGB(w,h));
 
                 } else if (btn == MouseEvent.BUTTON3) {
                     //System.out.println("‰Eƒ{ƒ^ƒ“ƒNƒŠƒbƒN");
-                    if (i_mouse_modeA == 62) {//ƒ{ƒ?ƒmƒC?}“ü—ÍŽž‚Í?A“ü—Í“r’†‚Ìƒ{ƒ?ƒmƒC•ê“_‚ª?Á‚¦‚È‚¢‚æ‚¤‚É?A‰EƒNƒŠƒbƒN‚É”½‰ž‚³‚¹‚È‚¢?B20181208
+                    if (i_mouse_modeA == 62) {//ƒ{??ƒmƒC?}“ü—ÍŽž‚Í?A“ü—Í“r’†‚Ìƒ{??ƒmƒC•ê“_‚ª?Á‚¦‚È‚¢‚æ‚¤‚É?A‰EƒNƒŠƒbƒN‚É”½‰ž‚³‚¹‚È‚¢?B20181208
                     } else {
                         if (i_mouse_undo_redo_mode == 1) {
                             return;
                         }//undo,redoƒ‚?[ƒh?B
                         es1.setCamera(camera_of_orisen_nyuuryokuzu);
-                        es1.mDragged_A_03(p);//?ü•ª?í?œƒ‚?[ƒh?B
+                        es1.mDragged_A_03(p);//??•ª???œƒ??[ƒh?B
                     }
                     repaint();
                     return;
@@ -9211,7 +9213,7 @@ write.setRGB(w, h, offsc_haikei.getRGB(w,h));
             else if (i_mouse_modeA == 62) {
                 es1.setCamera(camera_of_orisen_nyuuryokuzu);
                 es1.mDragged_A_62(p);
-            }//ƒ{ƒ?ƒmƒC?}?@‚ÉŽg‚¤
+            }//ƒ{??ƒmƒC?}?@‚ÉŽg‚¤
             //else if(i_mouse_modeA==63) {es1.setCamera(camera_of_orisen_nyuuryokuzu);es1.mDragged_A_63(p);}
             //else if(i_mouse_modeA==64) {es1.setCamera(camera_of_orisen_nyuuryokuzu);es1.mDragged_A_64(p);}
             //else if(i_mouse_modeA==65) {es1.setCamera(camera_of_orisen_nyuuryokuzu);es1.mDragged_A_65(p);}
@@ -9230,7 +9232,7 @@ write.setRGB(w, h, offsc_haikei.getRGB(w,h));
                 es1.mDragged_A_10002(p);
             } else if (i_mouse_modeA == 101) {
                 OZ.oriagari_sousa_mouse_drag(p);
-            }    //?Ü‚è?ã‚ª‚è?}‘€?ì
+            }    //?Ü‚è?ã‚ª‚è?}‘€??
             else if (i_mouse_modeA == 102) {
                 OZ.camera_of_oriagarizu.hyouji_ichi_idou(mouse_temp0.tano_Ten_iti(p));
                 OZ.camera_of_oriagari_omote.hyouji_ichi_idou(mouse_temp0.tano_Ten_iti(p));
@@ -9242,7 +9244,7 @@ write.setRGB(w, h, offsc_haikei.getRGB(w,h));
                 mouse_temp0.set(p);//mouse_temp0‚ÍˆêŽž“I‚ÉŽg‚¤Ten?Amouse_temp0.tano_Ten_iti(p)‚Ímouse_temp0‚©‚çŒ©‚½p‚ÌˆÊ’u
 
             } else if (i_mouse_modeA == 103) {
-            }//Šî?€–ÊŽw’è
+            }//Šî??–ÊŽw’è
             else if (i_mouse_modeA == 7) {
             } else if (i_mouse_modeA == 8) {
             } else {
@@ -9252,7 +9254,7 @@ write.setRGB(w, h, offsc_haikei.getRGB(w,h));
         }
     }
 
-    //ƒ}ƒEƒX‘€?ì(ƒ{ƒ^ƒ“‚ð—£‚µ‚½‚Æ‚«)‚ð?s‚¤ŠÖ?”----------------------------------------------------
+    //ƒ}ƒEƒX‘€??(ƒ{ƒ^ƒ“‚ð—£‚µ‚½‚Æ‚«)‚ð?s‚¤ŠÖ??----------------------------------------------------
     public void mouseReleased(MouseEvent e) {
         if (i_mouseReleased_yuukou == 1) {
             //Ten p =new Ten(e.getX(),e.getY());
@@ -9260,7 +9262,7 @@ write.setRGB(w, h, offsc_haikei.getRGB(w,h));
 
 
             if (ckbox_mouse_settei.isSelected()) {
-                //---------ƒ{ƒ^ƒ“‚ÌŽí—Þ‚É‚æ‚é“®?ì•Ï?X-----------------------------------------
+                //---------ƒ{ƒ^ƒ“‚ÌŽí—Þ‚É‚æ‚é“®??•Ï?X-----------------------------------------
                 if (btn == MouseEvent.BUTTON1) {
                     //
 
@@ -9291,7 +9293,7 @@ write.setRGB(w, h, offsc_haikei.getRGB(w,h));
                 } else if (btn == MouseEvent.BUTTON3) {
                     //System.out.println("‰Eƒ{ƒ^ƒ“ƒNƒŠƒbƒN");
                     if (i_mouse_modeA == 62) {
-                        repaint();//ƒ{ƒ?ƒmƒC?}“ü—ÍŽž‚Í?A“ü—Í“r’†‚Ìƒ{ƒ?ƒmƒC•ê“_‚ª?Á‚¦‚È‚¢‚æ‚¤‚É?A‰EƒNƒŠƒbƒN‚É”½‰ž‚³‚¹‚È‚¢?B20181208
+                        repaint();//ƒ{??ƒmƒC?}“ü—ÍŽž‚Í?A“ü—Í“r’†‚Ìƒ{??ƒmƒC•ê“_‚ª?Á‚¦‚È‚¢‚æ‚¤‚É?A‰EƒNƒŠƒbƒN‚É”½‰ž‚³‚¹‚È‚¢?B20181208
                     } else {
 
                         i_mouse_right_button_on = 0;
@@ -9307,7 +9309,7 @@ write.setRGB(w, h, offsc_haikei.getRGB(w,h));
                         es1.modosi_i_orisen_hojyosen();
                         i_mouseDragged_yuukou = 0;
                         i_mouseReleased_yuukou = 0;
-                        //?ü•ª?í?œƒ‚?[ƒh?B
+                        //??•ª???œƒ??[ƒh?B
                     }
                     return;
                 }
@@ -9572,7 +9574,7 @@ write.setRGB(w, h, offsc_haikei.getRGB(w,h));
             else if (i_mouse_modeA == 62) {
                 es1.setCamera(camera_of_orisen_nyuuryokuzu);
                 es1.mReleased_A_62(p);
-            }//ƒ{ƒ?ƒmƒC?}?@‚ÉŽg‚¤
+            }//ƒ{??ƒmƒC?}?@‚ÉŽg‚¤
             //else if(i_mouse_modeA==63){es1.setCamera(camera_of_orisen_nyuuryokuzu);es1.mReleased_A_63(p);}
             //else if(i_mouse_modeA==64){es1.setCamera(camera_of_orisen_nyuuryokuzu);es1.mReleased_A_64(p);}
             //else if(i_mouse_modeA==65){es1.setCamera(camera_of_orisen_nyuuryokuzu);es1.mReleased_A_65(p);}
@@ -9589,7 +9591,7 @@ write.setRGB(w, h, offsc_haikei.getRGB(w,h));
             } else if (i_mouse_modeA == 10002) {
                 es1.setCamera(camera_of_orisen_nyuuryokuzu);
                 es1.mReleased_A_10002(p);
-            } else if (i_mouse_modeA == 101) {        //?Ü‚è?ã‚ª‚è?}‘€?ì
+            } else if (i_mouse_modeA == 101) {        //?Ü‚è?ã‚ª‚è?}‘€??
                 OZ.oriagari_sousa_mouse_off(p);
             } else if (i_mouse_modeA == 102) {
                 OZ.camera_of_oriagarizu.hyouji_ichi_idou(mouse_temp0.tano_Ten_iti(p));
@@ -9601,7 +9603,7 @@ write.setRGB(w, h, offsc_haikei.getRGB(w,h));
 
                 mouse_temp0.set(p);
 
-            } else if (i_mouse_modeA == 103) {//Šî?€–ÊŽw’è
+            } else if (i_mouse_modeA == 103) {//Šî??–ÊŽw’è
                 int new_kijyunmen_id;
                 int old_kijyunmen_id;
                 old_kijyunmen_id = OZ.ts1.get_kijyunmen_id();
@@ -9638,19 +9640,19 @@ write.setRGB(w, h, offsc_haikei.getRGB(w,h));
 
     }
 
-    //ƒ}ƒEƒX‘€?ì(ƒ{ƒ^ƒ“‚ðƒNƒŠƒbƒN‚µ‚½‚Æ‚«)‚ð?s‚¤ŠÖ?”----------------------------------------------------
+    //ƒ}ƒEƒX‘€??(ƒ{ƒ^ƒ“‚ðƒNƒŠƒbƒN‚µ‚½‚Æ‚«)‚ð?s‚¤ŠÖ??----------------------------------------------------
     public void mouseClicked(MouseEvent e) {
         //‰½‚à‚µ‚È‚¢
 
 
     }
 
-    //ƒ}ƒEƒX‘€?ì(ƒJ?[ƒ\ƒ‹‚ª—LŒø—Ìˆæ“à‚É“ü‚Á‚½‚Æ‚«)‚ð?s‚¤ŠÖ?”----------------------------------------------------
+    //ƒ}ƒEƒX‘€??(ƒJ?[ƒ\ƒ‹‚ª—LŒø—Ìˆæ“à‚É“ü‚Á‚½‚Æ‚«)‚ð?s‚¤ŠÖ??----------------------------------------------------
     public void mouseEntered(MouseEvent e) {
         //‰½‚à‚µ‚È‚¢
     }
 
-    //ƒ}ƒEƒX‘€?ì(ƒJ?[ƒ\ƒ‹‚ª—LŒø—ÌˆæŠO‚É?o‚½‚Æ‚«)‚ð?s‚¤ŠÖ?”----------------------------------------------------
+    //ƒ}ƒEƒX‘€??(ƒJ?[ƒ\ƒ‹‚ª—LŒø—ÌˆæŠO‚É?o‚½‚Æ‚«)‚ð?s‚¤ŠÖ??----------------------------------------------------
     public void mouseExited(MouseEvent e) {
         //‰½‚à‚µ‚È‚¢
     }
@@ -9692,10 +9694,10 @@ public void keyTyped(KeyEvent e){
     }
 
     // ------------------------------------------------------
-    public void haikei_byouga(Graphics2D g2h, Image imgh) {//ˆø?”‚ÍƒJƒ?ƒ‰?Ý’è?A?ü•??A‰æ–ÊX•??A‰æ–Êy?‚‚³
-        //”wŒi‰æ‚ð?A‰æ‘œ‚Ì?¶?ã‚Í‚µ‚ð?AƒEƒBƒ“ƒhƒE‚Ì(0,0)‚É?‡‚í‚¹‚Ä‰ñ“]‚âŠg‘å‚È‚µ‚Å•\Ž¦‚µ‚½?ê?‡‚ðŠî?€?ó‘Ô‚Æ‚·‚é?B
+    public void haikei_byouga(Graphics2D g2h, Image imgh) {//ˆø?”‚ÍƒJ??ƒ‰?Ý’è?A?????A‰æ–ÊX???A‰æ–Êy?‚‚³
+        //”wŒi‰æ‚ð?A‰æ‘œ‚Ì?¶?ã‚Í‚µ‚ð?AƒEƒBƒ“ƒhƒE‚Ì(0,0)‚É?‡‚úž¹‚Ä‰ñ“]‚âŠg‘å‚È‚µ‚Å•\Ž¦‚µ‚½???‡‚ðŠ????ó‘Ô‚Æ‚·‚é?B
         //”wŒi‰æ?ã‚Ì“_h1‚ð’†?S‚Æ‚µ‚Äa”{Šg‘å‚·‚é?BŽŸ‚É?Ah1‚ð“WŠJ?}?ã‚Ì“_h3‚Æ?d‚È‚é‚æ‚¤‚É”wŒi‰æ‚ð•½?sˆÚ“®‚·‚é?B
-        //‚±‚Ì?ó‘Ô‚Ì“WŠJ?}‚ð?Ah3‚ð’†?S‚Éb“x‰ñ“]‚µ‚½‚æ‚¤Œ©‚¦‚é‚æ‚¤‚É?À•W‚ð‰ñ“]‚³‚¹‚Ä“\‚è•t‚¯‚Ä?A‚»‚ÌŒã?A?À•W‚Ì‰ñ“]‚ðŒ³‚É–ß‚·‚Æ‚¢‚¤ŠÖ?”?B
+        //‚±‚Ì?ó‘Ô‚Ì“WŠJ?}‚ð?Ah3‚ð’†?S‚Éb“x‰ñ“]‚µ‚½‚æ‚¤Œ©‚¦‚é‚æ‚¤‚É?À•W‚ð‰ñ“]‚³‚¹‚Ä“\‚è•t‚¯‚Ä?A‚»‚ÌŒã?A?À•W‚Ì‰ñ“]‚ðŒ³‚É–ß‚·‚Æ‚¢‚¤ŠÖ???B
         //ˆø?”‚Í?AGraphics2D g2h,Image imgh,Ten h1,Ten h2,Ten h3,Ten h4
         //h2,‚Æh4‚à?d‚È‚é‚æ‚¤‚É‚·‚é
         //
@@ -9727,13 +9729,13 @@ public void keyTyped(KeyEvent e){
 
 
     //----------------------------------------------------
-    //ƒyƒCƒ“ƒg‚ð?s‚¤ŠÖ?”----------------------------------
+    //ƒyƒCƒ“ƒg‚ð?s‚¤ŠÖ??----------------------------------
     //----------------------------------------------------
     public void paint(Graphics g) {
         //?uf?v‚ð•t‚¯‚é‚±‚Æ‚ÅfloatŒ^‚Ì?”’l‚Æ‚µ‚Ä‹L?q‚·‚é‚±‚Æ‚ª‚Å‚«‚é
         Graphics2D g2 = (Graphics2D) bufferGraphics;
         //Graphics2D g2d = (Graphics2D)g;
-        //BasicStroke BStroke = new BasicStroke(1.0f);g2.setStroke(BStroke);//?ü‚Ì‘¾‚³
+        //BasicStroke BStroke = new BasicStroke(1.0f);g2.setStroke(BStroke);//??‚Ì‘¾‚³
 
         //float fTenkaizuSenhaba=(float)iTenkaizuSenhaba;	float f_h_TenkaizuSenhaba=(float)i_h_TenkaizuSenhaba;
         fTenkaizuSenhaba = (float) iTenkaizuSenhaba;
@@ -9745,9 +9747,9 @@ public void keyTyped(KeyEvent e){
         }
 
         BasicStroke BStroke = new BasicStroke(fTenkaizuSenhaba, BasicStroke.CAP_BUTT, BasicStroke.JOIN_MITER);
-        g2.setStroke(BStroke);//?ü‚Ì‘¾‚³‚â?ü‚Ì––’[‚ÌŒ`?ó
+        g2.setStroke(BStroke);//??‚Ì‘¾‚³‚â??‚Ì––’[‚ÌŒ`??
 
-        //BasicStroke BStroke = new BasicStroke(1.2f, BasicStroke.CAP_BUTT, BasicStroke.JOIN_MITER);g2.setStroke(BStroke);//?ü‚Ì‘¾‚³‚â?ü‚Ì––’[‚ÌŒ`?ó
+        //BasicStroke BStroke = new BasicStroke(1.2f, BasicStroke.CAP_BUTT, BasicStroke.JOIN_MITER);g2.setStroke(BStroke);//??‚Ì‘¾‚³‚â??‚Ì––’[‚ÌŒ`??
         if (i_anti_alias == 1) {
             g2.setRenderingHint(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON);//ƒAƒ“ƒ`ƒGƒCƒŠƒAƒX?@ƒIƒ“
         }
@@ -9755,12 +9757,12 @@ public void keyTyped(KeyEvent e){
             g2.setRenderingHint(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_OFF);//ƒAƒ“ƒ`ƒGƒCƒŠƒAƒX?@ƒIƒt
         }
 
-        g2.setBackground(Color.WHITE);    //‚±‚Ì?s‚Í?A‰æ‘œ‚ðƒtƒ@ƒCƒ‹‚É?‘‚«?o‚»‚¤‚Æ‚µ‚ÄBufferedImageƒNƒ‰ƒX‚ðŽg‚¤?ê?‡?AƒfƒtƒHƒ‹ƒg‚Å”wŒi‚ª?•‚É‚È‚é‚Ì‚Å?A‚»‚ê‚ð”ð‚¯‚é‚½‚ß‚ÌˆÓ–¡?@20170107
+        g2.setBackground(Color.WHITE);    //‚±‚Ì?s‚Í?A‰æ‘œ‚ðƒtƒ@ƒCƒ‹‚É?‘‚«?o‚»‚¤‚Æ‚µ‚ÄBufferedImageƒNƒ‰ƒX‚ðŽg‚¤?????AƒfƒtƒHƒ‹ƒg‚Å”wŒi‚ª?•‚É‚È‚é‚Ì‚Å?A‚»‚ê‚ð”ð‚¯‚é‚½‚ß‚ÌˆÓ–¡?@20170107
         //‰æ‘œ‚ðƒtƒ@ƒCƒ‹‚É?‘‚«?o‚³‚·‚±‚Æ‚Í‚â‚ß‚Ä?A?ABufferedImageƒNƒ‰ƒX‚ðŽg‚í‚¸?AImageƒNƒ‰ƒX‚¾‚¯‚Å‚·‚Þ‚È‚ç•s—v‚Ì?s
 
         //AffineTransform at = new AffineTransform();
 
-        //String c=new String();                //•¶Žš—ñ?ˆ—?—p‚ÌƒNƒ‰ƒX‚ÌƒCƒ“ƒXƒ^ƒ“ƒX‰»
+        //String c=new String();                //•¶Žš—ñ????—p‚ÌƒNƒ‰ƒX‚ÌƒCƒ“ƒXƒ^ƒ“ƒX‰»
         //OritaCalc oc =new OritaCalc();
 
         //•Ê‚Ì?d‚È‚è‚³‚ª‚µ?@‚Ìƒ{ƒ^ƒ“‚Ì?F‚ÌŽw’è?B
@@ -9851,7 +9853,7 @@ public void keyTyped(KeyEvent e){
         //•`‰æ‚µ‚½‚¢“à—e‚ÍˆÈ‰º‚É?‘‚­‚±‚ÆVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVV
 
 
-        //ƒJƒ?ƒ‰‚ÌƒZƒbƒg
+        //ƒJ??ƒ‰‚ÌƒZƒbƒg
 
         es1.setCamera(camera_of_orisen_nyuuryokuzu);
 
@@ -9861,7 +9863,7 @@ public void keyTyped(KeyEvent e){
             OZi.ts1.setCamera(camera_of_orisen_nyuuryokuzu);
         }
 
-//VVVVVVVVVVVVVVVˆÈ‰º‚Ìts2‚Ö‚ÌƒJƒ?ƒ‰ƒZƒbƒg‚ÍOriagari_zu‚Ìoekaki‚ÅŽÀŽ{‚µ‚Ä‚¢‚é‚Ì‚ÅˆÈ‰º‚Ì5?s‚Í‚È‚­‚Ä‚à‚¢‚¢‚Í‚¸?@20180225
+//VVVVVVVVVVVVVVVˆÈ‰º‚Ìts2‚Ö‚ÌƒJ??ƒ‰ƒZƒbƒg‚ÍOriagari_zu‚Ìoekaki‚ÅŽÀŽ{‚µ‚Ä‚¢‚é‚Ì‚ÅˆÈ‰º‚Ì5?s‚Í‚È‚­‚Ä‚à‚¢‚¢‚Í‚¸?@20180225
         OZ.ts2.setCamera(OZ.camera_of_oriagarizu);
         OZ.ts2.setCam_omote(OZ.camera_of_oriagari_omote);
         OZ.ts2.setCam_ura(OZ.camera_of_oriagari_ura);
@@ -9877,10 +9879,10 @@ public void keyTyped(KeyEvent e){
 //oc.hyouji("“§–¾‰»ŽÀŽ{Žž‚Ì”wŒi•\Ž¦1");
 
 img_haikei=(Image)imageT;
-			int iw=img_haikei.getWidth(this);//ƒCƒ??[ƒW‚Ì•?‚ðŽæ“¾
-			int ih=img_haikei.getHeight(this);//ƒCƒ??[ƒW‚Ì?‚‚³‚ðŽæ“¾
+			int iw=img_haikei.getWidth(this);//ƒC???[ƒW‚Ì??‚ðŽæ“¾
+			int ih=img_haikei.getHeight(this);//ƒC???[ƒW‚Ì?‚‚³‚ðŽæ“¾
 
-			//System.out.println("paint•???"+iw);
+			//System.out.println("paint????"+iw);
 			//System.out.println("paint?‚‚³??"+ih);
 			h_cam.set_haikei_haba((double)iw);
 			h_cam.set_haikei_takasa((double)ih);
@@ -9894,13 +9896,13 @@ img_haikei=(Image)imageT;
         //System.out.println("paint?@+++++++++++++++++++++?@”wŒi•\Ž¦");
         //”wŒi•\Ž¦
         if ((img_haikei != null) && (ihaikeihyouji >= 1)) {
-            int iw = img_haikei.getWidth(this);//ƒCƒ??[ƒW‚Ì•?‚ðŽæ“¾
-            int ih = img_haikei.getHeight(this);//ƒCƒ??[ƒW‚Ì?‚‚³‚ðŽæ“¾
+            int iw = img_haikei.getWidth(this);//ƒC???[ƒW‚Ì??‚ðŽæ“¾
+            int ih = img_haikei.getHeight(this);//ƒC???[ƒW‚Ì?‚‚³‚ðŽæ“¾
 
-            //System.out.println("paint•???"+iw);
+            //System.out.println("paint????"+iw);
             //System.out.println("paint?‚‚³??"+ih);
-            h_cam.set_haikei_haba((double) iw);
-            h_cam.set_haikei_takasa((double) ih);
+            h_cam.set_haikei_haba(iw);
+            h_cam.set_haikei_takasa(ih);
 
             //if(i_Lock_on==1){
             haikei_byouga(g2, img_haikei);
@@ -9908,7 +9910,7 @@ img_haikei=(Image)imageT;
         }
 
         //ŠiŽq•\Ž¦
-        //es1.kousi_oekaki_with_camera(bufferGraphics,i_bun_hyouji,i_cp_hyouji,i_a0_hyouji,i_a1_hyouji,fTenkaizuSenhaba,i_orisen_hyougen,f_h_TenkaizuSenhaba,dim.width,dim.height);//“n‚·?î•ñ‚ÍƒJƒ?ƒ‰?Ý’è?A?ü•??A‰æ–ÊX•??A‰æ–Êy?‚‚³
+        //es1.kousi_oekaki_with_camera(bufferGraphics,i_bun_hyouji,i_cp_hyouji,i_a0_hyouji,i_a1_hyouji,fTenkaizuSenhaba,i_orisen_hyougen,f_h_TenkaizuSenhaba,dim.width,dim.height);//“n‚·?û±ñ‚ÍƒJ??ƒ‰?Ý’è?A?????A‰æ–ÊX???A‰æ–Êy?‚‚³
 
 
         //‰ð?à•\Ž¦
@@ -9917,17 +9919,17 @@ img_haikei=(Image)imageT;
             bufferGraphics.drawImage(img_kaisetu, 650, 100, this);//80,80,‚Í•`‰æŠJŽnˆÊ’u
 
             //bufferGraphics.drawImage(img_kaisetu,600,150,this);//80,80,‚Í•`‰æŠJŽnˆÊ’u
-            //	System.out.println("paint•???"+img_haikei.getWidth(this));
+            //	System.out.println("paint????"+img_haikei.getWidth(this));
             //	System.out.println("paint?‚‚³??"+img_haikei.getHeight(this));
         }
 
 
-        //Šî?€–Ê‚Ì•\Ž¦
-        //System.out.println("paint?@+++++++++++++++++++++?@Šî?€–Ê‚Ì•\Ž¦");
+        //Šî??–Ê‚Ì•\Ž¦
+        //System.out.println("paint?@+++++++++++++++++++++?@Šî??–Ê‚Ì•\Ž¦");
         if (i_mejirusi_hyouji == 1) {
             if (OZ.hyouji_flg > 0) {
                 //	ts1.setCamera(camera_of_orisen_nyuuryokuzu);
-                OZ.ts1.oekaki_kijyunmen_id_with_camera(bufferGraphics);//ts1‚ª?Ü‚è?ô‚Ý‚ð?s‚¤?Û‚ÌŠî?€–Ê‚ð•\Ž¦‚·‚é‚Ì‚ÉŽg‚¤?B
+                OZ.ts1.oekaki_kijyunmen_id_with_camera(bufferGraphics);//ts1‚ª?Ü‚è?ô‚Ý‚ð?s‚¤?Û‚ÌŠî??–Ê‚ð•\Ž¦‚·‚é‚Ì‚ÉŽg‚¤?B
             }
         }
 
@@ -9958,13 +9960,13 @@ img_haikei=(Image)imageT;
         //        es1.setCamera(camera_of_orisen_nyuuryokuzu);
 
         //if(i_mejirusi_hyouji==1){js.oekaki_jyuuji_with_camera(bufferGraphics);}
-        es1.oekaki_with_camera(bufferGraphics, i_bun_hyouji, i_cp_hyouji, i_a0_hyouji, i_a1_hyouji, fTenkaizuSenhaba, i_orisen_hyougen, f_h_TenkaizuSenhaba, dim.width, dim.height, i_mejirusi_hyouji);//“n‚·?î•ñ‚ÍƒJƒ?ƒ‰?Ý’è?A?ü•??A‰æ–ÊX•??A‰æ–Êy?‚‚³,“WŠJ?}“®‚©‚µ’†?S‚Ì?\Žš‚Ì–Úˆó‚Ì•\Ž¦
+        es1.oekaki_with_camera(bufferGraphics, i_bun_hyouji, i_cp_hyouji, i_a0_hyouji, i_a1_hyouji, fTenkaizuSenhaba, i_orisen_hyougen, f_h_TenkaizuSenhaba, dim.width, dim.height, i_mejirusi_hyouji);//“n‚·?û±ñ‚ÍƒJ??ƒ‰?Ý’è?A?????A‰æ–ÊX???A‰æ–Êy?‚‚³,“WŠJ?}“®‚©‚µ’†?S‚Ì?\Žš‚Ì–Úˆó‚Ì•\Ž¦
         //}
         //	bufferGraphics.drawString(c.valueOf(k.getsousuu()),30,50);
         //	bufferGraphics.drawString(c.valueOf(k.getsousuu()),30,70);
 
         if (i_bun_hyouji == 1) {
-            //“WŠJ?}?î•ñ‚Ì•¶Žš•\Ž¦
+            //“WŠJ?}?û±ñ‚Ì•¶Žš•\Ž¦
             bufferGraphics.setColor(Color.black);
 
             bufferGraphics.drawString("mouse= (   " + p_mouse_object_iti.getx() + "   ,   " + p_mouse_object_iti.gety() + "   )", 120, 75); //‚±‚Ì•\Ž¦“à—e‚Ívoid kekka_syori‚ÅŒˆ‚ß‚ç‚ê‚é?B
@@ -10001,7 +10003,7 @@ img_haikei=(Image)imageT;
                 bufferGraphics.setColor(Color.red);
 
                 bufferGraphics.drawString("Under Calculation. If you want to cancel calculation, uncheck [check A + MV]on right side and press the brake button (bicycle brake icon) on lower side.", 120, 134); //‚±‚Ì•\Ž¦“à—e‚Ívoid kekka_syori‚ÅŒˆ‚ß‚ç‚ê‚é?B
-                bufferGraphics.drawString("ŒvŽZ’†?B?@‚È‚¨?AŒvŽZ‚ðŽæ‚è?Á‚µ’Ê?í?ó‘Ô‚É–ß‚è‚½‚¢‚È‚ç?A‰E•Ó‚Ì[check A+MV]‚Ìƒ`ƒFƒbƒN‚ð‚Í‚¸‚µ?AƒuƒŒ?[ƒLƒ{ƒ^ƒ“?i‰º•Ó‚Ì?AŽ©“]ŽÔ‚ÌƒuƒŒ?[ƒL‚ÌƒAƒCƒRƒ“?j‚ð‰Ÿ‚·?B ", 120, 148); //‚±‚Ì•\Ž¦“à—e‚Ívoid kekka_syori‚ÅŒˆ‚ß‚ç‚ê‚é?B
+                bufferGraphics.drawString("ŒvŽZ’†?B?@‚È‚¨?AŒvŽZ‚ðŽæ‚è?Á‚µ’Ê???ó‘Ô‚É–ß‚è‚½‚¢‚È‚ç?A‰E•Ó‚Ì[check A+MV]‚Ìƒ`ƒFƒbƒN‚ð‚Í‚¸‚µ?AƒuƒŒ?[ƒLƒ{ƒ^ƒ“?i‰º•Ó‚Ì?AŽ©“]ŽÔ‚ÌƒuƒŒ?[ƒL‚ÌƒAƒCƒRƒ“?j‚ð‰Ÿ‚·?B ", 120, 148); //‚±‚Ì•\Ž¦“à—e‚Ívoid kekka_syori‚ÅŒˆ‚ß‚ç‚ê‚é?B
                 //bufferGraphics.setColor(Color.black);
             }
 
@@ -10020,7 +10022,7 @@ img_haikei=(Image)imageT;
 
         //“WŠJ?}‚ð?Ü‚è?ã‚ª‚è?}‚Ì?ã‚É•`‚­‚½‚ß‚É?A“WŠJ?}‚ð?Ä•\Ž¦‚·‚é
         if (i_cp_ue_hyouji == 1) {
-            es1.oekaki_with_camera(bufferGraphics, i_bun_hyouji, i_cp_hyouji, i_a0_hyouji, i_a1_hyouji, fTenkaizuSenhaba, i_orisen_hyougen, f_h_TenkaizuSenhaba, dim.width, dim.height, i_mejirusi_hyouji);//“n‚·?î•ñ‚ÍƒJƒ?ƒ‰?Ý’è?A?ü•??A‰æ–ÊX•??A‰æ–Êy?‚‚³
+            es1.oekaki_with_camera(bufferGraphics, i_bun_hyouji, i_cp_hyouji, i_a0_hyouji, i_a1_hyouji, fTenkaizuSenhaba, i_orisen_hyougen, f_h_TenkaizuSenhaba, dim.width, dim.height, i_mejirusi_hyouji);//“n‚·?û±ñ‚ÍƒJ??ƒ‰?Ý’è?A?????A‰æ–ÊX???A‰æ–Êy?‚‚³
         }
 
 
@@ -10040,24 +10042,24 @@ img_haikei=(Image)imageT;
         //System.out.println("paint?@+++++++++++++++++++++?@bufferGraphics‚Ö‚Ì•`‰æ?I—¹");
 
 
-        //’†‰›ŽwŽ¦?ü
+        //’†‰›ŽwŽ¦??
         if (i_ten_hanasi_hyouji == 1) {
 
             g2.setStroke(new BasicStroke(1.0f));
             //g2.setColor(new Color(0, 0, 0,255));
             g2.setColor(Color.black);
             g2.drawLine((int) (p_mouse_TV_iti.getx()), (int) (p_mouse_TV_iti.gety()),
-                    (int) (p_mouse_TV_iti.getx() + d_haba), (int) (p_mouse_TV_iti.gety() + d_haba)); //’¼?ü
+                    (int) (p_mouse_TV_iti.getx() + d_haba), (int) (p_mouse_TV_iti.gety() + d_haba)); //’¼??
 
             //g2.drawLine( (int)(p_mouse_TV_iti.getx()+d_haba*0.5),  (int)(p_mouse_TV_iti.gety()+d_haba*0.5),
-            //             (int)(p_mouse_TV_iti.getx()+d_haba),  (int)(p_mouse_TV_iti.gety()+d_haba*2.0)); //’¼?ü
+            //             (int)(p_mouse_TV_iti.getx()+d_haba),  (int)(p_mouse_TV_iti.gety()+d_haba*2.0)); //’¼??
         }
 
 
         //•`‰æ‚µ‚½‚¢“à—e‚Í‚±‚±‚Ü‚ÅAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 
 
-        // ƒIƒtƒXƒNƒŠ?[ƒ“ƒCƒ??[ƒW‚ðŽÀ?Û‚É•`‰æ‚·‚é?BƒIƒtƒXƒNƒŠ?[ƒ“‚Ì•?‚Í?Å?‰‚Í 0,0?B
+        // ƒIƒtƒXƒNƒŠ?[ƒ“ƒC???[ƒW‚ðŽÀ?Û‚É•`‰æ‚·‚é?BƒIƒtƒXƒNƒŠ?[ƒ“‚Ì??‚Í?Å?‰‚Í 0,0?B
         g.drawImage(offscreen, 0, 0, this);
         //System.out.println("paint?@+++++++++++++++++++++?@paint?I—¹");
 
@@ -10067,7 +10069,7 @@ img_haikei=(Image)imageT;
 /*
 //20181204
 //˜g?Ý’èŽž‚Ì”wŒi‚ð˜g“à‚Ì‚ÝŽc‚µ‚ÄƒgƒŠƒ€ 20181204
-		if((i_mouse_modeA==61)&&(es1.get_i_egaki_dankai()==4)){//˜g?ü‚ª•\Ž¦‚³‚ê‚Ä‚¢‚é?ó‘Ô
+		if((i_mouse_modeA==61)&&(es1.get_i_egaki_dankai()==4)){//˜g??‚ª•\Ž¦‚³‚ê‚Ä‚¢‚é?ó‘Ô
 					int xmin=(int)es1.p61_TV_hako.get_x_min();
 					int xmax=(int)es1.p61_TV_hako.get_x_max();
 					int ymin=(int)es1.p61_TV_hako.get_y_min();
@@ -10140,9 +10142,9 @@ double dvy=(double)ymin;
 		//ts2.setCamera(camera_of_oriagarizu);	//20170615 ŽÀ?s‚µ‚È‚¢‚æ‚¤‚É‚µ‚½?i?Ü‚è‚ ‚ª‚è?}‚Ì•\Ž¦?ó‹µ‚ð•Ï‚¦‚È‚¢‚æ‚¤‚É‚·‚é‚½‚ß?j
 		//js.setCamera(camera_of_oriagarizu);	//20170615 ŽÀ?s‚µ‚È‚¢‚æ‚¤‚É‚µ‚½?i?Ü‚è‚ ‚ª‚è?}‚Ì•\Ž¦?ó‹µ‚ð•Ï‚¦‚È‚¢‚æ‚¤‚É‚·‚é‚½‚ß?j
 
-		OZ.hyouji_flg=0;//?Ü‚è?ã‚ª‚è?}‚Ì•\Ž¦—lŽ®‚ÌŽw’è?B1‚È‚ç“WŠJ?}?®—??A2‚È‚ç?j‹à?}?B3‚È‚ç“§‰ß?}?B5‚È‚çŽÀ?Û‚É?Ü‚èŽ†‚ð?Ü‚Á‚½?ê?‡‚Æ“¯‚¶?B
-		OZ.i_suitei_meirei=0;//?Ü‚è?ô‚Ý?„’è‚ð‚Ç‚Ì’iŠK‚Ü‚Å?s‚¤‚©‚ÌŽwŽ¦
-		OZ.i_suitei_dankai=0;//?Ü‚è?ô‚Ý?„’è‚ª‚Ç‚Ì’iŠK‚Ü‚Å‚Å‚«‚½‚©‚Ì•\Ž¦
+		OZ.hyouji_flg=0;//?Ü‚è?ã‚ª‚è?}‚Ì•\Ž¦—lŽ®‚ÌŽw’è?B1‚È‚ç“WŠJ?}?®???A2‚È‚ç?j‹à?}?B3‚È‚ç“§‰ß?}?B5‚È‚çŽÀ?Û‚É?Ü‚èŽ†‚ð?Ü‚Á‚½???‡‚Æ“¯‚¶?B
+		OZ.i_suitei_meirei=0;//?Ü‚è?ô‚Ý??’è‚ð‚Ç‚Ì’iŠK‚Ü‚Å?s‚¤‚©‚ÌŽwŽ¦
+		OZ.i_suitei_dankai=0;//?Ü‚è?ô‚Ý??’è‚ª‚Ç‚Ì’iŠK‚Ü‚Å‚Å‚«‚½‚©‚Ì•\Ž¦
 		OZ.betu_sagasi_flg=0;
 
 		OZ.matome_write_image_jikkoutyuu = false; //•¡?”‚Ì?Ü‚è‚ ‚ª‚èŒ`‚Ì—\‘ª‚Ì?‘‚«?o‚µ‚ª‚ªŽÀ?s’†‚È‚çture‚É‚È‚é?B20170615
@@ -10154,35 +10156,35 @@ double dvy=(double)ymin;
 
     void settei_syokika_yosoku() {
         OZ.text_kekka = "";
-        OZ.hyouji_flg = 0;//?Ü‚è?ã‚ª‚è?}‚Ì•\Ž¦—lŽ®‚ÌŽw’è?B‚P‚È‚çŽÀ?Û‚É?Ü‚èŽ†‚ð?Ü‚Á‚½?ê?‡‚Æ“¯‚¶?B‚Q‚È‚ç“§‰ß?}
+        OZ.hyouji_flg = 0;//?Ü‚è?ã‚ª‚è?}‚Ì•\Ž¦—lŽ®‚ÌŽw’è?B‚P‚È‚çŽÀ?Û‚É?Ü‚èŽ†‚ð?Ü‚Á‚½???‡‚Æ“¯‚¶?B‚Q‚È‚ç“§‰ß?}
         OZ.hyouji_flg_backup = 0;//•\Ž¦—lŽ®hyouji_flg‚ÌˆêŽž“IƒoƒbƒNƒAƒbƒv—p
 
-        //•\Ž¦—p‚Ì’l‚ðŠi”[‚·‚é•Ï?”
-        OZ.ip1 = -1;//?ã‰º•\?E?l‚Ì?‰Šú?Ý’èŽž‚É?A?Ü‚Á‚½Œã‚Ì•\— ‚ª“¯‚¶–Ê‚ª
-        //—×?Ú‚·‚é‚Æ‚¢‚¤Œë?·‚ª‚ ‚ê‚ª0‚ð?A–³‚¯‚ê‚Î1000‚ðŠi”[‚·‚é•Ï?”?B
+        //•\Ž¦—p‚Ì’l‚ðŠi”[‚·‚é•Ï??
+        OZ.ip1 = -1;//?ã‰º•\?E?l‚Ì?‰Š??Ý’èŽž‚É?A?Ü‚Á‚½Œã‚Ì•\— ‚ª“¯‚¶–Ê‚ª
+        //—×?Ú‚·‚é‚Æ‚¢‚¤Œë?·‚ª‚ ‚ê‚ª0‚ð?A–³‚¯‚ê‚Î1000‚ðŠi”[‚·‚é•Ï???B
         //‚±‚±‚Å‚Ì?‰Šú’l‚Í(0‚©1000)ˆÈŠO‚Ì?”‚È‚ç‚È‚ñ‚Å‚à‚¢‚¢?B
         OZ.ip2 = -1;//?ã‰º•\?E?l‚ª?Ü‚è?ô‚Ý‰Â”\‚È?d‚È‚è•û‚ð’T‚µ‚½?Û‚É?A
-        //‰Â”\‚È?d‚È‚è•û‚ª‚È‚¯‚ê‚Î0‚ð?A‰Â”\‚È?d‚È‚è•û‚ª‚ ‚ê‚Î1000‚ðŠi”[‚·‚é•Ï?”?B
+        //‰Â”\‚È?d‚È‚è•û‚ª‚È‚¯‚ê‚Î0‚ð?A‰Â”\‚È?d‚È‚è•û‚ª‚ ‚ê‚Î1000‚ðŠi”[‚·‚é•Ï???B
         //‚±‚±‚Å‚Ì?‰Šú’l‚Í(0‚©1000)ˆÈŠO‚Ì?”‚È‚ç‚È‚ñ‚Å‚à‚¢‚¢?B
-        OZ.ip3 = 1;//ts1‚ª?Ü‚è?ô‚Ý‚ð?s‚¤?Û‚ÌŠî?€–Ê‚ðŽw’è‚·‚é‚Ì‚ÉŽg‚¤?B
+        OZ.ip3 = 1;//ts1‚ª?Ü‚è?ô‚Ý‚ð?s‚¤?Û‚ÌŠî??–Ê‚ðŽw’è‚·‚é‚Ì‚ÉŽg‚¤?B
 
         //ip4=0;//‚±‚ê‚Í?Ats1‚Ì?Å?‰‚É— •Ô‚µ‚ð‚·‚é‚©‚Ç‚¤‚©‚ðŽw’è‚·‚é?B0‚È‚ç‚µ‚È‚¢?B1‚È‚ç— •Ô‚·?B//20170615 ŽÀ?s‚µ‚È‚¢‚æ‚¤‚É‚µ‚½?i?Ü‚è‚ ‚ª‚è?}‚Ì•\Ž¦?ó‹µ‚ð•Ï‚¦‚È‚¢‚æ‚¤‚É‚·‚é‚½‚ß?j
 
         OZ.ip5 = -1;    //?ã‰º•\?E?l‚ªˆê’U?Ü‚è?ô‚Ý‰Â”\‚ÈŽ†‚Ì?d‚È‚è‚ðŽ¦‚µ‚½‚ ‚Æ‚Å?A
         //‚³‚ç‚É•Ê‚ÌŽ†‚Ì?d‚È‚è‚ð‚³‚ª‚·Žž‚Ì?Å?‰‚Ìjs.susumu(Smensuu)‚ÌŒ‹‰Ê?B
-        //0‚È‚ç?V‚½‚Ésusumu—]’n‚ª‚È‚©‚Á‚½?B0ˆÈŠO‚È‚ç•Ï‰»‚µ‚½Smen‚Ìid‚Ì?Å‚à?¬‚³‚¢”Ô?†
+        //0‚È‚ç?V‚½‚Ésusumu—]’n‚ª‚È‚©‚Á‚½?B0ˆÈŠO‚È‚ç•Ï‰»‚µ‚½Smen‚Ìid‚Ì?Å‚à?¬‚³‚¢”Ô??
         OZ.ip6 = -1;    //?ã‰º•\?E?l‚ªˆê’U?Ü‚è?ô‚Ý‰Â”\‚ÈŽ†‚Ì?d‚È‚è‚ðŽ¦‚µ‚½‚ ‚Æ‚Å?A
         //‚³‚ç‚É•Ê‚ÌŽ†‚Ì?d‚È‚è‚ð‚³‚ª‚·Žž‚Ì js.kanou_kasanari_sagasi()‚ÌŒ‹‰Ê?B
         //0‚È‚ç‰Â”\‚È?d‚È‚è‚©‚½‚Æ‚È‚é?ó‘Ô‚Í‘¶?Ý‚µ‚È‚¢?B
         //1000‚È‚ç•Ê‚Ì?d‚È‚è•û‚ªŒ©‚Â‚©‚Á‚½?B
 
 
-        OZ.betu_sagasi_flg = 0;     //‚±‚ê‚Í?u•Ê‚Ì?d‚È‚è‚ð’T‚·?v‚±‚Æ‚ª—LŒø‚Ì?ê?‡‚Í‚P?A–³Œø‚Ì?ê?‡‚Í‚O‚ð‚Æ‚é?B
+        OZ.betu_sagasi_flg = 0;     //‚±‚ê‚Í?u•Ê‚Ì?d‚È‚è‚ð’T‚·?v‚±‚Æ‚ª—LŒø‚Ì???‡‚Í‚P?A–³Œø‚Ì???‡‚Í‚O‚ð‚Æ‚é?B
         OZ.hakkenn_sita_kazu = 0;    //?Ü‚è?d‚È‚è•û‚Å?A‰½’Ê‚è”­Œ©‚µ‚½‚©‚ðŠi”[‚·‚é?B
 
 
         i_mouseDragged_yuukou = 0;
-        int i_mouseReleased_yuukou = 0;//0‚Í?Aƒ}ƒEƒX‘€?ì‚ð–³Ž‹?B1‚Íƒ}ƒEƒX‘€?ì—LŒø?Bƒtƒ@ƒCƒ‹ƒ{ƒbƒNƒX‚Ìon-off‚È‚Ç‚Å?A—\Šú‚¹‚ÊmouseDragged‚âmouseReleased‚ª”­?¶‚µ‚½‚Æ‚«?A‚»‚ê‚ð?E‚í‚È‚¢‚æ‚¤‚É0‚É?Ý’è‚·‚é?B‚±‚ê‚ç‚Í?Aƒ}ƒEƒX‚ªƒNƒŠƒbƒN‚³‚ê‚½‚Æ‚«‚É?A1—LŒøŽw’è‚É‚·‚é?B
+        int i_mouseReleased_yuukou = 0;//0‚Í?Aƒ}ƒEƒX‘€??‚ð–³Ž‹?B1‚Íƒ}ƒEƒX‘€??—LŒø?Bƒtƒ@ƒCƒ‹ƒ{ƒbƒNƒX‚Ìon-off‚È‚Ç‚Å?A—\Šú‚¹‚ÊmouseDragged‚âmouseReleased‚ª”­?¶‚µ‚½‚Æ‚«?A‚»‚ê‚ð?E‚í‚È‚¢‚æ‚¤‚É0‚É?Ý’è‚·‚é?B‚±‚ê‚ç‚Í?Aƒ}ƒEƒX‚ªƒNƒŠƒbƒN‚³‚ê‚½‚Æ‚«‚É?A1—LŒøŽw’è‚É‚·‚é?B
 
         OZ.suitei_syokika();
         keijiban.clear();
@@ -10193,7 +10195,7 @@ double dvy=(double)ymin;
     //   void reset(){		settei_syokika_cp();		settei_syokika_yosoku();		repaint();	}
 
 
-    ////b* ƒAƒvƒŠƒP?[ƒVƒ‡ƒ“—p?B?æ“ª‚ª?^?–?^?^?^‚ÅŽn‚Ü‚é?s‚É‚Í‚³‚Ü‚ê‚½•”•ª‚Í–³Ž‹‚³‚ê‚é?B
+    ////b* ƒAƒvƒŠƒP?[ƒVƒ‡ƒ“—p?B?æ“ª‚ª?^???^?^?^‚ÅŽn‚Ü‚é?s‚É‚Í‚³‚Ü‚ê‚½•”•ª‚Í–³Ž‹‚³‚ê‚é?B
     //---------------------------------------------------------
     void readImageFromFile() {
 
@@ -10230,7 +10232,7 @@ double dvy=(double)ymin;
             }
         }
 //repaint();
-        //System.out.println("01•???"+img_haikei.getWidth(this));
+        //System.out.println("01????"+img_haikei.getWidth(this));
         //System.out.println("01?‚‚³??"+img_haikei.getHeight(this));
 
     }
@@ -10259,7 +10261,7 @@ double dvy=(double)ymin;
 
         if (fname_wi != null) {
             flg_wi = 1;
-            repaint();//—Î‚Ì˜g?ü‚ð?‘‚«?o‚³‚È‚¢‚½‚ß‚É•K—v
+            repaint();//—Î‚Ì˜g??‚ð?‘‚«?o‚³‚È‚¢‚½‚ß‚É•K—v
             //writeImageFile(fname);
         }
         //if(flg61==1){flg61=0;es1.set_i_egaki_dankai(4);repaint();}
@@ -10291,10 +10293,10 @@ double dvy=(double)ymin;
             if (fname.endsWith("svg")) {
                 //	Memo memo1; memo1=es1.getMemo_for_kakidasi();
                 Memo memo1;
-                memo1 = es1.getMemo_for_svg_kakidasi_with_camera(i_bun_hyouji, i_cp_hyouji, i_a0_hyouji, i_a1_hyouji, fTenkaizuSenhaba, i_orisen_hyougen, f_h_TenkaizuSenhaba, dim.width, dim.height, i_mejirusi_hyouji);//“n‚·?î•ñ‚ÍƒJƒ?ƒ‰?Ý’è?A?ü•??A‰æ–ÊX•??A‰æ–Êy?‚‚³,“WŠJ?}“®‚©‚µ’†?S‚Ì?\Žš‚Ì–Úˆó‚Ì•\Ž¦
+                memo1 = es1.getMemo_for_svg_kakidasi_with_camera(i_bun_hyouji, i_cp_hyouji, i_a0_hyouji, i_a1_hyouji, fTenkaizuSenhaba, i_orisen_hyougen, f_h_TenkaizuSenhaba, dim.width, dim.height, i_mejirusi_hyouji);//“n‚·?û±ñ‚ÍƒJ??ƒ‰?Ý’è?A?????A‰æ–ÊX???A‰æ–Êy?‚‚³,“WŠJ?}“®‚©‚µ’†?S‚Ì?\Žš‚Ì–Úˆó‚Ì•\Ž¦
 
                 Memo memo2 = new Memo();
-                //memo2=OZ.getMemo_for_svg_kakidasi();//20180227?@Še?Ü‚è?ã‚ª‚è‚Ìmemo‚Æ?d•¡‚·‚é?ì‹Æ‚È‚Ì‚Å?í?œ
+                //memo2=OZ.getMemo_for_svg_kakidasi();//20180227?@Še?Ü‚è?ã‚ª‚è‚Ìmemo‚Æ?d•¡‚·‚é??‹Æ‚È‚Ì‚Å????
 
                 //Še?Ü‚è?ã‚ª‚è‚Ìmemo
                 Oriagari_Zu OZi;
@@ -10331,7 +10333,7 @@ double dvy=(double)ymin;
                     int xmax = (int) es1.p61_TV_hako.get_x_max();
                     int ymin = (int) es1.p61_TV_hako.get_y_min();
                     int ymax = (int) es1.p61_TV_hako.get_y_max();
-                    //	es1.set_i_egaki_dankai(0);repaint();//—Î‚Ì˜g?ü‚ð?‘‚«?o‚³‚È‚¢‚½‚ß‚É•K—v
+                    //	es1.set_i_egaki_dankai(0);repaint();//—Î‚Ì˜g??‚ð?‘‚«?o‚³‚È‚¢‚½‚ß‚É•K—v
                     //try{
                     //	Thread.sleep(1000);
                     //}catch (InterruptedException e){
@@ -10345,7 +10347,7 @@ double dvy=(double)ymin;
                         ImageIO.write(offscreen.getSubimage(xmin, ymin, xmax - xmin + 1, ymax - ymin + 1), "jpg", new File(fname));
                     }
 
-                } else {//˜g–³‚µ‚Ì?ê?‡‚Ì‘S‘Ì?‘‚«?o‚µ
+                } else {//˜g–³‚µ‚Ì???‡‚Ì‘S‘Ì?‘‚«?o‚µ
 
                     System.out.println("2018-529_");
                     if (i == 1) {
@@ -10384,7 +10386,7 @@ double dvy=(double)ymin;
             System.out.println(e);
         }
         repaint();
-        System.out.println("02•???" + img_haikei.getWidth(this));
+        System.out.println("02????" + img_haikei.getWidth(this));
         System.out.println("02?‚‚³??" + img_haikei.getHeight(this));
 
     }
@@ -10405,7 +10407,7 @@ double dvy=(double)ymin;
             System.out.println(e);
         }
         repaint();
-        //	System.out.println("02•???"+img_haikei.getWidth(this));
+        //	System.out.println("02????"+img_haikei.getWidth(this));
         //	System.out.println("02?‚‚³??"+img_haikei.getHeight(this));
 
     }
@@ -10444,7 +10446,7 @@ double dvy=(double)ymin;
 
         try {
 
-            if (fd.getFile() != null) {  //ƒLƒƒƒ“ƒZƒ‹‚Å‚Í‚È‚¢?ê?‡?B
+            if (fd.getFile() != null) {  //ƒLƒƒƒ“ƒZƒ‹‚Å‚Í‚È‚¢?????B
 
                 BufferedReader br = new BufferedReader(new FileReader(fname));
 
@@ -10544,7 +10546,7 @@ double dvy=(double)ymin;
         }
     }
 
-////b* ƒAƒvƒŠƒP?[ƒVƒ‡ƒ“—p?B?æ“ª‚ª?^?–?^?^?^‚ÅŽn‚Ü‚é?s‚É‚Í‚³‚Ü‚ê‚½•”•ª‚Í–³Ž‹‚³‚ê‚é
+////b* ƒAƒvƒŠƒP?[ƒVƒ‡ƒ“—p?B?æ“ª‚ª?^???^?^?^‚ÅŽn‚Ü‚é?s‚É‚Í‚³‚Ü‚ê‚½•”•ª‚Í–³Ž‹‚³‚ê‚é
 
     //--------------------------------------------------------------------------
     public void oritatami_suitei() {
@@ -10595,16 +10597,16 @@ double dvy=(double)ymin;
         d_ap_check4 = r;
         //es1.ap_check4(r);
         if (i_SubThread == 0) {
-            i_sub_mode = 3;//3=’¸“_Žü‚è‚Ì?Ü?ô‚Ý‰Â”\?«”»’è?A1=?Ü?ô‚Ý?„’è‚Ì•Ê‰ð‚ð‚Ü‚Æ‚ß‚Ä?o‚·?B0=?Ü?ô‚Ý?„’è‚Ì•Ê‰ð‚ð‚Ü‚Æ‚ß‚Ä?o‚·ƒ‚?[ƒh‚Å‚Í‚È‚¢?B‚±‚Ì•Ï?”‚ÍƒTƒuƒXƒŒƒbƒh‚Ì“®?ì•Ï?X‚É‚Â‚©‚¤‚¾‚¯?B20170611‚ÉVer3.008‚©‚ç’Ç‰Á
+            i_sub_mode = 3;//3=’¸“_Žü‚è‚Ì?Ü?ô‚Ý‰Â”\?«”»’è?A1=?Ü?ô‚Ý??’è‚Ì•Ê‰ð‚ð‚Ü‚Æ‚ß‚Ä?o‚·?B0=?Ü?ô‚Ý??’è‚Ì•Ê‰ð‚ð‚Ü‚Æ‚ß‚Ä?o‚·ƒ‚?[ƒh‚Å‚Í‚È‚¢?B‚±‚Ì•Ï?”‚ÍƒTƒuƒXƒŒƒbƒh‚Ì“®??•Ï?X‚É‚Â‚©‚¤‚¾‚¯?B20170611‚ÉVer3.008‚©‚ç’Ç‰Á
 
             i_SubThread = 1;
-            mks();//?V‚µ‚¢ƒXƒŒƒbƒh‚ð?ì‚é
+            mks();//?V‚µ‚¢ƒXƒŒƒbƒh‚ð??‚é
             sub.start();
             return;
         } else if (i_SubThread == 1) {
             if (i_sub_mode == 3) {
                 sub.stop();
-                mks();//?V‚µ‚¢ƒXƒŒƒbƒh‚ð?ì‚é
+                mks();//?V‚µ‚¢ƒXƒŒƒbƒh‚ð??‚é
                 sub.start();
             }
 
@@ -10622,7 +10624,7 @@ class SubThread extends Thread {
     //•Ï?”‚Ì?éŒ¾
     ap orihime_ap;
 
-    //ƒXƒŒƒbƒh?ì?¬Žž‚ÉŽÀ?s‚³‚ê‚é?ˆ—?
+    //ƒXƒŒƒbƒh???¬Žž‚ÉŽÀ?s‚³‚ê‚é????
     public SubThread(ap ap0) {
         orihime_ap = ap0;
     }
@@ -10646,7 +10648,7 @@ class SubThread extends Thread {
 
                 for (int i = 1; i <= mokuhyou; i++) {
                     orihime_ap.oritatami_suitei();
-                    orihime_ap.fname_and_number = fname + orihime_ap.c.valueOf(orihime_ap.OZ.hakkenn_sita_kazu);//‚Ü‚Æ‚ß?‘‚«?o‚µ‚ÉŽg‚¤?B
+                    orihime_ap.fname_and_number = fname + orihime_ap.OZ.hakkenn_sita_kazu;//‚Ü‚Æ‚ß?‘‚«?o‚µ‚ÉŽg‚¤?B
 
                     orihime_ap.w_image_jikkoutyuu = true;
                     orihime_ap.repaint();
@@ -10670,7 +10672,7 @@ class SubThread extends Thread {
             // -----------------------------------------------------------------
         } else if (orihime_ap.i_sub_mode == 2) {
             if (orihime_ap.i_oritatami_bangou == orihime_ap.OZ.hakkenn_sita_kazu) {
-                orihime_ap.OZ.text_kekka = "Number of found solutions = " + orihime_ap.c.valueOf(orihime_ap.OZ.hakkenn_sita_kazu) + "  ";
+                orihime_ap.OZ.text_kekka = "Number of found solutions = " + orihime_ap.OZ.hakkenn_sita_kazu + "  ";
             }
 
             int mokuhyou = orihime_ap.i_oritatami_bangou;
