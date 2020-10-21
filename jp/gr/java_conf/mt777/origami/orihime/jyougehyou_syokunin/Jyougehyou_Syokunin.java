@@ -24,6 +24,7 @@ public class Jyougehyou_Syokunin {//?繪ｺ表?@?ﾜりたたむ前の展開?}の面が?ﾜりたたん
 	//String c=new String();
 	//int Mensuu;             //?ﾜりたたむ前の展開?}の面の?? 
 	Jyougehyou jg = new Jyougehyou();
+	Touka_jyouken errorPos = null;
 	//Jyougehyou jg;// =new Jyougehyou();
 	//Jyougehyou jg_syokiti =new Jyougehyou();//展開?}のみから得られる?繪ｺ関係を記録しておく?B
 	int Smensuu;//Smenの??
@@ -593,9 +594,11 @@ public class Jyougehyou_Syokunin {//?繪ｺ表?@?ﾜりたたむ前の展開?}の面が?ﾜりたたん
 
 
 									if (jg.get(ueMenid[iuM], sitaMenid[isM]) == 0) {
+										errorPos = new Touka_jyouken(sitaMenid[isM], ueMenid[iuM], sitaMenid[isM], ueMenid[iuM]);
 										return 2;
 									}//面の?繪ｺ関係の拡張で矛?ｔｭ?ｶ?B
 									if (jg.get(sitaMenid[isM], ueMenid[iuM]) == 1) {
+										errorPos = new Touka_jyouken(sitaMenid[isM], ueMenid[iuM], sitaMenid[isM], ueMenid[iuM]);
 										return 2;
 									}//面の?繪ｺ関係の拡張で矛?ｔｭ?ｶ?B
 
@@ -642,9 +645,11 @@ public class Jyougehyou_Syokunin {//?繪ｺ表?@?ﾜりたたむ前の展開?}の面が?ﾜりたたん
 					//if(onaji_Smen_ni_sonzai(tg.geta(),tg.getb(),tg.getd())==1) {
 					if (jg.get(tg.geta(), tg.getb()) == 1) {
 						if (jg.get(tg.geta(), tg.getd()) == 0) {
+							errorPos = tg;
 							return 3;
 						}
 						if (jg.get(tg.getd(), tg.geta()) == 1) {
+							errorPos = tg;
 							return 3;
 						}
 						if (jg.get(tg.geta(), tg.getd()) < 0) {
@@ -660,9 +665,11 @@ public class Jyougehyou_Syokunin {//?繪ｺ表?@?ﾜりたたむ前の展開?}の面が?ﾜりたたん
 					}
 					if (jg.get(tg.geta(), tg.getb()) == 0) {
 						if (jg.get(tg.geta(), tg.getd()) == 1) {
+							errorPos = tg;
 							return 3;
 						}
 						if (jg.get(tg.getd(), tg.geta()) == 0) {
+							errorPos = tg;
 							return 3;
 						}
 						if (jg.get(tg.geta(), tg.getd()) < 0) {
@@ -679,9 +686,11 @@ public class Jyougehyou_Syokunin {//?繪ｺ表?@?ﾜりたたむ前の展開?}の面が?ﾜりたたん
 					//
 					if (jg.get(tg.geta(), tg.getd()) == 1) {
 						if (jg.get(tg.geta(), tg.getb()) == 0) {
+							errorPos = tg;
 							return 3;
 						}
 						if (jg.get(tg.getb(), tg.geta()) == 1) {
+							errorPos = tg;
 							return 3;
 						}
 						if (jg.get(tg.geta(), tg.getb()) < 0) {
@@ -697,9 +706,11 @@ public class Jyougehyou_Syokunin {//?繪ｺ表?@?ﾜりたたむ前の展開?}の面が?ﾜりたたん
 					}
 					if (jg.get(tg.geta(), tg.getd()) == 0) {
 						if (jg.get(tg.geta(), tg.getb()) == 1) {
+							errorPos = tg;
 							return 3;
 						}
 						if (jg.get(tg.getb(), tg.geta()) == 0) {
+							errorPos = tg;
 							return 3;
 						}
 						if (jg.get(tg.geta(), tg.getb()) < 0) {
@@ -751,9 +762,11 @@ public class Jyougehyou_Syokunin {//?繪ｺ表?@?ﾜりたたむ前の展開?}の面が?ﾜりたたん
 					//a>c && b>d なら a>d && b>c
 					if ((jg.get(a, c) == 1) && (jg.get(b, d) == 1)) {
 						if (jg.get(a, d) == 0) {
+							errorPos = tg;
 							return 4;
 						}
 						if (jg.get(b, c) == 0) {
+							errorPos = tg;
 							return 4;
 						}
 						if (jg.get(a, d) < 0) {
@@ -780,9 +793,11 @@ public class Jyougehyou_Syokunin {//?繪ｺ表?@?ﾜりたたむ前の展開?}の面が?ﾜりたたん
 					//a>d && b>c なら a>c && b>d
 					if ((jg.get(a, d) == 1) && (jg.get(b, c) == 1)) {
 						if (jg.get(a, c) == 0) {
+							errorPos = tg;
 							return 4;
 						}
 						if (jg.get(b, d) == 0) {
+							errorPos = tg;
 							return 4;
 						}
 						if (jg.get(a, c) < 0) {
@@ -810,9 +825,11 @@ public class Jyougehyou_Syokunin {//?繪ｺ表?@?ﾜりたたむ前の展開?}の面が?ﾜりたたん
 					//a<c && b<d なら a<d && b<c
 					if ((jg.get(a, c) == 0) && (jg.get(b, d) == 0)) {
 						if (jg.get(a, d) == 1) {
+							errorPos = tg;
 							return 4;
 						}
 						if (jg.get(b, c) == 1) {
+							errorPos = tg;
 							return 4;
 						}
 						if (jg.get(a, d) < 0) {
@@ -839,9 +856,11 @@ public class Jyougehyou_Syokunin {//?繪ｺ表?@?ﾜりたたむ前の展開?}の面が?ﾜりたたん
 					//a<d && b<c なら a<c && b<d
 					if ((jg.get(a, d) == 0) && (jg.get(b, c) == 0)) {
 						if (jg.get(a, c) == 1) {
+							errorPos = tg;
 							return 4;
 						}
 						if (jg.get(b, d) == 1) {
+							errorPos = tg;
 							return 4;
 						}
 						if (jg.get(a, c) < 0) {
@@ -870,9 +889,11 @@ public class Jyougehyou_Syokunin {//?繪ｺ表?@?ﾜりたたむ前の展開?}の面が?ﾜりたたん
 					//?@a>c>b?@なら?@a>d>b
 					if ((jg.get(a, c) == 1) && (jg.get(c, b) == 1)) {
 						if (jg.get(d, a) == 1) {
+							errorPos = tg;
 							return 4;
 						}
 						if (jg.get(b, d) == 1) {
+							errorPos = tg;
 							return 4;
 						}
 						if (jg.get(a, d) < 0) {
@@ -899,9 +920,11 @@ public class Jyougehyou_Syokunin {//?繪ｺ表?@?ﾜりたたむ前の展開?}の面が?ﾜりたたん
 					//?@a>d>b?@なら?@a>c>b
 					if ((jg.get(a, d) == 1) && (jg.get(d, b) == 1)) {
 						if (jg.get(c, a) == 1) {
+							errorPos = tg;
 							return 4;
 						}
 						if (jg.get(b, c) == 1) {
+							errorPos = tg;
 							return 4;
 						}
 						if (jg.get(a, c) < 0) {
@@ -928,9 +951,11 @@ public class Jyougehyou_Syokunin {//?繪ｺ表?@?ﾜりたたむ前の展開?}の面が?ﾜりたたん
 					//?@b>c>a?@なら?@b>d>a
 					if ((jg.get(b, c) == 1) && (jg.get(c, a) == 1)) {
 						if (jg.get(d, b) == 1) {
+							errorPos = tg;
 							return 4;
 						}
 						if (jg.get(a, d) == 1) {
+							errorPos = tg;
 							return 4;
 						}
 						if (jg.get(b, d) < 0) {
@@ -957,9 +982,11 @@ public class Jyougehyou_Syokunin {//?繪ｺ表?@?ﾜりたたむ前の展開?}の面が?ﾜりたたん
 					//?@b>d>a?@なら?@b>c>a
 					if ((jg.get(b, d) == 1) && (jg.get(d, a) == 1)) {
 						if (jg.get(c, b) == 1) {
+							errorPos = tg;
 							return 4;
 						}
 						if (jg.get(a, c) == 1) {
+							errorPos = tg;
 							return 4;
 						}
 						if (jg.get(b, c) < 0) {
@@ -988,9 +1015,11 @@ public class Jyougehyou_Syokunin {//?繪ｺ表?@?ﾜりたたむ前の展開?}の面が?ﾜりたたん
 					//?@c>a>d?@なら?@c>b>d
 					if ((jg.get(c, a) == 1) && (jg.get(a, d) == 1)) {
 						if (jg.get(b, c) == 1) {
+							errorPos = tg;
 							return 4;
 						}
 						if (jg.get(d, b) == 1) {
+							errorPos = tg;
 							return 4;
 						}
 						if (jg.get(c, b) < 0) {
@@ -1017,9 +1046,11 @@ public class Jyougehyou_Syokunin {//?繪ｺ表?@?ﾜりたたむ前の展開?}の面が?ﾜりたたん
 					//?@c>b>d?@なら?@c>a>d
 					if ((jg.get(c, b) == 1) && (jg.get(b, d) == 1)) {
 						if (jg.get(a, c) == 1) {
+							errorPos = tg;
 							return 4;
 						}
 						if (jg.get(d, a) == 1) {
+							errorPos = tg;
 							return 4;
 						}
 						if (jg.get(c, a) < 0) {
@@ -1046,9 +1077,11 @@ public class Jyougehyou_Syokunin {//?繪ｺ表?@?ﾜりたたむ前の展開?}の面が?ﾜりたたん
 					//?@d>a>c?@なら?@d>b>c
 					if ((jg.get(d, a) == 1) && (jg.get(a, c) == 1)) {
 						if (jg.get(b, d) == 1) {
+							errorPos = tg;
 							return 4;
 						}
 						if (jg.get(c, b) == 1) {
+							errorPos = tg;
 							return 4;
 						}
 						if (jg.get(d, b) < 0) {
@@ -1075,9 +1108,11 @@ public class Jyougehyou_Syokunin {//?繪ｺ表?@?ﾜりたたむ前の展開?}の面が?ﾜりたたん
 					//?@d>b>c?@なら?@d>a>c
 					if ((jg.get(d, b) == 1) && (jg.get(b, c) == 1)) {
 						if (jg.get(a, d) == 1) {
+							errorPos = tg;
 							return 4;
 						}
 						if (jg.get(c, a) == 1) {
+							errorPos = tg;
 							return 4;
 						}
 						if (jg.get(d, a) < 0) {
@@ -2475,6 +2510,20 @@ int ss; ss=getSmen_yuukou_suu();
 				g.drawLine(gx(s_tv.getax()), gy(s_tv.getay()), gx(s_tv.getbx()), gy(s_tv.getby())); //直??
 			}
 
+			if (errorPos != null) {
+				g2.setColor(new Color(255, 0, 0, 75));
+				fillPolygon(g2, errorPos.geta(), otta_Men_zu, camera);
+				fillPolygon(g2, errorPos.getb(), otta_Men_zu, camera);
+				fillPolygon(g2, errorPos.getc(), otta_Men_zu, camera);
+				fillPolygon(g2, errorPos.getd(), otta_Men_zu, camera);
+
+
+				fillPolygon(g2, errorPos.geta(), orite.get(), orihime_ap.camera_of_orisen_nyuuryokuzu);
+				fillPolygon(g2, errorPos.getb(), orite.get(), orihime_ap.camera_of_orisen_nyuuryokuzu);
+				fillPolygon(g2, errorPos.getc(), orite.get(), orihime_ap.camera_of_orisen_nyuuryokuzu);
+				fillPolygon(g2, errorPos.getd(), orite.get(), orihime_ap.camera_of_orisen_nyuuryokuzu);
+			}
+
 		}
 
 	}
@@ -2839,6 +2888,7 @@ int ss; ss=getSmen_yuukou_suu();
 
 		}
 
+
 		//g2.setRenderingHint(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_OFF);//アンチェイリアス?@オフ
 
 
@@ -2848,6 +2898,37 @@ int ss; ss=getSmen_yuukou_suu();
 
 		//camera中?Sを?\字で描く
 		//OO.jyuuji(g,camera.object2TV(camera.get_camera_ichi()), 5.0 , 2.0 , 4);
+	}
+
+	private void fillPolygon(Graphics2D g, int id, Tensyuugou faces, Camera transform) {
+		Ten t0 = new Ten();
+		Ten t1 = new Ten();
+
+		int[] x = new int[faces.getTenidsuu(id)+1];
+		int[] y = new int[faces.getTenidsuu(id)+1];
+
+		for (int i = 1; i <= faces.getTenidsuu(id) - 1; i++) {
+
+			t0.setx(faces.getTenx(faces.getTenid(id, i)));
+			t0.sety(faces.getTeny(faces.getTenid(id, i)));
+			t1.set(transform.object2TV(t0));
+			x[i] = gx(t1.getx());
+			y[i] = gy(t1.gety());
+			//x[i]=gx(Smen_zu.getTenx(Smen_zu.getTenid(im,i)));
+			//y[i]=gy(Smen_zu.getTeny(Smen_zu.getTenid(im,i)));
+		}
+
+		t0.setx(faces.getTenx(faces.getTenid(id, faces.getTenidsuu(id))));
+		t0.sety(faces.getTeny(faces.getTenid(id, faces.getTenidsuu(id))));
+		t1.set(transform.object2TV(t0));
+		x[0] = gx(t1.getx());
+		y[0] = gy(t1.gety());
+		//x[0]=gx(Smen_zu.getTenx(Smen_zu.getTenid(im,Smen_zu.getTenidsuu(im))));
+		//y[0]=gy(Smen_zu.getTeny(Smen_zu.getTenid(im,Smen_zu.getTenidsuu(im))));
+
+		//?ﾜり?繧ｪり?}を描くときのim番目のSmenの多角形の頂点の?ﾀ標?iPC表示???jを??めるのはここまで
+
+		g.fill(new Polygon(x, y, faces.getTenidsuu(id)));
 	}
 
 
